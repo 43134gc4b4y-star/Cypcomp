@@ -83,8 +83,11 @@ def companies(http: Http):
     return http.json(f"{API}/fetch-companies")
 
 
-def cheapest_branches(http: Http, pid, n: int) -> list[dict]:
-    data = http.json(f"{API}/retail/fetch-retail-branch-list?productId={pid}&page=0&size={n}&sort=PRICE,ASC")
+def cheapest_branches(http: Http, pid, n: int, company_id: int | None = None) -> list[dict]:
+    url = f"{API}/retail/fetch-retail-branch-list?productId={pid}&page=0&size={n}&sort=PRICE,ASC"
+    if company_id is not None:
+        url += f"&companyIds={company_id}"
+    data = http.json(url)
     rows = [b for b in (data.get("content") or []) if b.get("retailerProductPrice")]
     for b in rows:
         b.pop("companyPhotoFile", None)  # embedded logo, not needed
@@ -95,6 +98,7 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
     page_size = int(cfg.get("page_size", 100))
     branches_per_product = int(cfg.get("branches_per_product", 8))
     skip = {s.lower() for s in cfg.get("skip_chains", [])}
+    pinned = [int(c) for c in cfg.get("always_include_chain_ids", [])]
 
     catalogue = {p["productMasterId"]: p for p in product_pages(http, page_size) if p.get("productMasterId") is not None}
     log.info("e-kalathi: %d products in catalogue", len(catalogue))
@@ -107,8 +111,17 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
         except Exception as e:  # noqa: BLE001
             log.warning("e-kalathi: product %s failed: %s", pid, e)
             continue
+        # chains always shown on the site (e.g. Lidl, Alphamega), even when not among the cheapest
+        have = {b.get("companyName") for b in rows}
+        for cid in pinned:
+            try:
+                extra = cheapest_branches(http, pid, 1, cid)
+            except Exception as e:  # noqa: BLE001
+                log.warning("e-kalathi: product %s chain %s failed: %s", pid, cid, e)
+                continue
+            rows += [b for b in extra if b.get("companyName") not in have]
         prices = [b["retailerProductPrice"] for b in rows]
-        if prices != sorted(prices):
+        if prices[: len(prices) - len(pinned)] != sorted(prices[: len(prices) - len(pinned)]):
             unsorted += 1
         thumb = _pick(p, "productThumbnailUrl", "productMainPhotoUrl", default="")
         for b in rows:

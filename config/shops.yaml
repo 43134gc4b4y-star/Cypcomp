@@ -14,6 +14,8 @@ ekalathi:
   side: S
   page_size: 100
   branches_per_product: 8           # cheapest stores kept per product
+  always_include_chain_ids: [453, 471]   # Lidl and Alphamega: always fetched and shown
+  pinned_stores: [Lidl, AlphaMega]
   # skip_chains: [Metro]               # uncomment to leave chains out
 
 starling:

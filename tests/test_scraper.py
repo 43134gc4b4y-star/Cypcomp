@@ -130,6 +130,8 @@ def ekalathi_routes():
 
     def branches(url):
         pid = int(url.split("productId=")[1].split("&")[0])
+        if "companyIds=" in url:
+            return {"content": []}
         return {"content": [{"companyName": c, "name": c + " Λεμεσός", "retailerProductPrice": p,
                              "postalAddress": "Street 1, Limassol", "branchLatitude": "34°41'44.3\"N",
                              "branchLongitude": "33°04'49.6\"E", "companyPhotoFile": "xxxx"} for c, p in prices[pid]]}
@@ -252,3 +254,18 @@ def test_pack_size_pass(mcfg):
     g = groups["ps-20"]
     assert g.north[0].price == 1375.0 and g.south[0].price == 14.6   # both per kg
     assert "pack sizes differ" in g.unit
+
+
+def test_ekalathi_pinned_chain_added():
+    routes = ekalathi_routes()
+    base = routes["retail/fetch-retail-branch-list"]
+
+    def branches(url):
+        if "companyIds=471" in url:
+            return {"content": [{"companyName": "ΑΛΦΑΜΕΓΑ", "name": "ΑΛΦΑΜΕΓΑ Ακρόπολης", "retailerProductPrice": 9.99}]}
+        return base(url) if "companyIds=" not in url else {"content": []}
+
+    routes["retail/fetch-retail-branch-list"] = branches
+    offers = ekalathi.scrape(FakeHttp(routes), {"always_include_chain_ids": [471]})
+    stores = {o.store for o in offers if o.product_id == "2194"}
+    assert stores == {"Sklavenitis", "Lidl", "AlphaMega"}

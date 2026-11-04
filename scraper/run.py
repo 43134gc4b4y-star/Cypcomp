@@ -132,6 +132,18 @@ def tidy_category(c: str) -> str:
     return c.title()
 
 
+PINNED: list[str] = []
+
+
+def _with_pinned(offers: list[dict], pinned: list[str], top: int = 5) -> list[dict]:
+    """First `top` cheapest stores, plus any pinned chains (e.g. Lidl, AlphaMega) further down."""
+    out = offers[:top]
+    for o in offers[top:]:
+        if o["store"] in pinned:
+            out.append(o)
+    return out
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
     for g in groups:
@@ -147,7 +159,7 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
         items.append({
             "id": g.id, "name": g.name, "unit": g.unit, "category": tidy_category(g.category),
             "kind": g.kind, "note": g.note, "image": g.image, "cheaper": win, "saving_pct": round(pct, 1),
-            "north": n[:5], "south": s[:5], "north_count": len(n), "south_count": len(s),
+            "north": n[:5], "south": _with_pinned(s, PINNED), "north_count": len(n), "south_count": len(s),
         })
     items.sort(key=lambda x: -x["saving_pct"])
     return items
@@ -187,6 +199,7 @@ def main(argv=None):
     rate_info = fx.eur_try(http, prev) if not args.offline else (prev or fx.eur_try(http))
     rate = rate_info["eur_try"]
 
+    PINNED[:] = shops.get("ekalathi", {}).get("pinned_stores", [])
     overrides = load_yaml("overrides.yaml") if (ROOT / "config" / "overrides.yaml").exists() else {}
     groups = match(north, south, load_yaml("matching.yaml"), overrides)
     groups += generic(north, south, load_yaml("generic_items.yaml") or [])

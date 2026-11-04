@@ -13,12 +13,12 @@ jobs:
           done
           echo "--- dmarjet sitemap count"
           curl -s -A "$UA" https://www.dmarjet.com/sitemap.xml | grep -o '<loc>[^<]*/product/[^<]*' | wc -l
-          U=$(curl -s -A "$UA" https://www.dmarjet.com/sitemap.xml | grep -o 'https://dmarjet.com/tr/product/[^<]*' | sed -n '50p'); echo $U
-          curl -s -A "$UA" "$U" -o p.html; echo bytes $(wc -c < p.html)
+          U=$(curl -s -A "$UA" https://www.dmarjet.com/sitemap.xml | grep -o 'https://dmarjet.com/tr/product/[^<]*' | sed -n '50p' | sed 's#https://dmarjet.com#https://www.dmarjet.com#'); echo $U
+          curl -sL -A "$UA" "$U" -o p.html; echo bytes $(wc -c < p.html)
           python3 - <<'PY'
           import re,json
           h=open('p.html',encoding='utf-8',errors='ignore').read()
           for s in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',h,re.S)[:3]: print('LD', s[:600])
           print('og', re.findall(r'<meta property="(?:og:title|product:price:amount)" content="([^"]+)"',h))
-          print('prices', re.findall(r'[\d.,]+\s*(?:₺|TL)',h)[:10])
+          print('prices', re.findall(r'[\d.,]+\s*(?:₺|TL)',h)[:10]); i=h.find('price'); print('ctx', h[i-300:i+300] if i>0 else 'none')
           PY

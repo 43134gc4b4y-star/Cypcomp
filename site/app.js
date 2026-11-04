@@ -73,10 +73,15 @@
       more = '<details class="others"><summary>Other stores</summary><div class="olist"><div style="display:block">' + others(it.north, "EUR") +
         '</div><div style="display:block">' + others(it.south, "EUR") + "</div></div></details>";
     }
+    var chains = ["Lidl", "AlphaMega"].map(function (c) {
+      var o = it.south.filter(function (x) { return x.store === c; })[0];
+      return o ? "<span><b>" + c + "</b> " + eur(o.eur) + ' <span class="pl">' + tl(o.try) + "</span></span>" : "";
+    }).filter(Boolean).join("");
+    var chainRow = chains ? '<div class="chains">South chains: ' + chains + "</div>" : "";
     var note = it.kind !== "exact" && it.note ? '<div class="note">' + esc(it.note) + (n.date ? " · " + esc(n.date) : "") + "</div>" : "";
     return '<article class="card"><div class="head"><div class="art">' + img + '</div><div class="ttl"><div class="name">' + esc(it.name) +
       '</div><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + badge + '</div><div class="sides">' +
-      side("NORTH", "N", n, it.cheaper === "N", "EUR") + side("SOUTH", "S", s, it.cheaper === "S", "EUR") + "</div>" + more + note + "</article>";
+      side("NORTH", "N", n, it.cheaper === "N", "EUR") + side("SOUTH", "S", s, it.cheaper === "S", "EUR") + "</div>" + chainRow + more + note + "</article>";
   }
 
   function render() {
