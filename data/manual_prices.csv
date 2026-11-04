@@ -1,0 +1,5 @@
+item,category,unit,side,store,town,address,price,currency,date,source
+Petrol 95 (1 L),Fuel,1 litre,N,Fuel stations (fixed price),North Cyprus,,,TRY,,Set by the government; fill in from the latest announcement
+Petrol 95 (1 L),Fuel,1 litre,S,Cheapest station,South Cyprus,,,EUR,,Cyprus fuel price observatory
+Diesel (1 L),Fuel,1 litre,N,Fuel stations (fixed price),North Cyprus,,,TRY,,Set by the government; fill in from the latest announcement
+Diesel (1 L),Fuel,1 litre,S,Cheapest station,South Cyprus,,,EUR,,Cyprus fuel price observatory

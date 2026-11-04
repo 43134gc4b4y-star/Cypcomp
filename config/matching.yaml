@@ -1,0 +1,239 @@
+# How North and South products are paired up.
+#
+# A pair is only made when BOTH sides have the same brand and the same pack
+# size, and the rest of the name is similar. Edit these lists to improve it.
+
+# Brands sold on both sides. Left: the name shown in the app.
+# Right: other ways shops spell it (lowercase, no accents).
+brands:
+  Coca-Cola: [coca cola, coca-cola, cocacola, coke]
+  Pepsi: [pepsi]
+  Fanta: [fanta]
+  Sprite: [sprite]
+  Schweppes: [schweppes]
+  7UP: [7up, 7 up, seven up]
+  Red Bull: [red bull, redbull]
+  Monster: [monster energy, monster]
+  Nescafé: [nescafe]
+  Jacobs: [jacobs]
+  Lavazza: [lavazza]
+  Illy: [illy]
+  Lipton: [lipton]
+  Twinings: [twinings]
+  Nesquik: [nesquik]
+  Nestlé: [nestle]
+  Kellogg's: [kelloggs, kellogg s, kellogg]
+  Nutella: [nutella]
+  Ferrero: [ferrero rocher, ferrero]
+  Kinder: [kinder]
+  Milka: [milka]
+  Lindt: [lindt]
+  Toblerone: [toblerone]
+  Oreo: [oreo]
+  Lacta: [lacta]
+  Snickers: [snickers]
+  Mars: [mars]
+  Twix: [twix]
+  Bounty: [bounty]
+  KitKat: [kitkat, kit kat]
+  M&M's: [m m s, m and m s, mms]
+  Haribo: [haribo]
+  Mentos: [mentos]
+  Pringles: [pringles]
+  Doritos: [doritos]
+  Lay's: [lays, lay s]
+  Ruffles: [ruffles]
+  Barilla: [barilla]
+  Heinz: [heinz]
+  Hellmann's: [hellmanns, hellmann s, hellmann]
+  Knorr: [knorr]
+  Maggi: [maggi]
+  Uncle Ben's: [uncle bens, uncle ben s, ben s original]
+  Philadelphia: [philadelphia]
+  Président: [president]
+  Lurpak: [lurpak]
+  Kerrygold: [kerrygold]
+  Activia: [activia]
+  Danone: [danone]
+  Alpro: [alpro]
+  Pampers: [pampers]
+  Huggies: [huggies]
+  Molfix: [molfix]
+  Aptamil: [aptamil]
+  Bebelac: [bebelac]
+  NAN: [nan optipro, nestle nan, nan]
+  HiPP: [hipp]
+  Cow & Gate: [cow and gate, cow gate]
+  Always: [always]
+  Orkid: [orkid]
+  Tampax: [tampax]
+  Colgate: [colgate]
+  Signal: [signal]
+  Sensodyne: [sensodyne]
+  Oral-B: [oral b, oral-b]
+  Listerine: [listerine]
+  Nivea: [nivea]
+  Dove: [dove]
+  Rexona: [rexona]
+  Axe: [axe]
+  Gillette: [gillette]
+  Head & Shoulders: [head and shoulders, head shoulders, h s]
+  Pantene: [pantene]
+  Elvive: [elvive, elseve]
+  Garnier: [garnier]
+  L'Oréal: [loreal, l oreal]
+  Johnson's: [johnsons, johnson s]
+  Palmolive: [palmolive]
+  Ariel: [ariel]
+  Persil: [persil]
+  Omo: [omo]
+  Lenor: [lenor]
+  Comfort: [comfort]
+  Vanish: [vanish]
+  Fairy: [fairy]
+  Finish: [finish]
+  Calgon: [calgon]
+  Domestos: [domestos]
+  Cif: [cif]
+  Mr Muscle: [mr muscle]
+  Pril: [pril]
+  Selpak: [selpak]
+  Solo: [solo]
+  Duracell: [duracell]
+  Energizer: [energizer]
+  Whiskas: [whiskas]
+  Felix: [felix]
+  Pedigree: [pedigree]
+  Purina: [purina, pro plan, friskies, gourmet]
+  Royal Canin: [royal canin]
+  Heineken: [heineken]
+  Carlsberg: [carlsberg]
+  Efes: [efes]
+  Tuborg: [tuborg]
+  KEO: [keo]
+  Johnnie Walker: [johnnie walker]
+  Jameson: [jameson]
+  Absolut: [absolut]
+  Smirnoff: [smirnoff]
+  Bacardi: [bacardi]
+  Jack Daniel's: [jack daniels, jack daniel s]
+  Evian: [evian]
+  San Pellegrino: [san pellegrino, sanpellegrino]
+  Perrier: [perrier]
+  Tropicana: [tropicana]
+  Cappy: [cappy]
+  Quaker: [quaker]
+  Ülker: [ulker]
+  Eti: [eti]
+  Pınar: [pinar]
+  Sütaş: [sutas]
+  Torku: [torku]
+  Halloumi Alambra: [alambra]
+  Charalambides: [charalambides christis, charalambides, christis]
+  Lanitis: [lanitis]
+  Pittas: [pittas]
+  Kykkos: [kykkos]
+
+# Turkish / Greek words translated to English before comparing names.
+synonyms:
+  sut: milk
+  yagli: fullfat
+  tam: fullfat
+  yarim: semi
+  laktozsuz: lactosefree
+  peynir: cheese
+  hellim: halloumi
+  yogurt: yoghurt
+  yoghurt: yoghurt
+  yogourt: yoghurt
+  tereyagi: butter
+  yumurta: eggs
+  egg: eggs
+  kahve: coffee
+  cay: tea
+  bal: honey
+  su: water
+  maden: sparkling
+  gazoz: soda
+  meyve: fruit
+  suyu: juice
+  portakal: orange
+  elma: apple
+  domates: tomato
+  tomatoes: tomato
+  patates: potato
+  potatoes: potato
+  makarna: pasta
+  spagetti: spaghetti
+  pirinc: rice
+  seker: sugar
+  sekersiz: sugarfree
+  zero: sugarfree
+  un: flour
+  zeytinyagi: oliveoil
+  zeytin: olive
+  aycicek: sunflower
+  yag: oil
+  cikolata: chocolate
+  cikolatali: chocolate
+  biskuvi: biscuits
+  cips: crisps
+  chips: crisps
+  sampuan: shampoo
+  dis: tooth
+  macunu: paste
+  toothpaste: toothpaste
+  sabun: soap
+  deterjan: detergent
+  bulasik: dishwasher
+  camasir: laundry
+  tuvalet: toilet
+  kagidi: paper
+  kagit: paper
+  havlu: towel
+  mendil: tissues
+  islak: wet
+  bebek: baby
+  bezi: nappies
+  diapers: nappies
+  mama: food
+  kedi: cat
+  kopek: dog
+  mamasi: food
+  klasik: classic
+  orijinal: original
+  sade: plain
+  hindi: turkey
+  tavuk: chicken
+  dana: beef
+  kola: cola
+  light: light
+  diyet: diet
+  kafeinsiz: decaf
+  decaffeinated: decaf
+  granul: instant
+  hazir: instant
+  cam: glass
+  kutu: can
+  cans: can
+  sise: bottle
+  pet: bottle
+  bottles: bottle
+  gala: milk
+  tyri: cheese
+  kafes: coffee
+  nero: water
+
+# Words that make two products different even with the same brand and size.
+# If one name has it and the other doesn't, they are NOT paired.
+conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
+            red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
+            mint, menthol, extra, max, sensitive, whitening, kids, junior,
+            chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio]
+
+# Words ignored when comparing names.
+stopwords: [the, and, with, of, ile, ve, for, new, yeni, adet, li, lu, pcs, pack, x, tl, eur,
+            koli, kampanya, indirim, firsat, promo, offer, tem, temachia, temaxia]
+
+# How similar the rest of the names must be (0 = anything, 1 = identical).
+min_similarity: 0.34

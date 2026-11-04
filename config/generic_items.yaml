@@ -1,0 +1,62 @@
+# Everyday items compared regardless of brand (fruit & veg, eggs, bread...).
+# For each side the app takes the cheapest product whose name contains one of
+# the `any` words and none of the `not` words, priced per `per` (kg, litre,
+# or a fixed number of pieces).
+#
+# Words are lowercase without accents (ş -> s, ı -> i, ü -> u ...).
+
+- id: tomatoes
+  name: Tomatoes
+  category: Fruit & veg
+  per: kg
+  north: {any: [domates], not: [cherry, ceri, kurusu, salca, sos, konserve, rendesi, suyu, pure, ketcap]}
+  south: {any: [tomato], not: [cherry, sauce, paste, puree, canned, tin, juice, ketchup, dried, chopped, peeled]}
+
+- id: potatoes
+  name: Potatoes
+  category: Fruit & veg
+  per: kg
+  north: {any: [patates], not: [cips, kizartma, dondurulmus, puresi, salata, tatli]}
+  south: {any: [potato], not: [crisps, chips, frozen, fries, puree, salad, sweet]}
+
+- id: cucumbers
+  name: Cucumbers
+  category: Fruit & veg
+  per: kg
+  north: {any: [salatalik, hiyar], not: [tursu, kornison]}
+  south: {any: [cucumber], not: [pickle, pickled, gherkin]}
+
+- id: onions
+  name: Onions
+  category: Fruit & veg
+  per: kg
+  north: {any: [sogan], not: [toz, granul, halka, cips, yesil, taze]}
+  south: {any: [onion], not: [powder, rings, spring, green, crisps]}
+
+- id: bananas
+  name: Bananas
+  category: Fruit & veg
+  per: kg
+  north: {any: [muz], not: [aroma, cips, kurusu, sut, puree, yogurt, kek]}
+  south: {any: [banana], not: [chips, dried, milk, puree, yoghurt, cake, flavour]}
+
+- id: apples
+  name: Apples
+  category: Fruit & veg
+  per: kg
+  north: {any: [elma], not: [suyu, sirke, kurusu, cips, cay, aroma, puree]}
+  south: {any: [apple], not: [juice, vinegar, dried, chips, tea, flavour, puree, pie]}
+
+- id: lemons
+  name: Lemons
+  category: Fruit & veg
+  per: kg
+  north: {any: [limon], not: [suyu, sos, aroma, tuzu, cay, kolonya, deterjan, sabun, kek]}
+  south: {any: [lemon], not: [juice, sauce, flavour, tea, detergent, soap, cake, lemonade]}
+
+- id: eggs-15
+  name: Eggs (price for 15)
+  category: Dairy & eggs
+  per: 15 pc
+  north: {any: [yumurta], not: [cikolata, kinder, boya, makarna, surprise, surpriz]}
+  south: {any: [eggs, avga], not: [chocolate, kinder, pasta, noodles, surprise]}

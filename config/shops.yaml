@@ -1,0 +1,76 @@
+# Which websites to read every day.
+#
+# To switch a shop off, set `enabled: false`.
+# To add a North shop, copy one block, change the id/name/addresses, and pick
+# a `type`:
+#   shop_html    any shop with listing pages (works out names/prices itself)
+#   woocommerce  WordPress shops (fast JSON feed, falls back to pages)
+#   ekalathi     the South government price list (only one of these)
+
+ekalathi:
+  enabled: true
+  type: ekalathi
+  side: S
+  page_size: 100
+  # only_chains: [Lidl, Sklavenitis]   # uncomment to limit chains
+  skip_chains: []
+
+starling:
+  enabled: true
+  type: shop_html
+  side: N
+  store: Starling Supermarket
+  town: Alsancak, Girne
+  base_url: https://www.starlingsupermarket.com
+  start_url: https://www.starlingsupermarket.com/
+  category_link: "/kategori/"          # menu links that lead to listing pages
+  product_link: "/urun/"               # links that lead to a product page
+  page_param: sayfa                    # IdeaSoft shops page with ?sayfa=2
+  max_pages: 40
+  maps: "https://www.google.com/maps/search/?api=1&query=Starling+Supermarket+Karao%C4%9Flano%C4%9Flu+Cad.+No+68+Alsancak+Girne"
+  # selectors:                         # only if the automatic reader gets it wrong
+  #   card: ".showcase"
+  #   name: ".showcase-title"
+  #   price: ".showcase-price-new"
+
+sarper:
+  enabled: true
+  type: woocommerce
+  side: N
+  store: Sarper Market
+  town: Gazimağusa
+  base_url: https://www.sarpermarket.com
+  start_url: https://www.sarpermarket.com/
+  category_link: "/urun-grubu/"
+  product_link: "/urunler/"
+  page_param: "page/{n}/"              # WordPress pages look like /page/2/
+  max_pages: 60
+  maps: "https://www.google.com/maps/search/?api=1&query=Sarper+Market+Gazima%C4%9Fusa"
+
+hapci:
+  enabled: true
+  type: shop_html
+  side: N
+  store: Hapcı Market
+  town: Girne
+  base_url: https://kibrisonlinemarket.com
+  start_url: https://kibrisonlinemarket.com/m/hapci-market-girne
+  category_urls:
+    - https://kibrisonlinemarket.com/m/hapci-market-girne
+  product_link: "/(urun|product|p)/"
+  page_param: page
+  max_pages: 60
+  maps: "https://www.google.com/maps/search/?api=1&query=Hap%C3%A7%C4%B1+Market+Girne"
+
+sonmar:
+  enabled: false                       # TODO: web address of SonMar's online shop
+  type: shop_html
+  side: N
+  store: SonMar Market
+  town: Girne
+  base_url: https://REPLACE-ME
+  start_url: https://REPLACE-ME
+  category_link: "/kategori/"
+  product_link: "/urun/"
+  page_param: page
+  maps: "https://www.google.com/maps/search/?api=1&query=SonMar+Market+Girne"
