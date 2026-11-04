@@ -12,8 +12,8 @@ ekalathi:
   type: ekalathi
   side: S
   page_size: 100
-  # only_chains: [Lidl, Sklavenitis]   # uncomment to limit chains
-  skip_chains: []
+  branches_per_product: 8           # cheapest stores kept per product
+  # skip_chains: [Metro]               # uncomment to leave chains out
 
 starling:
   enabled: true
@@ -48,7 +48,7 @@ sarper:
   maps: "https://www.google.com/maps/search/?api=1&query=Sarper+Market+Gazima%C4%9Fusa"
 
 hapci:
-  enabled: true
+  enabled: false                       # its product list is drawn by JavaScript; needs a browser-based reader
   type: shop_html
   side: N
   store: Hapcı Market

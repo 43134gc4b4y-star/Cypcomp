@@ -182,7 +182,9 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
                 log.warning("%s: %s", cfg["id"], e)
                 break
             except Exception as e:  # noqa: BLE001
-                log.warning("%s: %s failed: %s", cfg["id"], url, e)
+                status = getattr(getattr(e, "response", None), "status_code", None)
+                if not (n > 1 and status == 404):   # 404 after page 1 = past the last page
+                    log.warning("%s: %s failed: %s", cfg["id"], url, e)
                 break
             found = jsonld_products(page, url) or cards(page, url, cfg["product_link"], cfg.get("selectors"))
             new = [f for f in found if f["url"] not in seen_on_cat]

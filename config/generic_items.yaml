@@ -98,7 +98,7 @@
   name: Butter (any brand, per kg)
   category: Milk & dairy
   per: kg
-  north: {any: [tereyag, "butter"], not: [tereyagli, hamur, milfoy, borek, pogaca, kruvasan, kraker, margarin, kurabiye, aroma, bisküvi, biskuvi, kek, krem, "fistik", "peanut", sos, cips, misir]}
+  north: {any: [tereyag, "butter"], not: [chicken, tavuk, masala, sos, tereyagli, hamur, milfoy, borek, pogaca, kruvasan, kraker, margarin, kurabiye, aroma, bisküvi, biskuvi, kek, krem, "fistik", "peanut", sos, cips, misir]}
   south: {cat: [butter and margatine], any: [butter], not: [margarine, spread, spreadable, flora, becel, "peanut"]}
 
 - id: water

@@ -116,29 +116,27 @@ def ekalathi_routes():
         {"productMasterId": 2312, "name": "Nescafe Classic 100g", "startPrice": 4.19,
          "productCategoryNameEnglish": "Coffee"},
         {"productMasterId": 7, "name": "Charalambides Fresh Milk 1L", "startPrice": 1.37},
-        {"productMasterId": 900, "name": "Tomatoes Loose (per kg)", "startPrice": 2.10},
     ]
-    chain_prices = {453: {2194: 4.65, 2195: 4.65, 2312: 4.19, 7: 1.37, 900: 2.10},
-                    480: {2194: 4.35, 2195: 4.45, 2312: 4.49, 900: 2.49}}
+    prices = {2194: [("ΣΚΛΑΒΕΝΙΤΗΣ", 4.35), ("LIDL", 4.65)], 2195: [("ΣΚΛΑΒΕΝΙΤΗΣ", 4.45), ("LIDL", 4.65)],
+              2312: [("LIDL", 4.19), ("ΣΚΛΑΒΕΝΙΤΗΣ", 4.49)], 7: [("LIDL", 1.37)]}
 
-    def plist(url):
-        if "companyIds=" in url:
-            cid = int(url.split("companyIds=")[1])
-            rows = [{**p, "startPrice": chain_prices[cid][p["productMasterId"]]}
-                    for p in catalogue if p["productMasterId"] in chain_prices[cid]]
-            return {"content": rows, "last": True}
-        return {"content": catalogue, "last": True}
+    def branches(url):
+        pid = int(url.split("productId=")[1].split("&")[0])
+        return {"content": [{"companyName": c, "name": c + " Λεμεσός", "retailerProductPrice": p,
+                             "postalAddress": "Street 1, Limassol", "branchLatitude": "34°41'44.3\"N",
+                             "branchLongitude": "33°04'49.6\"E", "companyPhotoFile": "xxxx"} for c, p in prices[pid]]}
 
-    return {"fetch-companies": [{"id": 453, "name": "Lidl"}, {"id": 480, "name": "Sklavenitis"}],
-            "fetch-product-list": plist}
+    return {"retail/fetch-retail-branch-list": branches,
+            "fetch-product-list": {"content": catalogue, "last": True}}
 
 
-def test_ekalathi_prices_per_chain():
+def test_ekalathi_prices_per_branch():
     offers = ekalathi.scrape(FakeHttp(ekalathi_routes()), {})
     cola = [o for o in offers if o.product_id == "2194"]
-    assert {o.store: o.price for o in cola} == {"Lidl": 4.65, "Sklavenitis": 4.35}
+    assert [(o.store, o.price) for o in cola] == [("Sklavenitis", 4.35), ("Lidl", 4.65)]
     assert cola[0].image == "https://www.e-kalathi.gov.cy/img/2194.png"
     assert cola[0].url.endswith("/product-information/2194")
+    assert cola[0].maps.endswith("query=34.695639,33.080444")   # exact branch location
 
 
 # ----------------------------------------------------------- matching

@@ -25,9 +25,10 @@ def main():
     http = Http(delay=0.5)
     if cfg["type"] == "ekalathi":
         from .sources import ekalathi
-        print("chains:", ekalathi.companies(http)[:20])
         first = next(ekalathi.product_pages(http, 5), None)
         print("first product:", first)
+        for b in ekalathi.cheapest_branches(http, first["productMasterId"], 5):
+            print(f"  {b['retailerProductPrice']:>6}  {b.get('companyName')}  {b.get('name')}")
         return
     url = sys.argv[2] if len(sys.argv) > 2 else None
     if not url:
