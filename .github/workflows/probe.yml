@@ -1,0 +1,9 @@
+name: Probe (temporary)
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - run: python tools/probe_sites.py https://www.supermarketkibris.com https://www.dmarjet.com https://www.dmarjet.com/tr https://burdaburda.com
