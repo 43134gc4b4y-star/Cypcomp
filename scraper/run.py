@@ -101,14 +101,23 @@ def offer_json(o: Offer, rate: float) -> dict:
     return d
 
 
+def _cheapest_per_store(offers: list[dict]) -> list[dict]:
+    seen, out = set(), []
+    for o in offers:
+        if o["store"] not in seen:
+            seen.add(o["store"])
+            out.append(o)
+    return out
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
     for g in groups:
         n = sorted((offer_json(o, rate) for o in g.north), key=lambda x: x["eur"])
         s = sorted((offer_json(o, rate) for o in g.south), key=lambda x: x["eur"])
-        # one line per store: its cheapest price
-        n = list({x["store"]: x for x in reversed(n)}.values())[::-1]
-        s = list({x["store"]: x for x in reversed(s)}.values())[::-1]
+        # one line per store: its cheapest price (lists are already cheapest-first)
+        n = _cheapest_per_store(n)
+        s = _cheapest_per_store(s)
         bn, bs = n[0], s[0]
         diff = bs["eur"] - bn["eur"]
         win = "N" if diff > 0.005 else "S" if diff < -0.005 else "="

@@ -147,8 +147,9 @@ def N(name, price, store="Starling", url=None):
     return Offer(source="t", side="N", store=store, name=name, price=price, currency="TRY", url=url or name)
 
 
-def S(name, price, pid, store="Lidl"):
-    return Offer(source="ekalathi", side="S", store=store, name=name, price=price, currency="EUR", product_id=str(pid))
+def S(name, price, pid, store="Lidl", cat=""):
+    return Offer(source="ekalathi", side="S", store=store, name=name, price=price, currency="EUR", product_id=str(pid),
+                 category=cat)
 
 
 @pytest.fixture
@@ -187,13 +188,25 @@ def test_overrides(mcfg):
     assert [g.id for g in match(north, south, mcfg, ov)] == ["ek-7"]
 
 
-def test_generic_per_kg():
+def test_generic_milk_per_litre():
     items = run.load_yaml("generic_items.yaml")
-    north = [N("DOMATES KG", 79.9), N("DOMATES SALCASI 830 G", 90), N("CHERRY DOMATES 250 G", 40)]
-    south = [S("Tomatoes Loose (per kg)", 2.10, 900), S("Tomato paste 410g", 1.0, 901)]
-    g = [x for x in generic(north, south, items) if x.id == "gen-tomatoes"][0]
-    assert [o.name for o in g.north] == ["DOMATES KG"]
-    assert [o.name for o in g.south] == ["Tomatoes Loose (per kg)"]
+    north = [N("GULGUN UHT YAGLI SUT 1000 ML", 63.9), N("PINAR CIKOLATALI SUT 200 ML", 20), N("SUTAS AYRAN 1 LT", 40)]
+    south = [S("Alambra Fresh Cyprus Milk Full Fat (Blue) 2L", 2.70, 1, cat="FRESH MILK"),
+             S("Lanitis Chocolate Milk 1L", 1.5, 2, cat="FRESH MILK")]
+    g = [x for x in generic(north, south, items) if x.id == "gen-milk"][0]
+    assert [(o.name, o.price) for o in g.north] == [("GULGUN UHT YAGLI SUT 1000 ML", 63.9)]
+    assert [(o.name, o.price) for o in g.south] == [("Alambra Fresh Cyprus Milk Full Fat (Blue) 2L", 1.35)]  # per litre
+
+
+def test_cheapest_store_comes_first():
+    offers = [{"store": "A", "eur": 1.0}, {"store": "B", "eur": 2.0}, {"store": "B", "eur": 3.0}, {"store": "A", "eur": 4.0}]
+    assert run._cheapest_per_store(offers) == [{"store": "A", "eur": 1.0}, {"store": "B", "eur": 2.0}]
+
+
+def test_brand_plus_size_with_filler_words(mcfg):
+    north = [N("TWIX CIKOLATA 50 G", 30), N("PRINGLES SALT&VINEGAR 165 G", 120)]
+    south = [S("Twix 50g Twin", 0.9, 10), S("Pringles Original 165g", 2.5, 11)]
+    assert {g.id for g in match(north, south, mcfg)} == {"ek-10"}   # flavour differs for Pringles
 
 
 # ----------------------------------------------------------- whole run
@@ -222,5 +235,4 @@ def test_end_to_end(tmp_path, monkeypatch):
     # North 295.20 TL = 5.90 EUR; South cheapest is Sklavenitis 4.35 -> South cheaper
     assert cola["cheaper"] == "S" and cola["south"][0]["store"] == "Sklavenitis"
     assert cola["north"][0]["eur"] == 5.9 and cola["north"][0]["try"] == 295.2
-    assert by["gen-tomatoes"]["cheaper"] == "N"   # 79.90 TL = 1.60 EUR vs 2.10 EUR -> North
     assert "ek-2195" in by  # zero matched with zero

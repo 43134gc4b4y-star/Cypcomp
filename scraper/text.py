@@ -152,3 +152,14 @@ def parse_size(name: str) -> Size | None:
 
 
 SIZE_TOKEN_RE = re.compile(r"^\d+([.,]\d+)?(kgr|kg|grams|gram|gr|gm|g|ml|cl|ltr|lt|l|x)?$")
+
+
+def size_codes(t: str) -> str:
+    """Nappy / clothing sizes: "S3", "size 3", "3 numara", "no:3", "beden 3" -> "sz3"."""
+    return re.sub(r"\b(?:s|size|no|numara|beden|n)\s?(\d{1,2})\b|\b(\d{1,2})\s?(?:numara|no|beden)\b",
+                  lambda mm: f" sz{mm.group(1) or mm.group(2)} ", t)
+
+
+def rule_text(name: str) -> str:
+    """Name as ' word word ' for keyword rules (space at both ends)."""
+    return " " + " ".join(size_codes(" ".join(tokens(name))).split()) + " "

@@ -12,7 +12,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 
 from .models import Offer
-from .text import SIZE_TOKEN_RE, Size, fold, parse_size, tokens
+from .text import SIZE_TOKEN_RE, Size, fold, parse_size, rule_text, size_codes, tokens
 
 
 class Matcher:
@@ -21,6 +21,8 @@ class Matcher:
         self.stop = {fold(w) for w in cfg.get("stopwords") or []}
         self.conflicts = {fold(w) for w in cfg.get("conflicts") or []}
         self.min_sim = float(cfg.get("min_similarity", 0.34))
+        self.filler = {self.synonyms.get(fold(w), fold(w)) for w in cfg.get("filler") or []}
+        self.generic_first = {fold(w) for w in cfg.get("not_brands") or []}
         # brand aliases, longest first so "coca cola zero" doesn't hit "cola"
         self.brand_aliases = sorted(
             ((" ".join(tokens(a)), name) for name, al in (cfg.get("brands") or {}).items()
@@ -37,9 +39,7 @@ class Matcher:
 
     def words(self, name: str, brand: str | None) -> set[str]:
         t = " ".join(tokens(name))
-        # nappy / clothing sizes: "S3", "size 3", "3 numara", "no 3", "beden 3" -> "sz3"
-        t = re.sub(r"\b(?:s|size|no|numara|beden|n)\s?(\d{1,2})\b|\b(\d{1,2})\s?(?:numara|no|beden)\b",
-                   lambda mm: f" sz{mm.group(1) or mm.group(2)} ", t)
+        t = size_codes(t)
         # drop pack sizes: "8x330 ml", "330ml x8", "1 lt", "12 li", "x8"
         t = re.sub(r"\b\d+\s*x\s*\d+\b|\bx\s*\d+\b|\b\d+\s*x\b", " ", t)
         t = re.sub(r"\b\d+\s*(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l|li|lu|adet|pcs|tem|temachia)?\b", " ", t)
@@ -57,16 +57,21 @@ class Matcher:
 
     def key(self, o: Offer) -> "Key":
         b = self.brand(o.name)
-        return Key(brand=b, size=parse_size(o.name), words=self.words(o.name, b))
+        w = self.words(o.name, b)
+        if re.search(r"\d\s*\+\s*\d|\bfree\b|bedava|hediye|\bal\s*\d\s*ode", fold(o.name)):
+            w.add("multibuy")   # "1+1", "3 al 2 ode", "+1 free" deals are not the single product
+        return Key(brand=b, size=parse_size(o.name), words=w)
 
     def score(self, a: "Key", b: "Key") -> float:
-        if not a.brand or a.brand != b.brand or not a.size or not a.size.same_as(b.size):
+        if not a.brand or a.brand != b.brand or not a.size or not a.size.same_as(b.size, tol=0.01):
             return 0.0
         diff = a.words ^ b.words
-        if diff & self.conflicts or any(re.fullmatch(r"sz\d+", w) for w in diff):
+        if diff & self.conflicts or "multibuy" in diff or any(re.fullmatch(r"sz\d+", w) for w in diff):
             return 0.0
-        if not a.words and not b.words:
-            return 1.0
+        ca, cb = a.words - self.filler, b.words - self.filler
+        if not ca or not cb:
+            return 0.6   # e.g. "Twix 50g Twin" vs "TWIX CIKOLATA 50 G"
+        a, b = Key(a.brand, a.size, ca), Key(b.brand, b.size, cb)
         inter = len(a.words & b.words)
         union = len(a.words | b.words) or 1
         sim = inter / union
@@ -102,6 +107,15 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
     overrides = overrides or {}
     forced = {str(x["north"]): str(x["south"]) for x in overrides.get("same", [])}
     banned = {(str(x["north"]), str(x["south"])) for x in overrides.get("different", [])}
+
+    # brands not in the list: a first word that starts product names on both sides
+    first_s = {tokens(o.name)[0] for o in south if tokens(o.name)}
+    first_n = {tokens(o.name)[0] for o in north if tokens(o.name)}
+    known = {a for a, _ in m.brand_aliases}
+    for w in sorted((first_s & first_n) - known - m.generic_first - set(m.synonyms) - m.stop):
+        if len(w) >= 3 and not w.isdigit():
+            m.brand_aliases.append((w, w.title()))
+    m.brand_aliases.sort(key=lambda x: -len(x[0]))
 
     # one anchor per e-kalathi product (all its chains together)
     anchors: dict[str, list[Offer]] = defaultdict(list)
@@ -145,49 +159,77 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
 
 # ---------------------------------------------------------------- generic items
 
-def _per_unit(o: Offer, per: str) -> float | None:
-    """Price for the item's `per` amount (kg / litre / N pieces)."""
-    size = parse_size(o.name)
-    pm = re.match(r"^\s*(\d+(?:\.\d+)?)?\s*(kg|l|litre|pc)\s*$", per)
+_COUNT_RE = re.compile(r"\b(\d{1,3})\s*(?:li|lu|adet|ad|pcs|pc|pieces|tem|temachia|eggs|avga|rolls?|rulo|r|yaprak|wipes)\b"
+                       r"|\bx\s*(\d{1,3})\b|\b(\d{1,3})\s*x\b")
+
+
+def _pieces(name: str) -> float | None:
+    t = fold(name)
+    mult = 1
+    m3 = re.search(r"\b(\d)\s*[x*]\s*(\d{1,3})\b", t)          # 3 x 72 wipes, 3*52 li
+    if m3:
+        return int(m3.group(1)) * int(m3.group(2))
+    m = _COUNT_RE.search(t)
+    if m:
+        n = int(next(g for g in m.groups() if g))
+        return n * mult if 1 <= n <= 400 else None
+    return None
+
+
+def per_unit(o: Offer, per: str, min_pieces: int = 1) -> float | None:
+    """Price for `per` of the product: "kg", "l", "100 g", "15 pc", "1 pc"."""
+    pm = re.match(r"^\s*(\d+(?:\.\d+)?)?\s*(kg|g|l|ml|pc)\s*$", per)
     if not pm:
         return None
     qty, unit = float(pm.group(1) or 1), pm.group(2)
-    if unit == "kg":
-        if size is None:
-            return o.price if re.search(r"\b(kg|kilo|kgr)\b", fold(o.name)) else None
-        return o.price / (size.total / 1000) * qty if size.unit == "g" and size.total else None
-    if unit in ("l", "litre"):
-        return o.price / (size.total / 1000) * qty if size and size.unit == "ml" and size.total else None
-    if unit == "pc":
-        n = re.search(r"\b(\d+)\s*'?\s*(?:li|lu|adet|pcs|pieces|tem|temachia|eggs|avga)?\b", fold(o.name))
-        if size and size.unit == "pc":
-            return o.price / size.total * qty
-        if n and 2 <= int(n.group(1)) <= 60:
-            return o.price / int(n.group(1)) * qty
-    return None
+    size = parse_size(o.name)
+    if unit in ("kg", "g"):
+        grams = qty * (1000 if unit == "kg" else 1)
+        if size and size.unit == "g" and size.total:
+            return o.price / size.total * grams
+        if size is None and re.search(r"\b(kg|kilo|kgr)\b", fold(o.name)):
+            return o.price / 1000 * grams
+        return None
+    if unit in ("l", "ml"):
+        ml = qty * (1000 if unit == "l" else 1)
+        return o.price / size.total * ml if size and size.unit == "ml" and size.total else None
+    n = size.total if size and size.unit == "pc" else _pieces(o.name)
+    return o.price / n * qty if n and n >= min_pieces else None
+
+
+def _rule_ok(o: Offer, rule: dict) -> bool:
+    t = rule_text(o.name)
+    has = lambda w: (" " + fold(w).strip() + (" " if w.endswith(" ") else "")) in t  # noqa: E731
+    if rule.get("cat") and not any(fold(c) in fold(o.category) for c in rule["cat"]):
+        return False
+    if rule.get("any") and not any(has(w) for w in rule["any"]):
+        return False
+    if any(not any(has(w) for w in group) for group in rule.get("all", [])):
+        return False
+    return not any(has(w) for w in rule.get("not", []))
 
 
 def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[Group]:
     out = []
     for it in items:
+        per = it.get("per", "kg")
         sides = {}
         for side, offers in (("north", north), ("south", south)):
-            rule = it.get(side) or {}
-            anyw = [fold(w) for w in rule.get("any", [])]
-            notw = [fold(w) for w in rule.get("not", [])]
             picked = []
             for o in offers:
-                t = " " + " ".join(tokens(o.name)) + " "
-                if any(f" {w}" in t for w in anyw) and not any(f" {w}" in t for w in notw):
-                    pu = _per_unit(o, it.get("per", "kg"))
-                    if pu:
-                        c = Offer(**{**o.to_dict(), "price": round(pu, 2)})
-                        c.extra = {**o.extra, "shelf_price": o.price, "shelf_name": o.name}
-                        picked.append(c)
+                if not _rule_ok(o, it.get(side) or {}):
+                    continue
+                pu = per_unit(o, per, int(it.get("min_pieces", 1)))
+                if pu and pu > 0:
+                    c = Offer(**{**o.to_dict(), "price": round(pu, 2)})
+                    c.extra = {**o.extra, "shelf_price": o.price, "shelf_name": o.name}
+                    picked.append(c)
             sides[side] = picked
         if sides["north"] and sides["south"]:
-            out.append(Group(id=f"gen-{it['id']}", name=it["name"], unit=f"per {it.get('per', 'kg')}",
+            label = per if re.match(r"^\d", per) else f"1 {per}"
+            out.append(Group(id=f"gen-{it['id']}", name=it["name"], unit=f"price per {label.replace(' pc', '')}",
                              category=it.get("category", ""), north=sides["north"], south=sides["south"],
                              kind="generic",
-                             note="Cheapest of any brand/variety, worked out per " + it.get("per", "kg")))
+                             note=f"Cheapest of any brand, worked out per {label.replace(' pc', ' item' if label.startswith('1 ') else ' items')}. "
+                                  "Shelf product shown under each store."))
     return out

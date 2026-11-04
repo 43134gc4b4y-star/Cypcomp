@@ -1,62 +1,147 @@
-# Everyday items compared regardless of brand (fruit & veg, eggs, bread...).
-# For each side the app takes the cheapest product whose name contains one of
-# the `any` words and none of the `not` words, priced per `per` (kg, litre,
-# or a fixed number of pieces).
+# Everyday items compared regardless of brand.
+# For each side the app takes the cheapest product that matches the rule,
+# priced per `per` (kg, l, "100 g", "15 pc", "1 pc" ...).
 #
-# Words are lowercase without accents (ş -> s, ı -> i, ü -> u ...).
+# Rule keys (all words lowercase, no accents: ş->s, ı->i, ü->u, ğ->g, ç->c, ö->o):
+#   any:  the name contains at least one of these (word start)
+#   all:  a list of lists - the name must contain one word from EACH list
+#   not:  the name contains none of these
+#   cat:  (South only) the e-kalathi category contains one of these
+# End a word with a space ("un ") to match only that whole word.
+# The South (e-kalathi) has no fresh fruit or vegetables, so none are listed.
 
-- id: tomatoes
-  name: Tomatoes
-  category: Fruit & veg
+- id: milk
+  name: Fresh milk (any brand)
+  category: Milk & dairy
+  per: l
+  north: {any: ["sut ", "suet", "pastorize", "gunluk sut", "uht"], not: [cikolata, kakao, muz, cilek, kahve, toz, ayran, kefir, protein, badem, soya, yulaf, hindistan, sutlu, krema, bebek, devam, keci, mama, latte, puding, sutlac, kek, gofret, cips, biskuvi, laktozsuz, light, yarim, "200 ml", "180 ml"]}
+  south: {cat: [fresh milk], not: [chocolate, goat, lactose, light, "0%", skimmed, "1%", "semi"]}
+
+- id: milk-lactose-free
+  name: Lactose-free milk (any brand)
+  category: Milk & dairy
+  per: l
+  north: {any: [laktozsuz], all: [[sut]], not: [cikolata, kakao, muz, cilek, kahve, yogurt, peynir]}
+  south: {cat: [fresh milk], any: [lactose]}
+
+- id: halloumi
+  name: Halloumi (any brand)
+  category: Cheese
   per: kg
-  north: {any: [domates], not: [cherry, ceri, kurusu, salca, sos, konserve, rendesi, suyu, pure, ketcap]}
-  south: {any: [tomato], not: [cherry, sauce, paste, puree, canned, tin, juice, ketchup, dried, chopped, peeled]}
+  north: {any: [hellim, halloumi], not: [kizartma, tost, sandvic, borek, boregi, sigara, pide, pogaca, gozleme, pizza, cips, tatli, ravioli, salata, kroket]}
+  south: {cat: [halloumi], not: [grill, sandwich, pizza]}
 
-- id: potatoes
-  name: Potatoes
-  category: Fruit & veg
+- id: feta
+  name: Feta / white cheese (any brand)
+  category: Cheese
   per: kg
-  north: {any: [patates], not: [cips, kizartma, dondurulmus, puresi, salata, tatli]}
-  south: {any: [potato], not: [crisps, chips, frozen, fries, puree, salad, sweet]}
+  north: {any: [feta, "beyaz peynir"], not: [light, pizza, borek, salata, krem]}
+  south: {cat: [cheese], any: [feta], not: [light]}
 
-- id: cucumbers
-  name: Cucumbers
-  category: Fruit & veg
-  per: kg
-  north: {any: [salatalik, hiyar], not: [tursu, kornison]}
-  south: {any: [cucumber], not: [pickle, pickled, gherkin]}
-
-- id: onions
-  name: Onions
-  category: Fruit & veg
-  per: kg
-  north: {any: [sogan], not: [toz, granul, halka, cips, yesil, taze]}
-  south: {any: [onion], not: [powder, rings, spring, green, crisps]}
-
-- id: bananas
-  name: Bananas
-  category: Fruit & veg
-  per: kg
-  north: {any: [muz], not: [aroma, cips, kurusu, sut, puree, yogurt, kek]}
-  south: {any: [banana], not: [chips, dried, milk, puree, yoghurt, cake, flavour]}
-
-- id: apples
-  name: Apples
-  category: Fruit & veg
-  per: kg
-  north: {any: [elma], not: [suyu, sirke, kurusu, cips, cay, aroma, puree]}
-  south: {any: [apple], not: [juice, vinegar, dried, chips, tea, flavour, puree, pie]}
-
-- id: lemons
-  name: Lemons
-  category: Fruit & veg
-  per: kg
-  north: {any: [limon], not: [suyu, sos, aroma, tuzu, cay, kolonya, deterjan, sabun, kek]}
-  south: {any: [lemon], not: [juice, sauce, flavour, tea, detergent, soap, cake, lemonade]}
-
-- id: eggs-15
+- id: eggs
   name: Eggs (price for 15)
-  category: Dairy & eggs
+  category: Milk & dairy
   per: 15 pc
-  north: {any: [yumurta], not: [cikolata, kinder, boya, makarna, surprise, surpriz]}
-  south: {any: [eggs, avga], not: [chocolate, kinder, pasta, noodles, surprise]}
+  north: {any: [yumurta], not: [cikolata, kinder, boya, makarna, surpriz, erişte, eriste, bildircin, kalip, pisirici, mayonez]}
+  south: {cat: [eggs], not: [chocolate, quail]}
+
+- id: instant-coffee
+  name: Instant coffee (any brand, per 100 g)
+  category: Coffee
+  per: 100 g
+  north: {any: [nescafe, "granul kahve", "hazir kahve", jacobs, "instant coffee"], not: [2in1, 3in1, arada, biskuvi, gofret, cikolata, kek, sut, "3u 1", "3 u 1", "2si 1", "2 si 1", "3in1", cappuccino, latte, kremali, stick, sutlu, gold, decaf, kafeinsiz, mate, frappe, "turk kahve", "turkish", espresso, beans, cekirdek, filtre, filter, makine, kupa, kapsul, kreması, kremasi, kahvesi]}
+  south: {cat: [instant coffee], not: [gold, decaf, "3in1", "3 in 1", cappuccino]}
+
+- id: cyprus-coffee
+  name: Cyprus / Turkish coffee (per 100 g)
+  category: Coffee
+  per: 100 g
+  north: {any: ["turk kahve", "kibris kahve", "kahve dunyasi turk", "dibek"], not: [makine, fincan, cezve, kupa, cikolata, "3u 1", "seker"]}
+  south: {cat: [cyprus coffee]}
+
+- id: rice
+  name: Rice (any type, per kg)
+  category: Pantry
+  per: kg
+  north: {any: [pirinc, "rice"], not: [unu, sutlac, patlak, cips, krem, gevrek, sirke, kraker, makarna, sake, "pirinc unu"]}
+  south: {cat: [rice]}
+
+- id: pasta
+  name: Dry pasta (any brand, per kg)
+  category: Pantry
+  per: kg
+  north: {any: [makarna, spagetti, spaghetti, penne, fusilli, burgu, kelebek], not: [sos, salata, hazir, cup, bardak, noodle, tavuk, bebek, maskarpone, kapak, suzgec, tencere]}
+  south: {cat: [pasta and pasta sauces], not: [sauce, pesto, napoletana, bolognese, sugo]}
+
+- id: flour
+  name: Flour (any brand, per kg)
+  category: Pantry
+  per: kg
+  north: {any: ["un ", "bugday unu", "flour"], not: [kurabiye, kek, mamul, gevrek, pasta, misir, pirinc, nohut, badem, hindistan, "un kurabiye", corek, galeta, "unlu"]}
+  south: {cat: [flour], not: [corn, rice, almond]}
+
+- id: sunflower-oil
+  name: Sunflower oil (per litre)
+  category: Pantry
+  per: l
+  north: {any: [aycicek, aycicegi, sunflower], all: [[yag, oil]], not: [mayonez, ton, sardalya, cips, margarin]}
+  south: {cat: [cooking oils], any: [sunflower]}
+
+- id: olive-oil
+  name: Olive oil (per litre)
+  category: Pantry
+  per: l
+  north: {any: [zeytinyag, "zeytin yag", "olive oil", sizma], not: [pirina, pomace, sprey, sabun, krem, sampuan, ton, sardalya, zeytinyagli, enginar, dolma, sarma, kozmetik, cilt, vucut]}
+  south: {cat: [olive oil], not: [pomace, "spray"]}
+
+- id: butter
+  name: Butter (any brand, per kg)
+  category: Milk & dairy
+  per: kg
+  north: {any: [tereyag, "butter"], not: [tereyagli, hamur, milfoy, borek, pogaca, kruvasan, kraker, margarin, kurabiye, aroma, bisküvi, biskuvi, kek, krem, "fistik", "peanut", sos, cips, misir]}
+  south: {cat: [butter and margatine], any: [butter], not: [margarine, spread, spreadable, flora, becel, "peanut"]}
+
+- id: water
+  name: Still water (per litre, any bottle size)
+  category: Drinks
+  per: l
+  north: {any: ["su "], not: [maden, gazli, aroma, meyve, mango, limon, cilek, sabun, sampuan, "su bardak", hortum, pompa, isitici, sebil, sise, matara, "su tabanca", "su kabi"]}
+  south: {cat: [water], not: [sparkling, soda, flavour, lemon]}
+
+- id: cola
+  name: Cola, regular (per litre)
+  category: Drinks
+  per: l
+  north: {any: ["coca cola", "kola ", pepsi, "cola "], not: [zero, light, diet, sekersiz, max, "kiraz", "cherry", vanilla, sakiz, "jelibon", "seker", "yasam"]}
+  south: {cat: [soft drinks], any: [cola, pepsi], not: [zero, light, max, free, diet, cherry]}
+
+- id: toilet-paper
+  name: Toilet paper (price per roll)
+  category: Paper & tissues
+  per: 1 pc
+  north: {any: ["tuvalet kagidi", "tuvalet kağıdı", "toilet"], not: [islak, nemli, sabun, temizleyici, tutacak, aparat]}
+  south: {cat: [toilet paper], any: [toilet, roll], not: [wet, tissue, kitchen]}
+
+# Nappies are not compared per piece: North shop names rarely say how many are in the pack.
+
+- id: baby-milk
+  name: Baby formula milk (any brand or stage, per kg)
+  category: Baby
+  per: kg
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], not: [biberon, emzik, kase, kasik, puree, bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  south: {cat: [baby milk], not: [cereal, rice, biscuit]}
+
+- id: wet-wipes
+  name: Baby wet wipes (per 100 wipes)
+  category: Baby
+  min_pieces: 20
+  per: 100 pc
+  north: {any: ["islak mendil", "islak havlu", "wet wipes"], not: [kolonya, makyaj, dezenfektan, yuzey, tuvalet, "kopek", "kedi"]}
+  south: {cat: [wet wipes]}
+
+- id: ice-cream
+  name: Ice cream tub (per litre)
+  category: Frozen
+  per: l
+  north: {any: [dondurma, "algida carte", "ice cream", magnum, "carte dor"], not: [kulah, sopa, cubuk, "mini", "kapsul", kaplama, "6 li", "4 lu", "makine", "kase"]}
+  south: {cat: [ice cream], not: [mini, multipack, "x4", "x6", stick, cone]}

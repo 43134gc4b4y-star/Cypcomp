@@ -133,6 +133,28 @@ brands:
   Lanitis: [lanitis]
   Pittas: [pittas]
   Kykkos: [kykkos]
+  Algida: [algida]
+  Cadbury: [cadbury]
+  Maltesers: [maltesers]
+  Galaxy: [galaxy]
+  McVitie's: [mcvities, mc vities]
+  Becel: [becel]
+  Nutricia: [nutricia, almiron]
+  Aptamil: [aptamil]
+  Weetabix: [weetabix]
+  Frico: [frico]
+  Arla: [arla]
+  Dettol: [dettol]
+  Pronto: [pronto]
+  Fructis: [fructis]
+  Lux: [lux]
+  Magnum: [magnum]
+  Bueno: [kinder bueno]
+  Fairy: [fairy]
+  Whiskas: [whiskas]
+  Gullon: [gullon]
+  Loacker: [loacker]
+  Nutella: [nutella]
 
 # Turkish / Greek words translated to English before comparing names.
 synonyms:
@@ -207,6 +229,39 @@ synonyms:
   tavuk: chicken
   dana: beef
   kola: cola
+  findikli: hazelnut
+  findik: hazelnut
+  sutlu: milk
+  cilek: strawberry
+  cilekli: strawberry
+  limon: lemon
+  limonlu: lemon
+  nane: mint
+  naneli: mint
+  vanilya: vanilla
+  vanilyali: vanilla
+  karamel: caramel
+  karamelli: caramel
+  badem: almond
+  bademli: almond
+  fistik: pistachio
+  fistikli: pistachio
+  tuzlu: salted
+  tuzsuz: unsalted
+  bitter: dark
+  teneke: can
+  tin: can
+  sirke: vinegar
+  sogan: onion
+  ekşi: sour
+  eksi: sour
+  krema: cream
+  orjinal: original
+  klasik: classic
+  sac: hair
+  kremi: conditioner
+  dus: shower
+  jeli: gel
   light: light
   diyet: diet
   kafeinsiz: decaf
@@ -231,9 +286,22 @@ conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, 
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio]
 
+# Words that only describe the kind of product ("chocolate", "biscuits", "can").
+# If one name has nothing left except these, brand + size is enough to pair.
+filler: [chocolate, biscuits, crisps, can, bottle, glass, twin, bar, wafer, cookies, gofret, sakiz, gum,
+         candy, drink, soda, juice, cereal, gevrek, coffee, tea, water, sparkling, paste, sauce, pack, multipack,
+         pouch, tub, jar, kase, folyo, foil, pet, cam, kutu, sise, gazoz, icecek, tablet, tableti, cikolata,
+         biskuvi, cips, super, boy, mega, mini, family]
+
 # Words ignored when comparing names.
 stopwords: [the, and, with, of, ile, ve, for, new, yeni, adet, li, lu, pcs, pack, x, tl, eur,
             koli, kampanya, indirim, firsat, promo, offer, tem, temachia, temaxia]
 
 # How similar the rest of the names must be (0 = anything, 1 = identical).
 min_similarity: 0.34
+
+# First words that are NOT brands (so they're never used to pair products).
+not_brands: [baby, fresh, spring, golden, elite, delta, flora, super, mega, mini, classic, original, premium,
+             family, natural, organic, bio, light, extra, gold, red, white, black, green, blue, new, big, pure,
+             dairy, cyprus, kibris, ekmek, milk, water, cheese, chocolate, cola, sut, su, organik, sweet, happy,
+             top, best, star, royal, prima, eco, life, active, fit, kids, my, la, le, el, il, the, mr, dr]

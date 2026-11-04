@@ -7,21 +7,15 @@ jobs:
       - run: |
           UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
           B=https://www.e-kalathi.gov.cy
-          curl -sL -A "$UA" $B/ -o index.html
-          grep -oE '(src|href)="[^"]+\.js"' index.html | head -20
-          for js in $(grep -oE 'src="[^"]+\.js"' index.html | sed 's/src="//;s/"$//'); do
-            case $js in http*) u=$js;; /*) u=$B$js;; *) u=$B/$js;; esac
-            curl -sL -A "$UA" "$u" -o "b_$(basename $js)"
-          done
-          ls -la
-          echo "=== API paths in bundles ==="
-          cat b_*.js | grep -oE '"/?(api/)?fetch-[A-Za-z0-9_-]+[^"]{0,80}' | sort | uniq -c | sort -rn | head -80
-          cat b_*.js | grep -oE '[`"'"'"'][^`"'"'"']{0,40}(fetch|get|find|search)-[a-z-]+[^`"'"'"']{0,60}' | sort -u | head -120
-          echo "=== companyIds usage ==="
-          cat b_*.js | grep -oE '.{0,120}companyIds.{0,120}' | head -10
-          cat b_*.js | grep -oE '.{0,160}productMasterId.{0,160}' | head -20
-          echo "=== product detail probe ==="
           A=$B/ekalathi-website-server/api
-          for ep in "fetch-product?id=34" "fetch-product-details?id=34" "fetch-product-information?id=34" "fetch-product-prices?id=34" "fetch-product-company-prices?id=34" "fetch-product-by-id?id=34" "fetch-product-info?productMasterId=34"; do
-            echo "--- $ep"; curl -s -A "$UA" "$A/$ep" | head -c 1500; echo
+          curl -sL -A "$UA" https://e-kalathi.b-cdn.net/main.b038af27db30db77.js -o m.js
+          echo "=== constructParams ==="; grep -oE 'constructParams\([a-z],"[^"]+"\)' m.js | sort -u
+          grep -oE '.{0,300}constructParams\(e,i\)\{.{0,600}' m.js | head -2
+          echo "=== branch-list context ==="; grep -oE '.{0,200}fetch-retail-branch-list.{0,200}' m.js | head -3
+          grep -oE '.{0,80}(branchName|retailBranch|companyName|branchPrice|distance)[A-Za-z]*.{0,80}' m.js | head -15
+          for q in "productId=34" "productId=34&page=0&size=50" "productId=34&page=0&size=50&orderField=PRICE&orderDirection=ASC" "productId=34&paging.page=0&paging.size=100"; do
+            echo "--- retail/fetch-retail-branch-list?$q"; curl -s -A "$UA" "$A/retail/fetch-retail-branch-list?$q" | head -c 2500; echo
+            echo "--- retail/fetch-common-retail-branch-list?$q"; curl -s -A "$UA" "$A/retail/fetch-common-retail-branch-list?$q" | head -c 800; echo
           done
+          echo "--- fetch-retail-branches"; curl -s -A "$UA" "$A/fetch-retail-branches" | head -c 1500; echo
+          echo "--- fetch-companies"; curl -s -A "$UA" "$A/fetch-companies" | head -c 800; echo
