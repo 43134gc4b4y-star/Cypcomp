@@ -47,7 +47,9 @@ def parse_number(s: str) -> float | None:
 def find_prices(text: str, require_currency: bool = True) -> list[float]:
     """All prices in a piece of text. By default only numbers next to a currency."""
     out = []
-    for m in PRICE_RE.finditer(text or ""):
+    # rejoin thousands split across HTML tags: "1. 007,25 TL" / "1 . 007,25" -> "1.007,25"
+    text = re.sub(r"(?<![\d.,])(\d{1,3})\s*([.,])\s+(\d{3}(?:[.,]\d{1,2})?)\b", r"\1\2\3", text or "")
+    for m in PRICE_RE.finditer(text):
         if require_currency and not (m.group("pre") or m.group("post")):
             continue
         v = parse_number(m.group("num"))

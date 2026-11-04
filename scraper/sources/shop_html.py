@@ -201,7 +201,10 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
 
 
 def to_offer(cfg: dict, f: dict) -> Offer:
-    name, barcode = split_barcode(f["name"])
+    raw = f["name"]
+    if cfg.get("name_strip"):
+        raw = re.sub(cfg["name_strip"], "", raw, flags=re.I).strip()
+    name, barcode = split_barcode(raw)
     return Offer(source=cfg["id"], side=cfg["side"], store=cfg["store"], name=name,
                  price=float(f["price"]), currency=cfg.get("currency", "TRY"), url=f["url"],
                  image=f.get("image", ""), category=f.get("category", ""),

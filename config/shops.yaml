@@ -67,6 +67,7 @@ unimar:
   start_url: https://www.unimarmarket.com/
   category_link: "/Kategori/"
   product_link: "/Urun/"
+  name_strip: "\\s*[ÜU]nimar S[üu]permarket\\s*$"   # the shop adds its name to every product
   page_param: sayfa
   max_pages: 40
   maps: "https://www.google.com/maps/search/?api=1&query=Unimar+Market+Gazima%C4%9Fusa"
