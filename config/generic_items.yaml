@@ -128,7 +128,7 @@
   name: Baby formula milk (any brand or stage, per kg)
   category: Baby
   per: kg
-  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], not: [biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
   south: {cat: [baby milk], not: [cereal, rice, biscuit]}
 
 - id: wet-wipes
@@ -192,7 +192,7 @@
   name: Potato crisps (any brand, per 100 g)
   category: Snacks
   per: 100 g
-  north: {any: [cips, chips, pringles, lays, ruffles, doritos], not: [kraker, tahil, cracker, misir, tortilla, nacho, doritos, cubuk, sebze, mercimek, nohut, sandvic]}
+  north: {any: [cips, chips, pringles, lays, ruffles, doritos], not: [iceland, "straight cut", "cut chips", donuk, dondurulmus, kizartma, frozen, mccain, kraker, tahil, cracker, misir, tortilla, nacho, doritos, cubuk, sebze, mercimek, nohut, sandvic]}
   south: {cat: [potato / corn / rice chips], not: [garidakia, popcorn, tortilla, nacho, doritos, corn, rice, puffs]}
 
 - id: milk-chocolate
@@ -333,7 +333,7 @@
   category: Personal care
   per: 1 pc
   min_pieces: 5
-  north: {any: ["hijyenik ped", "ped ", always, orkid, molped, "kotex"], not: [anydays, gunluk, liners, gunluk, "gunluk ped", liner, emzirme, gogus, yatak, kedi, kopek]}
+  north: {any: ["hijyenik ped", "ped ", always, orkid, molped, "kotex"], not: [daily, anydays, gunluk, liners, gunluk, "gunluk ped", liner, emzirme, gogus, yatak, kedi, kopek]}
   south: {cat: [sanitary napkins], not: [liners, daily, dailies, pantyliner, panty]}
 
 - id: adult-diapers
