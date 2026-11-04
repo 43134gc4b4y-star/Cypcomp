@@ -4,6 +4,21 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: pip install requests
-      - run: python tools/probe_sites.py https://www.supermarketkibris.com https://www.dmarjet.com https://www.dmarjet.com/tr https://burdaburda.com
+      - run: |
+          UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
+          A=https://www.e-kalathi.gov.cy/ekalathi-website-server/api/retail/fetch-retail-branch-list
+          for c in 453 471; do
+            echo "--- companyIds=$c"
+            curl -s -A "$UA" "$A?productId=34&page=0&size=2&sort=PRICE,ASC&companyIds=$c" | jq -c '{total:.totalElements, rows:[.content[]?|{companyName,name,retailerProductPrice}]}'
+          done
+          echo "--- dmarjet sitemap count"
+          curl -s -A "$UA" https://dmarjet.com/sitemap.xml | grep -o '<loc>[^<]*/product/[^<]*' | wc -l
+          U=$(curl -s -A "$UA" https://dmarjet.com/sitemap.xml | grep -o 'https://dmarjet.com/tr/product/[^<]*' | sed -n '50p'); echo $U
+          curl -s -A "$UA" "$U" -o p.html; echo bytes $(wc -c < p.html)
+          python3 - <<'PY'
+          import re,json
+          h=open('p.html',encoding='utf-8',errors='ignore').read()
+          for s in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',h,re.S)[:3]: print('LD', s[:600])
+          print('og', re.findall(r'<meta property="(?:og:title|product:price:amount)" content="([^"]+)"',h))
+          print('prices', re.findall(r'[\d.,]+\s*(?:₺|TL)',h)[:10])
+          PY
