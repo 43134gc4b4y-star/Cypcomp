@@ -57,7 +57,7 @@
 
   function others(list, cur) {
     return list.slice(1).map(function (o) {
-      var p = cur === "TRY" ? tl(o.try) : eur(o.eur);
+      var p = eur(o.eur) + ' <span class="pl">' + tl(o.try) + "</span>";
       var nm = safeUrl(o.url) ? '<a target="_blank" rel="noopener" href="' + esc(o.url) + '">' + esc(o.store) + "</a>" : esc(o.store);
       return "<div><span>" + nm + "</span><b>" + p + "</b></div>";
     }).join("");
@@ -70,13 +70,13 @@
     var img = safeUrl(it.image) ? '<img loading="lazy" alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
     var more = "";
     if (it.north.length > 1 || it.south.length > 1) {
-      more = '<details class="others"><summary>Other stores</summary><div class="olist"><div style="display:block">' + others(it.north, "TRY") +
+      more = '<details class="others"><summary>Other stores</summary><div class="olist"><div style="display:block">' + others(it.north, "EUR") +
         '</div><div style="display:block">' + others(it.south, "EUR") + "</div></div></details>";
     }
     var note = it.kind !== "exact" && it.note ? '<div class="note">' + esc(it.note) + (n.date ? " · " + esc(n.date) : "") + "</div>" : "";
     return '<article class="card"><div class="head"><div class="art">' + img + '</div><div class="ttl"><div class="name">' + esc(it.name) +
       '</div><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + badge + '</div><div class="sides">' +
-      side("NORTH", "N", n, it.cheaper === "N", "TRY") + side("SOUTH", "S", s, it.cheaper === "S", "EUR") + "</div>" + more + note + "</article>";
+      side("NORTH", "N", n, it.cheaper === "N", "EUR") + side("SOUTH", "S", s, it.cheaper === "S", "EUR") + "</div>" + more + note + "</article>";
   }
 
   function render() {
