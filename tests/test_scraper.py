@@ -25,6 +25,8 @@ def test_find_prices():
     assert find_prices("CEMER SU 0.5LT. 10.25 ₺") == [10.25]
     assert find_prices("€1.37") == [1.37]
     assert find_prices("PINAR 700 G") == []
+    assert find_prices("1097.25 TL") == [1097.25]
+    assert find_prices("12345,90 ₺") == [12345.9]
     assert find_prices("<b>1.</b> 007,25 TL".replace("<b>", "").replace("</b>", "")) == [1007.25]
 
 
