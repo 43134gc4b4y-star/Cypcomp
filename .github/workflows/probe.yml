@@ -6,16 +6,14 @@ jobs:
     steps:
       - run: |
           UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
-          B=https://www.e-kalathi.gov.cy
-          A=$B/ekalathi-website-server/api
-          curl -sL -A "$UA" https://e-kalathi.b-cdn.net/main.b038af27db30db77.js -o m.js
-          echo "=== constructParams ==="; grep -oE 'constructParams\([a-z],"[^"]+"\)' m.js | sort -u
-          grep -oE '.{0,300}constructParams\(e,i\)\{.{0,600}' m.js | head -2
-          echo "=== branch-list context ==="; grep -oE '.{0,200}fetch-retail-branch-list.{0,200}' m.js | head -3
-          grep -oE '.{0,80}(branchName|retailBranch|companyName|branchPrice|distance)[A-Za-z]*.{0,80}' m.js | head -15
-          for q in "productId=34" "productId=34&page=0&size=50" "productId=34&page=0&size=50&orderField=PRICE&orderDirection=ASC" "productId=34&paging.page=0&paging.size=100"; do
-            echo "--- retail/fetch-retail-branch-list?$q"; curl -s -A "$UA" "$A/retail/fetch-retail-branch-list?$q" | head -c 2500; echo
-            echo "--- retail/fetch-common-retail-branch-list?$q"; curl -s -A "$UA" "$A/retail/fetch-common-retail-branch-list?$q" | head -c 800; echo
+          A=https://www.e-kalathi.gov.cy/ekalathi-website-server/api/retail/fetch-retail-branch-list
+          curl -s -A "$UA" "$A?productId=34&page=0&size=3" -o r.json -w "bytes=%{size_download}\n"
+          jq -c '{totalElements,totalPages,size,last} ' r.json
+          jq -c '.content[0]|del(.companyPhotoFile)' r.json
+          jq -c '.content[]|del(.companyPhotoFile)|{name,companyName,price,productPrice,distance}' r.json
+          for s in "PRICE,ASC" "price,ASC" "PRODUCT_PRICE,ASC" "DEFAULT,ASC" "PRODUCT_START_PRICE,ASC"; do
+            echo "--- sort=$s"; curl -s -A "$UA" "$A?productId=34&page=0&size=5&sort=$s" | jq -c '[.content[]?|del(.companyPhotoFile)|(.companyName+" "+((.price//.productPrice//.finalPrice//"?")|tostring))]' 2>&1 | head -c 600; echo
           done
-          echo "--- fetch-retail-branches"; curl -s -A "$UA" "$A/fetch-retail-branches" | head -c 1500; echo
-          echo "--- fetch-companies"; curl -s -A "$UA" "$A/fetch-companies" | head -c 800; echo
+          curl -s -A "$UA" "$A?productId=34&page=0&size=300" -o all.json -w "all bytes=%{size_download}\n"
+          jq -c '{n:(.content|length), total:.totalElements}' all.json
+          jq -r '.content[]|del(.companyPhotoFile)|[.companyName, (.. |numbers|tostring)]|@tsv' all.json | head -5
