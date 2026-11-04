@@ -10,8 +10,8 @@ store, and a map link. Lira and euro prices are shown side by side.
 ```
  every morning (GitHub Actions, free)
         │
-        ├─ South: e-kalathi.gov.cy (government price list, ~476 products × every chain)
-        ├─ North: Starling, Sarper, Hapcı online shops (+ any shop you add)
+        ├─ South: e-kalathi.gov.cy (government price list, 476 products, cheapest branches)
+        ├─ North: Starling, Sarper, Nesdersan, Unimar, Kıbrıs Sanal Market (+ any shop you add)
         ├─ Exchange rate: European Central Bank
         ▼
  pair products  →  site/data/prices.json  →  website (GitHub Pages)
@@ -78,6 +78,17 @@ python -m scraper.diagnose starling    # check what the scraper sees on one page
 python -m pytest                       # tests
 cd site && python -m http.server       # view the site at http://localhost:8000
 ```
+
+## Shops checked but not included
+
+| Shop | Why |
+|---|---|
+| Alphamega, CQUARE, SupermarketCy (South) | Bot protection blocks automated visitors |
+| Bi-Sipariş, Cepbasket, Kesmar (North) | Bot protection or robots.txt says no |
+| Athienitis, Sklavenitis (South) | No online shop with prices |
+| Molto, Önder AVM (North) | No prices online (offers only as leaflet photos on Facebook) |
+| Hapcı (kibrisonlinemarket) | Products only load with JavaScript |
+| Erdener | Online shop holds template sample products, not real prices |
 
 ## Good to know
 
