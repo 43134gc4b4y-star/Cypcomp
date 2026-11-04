@@ -40,6 +40,8 @@ def test_find_prices():
     ("Nescafe Classic 200gr", Size("g", 200)),
     ("Halloumi 1kg", Size("g", 1000)),
     ("DOMATES KG", None),
+    ("SOFF YUMUSATICI 1400 LT", Size("ml", 1400)),
+    ("GULGUN GUNLUK SUT 1000 CL", Size("ml", 1000)),
 ])
 def test_parse_size(name, size):
     got = parse_size(name)

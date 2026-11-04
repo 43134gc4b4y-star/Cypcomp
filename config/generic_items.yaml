@@ -145,3 +145,215 @@
   per: l
   north: {any: [dondurma, "algida carte", "ice cream", magnum, "carte dor"], not: [kulah, sopa, cubuk, "mini", "kapsul", kaplama, "6 li", "4 lu", "makine", "kase"]}
   south: {cat: [ice cream], not: [mini, multipack, "x4", "x6", stick, cone]}
+
+- id: yoghurt-plain
+  name: Plain yoghurt (any brand, per kg)
+  category: Milk & dairy
+  per: kg
+  north: {any: [yogurt, yoghurt], not: [diet, light, "0 yag", meyveli, cilek, cikolata, muz, vanilya, icecek, ayran, kefir, protein, aroma, granola, kayisi, visne, orman, seftali, mango, sos, kurusu, mama, bebek, mayasi, puding, dondurma, kek, cips, krem]}
+  south: {cat: [yogurt], not: [fruit, strawberry, chocolate, vanilla, toppers, cereal, honey, drink, peach, cherry, berry, mango, banana]}
+
+- id: cheddar
+  name: Cheddar cheese (any brand, per kg)
+  category: Cheese
+  per: kg
+  north: {any: [cheddar, "cedar peynir"], not: [sos, cips, kraker, burger, tost]}
+  south: {cat: [cheese], any: [cheddar], not: [sauce, slices]}
+
+- id: cheese-slices
+  name: Cheese slices / toast cheese (per kg)
+  category: Cheese
+  per: kg
+  north: {any: ["dilim peynir", "dilimli", "tost peynir", "toast"], all: [[peynir, cheese, kasar, cheddar]], not: [krem, labne, beyaz]}
+  south: {cat: [cheese], any: [slices, toast], not: [cream]}
+
+- id: cream-cheese
+  name: Cream cheese (per kg)
+  category: Cheese
+  per: kg
+  north: {any: ["krem peynir", philadelphia, "cream cheese", labne], not: [kek, tatli, sos, kraker]}
+  south: {cat: [cheese], any: ["cream cheese", philadelphia, "cream ch"], not: [light]}
+
+- id: margarine
+  name: Margarine / spread (per kg)
+  category: Milk & dairy
+  per: kg
+  north: {any: [margarin], not: [kek, kurabiye, hamur]}
+  south: {cat: [butter and margatine], any: [margarine, spread, becel, flora, spry], not: [butter]}
+
+- id: cereal-cornflakes
+  name: Corn flakes (any brand, per kg)
+  category: Breakfast
+  per: kg
+  north: {any: ["corn flakes", cornflakes, "misir gevregi"], not: [cikolata, kakao, bal, meyve, bar, ballı]}
+  south: {cat: [breakfast cereals], any: ["corn flakes", cornflakes], not: [frosties, chocolate, honey]}
+
+- id: crisps
+  name: Potato crisps (any brand, per 100 g)
+  category: Snacks
+  per: 100 g
+  north: {any: [cips, chips, pringles, lays, ruffles, doritos], not: [kraker, tahil, cracker, misir, tortilla, nacho, doritos, cubuk, sebze, mercimek, nohut, sandvic]}
+  south: {cat: [potato / corn / rice chips], not: [garidakia, popcorn, tortilla, nacho, doritos, corn, rice, puffs]}
+
+- id: milk-chocolate
+  name: Milk chocolate bar (any brand, per 100 g)
+  category: Snacks
+  per: 100 g
+  north: {any: [cikolata, chocolate], all: [[sutlu, milk, "dairy milk"]], not: [cikolatali, burcak, digestive, biscuit, cookie, cookies, homeblest, findik, badem, fistik, bisküvi, biskuvi, gofret, kek, gevrek, icecek, sut ", puding, dondurma, krem, sos, kaplama, draje, mini, "kutu"]}
+  south: {cat: [chocolates], any: [milk, "dairy milk"], not: [hazelnut, almond, nut, biscuit, wafer, mini, celebration, tub, box, bueno]}
+
+- id: biscuits-digestive
+  name: Digestive biscuits (per kg)
+  category: Snacks
+  per: kg
+  north: {any: [digestive, "kepekli biskuvi"], not: [cikolata, cikolatali]}
+  south: {cat: [buscuits], any: [digestive], not: [chocolate]}
+
+- id: orange-juice
+  name: Orange juice (per litre)
+  category: Drinks
+  per: l
+  north: {any: ["portakal suyu", "portakal meyve suyu", "orange juice", "portakal %100"], not: [aroma, toz, tang, nektar, "meyveli icecek", gazli]}
+  south: {cat: [fruit and vegetable juices], any: [orange], not: [carrot, apple, mango, multi, peach, nectar, drink]}
+
+- id: sparkling-water
+  name: Sparkling / mineral water (per litre)
+  category: Drinks
+  per: l
+  north: {any: ["maden suyu", "soda ", sparkling], not: [aroma, meyveli, limon, mango, cilek, elma, karpuz, ananas, frenk, karadut, portakal, nar, kiraz, mandalina, ginger]}
+  south: {cat: [water], any: [sparkling, soda], not: [lemon, flavour]}
+
+- id: tuna
+  name: Canned tuna (per 100 g)
+  category: Pantry
+  per: 100 g
+  north: {any: ["ton balig", "ton bal", tuna], not: [salata, sandvic, pizza, mama, kedi]}
+  south: {cat: [canned fish], any: [tuna], not: [salad, pate]}
+
+- id: ketchup
+  name: Ketchup (per kg)
+  category: Pantry
+  per: kg
+  north: {any: [ketcap, ketchup], not: [cips, sos ", acili]}
+  south: {cat: [sauces and dressings], any: [ketchup], not: [hot, spicy]}
+
+- id: mayonnaise
+  name: Mayonnaise (per kg)
+  category: Pantry
+  per: kg
+  north: {any: [mayonez, mayonnaise], not: [light, sos ", ketcap, hardal]}
+  south: {cat: [sauces and dressings], any: [mayonnaise], not: [light]}
+
+- id: frozen-peas
+  name: Frozen peas (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [bezelye], all: [[donuk, dondurulmus, superfresh, feast, iceland, emborg, sff]], not: [havuc, garnitur, konserve, cam]}
+  south: {cat: [frozen vegetables], any: [peas], not: [carrot, mix, corn]}
+
+- id: frozen-fries
+  name: Frozen chips / fries (per kg)
+  category: Frozen
+  per: kg
+  north: {any: ["patates kizartma", "parmak patates", fries, "elma dilim", "dondurulmus patates"], not: [cips, baharat, makine]}
+  south: {cat: [frozen vegetables and potato], any: [fries, chips, potato, wedges], not: [sweet, croquette]}
+
+- id: frozen-pizza
+  name: Frozen pizza (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [pizza], all: [[donuk, dondurulmus, superfresh, dr oetker, "dr. oetker", ristorante, feast, iceland]], not: [sos, hamur, harc, kesici, tava, "pizza peyniri"]}
+  south: {cat: [frozen pasta, pizza], any: [pizza], not: [mini, bites]}
+
+- id: ham-turkey
+  name: Sliced turkey / chicken ham (per kg)
+  category: Cold cuts
+  per: kg
+  north: {any: ["hindi fume", "hindi jambon", "tavuk jambon", "hindi salam", "fume hindi", "turkey"], not: [sucuk, sosis, pastirma, kavurma, but, kanat, govde, butun]}
+  south: {cat: [cold cuts], any: [turkey, chicken], not: [sausage, frankfurter, pork, bacon]}
+
+- id: sausages
+  name: Sausages / frankfurters (per kg)
+  category: Cold cuts
+  per: kg
+  north: {any: [sosis, frankfurter], not: [ekmek, sandvic, pizza, "sosis tava", kedi, kopek]}
+  south: {cat: [cold cuts], any: [sausage, frankfurter, hot dog], not: [pork]}
+
+- id: dry-cat-food
+  name: Dry cat food (per kg)
+  category: Pets
+  per: kg
+  north: {any: ["kedi mama", "cat food", "kuru kedi"], all: [[kuru, dry, yetiskin, adult, whiskas, felix, "pro plan", "royal canin", purina, "cat chow", "reflex", "n d"]], not: [islak, pouch, konserve, odul, "sos ", "85 g", "100 g", jole, jelly]}
+  south: {cat: [animal food], any: [cat, whiskas, felix, friskies], all: [[dry, kg]], not: [wet, pouch, can, dog]}
+
+- id: dry-dog-food
+  name: Dry dog food (per kg)
+  category: Pets
+  per: kg
+  north: {any: ["kopek mama", "dog food", "kuru kopek"], not: [islak, konserve, odul, biscrok, markies, kemik, stick, "sos "]}
+  south: {cat: [animal food], any: [dog, pedigree], not: [biscrok, treat, wet, can, cat]}
+
+- id: fabric-softener
+  name: Fabric softener (per litre)
+  category: Cleaning
+  per: l
+  north: {any: [yumusatici, softener, "camasir yumusatici", lenor, comfort, vernel, yumos, softlan], not: [kagit, mendil, sprey, "bebek deterjani"]}
+  south: {cat: [fabric softeners]}
+
+- id: shampoo
+  name: Shampoo (any brand, per litre)
+  category: Personal care
+  per: l
+  north: {any: [sampuan, shampoo], not: [kopek, kedi, hali, oto, araba, kuru, "sac kremi", conditioner, "2 si 1", "2si1", "2in1", "3 u 1", bebek, baby, mini, seyahat, travel]}
+  south: {cat: [shampoos and conditioners], any: [shampoo], not: [conditioner, baby, "2in1", "2 in 1", mini]}
+
+- id: liquid-soap
+  name: Liquid hand soap (per litre)
+  category: Personal care
+  per: l
+  north: {any: ["sivi sabun", "el sabunu", handwash, "hand wash"], not: [bulasik, camasir, "kati sabun"]}
+  south: {cat: [soaps], any: [handwash, "hand wash", liquid, cream wash], not: [bar, bath, shower]}
+
+- id: bar-soap
+  name: Bar soap (per 100 g)
+  category: Personal care
+  per: 100 g
+  north: {any: [sabun], not: [sivi, bulasik, camasir, "el sabunu", kalip, dispenser, kap, "sabunluk", "sabun kutusu", koku, "sabun koku", kopek, kedi]}
+  south: {cat: [soaps], any: [soap, bar, beauty], not: [liquid, handwash, wash, bath, shower, refill]}
+
+- id: kitchen-roll
+  name: Kitchen roll (price per roll)
+  category: Paper & tissues
+  per: 1 pc
+  north: {any: ["kagit havlu", "kitchen roll", "kitchen towel"], not: [tutacak, aparat, islak]}
+  south: {cat: [napkings and kitchen roll], any: [kitchen, roll, towel], not: [napkins]}
+
+- id: sanitary-pads
+  name: Sanitary pads (per pad)
+  category: Personal care
+  per: 1 pc
+  min_pieces: 5
+  north: {any: ["hijyenik ped", "ped ", always, orkid, molped, "kotex"], not: [anydays, gunluk, liners, gunluk, "gunluk ped", liner, emzirme, gogus, yatak, kedi, kopek]}
+  south: {cat: [sanitary napkins], not: [liners, daily, dailies, pantyliner, panty]}
+
+- id: adult-diapers
+  name: Adult incontinence pads / diapers (per piece)
+  category: Personal care
+  per: 1 pc
+  min_pieces: 5
+  north: {any: ["yetiskin bezi", "hasta bezi", "mesane bezi", tena], not: [ortu, alez]}
+  south: {cat: [adult diapers]}
+
+- id: dish-liquid
+  name: Washing-up liquid (per litre)
+  category: Cleaning
+  per: l
+  north: {any: ["bulasik deterjan", "elde bulasik", fairy, pril, "sivi bulasik"], not: [tablet, kapsul, makine, "makinesi", parlatici, tuz, temizleyici, eldiven]}
+  south: {cat: [household cleaning], any: [fairy, "washing up", dish, "lemon liquid"], not: [tablet, caps, dishwasher, machine]}
+
+- id: bleach
+  name: Bleach (per litre)
+  category: Cleaning
+  per: l
+  north: {any: ["camasir suyu", domestos, bleach], not: [jel ", sprey, mendil]}
+  south: {cat: [household cleaning], any: [bleach, domestos, "clorox"], not: [cleaner, smac, "with bleach", spray, wipes, gel ", toilet]}

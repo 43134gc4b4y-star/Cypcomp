@@ -139,8 +139,9 @@ def parse_size(name: str) -> Size | None:
         pass  # take the last explicit size in the name
     if m:
         unit, mult = _UNITS[m.group(2)]
-        if m.group(2) == "cl" and float(m.group(1)) >= 100:
-            mult = 1  # "1000 CL" is a typo for 1000 ml
+        q = float(m.group(1))
+        if (m.group(2) == "cl" and q >= 100) or (mult == 1000 and q > 60):
+            mult = 1  # typos: "1000 CL", "1400 LT", "500 KG" mean ml / g
         each = float(m.group(1)) * mult
         c = _COUNT_X.search(s)
         count = int(c.group(1) or c.group(2)) if c else 1
