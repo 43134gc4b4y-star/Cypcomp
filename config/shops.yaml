@@ -86,7 +86,7 @@ kibrissanal:
   maps: "https://www.google.com/maps/search/?api=1&query=K%C4%B1br%C4%B1s+Sanal+Market+Lefko%C5%9Fa"
 
 erdener:
-  enabled: true
+  enabled: false                       # its online shop only holds template sample products, not real prices
   type: woocommerce
   side: N
   store: Erdener Supermarket

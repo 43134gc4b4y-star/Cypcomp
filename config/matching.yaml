@@ -284,7 +284,8 @@ synonyms:
 conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
             red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
-            chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio]
+            chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
+            wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi]
 
 # Words that only describe the kind of product ("chocolate", "biscuits", "can").
 # If one name has nothing left except these, brand + size is enough to pair.
