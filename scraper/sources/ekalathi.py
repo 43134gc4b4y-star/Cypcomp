@@ -36,7 +36,9 @@ def chain_name(name: str) -> str:
     for gr, en in sorted(CHAIN_NAMES.items(), key=lambda x: -len(x[0])):
         if gr in name:
             name = name.replace(gr, en)
-    return name.title() if name.isupper() else name
+    if name.isupper():
+        name = " ".join(w.capitalize() for w in name.split(" "))   # "MARY'S" -> "Mary's"
+    return name
 
 
 def dms_to_decimal(s: str) -> float | None:

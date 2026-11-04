@@ -294,7 +294,7 @@ def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[G
                     c = Offer(**{**o.to_dict(), "price": round(pu, 2)})
                     c.extra = {**o.extra, "shelf_price": o.price, "shelf_name": o.name}
                     picked.append(c)
-            sides[side] = drop_outliers(picked)
+            sides[side] = drop_outliers(picked, 0.25) if side == "north" else picked   # misread labels come from North pages
         if sides["north"] and sides["south"]:
             label = per if re.match(r"^\d", per) else f"1 {per}"
             out.append(Group(id=f"gen-{it['id']}", name=it["name"], unit=f"price per {label.replace(' pc', '')}",
