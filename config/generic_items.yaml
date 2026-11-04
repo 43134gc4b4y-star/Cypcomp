@@ -128,7 +128,7 @@
   name: Baby formula milk (any brand or stage, per kg)
   category: Baby
   per: kg
-  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], not: [biberon, emzik, kase, kasik, puree, bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], not: [biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
   south: {cat: [baby milk], not: [cereal, rice, biscuit]}
 
 - id: wet-wipes
@@ -269,7 +269,7 @@
   name: Sliced turkey / chicken ham (per kg)
   category: Cold cuts
   per: kg
-  north: {any: ["hindi fume", "hindi jambon", "tavuk jambon", "hindi salam", "fume hindi", "turkey"], not: [sucuk, sosis, pastirma, kavurma, but, kanat, govde, butun]}
+  north: {any: ["hindi fume", "hindi jambon", "tavuk jambon", "hindi salam", "fume hindi", "turkey"], not: [cat, kedi, kopek, dog, simba, mama, pet, sucuk, sosis, pastirma, kavurma, but, kanat, govde, butun]}
   south: {cat: [cold cuts], any: [turkey, chicken], not: [sausage, frankfurter, pork, bacon]}
 
 - id: sausages
@@ -297,7 +297,7 @@
   name: Fabric softener (per litre)
   category: Cleaning
   per: l
-  north: {any: [yumusatici, softener, "camasir yumusatici", lenor, comfort, vernel, yumos, softlan], not: [kagit, mendil, sprey, "bebek deterjani"]}
+  north: {any: [yumusatici, softener, "camasir yumusatici", lenor, comfort, vernel, yumos, softlan], not: [kova, kovasi, mop, paspas, vivident, sakiz, kagit, mendil, sprey, "bebek deterjani"]}
   south: {cat: [fabric softeners]}
 
 - id: shampoo
@@ -326,7 +326,7 @@
   category: Paper & tissues
   per: 1 pc
   north: {any: ["kagit havlu", "kitchen roll", "kitchen towel"], not: [tutacak, aparat, islak]}
-  south: {cat: [napkings and kitchen roll], any: [kitchen, roll, towel], not: [napkins]}
+  south: {cat: [napkings and kitchen roll], any: [kitchen, roll, towel], not: [napkins, professional, "x1 "]}
 
 - id: sanitary-pads
   name: Sanitary pads (per pad)
