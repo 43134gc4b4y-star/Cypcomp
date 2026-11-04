@@ -36,3 +36,14 @@ for base in SITES:
             print(f"{path} allowed={ok} {r.status_code} {len(r.text)} :: {body[:300]}")
         except Exception as e:
             print(path, "ERR", e)
+
+# extra: list all internal links of the two sites to spot shop/campaign pages
+for base in SITES:
+    try:
+        html = S.get(base, timeout=25).text
+    except Exception:
+        continue
+    links = sorted(set(re.findall(r'href="([^"#]+)"', html)))
+    print("\n--- links on", base, len(links))
+    for l in links[:120]:
+        print("  ", l)

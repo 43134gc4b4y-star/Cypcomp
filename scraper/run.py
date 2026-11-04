@@ -25,12 +25,12 @@ from . import fx
 from .match import Group, generic, match
 from .models import Offer
 from .net import Http
-from .sources import ekalathi, shop_html, woocommerce
+from .sources import ekalathi, shop_html, shopify, woocommerce
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 SITE_DATA = ROOT / "site" / "data"
-SCRAPERS = {"ekalathi": ekalathi.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape}
+SCRAPERS = {"ekalathi": ekalathi.scrape, "shopify": shopify.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape}
 
 log = logging.getLogger("compare-cyprus")
 

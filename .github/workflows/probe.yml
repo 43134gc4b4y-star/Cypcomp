@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install requests
-      - run: python tools/probe_sites.py https://www.alphamega.com.cy https://c2c.com.cy https://supermarketcy.com.cy https://www.cyprus-supermarket.com https://www.athienitis.com https://www.sklavenitis.com.cy https://www.nesdersan.com https://www.unimarmarket.com https://www.kibrissanalmarket.com https://www.erdenersupermarket.com https://greenbluemarket.com https://bi-siparis.com https://www.cepbasket.com
+      - run: python tools/probe_sites.py https://www.moltomarket.com https://onderalisverismerkezi.com https://www.onderalisverismerkezi.com

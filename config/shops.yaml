@@ -5,6 +5,7 @@
 # a `type`:
 #   shop_html    any shop with listing pages (works out names/prices itself)
 #   woocommerce  WordPress shops (fast JSON feed, falls back to pages)
+#   shopify      Shopify shops (full JSON catalogue)
 #   ekalathi     the South government price list (only one of these)
 
 ekalathi:
@@ -46,6 +47,56 @@ sarper:
   page_param: "page/{n}/"              # WordPress pages look like /page/2/
   max_pages: 60
   maps: "https://www.google.com/maps/search/?api=1&query=Sarper+Market+Gazima%C4%9Fusa"
+
+nesdersan:
+  enabled: true
+  type: shopify
+  side: N
+  store: Nesdersan
+  town: Lefkoşa
+  base_url: https://nesdersan.com
+  maps: "https://www.google.com/maps/search/?api=1&query=Nesdersan+Lefko%C5%9Fa"
+
+unimar:
+  enabled: true
+  type: shop_html
+  side: N
+  store: Unimar Market
+  town: Gazimağusa
+  base_url: https://www.unimarmarket.com
+  start_url: https://www.unimarmarket.com/
+  category_link: "/Kategori/"
+  product_link: "/Urun/"
+  page_param: sayfa
+  max_pages: 40
+  maps: "https://www.google.com/maps/search/?api=1&query=Unimar+Market+Gazima%C4%9Fusa"
+
+kibrissanal:
+  enabled: true
+  type: shop_html                      # WordPress shop; its robots.txt closes the JSON feed, so pages are read
+  side: N
+  store: Kıbrıs Sanal Market
+  town: Lefkoşa
+  base_url: https://www.kibrissanalmarket.com
+  start_url: https://www.kibrissanalmarket.com/
+  category_link: "/urun-grubu/"
+  product_link: "/urunler/"
+  page_param: "page/{n}/"
+  max_pages: 60
+  maps: "https://www.google.com/maps/search/?api=1&query=K%C4%B1br%C4%B1s+Sanal+Market+Lefko%C5%9Fa"
+
+erdener:
+  enabled: true
+  type: woocommerce
+  side: N
+  store: Erdener Supermarket
+  town: Girne
+  base_url: https://erdenersupermarket.com
+  start_url: https://erdenersupermarket.com/
+  category_link: "/urun-kategori/"
+  product_link: "/urun/"
+  page_param: "page/{n}/"
+  maps: "https://www.google.com/maps/search/?api=1&query=Erdener+Supermarket+Girne"
 
 hapci:
   enabled: false                       # its product list is drawn by JavaScript; needs a browser-based reader
