@@ -7,13 +7,13 @@ jobs:
       - run: |
           UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
           A=https://www.e-kalathi.gov.cy/ekalathi-website-server/api/retail/fetch-retail-branch-list
-          for c in 453 471; do
+          for c in; do
             echo "--- companyIds=$c"
             curl -s -A "$UA" "$A?productId=34&page=0&size=2&sort=PRICE,ASC&companyIds=$c" | jq -c '{total:.totalElements, rows:[.content[]?|{companyName,name,retailerProductPrice}]}'
           done
           echo "--- dmarjet sitemap count"
-          curl -s -A "$UA" https://dmarjet.com/sitemap.xml | grep -o '<loc>[^<]*/product/[^<]*' | wc -l
-          U=$(curl -s -A "$UA" https://dmarjet.com/sitemap.xml | grep -o 'https://dmarjet.com/tr/product/[^<]*' | sed -n '50p'); echo $U
+          curl -s -A "$UA" https://www.dmarjet.com/sitemap.xml | grep -o '<loc>[^<]*/product/[^<]*' | wc -l
+          U=$(curl -s -A "$UA" https://www.dmarjet.com/sitemap.xml | grep -o 'https://dmarjet.com/tr/product/[^<]*' | sed -n '50p'); echo $U
           curl -s -A "$UA" "$U" -o p.html; echo bytes $(wc -c < p.html)
           python3 - <<'PY'
           import re,json
