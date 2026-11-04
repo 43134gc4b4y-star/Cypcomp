@@ -1,6 +1,6 @@
 {
 "source": "ekalathi",
-"fetched_at": "2026-11-04T05:31:55+00:00",
+"fetched_at": "2026-11-04T06:18:04+00:00",
 "offers": [
 {
 "source": "ekalathi",
@@ -13305,6 +13305,158 @@
 {
 "source": "ekalathi",
 "side": "S",
+"store": "Athienitis NICOSIA MALL",
+"name": "Flora Margarine Original 450g Tub",
+"price": 1.95,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "Athienitis Nicosia Mall",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.134528,33.278917",
+"extra": {
+"address": "Μαδρίτης 2 (Nicosia Mall), 2306  Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis ΠΑΛΛΟΥΡΙΩΤΙΣΣΑ",
+"name": "Flora Margarine Original 450g Tub",
+"price": 1.95,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "Athienitis Παλλουριώτισσα",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.172167,33.377917",
+"extra": {
+"address": "Τζων Κέννεντυ 26,1046 Παλουριώτισσα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - The Fresh Market",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.29,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "MAS - THE FRESH MARKET 2 Γερμασόγεια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.692722,33.080056",
+"extra": {
+"address": "Γεωργίου Α' Glykis court, 4040, shop 5-7  Γερμασόγεια Λεμεσός",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - The Fresh Market",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.29,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "MAS - THE FRESH MARKET Γερμασόγεια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.699611,33.097389",
+"extra": {
+"address": "Προφήτη Ηλία 3Α, 4046, Γερμασόγεια Λεμεσός",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Mary'S Market",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "Mas - Mary’S Market",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.687833,33.026028",
+"extra": {
+"address": "Eric Mendelsohn 3, (Naafi area) 3501 Λεμεσός",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Mary'S Market",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "Mas - Mary’S Veggies",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.688222,33.030917",
+"extra": {
+"address": "Le Corbusier 47, (Naafi area) 3501 Λεμεσός",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Lidl",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"extra": {
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Lidl",
+"name": "Flora Margarine Original 450g Tub",
+"price": 2.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/961",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
+"category": "BUTTER AND MARGATINE",
+"barcode": "",
+"product_id": "961",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"extra": {
+"address": "Αξιού 81, 2311 Λακατάμια",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
 "store": "Stelios",
 "name": "Straggato Yoghurt Authentic Charalambides Christis 450g",
 "price": 1.95,
@@ -19835,158 +19987,6 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=34.687833,33.026028",
 "extra": {
 "address": "Eric Mendelsohn 3, (Naafi area) 3501 Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - The Fresh Market",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.29,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "MAS - THE FRESH MARKET Γερμασόγεια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.699611,33.097389",
-"extra": {
-"address": "Προφήτη Ηλία 3Α, 4046, Γερμασόγεια Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - The Fresh Market",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.29,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "MAS - THE FRESH MARKET 2 Γερμασόγεια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.692722,33.080056",
-"extra": {
-"address": "Γεωργίου Α' Glykis court, 4040, shop 5-7  Γερμασόγεια Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Mary'S Market",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.35,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "Mas - Mary’S Veggies",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.688222,33.030917",
-"extra": {
-"address": "Le Corbusier 47, (Naafi area) 3501 Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Mary'S Market",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.35,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "Mas - Mary’S Market",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.687833,33.026028",
-"extra": {
-"address": "Eric Mendelsohn 3, (Naafi area) 3501 Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Lidl",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
-"extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Lidl",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
-"extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Lidl",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "LIDL Αραδίππου",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.936917,33.590917",
-"extra": {
-"address": "Λεωφ.Ελευθερίας 7, 7102 Αραδίππου",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Lidl",
-"name": "Flora Margarine Original 450g Tub",
-"price": 2.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/961",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000961/10000961_thumb.png",
-"category": "BUTTER AND MARGATINE",
-"barcode": "",
-"product_id": "961",
-"town": "LIDL Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.935139,33.639111",
-"extra": {
-"address": "Φυλίρας1-7, 6059 Λάρνακα",
 "offer": false
 }
 },
@@ -32884,10 +32884,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "7",
-"town": "Ioannides Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
+"town": "Ioannides Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
 "extra": {
-"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
+"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
 "offer": false
 }
 },
@@ -32903,10 +32903,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "7",
-"town": "Ioannides Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
+"town": "Ioannides Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
 "extra": {
-"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
+"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
 "offer": false
 }
 },
@@ -49566,25 +49566,6 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "893",
-"town": "SUPER DISCOUNT STORE Ζακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
-"extra": {
-"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Agios Georgios Livio Pomace Olive Oil 1L (S/O)",
-"price": 3.89,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/893",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000893/10000893_thumb.png",
-"category": "OLIVE OIL",
-"barcode": "",
-"product_id": "893",
 "town": "SUPER DISCOUNT STORE Αστρομερίτης",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
 "extra": {
@@ -49604,29 +49585,10 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "893",
-"town": "SUPER DISCOUNT STORE Ανθούπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
+"town": "SUPER DISCOUNT STORE Ακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
 "extra": {
-"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Agios Georgios Livio Pomace Olive Oil 1L (S/O)",
-"price": 3.89,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/893",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000893/10000893_thumb.png",
-"category": "OLIVE OIL",
-"barcode": "",
-"product_id": "893",
-"town": "SUPER DISCOUNT STORE Δερύνειας",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
-"extra": {
-"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
 "offer": false
 }
 },
@@ -49661,10 +49623,48 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "893",
-"town": "SUPER DISCOUNT STORE Ακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
+"town": "SUPER DISCOUNT STORE Δερύνειας",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
 "extra": {
-"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
+"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Agios Georgios Livio Pomace Olive Oil 1L (S/O)",
+"price": 3.89,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/893",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000893/10000893_thumb.png",
+"category": "OLIVE OIL",
+"barcode": "",
+"product_id": "893",
+"town": "SUPER DISCOUNT STORE Ζακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
+"extra": {
+"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Agios Georgios Livio Pomace Olive Oil 1L (S/O)",
+"price": 3.89,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/893",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000893/10000893_thumb.png",
+"category": "OLIVE OIL",
+"barcode": "",
+"product_id": "893",
+"town": "SUPER DISCOUNT STORE Ανθούπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
+"extra": {
+"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
 "offer": false
 }
 },
@@ -60947,10 +60947,10 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "896",
-"town": "SUPER DISCOUNT STORE Ανθούπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
+"town": "SUPER DISCOUNT STORE Ακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
 "extra": {
-"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
+"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
 "offer": false
 }
 },
@@ -60985,10 +60985,10 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "896",
-"town": "SUPER DISCOUNT STORE Ακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
+"town": "SUPER DISCOUNT STORE Ανθούπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
 "extra": {
-"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
+"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
 "offer": false
 }
 },
@@ -62277,29 +62277,10 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "916",
-"town": "Sklavenitis Τσερίου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
+"town": "Sklavenitis Λατσιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110778,33.383167",
 "extra": {
-"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Sklavenitis",
-"name": "MONINI EXTRA VIRGIN OLIVE OIL 500ML",
-"price": 6.5,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/916",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000916/10000916_thumb.png",
-"category": "OLIVE OIL",
-"barcode": "",
-"product_id": "916",
-"town": "Sklavenitis Έγκωμη",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.142583,33.311250",
-"extra": {
-"address": "Λυκαβητού 40, 2401 Λευκωσία",
+"address": "Λεωφόρος Αρχιεπισκόπου Μακαρίου Γ' 56, 2220 Λευκωσία",
 "offer": true
 }
 },
@@ -62334,10 +62315,29 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "916",
-"town": "Sklavenitis Λατσιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110778,33.383167",
+"town": "Sklavenitis Τσερίου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
 "extra": {
-"address": "Λεωφόρος Αρχιεπισκόπου Μακαρίου Γ' 56, 2220 Λευκωσία",
+"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "MONINI EXTRA VIRGIN OLIVE OIL 500ML",
+"price": 6.5,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/916",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000916/10000916_thumb.png",
+"category": "OLIVE OIL",
+"barcode": "",
+"product_id": "916",
+"town": "Sklavenitis Έγκωμη",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.142583,33.311250",
+"extra": {
+"address": "Λυκαβητού 40, 2401 Λευκωσία",
 "offer": true
 }
 },
@@ -62866,25 +62866,6 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2925",
-"town": "MAS - KARSERAS Αγία Φύλα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.697278,33.010750",
-"extra": {
-"address": "Αγίας Φυλάξεως 253, 3116, Αγία Φύλα, Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Karseras",
-"name": "Sani Adults Pants No2 Medium 14 Pcs",
-"price": 6.95,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/2925",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002925/10002925_thumb.png",
-"category": "ADULT DIAPERS",
-"barcode": "",
-"product_id": "2925",
 "town": "MAS - KARSERAS Πολεμίδια",
 "maps": "https://www.google.com/maps/search/?api=1&query=34.697333,33.010833",
 "extra": {
@@ -62904,10 +62885,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2925",
-"town": "Mas - Mary’S Market",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.687833,33.026028",
+"town": "Mas - Mary’S Veggies",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.688222,33.030917",
 "extra": {
-"address": "Eric Mendelsohn 3, (Naafi area) 3501 Λεμεσός",
+"address": "Le Corbusier 47, (Naafi area) 3501 Λεμεσός",
 "offer": false
 }
 },
@@ -62923,10 +62904,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2925",
-"town": "Mas - Mary’S Veggies",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.688222,33.030917",
+"town": "Mas - Mary’S Market",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.687833,33.026028",
 "extra": {
-"address": "Le Corbusier 47, (Naafi area) 3501 Λεμεσός",
+"address": "Eric Mendelsohn 3, (Naafi area) 3501 Λεμεσός",
 "offer": false
 }
 },
@@ -62984,6 +62965,25 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
 "extra": {
 "address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Sani Adults Pants No2 Medium 14 Pcs",
+"price": 7.49,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/2925",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002925/10002925_thumb.png",
+"category": "ADULT DIAPERS",
+"barcode": "",
+"product_id": "2925",
+"town": "SUPER DISCOUNT STORE Ανθούπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
+"extra": {
+"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
 "offer": false
 }
 },
@@ -64823,6 +64823,25 @@
 "category": "ICE CREAM",
 "barcode": "",
 "product_id": "1933",
+"town": "SUPER DISCOUNT STORE Αστρομερίτης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
+"extra": {
+"address": "Τροόδους 10,Αστρομερίτης, 2722 Λευκωσία  ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "KRI-KRI HEARTMADE 3LT VAN-COCO-STRAW-PISTA FAMILY PACK",
+"price": 7.95,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1933",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001933/10001933_thumb.png",
+"category": "ICE CREAM",
+"barcode": "",
+"product_id": "1933",
 "town": "SUPER DISCOUNT STORE Λιβάδια",
 "maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
 "extra": {
@@ -64842,10 +64861,10 @@
 "category": "ICE CREAM",
 "barcode": "",
 "product_id": "1933",
-"town": "SUPER DISCOUNT STORE Ακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
+"town": "SUPER DISCOUNT STORE Καλό Χωριό",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
 "extra": {
-"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
+"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
 "offer": false
 }
 },
@@ -64865,25 +64884,6 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
 "extra": {
 "address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "KRI-KRI HEARTMADE 3LT VAN-COCO-STRAW-PISTA FAMILY PACK",
-"price": 7.95,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1933",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001933/10001933_thumb.png",
-"category": "ICE CREAM",
-"barcode": "",
-"product_id": "1933",
-"town": "SUPER DISCOUNT STORE Αστρομερίτης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
-"extra": {
-"address": "Τροόδους 10,Αστρομερίτης, 2722 Λευκωσία  ",
 "offer": false
 }
 },
@@ -64937,10 +64937,10 @@
 "category": "ICE CREAM",
 "barcode": "",
 "product_id": "1933",
-"town": "SUPER DISCOUNT STORE Καλό Χωριό",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
+"town": "SUPER DISCOUNT STORE Ακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
 "extra": {
-"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
+"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
 "offer": false
 }
 },
