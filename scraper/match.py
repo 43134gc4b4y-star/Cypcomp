@@ -144,6 +144,51 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
             joined[best].append(o)
 
     groups = []
+    # second pass: same product, different pack size -> compare per kg / litre / piece
+    if cfg.get("pack_size_pass", True):
+        min_sim = float(cfg.get("pack_size_min_similarity", 0.7))
+        north_by_brand: dict[str, list] = defaultdict(list)
+        for o in north:
+            kn = m.key(o)
+            if kn.brand and kn.size:
+                north_by_brand[kn.brand].append((o, kn))
+        for pid, s_offers in anchors.items():
+            if pid in joined:
+                continue
+            ka = akeys[pid]
+            if not ka.brand or not ka.size:
+                continue
+            best, best_s = [], 0.0
+            for o, kn in north_by_brand.get(ka.brand, []):
+                if kn.size.unit != ka.size.unit:
+                    continue
+                ratio = kn.size.total / ka.size.total
+                if not 0.2 <= ratio <= 5 or (o.url, pid) in banned:
+                    continue
+                if ("can" in ka.words) != ("can" in kn.words):
+                    continue   # cans vs bottles are priced differently per litre
+                ca, cn = ka.words - m.filler, kn.words - m.filler
+                if not (ca <= cn or cn <= ca) or len(ca ^ cn) > 1:
+                    continue   # same descriptive words, at most one extra (e.g. "Danish")
+                sc = m.score(Key(kn.brand, ka.size, kn.words), ka)   # compare names as if same size
+                if sc >= min_sim:
+                    if sc > best_s + 1e-9:
+                        best, best_s = [o], sc
+                    elif abs(sc - best_s) < 1e-9:
+                        best.append(o)
+            if best:
+                per = {"g": "kg", "ml": "l", "pc": "1 pc"}[ka.size.unit]
+                conv = lambda offs: [c for c in (_as_per_unit(x, per) for x in offs) if c]  # noqa: E731
+                n_c, s_c = conv(best), conv(s_offers)
+                if n_c and s_c:
+                    label = {"kg": "per kg", "l": "per litre", "1 pc": "per item"}[per]
+                    groups.append(Group(
+                        id=f"ps-{pid}", name=_base_name(s_offers[0].name), unit=f"price {label} · pack sizes differ",
+                        category=s_offers[0].category, north=n_c, south=s_c,
+                        image=s_offers[0].image, kind="generic",
+                        note=f"Same brand and product sold in different pack sizes, so compared {label}. "
+                             "Shelf pack shown under each store."))
+
     for pid, north_offers in joined.items():
         s_offers = anchors[pid]
         first = s_offers[0]
@@ -155,6 +200,22 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
             image=img,
         ))
     return groups
+
+
+def _base_name(name: str) -> str:
+    """'Doritos Nacho Cheese 180g' -> 'Doritos Nacho Cheese' (pack size removed)."""
+    t = re.sub(r"\s*\(?\d+(?:[.,]\d+)?\s*(?:kg|g|gr|ml|l|lt|cl|pcs|pieces)\b\)?(\s*[x×]\s*\d+)?", "", name, flags=re.I)
+    t = re.sub(r"\b\d+\s*[x×]\s*\d+(?:[.,]\d+)?\s*(?:g|ml|l)?\b", "", t, flags=re.I)
+    return re.sub(r"\s{2,}", " ", t).strip(" -,") or name
+
+
+def _as_per_unit(o: Offer, per: str) -> Offer | None:
+    pu = per_unit(o, per)
+    if not pu:
+        return None
+    c = Offer(**{**o.to_dict(), "price": round(pu, 2)})
+    c.extra = {**o.extra, "shelf_price": o.price, "shelf_name": o.name}
+    return c
 
 
 # ---------------------------------------------------------------- generic items
@@ -209,6 +270,15 @@ def _rule_ok(o: Offer, rule: dict) -> bool:
     return not any(has(w) for w in rule.get("not", []))
 
 
+def drop_outliers(offers: list[Offer], factor: float = 0.35) -> list[Offer]:
+    """Remove per-unit prices far below the rest (almost always a misread size or price)."""
+    if len(offers) < 3:
+        return offers
+    ps = sorted(o.price for o in offers)
+    median = ps[len(ps) // 2]
+    return [o for o in offers if o.price >= factor * median]
+
+
 def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[Group]:
     out = []
     for it in items:
@@ -224,7 +294,7 @@ def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[G
                     c = Offer(**{**o.to_dict(), "price": round(pu, 2)})
                     c.extra = {**o.extra, "shelf_price": o.price, "shelf_name": o.name}
                     picked.append(c)
-            sides[side] = picked
+            sides[side] = drop_outliers(picked)
         if sides["north"] and sides["south"]:
             label = per if re.match(r"^\d", per) else f"1 {per}"
             out.append(Group(id=f"gen-{it['id']}", name=it["name"], unit=f"price per {label.replace(' pc', '')}",

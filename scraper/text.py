@@ -130,11 +130,14 @@ def parse_size(name: str) -> Size | None:
     """Extract the pack size from a product name. Returns None if none found."""
     s = fold(name)
     s = re.sub(r"(\d),(\d)", r"\1.\2", s)
+    s = re.sub(r"\+\s*\d+(?:\.\d+)?\s*(?:g|gr|ml)\b\s*(?:free|bedava|hediye)?", " ", s)  # "400g+80g free" -> 400 g
     for rx, order in ((_MULTI1, "cqu"), (_MULTI2, "quc"), (_MULTI3, "cqu")):
         m = rx.search(s)
         if m:
             vals = dict(zip(order, m.groups()))
             unit, mult = _UNITS[vals["u"]]
+            if rx is _MULTI3 and unit == "g" and int(vals["c"]) >= 8:
+                return Size(unit, float(vals["q"]) * mult, 1)   # "16 li 200 g" = 16 pieces, 200 g in total
             return Size(unit, float(vals["q"]) * mult, int(vals["c"]))
     m = None
     for m in _SINGLE.finditer(s):

@@ -110,6 +110,28 @@ def _cheapest_per_store(offers: list[dict]) -> list[dict]:
     return out
 
 
+# e-kalathi categories -> the site's categories
+CATEGORY_MAP = [
+    (("MILK", "YOGURT", "EGGS", "BUTTER", "MARGA"), "Milk & dairy"), (("CHEESE", "HALLOUMI"), "Cheese"),
+    (("COFFEE",), "Coffee"), (("CEREAL", "MUSLI"), "Breakfast"),
+    (("CHOCOLATE", "BUSCUIT", "BISCUIT", "CHIPS", "ICE CREAM"), "Snacks"),
+    (("SOFT DRINK", "WATER", "JUICE"), "Drinks"), (("FROZEN",), "Frozen"), (("COLD CUTS",), "Cold cuts"),
+    (("BABY", "WET WIPES"), "Baby"), (("ANIMAL",), "Pets"), (("NUTS", "DRY FRUIT"), "Nuts & dried fruit"),
+    (("LAUNDRY", "FABRIC", "CLEANING"), "Cleaning"), (("TOILET", "NAPKIN"), "Paper & tissues"),
+    (("SHAMPOO", "SOAP", "SANITARY", "ADULT"), "Personal care"),
+    (("PASTA", "RICE", "FLOUR", "OIL", "SAUCE", "CANNED"), "Pantry"),
+]
+
+
+def tidy_category(c: str) -> str:
+    if not c or not c.isupper():
+        return c or "Other"
+    for keys, name in CATEGORY_MAP:
+        if any(k in c for k in keys):
+            return name
+    return c.title()
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
     for g in groups:
@@ -123,7 +145,7 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
         win = "N" if diff > 0.005 else "S" if diff < -0.005 else "="
         pct = abs(diff) / max(bn["eur"], bs["eur"]) * 100 if win != "=" else 0
         items.append({
-            "id": g.id, "name": g.name, "unit": g.unit, "category": g.category or "Other",
+            "id": g.id, "name": g.name, "unit": g.unit, "category": tidy_category(g.category),
             "kind": g.kind, "note": g.note, "image": g.image, "cheaper": win, "saving_pct": round(pct, 1),
             "north": n[:5], "south": s[:5], "north_count": len(n), "south_count": len(s),
         })

@@ -43,6 +43,9 @@ def test_find_prices():
     ("Nescafe Classic 200gr", Size("g", 200)),
     ("Halloumi 1kg", Size("g", 1000)),
     ("DOMATES KG", None),
+    ("Valio Edam 24% Slices 400g+80g FREE", Size("g", 400)),
+    ("SUTAS UCGEN PEYNIR 16 LI 200 G", Size("g", 200)),
+    ("SPRITE GAZOZ 1 LT 12 LI", Size("ml", 1000)),
     ("SOFF YUMUSATICI 1400 LT", Size("ml", 1400)),
     ("GULGUN GUNLUK SUT 1000 CL", Size("ml", 1000)),
 ])
@@ -239,3 +242,13 @@ def test_end_to_end(tmp_path, monkeypatch):
     assert cola["cheaper"] == "S" and cola["south"][0]["store"] == "Sklavenitis"
     assert cola["north"][0]["eur"] == 5.9 and cola["north"][0]["try"] == 295.2
     assert "ek-2195" in by  # zero matched with zero
+
+
+def test_pack_size_pass(mcfg):
+    north = [N("KERRYGOLD TEREYAGI TUZSUZ FOLYO 200 G", 275), N("NESCAFE GOLD BLEND ALTA RICA SISE 95 G", 495)]
+    south = [S("Kerrygold Butter Unsalted 250g Foil", 3.65, 20), S("Nescafé Gold Blend 190g Jar", 6.48, 21)]
+    groups = {g.id: g for g in match(north, south, mcfg)}
+    assert set(groups) == {"ps-20"}                       # Alta Rica is a different coffee
+    g = groups["ps-20"]
+    assert g.north[0].price == 1375.0 and g.south[0].price == 14.6   # both per kg
+    assert "pack sizes differ" in g.unit

@@ -285,7 +285,8 @@ conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, 
             red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
-            wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi]
+            wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi,
+            mix, spreadable, treat, odul]
 
 # Words that only describe the kind of product ("chocolate", "biscuits", "can").
 # If one name has nothing left except these, brand + size is enough to pair.

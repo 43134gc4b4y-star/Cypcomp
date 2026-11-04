@@ -357,3 +357,214 @@
   per: l
   north: {any: ["camasir suyu", domestos, bleach], not: [jel ", sprey, mendil]}
   south: {cat: [household cleaning], any: [bleach, domestos, "clorox"], not: [cleaner, smac, "with bleach", spray, wipes, gel ", toilet]}
+
+- id: almonds
+  name: Almonds (per kg)
+  category: Nuts & dried fruit
+  per: kg
+  north: {any: [badem, almond], all: [[cig, kavrulmus, naturel, natural, raw, roasted, tuzlu, tuzsuz, kuruyemis, peyman, tuccaroglu, cerci, bahceden, "ic badem", "badem ici", cerez]], not: [dus, jel, sabun, krem, losyon, bademli, musli, granola, gevrek, citir, balli, pop, corn, misir, "yer fistik", karisik, cips, kraker, bar, sekerleme, nutzz, dondurma, magnum, algida, cookie, mini, helva, pasta, cikolata, sut, sutu, yag, ezme, krem, kurabiye, unu, sabun, sampuan, sekeri, draje, bar, kek, gofret, sos, icecek, lokum, findik]}
+  south: {cat: [dry fruit and nuts], any: [almond, amygdal]}
+
+- id: cashews
+  name: Cashew nuts (per kg)
+  category: Nuts & dried fruit
+  per: kg
+  north: {any: ["kaju ", cashew], not: [kajun, baharat, cikolata, ezme, krem, bar, mix, karisik]}
+  south: {cat: [dry fruit and nuts], any: [cashew, kasious]}
+
+- id: mixed-nuts
+  name: Mixed nuts (per kg)
+  category: Nuts & dried fruit
+  per: kg
+  north: {any: ["karisik kuruyemis", "mixed nuts", "kokteyl kuruyemis", "karisik cerez", "lux karisik", "super karisik"], not: [cikolata, bar, meyve]}
+  south: {cat: [dry fruit and nuts], any: [mixed nuts]}
+
+- id: pistachios
+  name: Pistachios (per kg)
+  category: Nuts & dried fruit
+  per: kg
+  north: {any: ["antep fistik", "antep fistigi", pistachio, "fistik kavrulmus"], all: [[antep, pistachio]], not: [granola, kakao, musli, gevrek, fistikli, nutymax, solen, helva, halva, cikolata, ezme, krem, baklava, lokum, kurabiye, dondurma, gofret, tatli, kek, puding]}
+  south: {cat: [dry fruit and nuts], any: [xalepian, chalepian, pistach]}
+
+- id: fish-fingers
+  name: Fish fingers (per kg)
+  category: Frozen
+  per: kg
+  north: {any: ["balik parmak", "fish finger", "fish stick", "balik kroket", "balik stick"], not: [kedi, kopek, mama]}
+  south: {cat: [frozen fish], any: [fish fingers, fish sticks]}
+
+- id: battered-fish
+  name: Breaded / battered fish fillets (per kg)
+  category: Frozen
+  per: kg
+  north: {any: ["pane balik", "battered", "breaded", "kaplamali balik", "panelenmis balik", "cod fillet", "morina"], not: [kedi, kopek, mama, salata]}
+  south: {cat: [frozen fish], any: [battered, breaded], not: [fingers, sticks]}
+
+- id: shrimps
+  name: Cooked / peeled prawns (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [karides, shrimp, prawn], all: [[donuk, dondurulmus, frozen, haslanmis, ayiklanmis, cooked, peeled, iceland, superfresh, kg]], not: [skips, coctail, pringles, cocktail, chips, cips, cips, kraker, aroma, sos, cesni, kedi, cubuk, salata]}
+  south: {cat: [frozen fish], any: [garides, shrimp, prawn], not: [crab]}
+
+- id: salmon
+  name: Salmon fillets / portions (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [somon, salmon], not: [felix, whiskas, gourmet, purina, jel, jole, fume, smoked, kedi, kopek, mama, konserve, pate, ezme, cubuk, sos, yag, salata, kraker]}
+  south: {cat: [frozen fish], any: [salmon], not: [smoked]}
+
+- id: crab-sticks
+  name: Crab sticks / surimi (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [surimi, "yengec", "crab stick", "crab sticks"], not: [salata, sos]}
+  south: {cat: [frozen fish], any: [crab]}
+
+- id: oats
+  name: Oats / porridge (per kg)
+  category: Breakfast
+  per: kg
+  north: {any: ["yulaf ezme", "yulaf ezmesi", oats, porridge, "quaker"], not: [cikolata, bar, biskuvi, kurabiye, sut, icecek, granola, muesli, musli, meyveli, bal, kek, "yulaf sutu", krem]}
+  south: {cat: [breakfast cereals], any: [oats, oat bags], not: [chocolate, mpoukies]}
+
+- id: filo-pastry
+  name: Filo / yufka pastry (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [yufka, "filo ", phyllo, baklavalik], not: [dog, cat, kedi, kopek, borek, sigara, tatli, kesici, oklava]}
+  south: {cat: [frozen pasta, pizza and pastries], any: [fillo, filo, phyllo]}
+
+- id: puff-pastry
+  name: Puff pastry (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [milfoy, "puff pastry", "sfoliata"], not: [borek, tatli, poğaca, pogaca, kurabiye]}
+  south: {cat: [frozen pasta, pizza and pastries], any: [sfoliata, puff]}
+
+- id: ravioli
+  name: Ravioli (per kg)
+  category: Frozen
+  per: kg
+  north: {any: [ravioli, ravyoli, "ravioles", "ravyolli"], not: [sos, kalip, kesici]}
+  south: {cat: [frozen pasta, pizza and pastries], any: [ravioli, ravioles]}
+
+- id: bacon
+  name: Bacon (per kg)
+  category: Cold cuts
+  per: kg
+  north: {any: [bacon, "domuz pastirma"], not: [cips, aroma, cesni, sos, "hindi bacon", "dana bacon", "turkey bacon", kraker, "bacon bits", burger, pizza, peynir]}
+  south: {cat: [cold cuts], any: [bacon]}
+
+- id: ham
+  name: Sliced ham (per kg)
+  category: Cold cuts
+  per: kg
+  north: {any: [jambon, " ham ", "pork ham", "cooked ham", "domuz jambon"], not: [pilic, tav, hindi, tavuk, dana, "turkey", chicken, pizza, tost, sandvic, burger]}
+  south: {cat: [cold cuts], any: [ham sliced, " ham "], not: [turkey]}
+
+- id: salami
+  name: Salami (any meat, per kg)
+  category: Cold cuts
+  per: kg
+  north: {any: [salam, salami], not: [pizza, tost, sandvic, burger, "salamura", kedi, kopek]}
+  south: {cat: [cold cuts], any: [salami]}
+
+- id: edam
+  name: Edam / Gouda cheese (per kg)
+  category: Cheese
+  per: kg
+  north: {any: [edam, gouda], not: [rende, dilim, sos]}
+  south: {cat: [cheese], any: [edam, gouda]}
+
+- id: cottage-cheese
+  name: Cottage cheese (per kg)
+  category: Cheese
+  per: kg
+  north: {any: ["cottage", "cottage cheese", "lor peyniri"], not: [tatli, kek, krem]}
+  south: {cat: [cheese], any: [cottage], not: [protein]}
+
+- id: grated-cheese
+  name: Grated cheese (per kg)
+  category: Cheese
+  per: kg
+  north: {any: ["rende", rendelenmis, grated, "rende kasar", "rende peynir"], all: [[peynir, kasar, cheese, cheddar, parmesan, mozzarella, mozarella]], not: [rende ", "rende alet", "rende makine"]}
+  south: {cat: [cheese], any: [grated, trimma]}
+
+- id: cheese-portions
+  name: Spreadable cheese triangles (per kg)
+  category: Cheese
+  per: kg
+  north: {any: ["ucgen peynir", "la vache", "laughing cow", "porsiyon peynir", "ucgen", "happy cow ucgen", "kiri "], all: [[peynir, cheese, ucgen, kiri, vache]], not: [manti, kraker, burger, dilim]}
+  south: {cat: [cheese], any: ["portion", "vache qui rit portion"], not: [light, dippers]}
+
+- id: mozzarella
+  name: Mozzarella (per kg)
+  category: Cheese
+  per: kg
+  north: {any: [mozzarella, mozarella], not: [rende, pizza, stick, kroket, cubuk, sos]}
+  south: {cat: [cheese], any: [mozzarella], not: [grated, sticks]}
+
+- id: washing-powder
+  name: Laundry powder (per kg)
+  category: Cleaning
+  per: kg
+  north: {any: ["toz deterjan", "camasir deterjani toz", "matik"], all: [[toz, powder, matik]], not: [sivi, jel, kapsul, bulasik, "elde yikama", sabun]}
+  south: {cat: [laundry detergents], any: [powder, kg]}
+
+- id: washing-liquid
+  name: Laundry liquid / gel (per litre)
+  category: Cleaning
+  per: l
+  north: {any: ["sivi deterjan", "sivi camasir", "jel deterjan", "camasir jel", "laundry gel", "liquid detergent"], not: [bulasik, toz, kapsul, yumusatici, "elde", bebek, "yun", "siyah"]}
+  south: {cat: [laundry detergents], any: [gel, liquid, l ], not: [powder, pods, kg, baby, proderm, wool]}
+
+- id: laundry-pods
+  name: Laundry capsules / pods (per pod)
+  category: Cleaning
+  per: 1 pc
+  min_pieces: 8
+  north: {any: [kapsul, pods, caps], all: [[camasir, ariel, persil, fairy, omo, laundry, deterjan]], not: [bulasik, makine, dishwasher, kahve, coffee, vitamin, ilac]}
+  south: {cat: [laundry detergents], any: [pods, caps, capsules]}
+
+- id: cream-cleaner
+  name: Cream cleaner (Cif-type, per litre)
+  category: Cleaning
+  per: l
+  north: {any: ["krem temizleyici", "cif krem", "cif cream", "krem jel"], not: [cilt, yuz, el kremi, sac]}
+  south: {cat: [household cleaning], any: [cream], not: [spray]}
+
+- id: floor-cleaner
+  name: Floor / surface cleaner (per litre)
+  category: Cleaning
+  per: l
+  north: {any: ["yuzey temizleyici", "yer temizleyici", "genel temizlik", "zemin temizleyici", ajax, "fabuloso", "mr proper", "mr. proper"], not: [sprey, sprey, mendil, krem, "cam temizleyici", "banyo", "mutfak", "wc", "kirec", "tablet"]}
+  south: {cat: [household cleaning], any: [floor, ajax, "lavender 1000"], not: [spray, trigger, drain]}
+
+- id: drain-opener
+  name: Drain opener (per kg / litre equivalent)
+  category: Cleaning
+  per: l
+  north: {any: ["lavabo acici", "gider acici", drano, "drain"], not: [tablet, granul, toz]}
+  south: {cat: [household cleaning], any: [drano], not: [flup]}
+
+- id: apple-juice
+  name: Apple juice (per litre)
+  category: Drinks
+  per: l
+  north: {any: ["elma suyu", "elma meyve suyu", "apple juice", "%100 elma"], not: [aroma, toz, "meyveli icecek", gazli, sirke, karisik, havuc, nektar]}
+  south: {cat: [fruit and vegetable juices], any: [apple juice], not: [carrot, cocktail]}
+
+- id: mixed-juice
+  name: Mixed fruit juice (per litre)
+  category: Drinks
+  per: l
+  north: {any: ["karisik meyve suyu", "karisik meyve", "multi fruit", "kokteyl meyve", "multivitamin"], not: [aroma, toz, gazli, kurusu, recel, yogurt, kek, sekerleme]}
+  south: {cat: [fruit and vegetable juices], any: [cocktail, "5 fruit"]}
+
+- id: baby-cereal
+  name: Baby cereal / rice cream (per kg)
+  category: Baby
+  per: kg
+  north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
+  south: {cat: [baby food]}
