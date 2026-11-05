@@ -41,8 +41,8 @@ def _plain(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", s.lower()) if unicodedata.category(c) != "Mn")
 
 
-def find_report(http: Http, today: date, months_back: int = 4) -> tuple[str, str] | None:
-    """(pdf url, 'Sep 2026') of the newest monthly observatory."""
+def find_report(http: Http, today: date, months_back: int = 4) -> tuple[list[str], str] | None:
+    """(pdf urls of the newest monthly observatory announcement, 'Sep 2026')."""
     best = None
     y, m = today.year, today.month
     for _ in range(months_back):
@@ -52,13 +52,13 @@ def find_report(http: Http, today: date, months_back: int = 4) -> tuple[str, str
             href = urljoin(listing, href)
             art = http.text(href)
             t = re.search(TITLE + r"\s*-\s*(\w+)\s+(\d{4})", art)
-            pdf = re.search(r'href="([^"]+\.pdf)"', art)
-            if not (t and pdf) or t.group(1) not in MONTHS:
+            pdfs = [urljoin(href, u) for u in dict.fromkeys(re.findall(r'href="([^"]+\.pdf)"', art))
+                    if "layout/docs" not in u]
+            if not (t and pdfs) or t.group(1) not in MONTHS:
                 continue
             key = (int(t.group(2)), MONTHS[t.group(1)])
             if not best or key > best[0]:
-                url = urljoin(href, pdf.group(1))
-                best = (key, url, f"{EN_MONTH[key[1]]} {key[0]}")
+                best = (key, pdfs, f"{EN_MONTH[key[1]]} {key[0]}")
         if best:
             break
         y, m = (y, m - 1) if m > 1 else (y - 1, 12)
@@ -88,17 +88,20 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
     if not found:
         log.warning("observatory: no monthly report found")
         return []
-    url, month = found
+    urls, month = found
     import pdfplumber
-    data = http.get(url).content
-    with pdfplumber.open(io.BytesIO(data)) as pdf:
-        text = "\n".join(p.extract_text() or "" for p in pdf.pages)
-    rows = parse_rows(text)
-    log.info("observatory: %s (%s), %d fresh per-kg rows", month, url, len(rows))
-    if not rows:                     # keep the text so the format can be checked
-        dbg = Path(__file__).resolve().parents[2] / "debug"
-        dbg.mkdir(exist_ok=True)
-        (dbg / "observatory.txt").write_text(text, encoding="utf-8")
+    rows, url, texts = [], urls[0], []
+    for u in urls:                       # the announcement has several PDFs; use the one with the price table
+        with pdfplumber.open(io.BytesIO(http.get(u).content)) as pdf:
+            text = "\n".join(p.extract_text() or "" for p in pdf.pages)
+        texts.append(f"===== {u}\n{text}")
+        r = parse_rows(text)
+        if len(r) > len(rows):
+            rows, url = r, u
+    log.info("observatory: %s (%s), %d fresh per-kg rows from %d PDFs", month, url, len(rows), len(urls))
+    if not rows:                     # show the format so the reader can be fixed
+        for t in texts:
+            log.info("observatory text sample:\n%s", "\n".join(t.splitlines()[:40]))
     seen = set()
     offers = []
     for eng, hi, lo, avg in rows:
