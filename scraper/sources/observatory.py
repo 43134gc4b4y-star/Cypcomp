@@ -9,6 +9,7 @@ from urllib.parse import urljoin
 import logging
 import re
 from datetime import date
+from pathlib import Path
 
 from ..models import Offer
 from ..net import Http
@@ -93,7 +94,11 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
     with pdfplumber.open(io.BytesIO(data)) as pdf:
         text = "\n".join(p.extract_text() or "" for p in pdf.pages)
     rows = parse_rows(text)
-    log.info("observatory: %s, %d fresh per-kg rows", month, len(rows))
+    log.info("observatory: %s (%s), %d fresh per-kg rows", month, url, len(rows))
+    if not rows:                     # keep the text so the format can be checked
+        dbg = Path(__file__).resolve().parents[2] / "debug"
+        dbg.mkdir(exist_ok=True)
+        (dbg / "observatory.txt").write_text(text, encoding="utf-8")
     seen = set()
     offers = []
     for eng, hi, lo, avg in rows:
