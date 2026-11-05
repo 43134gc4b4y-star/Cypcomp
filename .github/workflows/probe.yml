@@ -4,6 +4,24 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: pip install requests
-      - run: python tools/probe_sites.py https://eshop.alphamega.com.cy https://www.fetch.com.cy https://www.cheapbasket.com.cy https://www.metro.com.cy https://www.sklavenitiscyprus.com.cy https://www.mas.com.cy https://plusdiscount.com.cy https://www.kimbino.com.cy https://psaxtiri.com 2>&1 | grep -v "^   " | head -150
+      - run: |
+          UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
+          echo "=== MAS"
+          curl -s -A "$UA" -D h.txt "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&page=1" -o m.json
+          grep -i "x-wp-total" h.txt
+          jq -c '.[]|{name, price:.prices.price, cur:.prices.currency_code, minor:.prices.currency_minor_unit, stock:.is_in_stock, cats:[.categories[]?.name], sku}' m.json
+          curl -s -A "$UA" "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&page=1&search=coca" | jq -c '.[]|{name, price:.prices.price}'
+          curl -s -A "$UA" "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&search=pringles" | jq -c '.[]|{name, price:.prices.price}'
+          echo "=== FETCH"
+          curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o '<loc>[^<]*' | head -20
+          for sm in $(curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o 'https://fetch.com.cy/sitemap[^<]*'); do echo "$sm $(curl -s -A "$UA" $sm | grep -c '<loc>')"; done
+          P=$(for sm in $(curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o 'https://fetch.com.cy/sitemap[^<]*product[^<]*'); do curl -s -A "$UA" $sm | grep -o '<loc>[^<]*' | sed 's/<loc>//' | sed -n '100p'; done | head -1); echo "product: $P"
+          [ -n "$P" ] && curl -sL -A "$UA" "$P" -o p.html && python3 - <<'PY'
+          import re
+          h=open('p.html',encoding='utf-8',errors='ignore').read()
+          print('len',len(h))
+          for s in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',h,re.S)[:3]: print('LD', s[:700])
+          print('eur', re.findall(r'€\s?\d+[.,]\d{2}|\d+[.,]\d{2}\s?€',h)[:8])
+          PY
+          echo "=== STORES on fetch"
+          curl -s -A "$UA" https://fetch.com.cy/ | grep -o 'href="/s/[^"]*"' | sort -u | head -30
