@@ -204,6 +204,14 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
              len(likely), len(staples), len(wide), len(cache), len(todo), budget)
     ok = _seller_ok(cfg)
     read = 0
+    progress = cfg.get("_progress")
+    every = 60 * float(cfg.get("publish_every_minutes", 10))
+    next_publish = time.monotonic() + every
+
+    def in_use():
+        return [Offer.from_dict(d) for c in cache.values()
+                if (today - date.fromisoformat(c["t"])).days <= int(cfg.get("keep_days", 10)) for d in c["offers"]]
+
     for u in todo[:budget]:
         if time.monotonic() > stop_at:
             log.info("fetch: time limit reached")
@@ -217,11 +225,15 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
         read += 1
         if read % 500 == 0:
             log.info("  fetch: %d pages read", read)
+        if progress and time.monotonic() >= next_publish:     # put what was found so far on the site
             CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+            try:
+                progress(in_use())
+            except Exception as e:  # noqa: BLE001
+                log.warning("fetch: publishing part-way failed: %s", e)
+            next_publish = time.monotonic() + every
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    fresh = int(cfg.get("keep_days", 10))
-    out = [Offer.from_dict(d) for u, c in cache.items()
-           if (today - date.fromisoformat(c["t"])).days <= fresh for d in c["offers"]]
+    out = in_use()
     log.info("fetch: read %d pages today; %d supermarket prices on %d products in use",
              read, len(out), sum(1 for c in cache.values() if c["offers"]))
     return out

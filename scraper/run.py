@@ -16,6 +16,7 @@ import json
 import logging
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -179,6 +180,29 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
     return items
 
 
+def publish_progress(sid: str, offers: list) -> None:
+    """Part-way through a long shop (Fetch): save what was found, rebuild the site data,
+    and - on GitHub - publish it if the list of items or prices changed."""
+    prev = read_raw(sid)
+    if prev and len(offers) < 0.4 * len(prev["offers"]):
+        return
+    (RAW / f"{sid}.json").write_text(json.dumps({
+        "source": sid, "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "offers": [o.to_dict() for o in offers]}, ensure_ascii=False, indent=0), encoding="utf-8")
+    page = SITE_DATA / "prices.json"
+    before = json.loads(page.read_text(encoding="utf-8"))["items"] if page.exists() else None
+    subprocess.run([sys.executable, "-m", "scraper.run", "--offline"], cwd=ROOT, check=True,
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    after = json.loads(page.read_text(encoding="utf-8"))
+    if after["items"] == before:
+        log.info("  progress: nothing new to publish")
+        return
+    log.info("  progress: %d items - publishing", after["count"])
+    script = ROOT / ".github" / "publish.sh"
+    if os.environ.get("PUBLISH_PROGRESS") and script.exists():
+        subprocess.run(["bash", str(script), f"{after['count']} items"], cwd=ROOT, check=False)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", nargs="*", help="only scrape these shop ids")
@@ -199,7 +223,8 @@ def main(argv=None):
                 cfg = {**cfg, "_matching": load_yaml("matching.yaml"),
                        "_north": [Offer.from_dict(d) for s2, c2 in shops.items()
                                   if c2.get("side") == "N" and c2.get("enabled", True) and read_raw(s2)
-                                  for d in read_raw(s2)["offers"]]}
+                                  for d in read_raw(s2)["offers"]],
+                       "_progress": lambda offers, sid=sid: publish_progress(sid, offers)}
             report.append(scrape_shop(http, sid, cfg))
 
     north, south, stamps = [], [], {}

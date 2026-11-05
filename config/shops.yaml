@@ -30,6 +30,7 @@ fetch:
   refresh_days: 3                     # prices re-read every 3 days (shops change prices weekly-ish)
   recheck_days: 21                    # pages with no supermarket price are looked at again after 3 weeks
   keep_days: 10                       # a price not re-read for 10 days is dropped
+  publish_every_minutes: 10           # put new finds on the site every 10 minutes during the run
   # only supermarkets, grocers and pharmacies count as a South price (kiosks charge far more)
   seller_include: "supermarket|super market|grocery|mini market|market|melco|cheap basket|etherio|discount store|pharmacy"
   seller_exclude: "periptero|kiosk|bakery|confectionery|pet people|convenience|eat some more|pow!"
