@@ -6,22 +6,19 @@ jobs:
     steps:
       - run: |
           UA="Mozilla/5.0 (compatible; CompareCyprusBot/1.0)"
-          echo "=== MAS"
-          curl -s -A "$UA" -D h.txt "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&page=1" -o m.json
-          grep -i "x-wp-total" h.txt
-          jq -c '.[]|{name, price:.prices.price, cur:.prices.currency_code, minor:.prices.currency_minor_unit, stock:.is_in_stock, cats:[.categories[]?.name], sku}' m.json
-          curl -s -A "$UA" "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&page=1&search=coca" | jq -c '.[]|{name, price:.prices.price}'
-          curl -s -A "$UA" "https://www.mas.com.cy/wp-json/wc/store/v1/products?per_page=5&search=pringles" | jq -c '.[]|{name, price:.prices.price}'
-          echo "=== FETCH"
-          curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o '<loc>[^<]*' | head -20
-          for sm in $(curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o 'https://fetch.com.cy/sitemap[^<]*'); do echo "$sm $(curl -s -A "$UA" $sm | grep -c '<loc>')"; done
-          P=$(for sm in $(curl -s -A "$UA" https://fetch.com.cy/sitemap.xml | grep -o 'https://fetch.com.cy/sitemap[^<]*product[^<]*'); do curl -s -A "$UA" $sm | grep -o '<loc>[^<]*' | sed 's/<loc>//' | sed -n '100p'; done | head -1); echo "product: $P"
-          [ -n "$P" ] && curl -sL -A "$UA" "$P" -o p.html && python3 - <<'PY'
+          curl -s -A "$UA" https://fetch.com.cy/robots.txt | head -40
+          echo "=== supermarket-like stores"
+          curl -s -A "$UA" https://fetch.com.cy/sitemap-stores.xml | grep -o 'fetch.com.cy/s/[^<]*' | grep -iE "super|market|mas-|athien|kkolias|stelios|alphamega|sklaven|lidl|metro|ioannid|kokkinos|philippos|smart|discount|poplife|sypal|lysiotis|papas|minimarket|grocery|fresh" | head -60
+          S=https://fetch.com.cy/s/theoklitos-zorpas-o-athienitis
+          curl -sL -A "$UA" $S -o s.html; echo "store page bytes $(wc -c < s.html)"
+          python3 - <<'PY'
           import re
-          h=open('p.html',encoding='utf-8',errors='ignore').read()
-          print('len',len(h))
-          for s in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',h,re.S)[:3]: print('LD', s[:700])
-          print('eur', re.findall(r'€\s?\d+[.,]\d{2}|\d+[.,]\d{2}\s?€',h)[:8])
+          h=open('s.html',encoding='utf-8',errors='ignore').read()
+          print('product links', len(set(re.findall(r'href="(/p/[^"]+)"',h))))
+          print(sorted(set(re.findall(r'href="(/p/[^"]+)"',h)))[:5])
+          print('euro prices', re.findall(r'€\s?\d+[.,]\d{2}|\d+[.,]\d{2}\s?€',h)[:10])
+          for s in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>',h,re.S)[:4]: print('LD', s[:400])
+          m=re.findall(r'"price":\s?"?([\d.]+)',h); print('price fields', len(m), m[:10])
+          print('next links', sorted(set(re.findall(r'href="([^"]*(?:page=|/c/)[^"]*)"',h)))[:10])
+          i=h.find('"products"'); print('products ctx', h[i:i+600] if i>0 else 'none')
           PY
-          echo "=== STORES on fetch"
-          curl -s -A "$UA" https://fetch.com.cy/ | grep -o 'href="/s/[^"]*"' | sort -u | head -30
