@@ -71,6 +71,30 @@ def to_offer(row: dict) -> Offer | None:
                  extra={"date": date, "contributed": True})
 
 
+def reported(root: Path) -> list[Offer]:
+    """Prices typed in by hand from screenshots or shop visits: data/reported_prices.csv
+    (same columns as the form; rows older than 60 days are left out)."""
+    p = root / "data" / "reported_prices.csv"
+    if not p.exists():
+        return []
+    from datetime import date
+    out = []
+    for row in csv.DictReader(p.open(encoding="utf-8")):
+        o = to_offer(row)
+        if not o:
+            continue
+        try:
+            if (date.today() - date.fromisoformat(o.extra.get("date", ""))).days > 60:
+                continue
+        except ValueError:
+            pass
+        o.source = "reported"
+        o.town = _col(row, "Town") or o.town
+        o.extra["note"] = f"price reported {o.extra.get('date', '')}"
+        out.append(o)
+    return out
+
+
 def load(http: Http, cfg: dict, known: dict, root: Path) -> list[Offer]:
     """Approved shopper prices. `known` maps barcode -> (item name, {side: [eur prices]}) for checks."""
     url = (cfg or {}).get("csv_url", "")

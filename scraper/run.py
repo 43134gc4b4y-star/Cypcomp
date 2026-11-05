@@ -262,10 +262,11 @@ def main(argv=None):
                 prices[o.side].append(o.price)
     contributed = contrib.load(http, load_yaml("contributions.yaml") if (ROOT / "config" / "contributions.yaml").exists() else {},
                                known, ROOT)
+    contributed += contrib.reported(ROOT)
     for o in contributed:
         (north if o.side == "N" else south).append(o)
     if contributed:
-        stamps["contrib"] = {"store": "Shopper reports (reviewed)", "side": "N+S",
+        stamps["contrib"] = {"store": "Reported prices (shoppers / app screenshots)", "side": "N+S",
                              "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                              "products": len(contributed)}
 
