@@ -22,7 +22,7 @@ store, and a map link. Lira and euro prices are shown side by side.
 | `scraper/` | The Python code that reads the shops and pairs products |
 | `config/shops.yaml` | Which shops to read (switch on/off, add new ones) |
 | `config/matching.yaml` | Brands, Turkish→English words, rules for pairing |
-| `config/generic_items.yaml` | “Any brand” items such as tomatoes or eggs, compared per kg / per piece |
+| `config/generic_items.yaml` | “Any brand” items such as tomatoes or eggs, compared only between packs of the same size |
 | `config/overrides.yaml` | Force two products to be paired, or never paired |
 | `data/manual_prices.csv` | Prices you type in yourself (e.g. fuel) |
 | `data/raw/` | Each shop's full product list from the last good run |
