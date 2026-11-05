@@ -568,3 +568,66 @@
   per: kg
   north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
   south: {cat: [baby food]}
+
+# --- staples the price observatory doesn't cover; South prices come from Fetch
+#     (pages picked by the `staples` words in shops.yaml) ---
+- id: sugar
+  name: White sugar (any brand)
+  category: Baking & cooking
+  per: kg
+  north: {any: ["toz seker", "kristal seker"], not: [pudra, esmer, kup, stevia, tatlandirici, sekersiz, vanilin]}
+  south: {any: ["white sugar", "granulated sugar", "sugar white", "crystal sugar"], not: [brown, icing, cane, cube, stevia, free, syrup, demerara, caster]}
+- id: salt
+  name: Table salt (any brand)
+  category: Baking & cooking
+  per: kg
+  north: {any: ["sofra tuzu", "iyotlu tuz", "kaya tuzu", "tuz "], not: [salamura, bulasik, makine, kraker, cips, tuzsuz, biber, baharat, limon, deniz, himalaya, pembe, "az tuzlu", tuzlu, fistik, findik, badem]}
+  south: {any: ["table salt", "iodised salt", "iodized salt", "salt "], not: [sea, himalayan, pink, dishwasher, crisps, chips, salted, unsalted, pepper, flakes, smoked, celery, garlic, "low salt", butter, nuts, peanut, caramel, crackers, popcorn, bath]}
+- id: lentils
+  name: Red lentils (any brand)
+  category: Rice, pasta & pulses
+  per: kg
+  north: {all: [[mercimek], [kirmizi]], not: [corba, cips, cubuk, makarna, kofte, unu]}
+  south: {all: [[lentil], [red]], not: [soup, crisps, chips, pasta, snack, curry, ready]}
+- id: chickpeas
+  name: Dried chickpeas (any brand)
+  category: Rice, pasta & pulses
+  per: kg
+  north: {any: [nohut], not: [konserve, haslanmis, leblebi, humus, cips, unu, kavrulmus, salata, cubuk, "400 g", "800 g"]}
+  south: {any: [chickpea, chick peas, revithia], not: [tin, tinned, canned, can, cooked, houmous, hummus, crisps, snack, roasted, flour, salad, "400g", "400 g", "800g", jar]}
+- id: tomato-paste
+  name: Tomato paste (any brand)
+  category: Sauces & spreads
+  per: kg
+  north: {any: ["domates salcasi", "salca"], not: [biber, aci, ketcap, sos, karisik]}
+  south: {any: ["tomato paste", "tomato puree", "concentrated tomato", "tomato concentrate"], not: [pepper, ketchup, sauce, sun dried, passata, chopped, pesto]}
+- id: toothpaste
+  name: Toothpaste (per 100 ml)
+  category: Personal care
+  per: 100 ml
+  north: {any: ["dis macunu", toothpaste], not: [firca, cocuk, kids, junior, bebek, set]}
+  south: {any: [toothpaste], not: [brush, kids, junior, baby, set, travel, "+ brush"]}
+- id: vinegar
+  name: Vinegar (any brand)
+  category: Sauces & spreads
+  per: l
+  north: {any: [sirke], not: [limon, balzamik, elma, uzum, nar, sos, cips, krema, glaze]}
+  south: {any: [vinegar], not: [balsamic, apple, cider, wine, crisps, chips, glaze, cream, raspberry, rice, sherry, pomegranate]}
+- id: bulgur
+  name: Bulgur wheat (any brand)
+  category: Rice, pasta & pulses
+  per: kg
+  north: {any: [bulgur], not: [kofte, salata, hazir, cig]}
+  south: {any: [bulgur, pourgouri, "cracked wheat"], not: [salad, ready, kofte, meal]}
+- id: honey
+  name: Honey (any brand)
+  category: Breakfast & spreads
+  per: kg
+  north: {any: ["bal "], not: [kabak, ikizi, seker, balik, balsam, balkabagi, kaymak, tahin, cubuk, mum, sakiz, sampuan, krem, sabun, gevrek, cips, "bal kabagi", cerez, aroma, sos, bisk, kek, tatli]}
+  south: {any: [honey], not: [mustard, cereal, roasted, nut, peanut, crisps, chips, shampoo, soap, cream, bar, biscuits, yoghurt, yogurt, sauce, glaze, chicken, ham, granola, loops, flakes, oats, candy, tea, lemon, lozenge, melon, honeydew, balm, wax]}
+- id: tea-bags
+  name: Black tea bags (per 100 bags)
+  category: Coffee & tea
+  per: 100 pc
+  north: {any: ["poset cay", "bardak poset", "tea bags", "teabags"], not: [demlik, yesil, green, bitki, meyve, ihlamur, adacayi, papatya, kusburnu, nane, limon, elma, ice, soguk, herbal]}
+  south: {any: ["tea bags", "teabags", "black tea"], not: [green, herbal, chamomile, mint, fruit, iced, ice, lemon, rooibos, camomile, jasmine, peach, berry, ginger, loose, decaf, sage, mountain, infusion, chai]}

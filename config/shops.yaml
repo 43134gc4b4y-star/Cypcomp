@@ -27,6 +27,10 @@ fetch:
   # only supermarkets, grocers and pharmacies count as a South price (kiosks charge far more)
   seller_include: "supermarket|super market|grocery|mini market|market|melco|cheap basket|etherio|discount store|pharmacy"
   seller_exclude: "periptero|kiosk|bakery|confectionery|pet people|convenience|eat some more|pow!"
+  # also read pages for these everyday items (compared as "any brand" in generic_items.yaml)
+  staples: [white-sugar, granulated-sugar, table-salt, iodised-salt, red-lentils, chickpeas, tomato-paste,
+            tomato-puree, toothpaste, vinegar, bulgur, pourgouri, honey, tea-bags, teabags, black-tea]
+  staples_per_word: 40
 
 starling:
   enabled: true

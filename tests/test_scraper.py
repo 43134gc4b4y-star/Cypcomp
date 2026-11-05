@@ -352,3 +352,12 @@ def test_contrib_review_and_approval(tmp_path):
     assert len(got) == 1 and got[0].store == "Lidl"
     review = (tmp_path / "data" / "contributions_review.md").read_text()
     assert "Sklavenitis" in review and "⚠️" in review
+
+
+def test_fetch_staple_urls():
+    from scraper.sources.fetchcy import staple_urls
+    urls = ["https://fetch.com.cy/p/cyprus-white-sugar-1kg", "https://fetch.com.cy/p/sugar-free-gum",
+            "https://fetch.com.cy/p/colgate-toothpaste-75ml", "https://fetch.com.cy/p/white-sugar"]
+    got = staple_urls(urls, ["white-sugar", "toothpaste"], 5)
+    assert got == ["https://fetch.com.cy/p/white-sugar", "https://fetch.com.cy/p/cyprus-white-sugar-1kg",
+                   "https://fetch.com.cy/p/colgate-toothpaste-75ml"]

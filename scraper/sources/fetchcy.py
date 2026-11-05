@@ -125,6 +125,15 @@ def read_product(http: Http, url: str) -> list[Offer]:
     return out
 
 
+def staple_urls(urls: list[str], words: list[str], per_word: int) -> list[str]:
+    """Pages for everyday any-brand items, e.g. every '/p/...-white-sugar-...' address (capped per word)."""
+    out: list[str] = []
+    for w in words:
+        hits = [u for u in urls if f"-{w}-" in "-" + u.rsplit("/p/", 1)[-1].strip("/") + "-"]
+        out += sorted(hits, key=len)[:per_word]
+    return list(dict.fromkeys(out))
+
+
 def scrape(http: Http, cfg: dict) -> list[Offer]:
     north = cfg.get("_north") or []
     if not north:
@@ -132,6 +141,8 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
         return []
     urls = product_urls(http)
     picks = candidates(urls, north, cfg.get("_matching", {}), int(cfg.get("max_products", 2500)))
+    picks += [u for u in staple_urls(urls, cfg.get("staples") or [], int(cfg.get("staples_per_word", 40)))
+              if u not in set(picks)]
     offers: list[Offer] = []
     for i, u in enumerate(picks, 1):
         try:
