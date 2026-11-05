@@ -291,7 +291,7 @@ conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, 
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
             wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi,
-            mix, spreadable, treat, odul, vegan, lasagne, lazanya, biscuits]
+            mix, spreadable, treat, odul, vegan, lasagne, lazanya, biscuits, cookies]
 
 # Words that only describe the kind of product ("chocolate", "biscuits", "can").
 # If one name has nothing left except these, brand + size is enough to pair.

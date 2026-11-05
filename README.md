@@ -89,6 +89,9 @@ cd site && python -m http.server       # view the site at http://localhost:8000
 | Molto, Önder AVM (North) | No prices online (offers only as leaflet photos on Facebook) |
 | Hapcı (kibrisonlinemarket) | Products only load with JavaScript |
 | Erdener | Online shop holds template sample products, not real prices |
+| MAS Supermarkets website | Product feed has no prices (all 0) |
+| Plus Discount | Captcha wall |
+| Cheap Basket website | Shop runs through Fetch (included that way) |
 | Supermarket Kıbrıs (Girne) | Refuses automated connections |
 | Dmarjet (İskele) | Prices load by JavaScript from an address its robots.txt closes |
 | BurdaBurda | robots.txt says no |
