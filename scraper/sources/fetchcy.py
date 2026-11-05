@@ -66,7 +66,7 @@ def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> l
     scored = []
     for u in urls:
         k = m.key(Offer(source="", side="S", store="", name=slug_name(u), price=0, currency="EUR"))
-        if not k.brand or not k.size or k.brand not in by_brand:
+        if not k.brand or not k.size or not k.size.total or k.brand not in by_brand:
             continue
         best = max((m.score(nk, k) for nk in by_brand[k.brand]), default=0)
         if best > 0:

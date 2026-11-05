@@ -40,6 +40,7 @@ class Matcher:
     def words(self, name: str, brand: str | None) -> set[str]:
         t = " ".join(tokens(name))
         t = size_codes(t)
+        t = re.sub(r"\b(?:no|without|zero|free of)\s+sugar\b|\bsugar\s+free\b|\bnon\s+sugar\b", " sugarfree ", t)
         # drop pack sizes: "8x330 ml", "330ml x8", "1 lt", "12 li", "x8"
         t = re.sub(r"\b\d+\s*x\s*\d+\b|\bx\s*\d+\b|\b\d+\s*x\b", " ", t)
         t = re.sub(r"\b\d+\s*(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l|li|lu|adet|pcs|tem|temachia)?\b", " ", t)
@@ -180,6 +181,8 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
             best, best_s = [], 0.0
             for o, kn in north_by_brand.get(ka.brand, []):
                 if kn.size.unit != ka.size.unit:
+                    continue
+                if not ka.size.total:
                     continue
                 ratio = kn.size.total / ka.size.total
                 if not 0.4 <= ratio <= 2.5 or (o.url, pid) in banned:   # e.g. 1.5 L bottle vs 330 ml can is too different

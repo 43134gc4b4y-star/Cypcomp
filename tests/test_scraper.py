@@ -305,3 +305,9 @@ def test_barcode_decides(mcfg):
     s = S("Pringles Original 165g", 2.45, "gtin-5053990101573"); s.barcode = "5053990101573"; s.source = "fetch"
     groups = match([a, b], [s], mcfg)
     assert [[o.url for o in g.north] for g in groups] == [[a.url]]   # different barcode is rejected
+
+
+def test_sugar_free_is_not_sugar(mcfg):
+    north = [N("POKKA BLACK COFFEE NO SUGAR 240ML", 60)]
+    south = [S("Pokka Black Coffee with sugar 240ml", 1.1, 30)]
+    assert match(north, south, mcfg) == []
