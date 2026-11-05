@@ -15,6 +15,7 @@ import csv
 import json
 import logging
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -95,7 +96,10 @@ def offer_json(o: Offer, rate: float) -> dict:
     d = {"store": o.store, "town": o.town, "eur": round(eur, 2), "try": round(tl, 2),
          "currency": o.currency, "url": o.url, "maps": o.maps, "name": o.name}
     if o.extra.get("shelf_price"):
-        d["shelf"] = {"name": o.extra["shelf_name"], "price": o.extra["shelf_price"]}
+        sp = o.extra["shelf_price"]
+        d["shelf"] = {"name": o.extra["shelf_name"], "price": sp,
+                      "eur": round(sp if o.currency == "EUR" else sp / rate, 2),
+                      "try": round(sp if o.currency == "TRY" else sp * rate, 2)}
     if o.extra.get("date"):
         d["date"] = o.extra["date"]
     return d
@@ -202,6 +206,10 @@ def main(argv=None):
         if not raw or not cfg.get("enabled", True):
             continue
         offers = [Offer.from_dict(d) for d in raw["offers"]]
+        if cfg.get("seller_include") or cfg.get("seller_exclude"):
+            inc = re.compile(cfg.get("seller_include", "."), re.I)
+            exc = re.compile(cfg.get("seller_exclude", "$^"), re.I)
+            offers = [o for o in offers if inc.search(o.store) and not exc.search(o.store)]
         stamps[sid] = {"store": cfg.get("store", "e-kalathi (South supermarkets)"), "side": cfg["side"],
                        "fetched_at": raw["fetched_at"], "products": len(offers)}
         (north if cfg["side"] == "N" else south).extend(offers)

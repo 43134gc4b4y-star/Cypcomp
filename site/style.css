@@ -51,3 +51,4 @@ button.main{margin:0 0 14px;width:100%;padding:12px;border:0;border-radius:12px;
 @media (max-width:380px){.pr{font-size:19px}.sides{gap:7px}.side{padding:8px}}
 .chains{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px;color:var(--muted)}
 .chains b{color:var(--south)}
+.unitp{font-size:12px;font-weight:700;color:var(--text);margin-top:4px;background:var(--bg);border-radius:8px;padding:3px 6px;display:inline-block}

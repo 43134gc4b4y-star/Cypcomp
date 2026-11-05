@@ -202,7 +202,13 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
                 per = {"g": "kg", "ml": "l", "pc": "1 pc"}[ka.size.unit]
                 conv = lambda offs: [c for c in (_as_per_unit(x, per) for x in offs) if c]  # noqa: E731
                 n_c, s_c = conv(best), conv(s_offers)
-                if n_c and s_c:
+                same_size = all(m.key(x).size and m.key(x).size.same_as(ka.size) for x in best)
+                if n_c and s_c and same_size:
+                    # names differ too much for the exact pass but the packs are identical: plain shelf prices
+                    groups.append(Group(id=f"ps-{pid}", name=s_offers[0].name, unit=ka.size.label(),
+                                        category=s_offers[0].category, north=best, south=s_offers,
+                                        image=s_offers[0].image))
+                elif n_c and s_c:
                     label = {"kg": "per kg", "l": "per litre", "1 pc": "per item"}[per]
                     groups.append(Group(
                         id=f"ps-{pid}", name=_base_name(s_offers[0].name), unit=f"price {label} · pack sizes differ",

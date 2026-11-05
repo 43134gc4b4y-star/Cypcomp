@@ -24,6 +24,9 @@ fetch:
   side: S
   store: Fetch (South shops)
   max_products: 2500                  # product pages read per day (1 per second)
+  # only supermarkets, grocers and pharmacies count as a South price (kiosks charge far more)
+  seller_include: "supermarket|super market|grocery|mini market|market|melco|cheap basket|etherio|discount store|pharmacy"
+  seller_exclude: "periptero|kiosk|bakery|confectionery|pet people|convenience|eat some more|pow!"
 
 starling:
   enabled: true
