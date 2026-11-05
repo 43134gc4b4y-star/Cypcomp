@@ -1,0 +1,9 @@
+name: Probe (temporary)
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - run: python tools/probe_sites.py https://eshop.alphamega.com.cy https://www.fetch.com.cy https://www.cheapbasket.com.cy https://www.metro.com.cy https://www.sklavenitiscyprus.com.cy https://www.mas.com.cy https://plusdiscount.com.cy https://www.kimbino.com.cy https://psaxtiri.com 2>&1 | grep -v "^   " | head -150
