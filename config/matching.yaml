@@ -286,7 +286,7 @@ synonyms:
 
 # Words that make two products different even with the same brand and size.
 # If one name has it and the other doesn't, they are NOT paired.
-conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
+conflicts: [shampoo, bath, wash, conditioner, lotion, sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
             red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
