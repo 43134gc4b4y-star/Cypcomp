@@ -4,18 +4,24 @@
   var $ = function (id) { return document.getElementById(id); };
   var DATA = null, query = "", cat = "", shown = 40;
 
-  var TRENDING = ["milk", "coffee", "cola", "eggs", "halloumi", "honey", "nappies", "baby milk", "tissue", "protein bar", "olive oil", "tomatoes"];
+  var TRENDING = [];
   // English search words -> Turkish/Greek words shops use, so "milk" also finds "süt"
   var ALIAS = {
-    milk: ["sut", "gala"], coffee: ["kahve", "nescafe"], tea: ["cay"], honey: ["bal"], eggs: ["yumurta", "avga"], egg: ["yumurta"],
-    cheese: ["peynir"], halloumi: ["hellim"], water: ["su "], bread: ["ekmek"], butter: ["tereyag"], yoghurt: ["yogurt"],
-    nappies: ["bebek bezi", "pampers", "diaper", "molfix", "huggies"], diapers: ["nappies", "bebek bezi"],
-    "baby milk": ["aptamil", "bebelac", "nan ", "hipp", "formula", "devam sutu", "bebek sutu"],
-    tissue: ["mendil", "tissues", "selpak", "kleenex"], "toilet paper": ["tuvalet kagidi"], cola: ["coca", "pepsi", "kola"],
-    "protein bar": ["protein"], chocolate: ["cikolata"], rice: ["pirinc"], pasta: ["makarna"], sugar: ["seker"],
-    flour: ["un "], "olive oil": ["zeytinyag", "olive oil"], oil: ["yag"], tomatoes: ["domates", "tomato"], potatoes: ["patates"],
-    shampoo: ["sampuan"], detergent: ["deterjan"], toothpaste: ["dis macunu"], soap: ["sabun"], beer: ["bira"], wine: ["sarap"]
+    milk: ["sut", "gala", "fresh milk"], coffee: ["kahve", "nescafe", "instant coffee"], tea: ["cay", "lipton", "twinings"],
+    honey: ["bal"], eggs: ["yumurta", "avga"], egg: ["eggs"], cheese: ["peynir", "cheddar", "feta", "edam"],
+    halloumi: ["hellim"], water: ["su", "still water", "sparkling water"], butter: ["tereyagi", "tereyag"],
+    yoghurt: ["yogurt"], yogurt: ["yoghurt"],
+    nappies: ["bebek bezi", "pampers", "diapers", "molfix", "huggies"], "baby milk": ["baby formula", "aptamil", "bebelac", "nan"],
+    tissue: ["mendil", "tissues", "selpak", "kleenex", "toilet paper"], "toilet paper": ["tuvalet kagidi"],
+    cola: ["coca cola", "pepsi", "kola"], "protein bar": ["protein"], chocolate: ["cikolata", "chocolate bar"],
+    rice: ["pirinc"], pasta: ["makarna", "spaghetti", "penne"], sugar: ["seker"], flour: ["un"],
+    "olive oil": ["zeytinyagi", "zeytinyag"], tomatoes: ["domates", "tomato"], potatoes: ["patates"],
+    shampoo: ["sampuan"], detergent: ["deterjan", "laundry"], toothpaste: ["dis macunu"], soap: ["sabun"],
+    beer: ["bira"], crisps: ["cips", "chips", "pringles", "lays"], cereal: ["corn flakes", "gevrek"],
+    "cat food": ["kedi", "whiskas", "felix"], "dog food": ["kopek", "pedigree"], deodorant: ["deo", "roll on"]
   };
+  var TRENDING_CANDIDATES = ["milk", "coffee", "cola", "eggs", "halloumi", "cheese", "butter", "chocolate", "crisps",
+    "shampoo", "deodorant", "baby milk", "nappies", "tissue", "olive oil", "cereal", "cat food", "honey", "tea", "water"];
   var CAT_ICON = [[/fuel|petrol|diesel/i, "⛽"], [/milk|dairy|cheese|yogh|egg/i, "🥛"], [/coffee|tea/i, "☕"], [/drink|soft|water|juice|beverage/i, "🥤"],
     [/fruit|veg/i, "🥬"], [/meat|chicken|fish/i, "🍗"], [/baby|nappy|diaper/i, "🍼"], [/bread|bak/i, "🍞"], [/snack|choc|sweet|biscuit/i, "🍫"],
     [/clean|detergent|household/i, "🧴"], [/personal|care|hygiene|shampoo/i, "🧼"], [/paper|tissue/i, "🧻"], [/pet/i, "🐾"]];
@@ -30,18 +36,34 @@
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
   function icon(it) { for (var i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.category + " " + it.name)) return CAT_ICON[i][1]; return "🛒"; }
 
+  function words(t) { return fold(t).split(/[^a-z0-9]+/).filter(Boolean); }
+
   function index(it) {
-    var parts = [it.name, it.category, it.unit];
-    it.north.concat(it.south).forEach(function (o) { parts.push(o.name, o.store); });
-    it._t = " " + fold(parts.join(" ")) + " ";
+    it._n = words(it.name);
+    var all = [it.name, it.category, it.unit];
+    it.north.concat(it.south).forEach(function (o) { all.push(o.name, o.store, o.shelf ? o.shelf.name : ""); });
+    it._a = words(all.join(" "));
   }
 
-  function matches(it, q) {
-    if (!q) return true;
-    var alts = [q].concat(ALIAS[q] || []);
-    return alts.some(function (a) {
-      return fold(a).trim().split(/\s+/).every(function (w) { return it._t.indexOf(" " + w) >= 0 || it._t.indexOf(w) >= 0 && w.length > 3; });
-    });
+  // a query word matches a whole word, or the start of a longer word (5+ letters typed)
+  function hasWord(list, w) {
+    for (var i = 0; i < list.length; i++) if (list[i] === w || (w.length >= 5 && list[i].indexOf(w) === 0)) return true;
+    return false;
+  }
+
+  function phraseScore(it, phrase) {
+    var ws = words(phrase);
+    if (!ws.length) return 0;
+    if (ws.every(function (w) { return hasWord(it._n, w); })) return it.kind === "generic" && !/pack sizes/.test(it.unit) ? 3.5 : 3;   // own name; "any brand" items first
+    if (ws.every(function (w) { return hasWord(it._a, w); })) return 1;   // only in a shop's product name
+    return 0;
+  }
+
+  function score(it, q) {
+    if (!q) return 1;
+    var best = phraseScore(it, q);
+    (ALIAS[q.trim()] || []).forEach(function (a) { best = Math.max(best, phraseScore(it, a) - 0.5); });
+    return best;
   }
 
   function perLabel(it) {
@@ -96,7 +118,11 @@
   }
 
   function render() {
-    var list = DATA.items.filter(function (it) { return (!cat || it.category === cat) && matches(it, fold(query).trim()); });
+    var q = fold(query).trim();
+    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.category === cat) ? score(it, q) : 0 }; })
+      .filter(function (x) { return x.s > 0; })
+      .sort(function (a, b) { return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || b.it.saving_pct - a.it.saving_pct; })
+      .map(function (x) { return x.it; });
     var html = list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
       html = '<div class="card empty"><div class="big">⏳</div><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
@@ -145,7 +171,9 @@
   $("more").addEventListener("click", function () { shown += 40; render(); });
 
   fetch("data/prices.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
-    DATA = d; DATA.items.forEach(index); header(); drawChips(); render();
+    DATA = d; DATA.items.forEach(index);
+    TRENDING = TRENDING_CANDIDATES.filter(function (t) { return DATA.items.some(function (it) { return score(it, t) >= 2.5; }); }).slice(0, 12);
+    header(); drawChips(); render();
   }).catch(function () {
     $("out").innerHTML = '<div class="card empty"><div class="big">⚠️</div><div class="name">Could not load prices</div><p class="small">Please try again in a moment.</p></div>';
   });
