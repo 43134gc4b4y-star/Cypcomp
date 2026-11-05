@@ -294,7 +294,9 @@ def test_fetch_candidates(mcfg):
     urls = ["https://fetch.com.cy/p/pringles-original-165g", "https://fetch.com.cy/p/pringles-original-200g",
             "https://fetch.com.cy/p/urino-vet-dog-16gr"]
     north = [N("PRINGLES ORIGINAL 165 G", 149.9)]
-    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g"]
+    # same size first, then a similar pack size (compared per kg); unrelated products skipped
+    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g",
+                                                          "https://fetch.com.cy/p/pringles-original-200g"]
 
 
 def test_barcode_decides(mcfg):
