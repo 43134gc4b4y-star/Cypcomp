@@ -295,9 +295,21 @@ def test_fetch_candidates(mcfg):
     urls = ["https://fetch.com.cy/p/pringles-original-165g", "https://fetch.com.cy/p/pringles-original-200g",
             "https://fetch.com.cy/p/urino-vet-dog-16gr"]
     north = [N("PRINGLES ORIGINAL 165 G", 149.9)]
-    # same size first, then a similar pack size (compared per kg); unrelated products skipped
-    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g",
-                                                          "https://fetch.com.cy/p/pringles-original-200g"]
+    # same brand and size first; other sizes are only in the wide net; unrelated products skipped
+    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g"]
+    assert fetchcy.brand_urls(urls, north, mcfg) == urls[:2]
+
+
+def test_fetch_plan_order():
+    from datetime import date
+    from scraper.sources import fetchcy
+    today = date(2026, 11, 10)
+    cache = {"old-price": {"t": "2026-11-01", "offers": [{"x": 1}]},
+             "fresh-price": {"t": "2026-11-09", "offers": [{"x": 1}]},
+             "empty-old": {"t": "2026-10-01", "offers": []},
+             "empty-new": {"t": "2026-11-08", "offers": []}}
+    todo = fetchcy.plan(cache, ["new-likely", "fresh-price"], [], ["new-wide", "empty-old", "empty-new"], today, {})
+    assert todo == ["new-likely", "old-price", "new-wide", "empty-old"]
 
 
 def test_barcode_decides(mcfg):

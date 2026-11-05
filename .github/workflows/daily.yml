@@ -25,7 +25,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,6 +33,14 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+
+      - name: Restore what was read from Fetch on earlier days
+        if: github.event_name != 'push'
+        uses: actions/cache/restore@v4
+        with:
+          path: data/raw/fetch_cache.json
+          key: fetch-cache-${{ github.run_id }}
+          restore-keys: fetch-cache-
 
       - name: Read shops and build website data
         env:
@@ -45,6 +53,13 @@ jobs:
           else
             python -m scraper.run
           fi
+
+      - name: Keep what was read from Fetch for tomorrow
+        if: always() && github.event_name != 'push' && hashFiles('data/raw/fetch_cache.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: data/raw/fetch_cache.json
+          key: fetch-cache-${{ github.run_id }}
 
       - name: Save new prices to the repository
         run: |

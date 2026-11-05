@@ -14,6 +14,9 @@ from __future__ import annotations
 import json
 import logging
 import re
+import time
+from datetime import date, datetime, timezone
+from pathlib import Path
 from collections import defaultdict
 from urllib.parse import quote_plus
 
@@ -44,7 +47,14 @@ def slug_name(url: str) -> str:
 
 
 def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> list[str]:
-    """Product pages whose name has the same brand and pack size as a North product."""
+    """Product pages whose name has the same brand and pack size as a North product (best first)."""
+    scored = _scored(urls, north, mcfg)
+    scored.sort(key=lambda x: -x[0])
+    log.info("fetch: %d of %d product pages look like North products", len(scored), len(urls))
+    return [u for _, u in scored[:limit]]
+
+
+def _matcher(mcfg: dict, north: list[Offer]) -> Matcher:
     m = Matcher(mcfg)
     first_n = defaultdict(int)
     for o in north:
@@ -56,13 +66,16 @@ def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> l
         if n >= 3 and len(w) >= 3 and not w.isdigit() and w not in known | m.generic_first | set(m.synonyms) | m.stop:
             m.brand_aliases.append((w, w.title()))
     m.brand_aliases.sort(key=lambda x: -len(x[0]))
+    return m
 
+
+def _scored(urls: list[str], north: list[Offer], mcfg: dict) -> list[tuple[float, str]]:
+    m = _matcher(mcfg, north)
     by_brand = defaultdict(list)
     for o in north:
         k = m.key(o)
         if k.brand and k.size:
             by_brand[k.brand].append(k)
-    from ..match import Key
     scored = []
     for u in urls:
         k = m.key(Offer(source="", side="S", store="", name=slug_name(u), price=0, currency="EUR"))
@@ -70,19 +83,22 @@ def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> l
             continue
         best = max((m.score(nk, k) for nk in by_brand[k.brand]), default=0)
         if best > 0:
-            scored.append((2 + best, u))          # same pack size: read first
-            continue
-        # similar pack size (compared per kg / litre on the site)
-        for nk in by_brand[k.brand]:
-            if nk.size.unit != k.size.unit or not 0.4 <= nk.size.total / k.size.total <= 2.5:
-                continue
-            ca, cn = k.words - m.filler, nk.words - m.filler
-            if (ca <= cn or cn <= ca) and len(ca ^ cn) <= 1 and m.score(Key(nk.brand, k.size, nk.words), k) >= 0.7:
-                scored.append((1, u))
-                break
-    scored.sort(key=lambda x: -x[0])
-    log.info("fetch: %d of %d product pages look like North products", len(scored), len(urls))
-    return [u for _, u in scored[:limit]]
+            scored.append((2 + best, u))          # same pack size
+    return scored
+
+
+def brand_urls(urls: list[str], north: list[Offer], mcfg: dict) -> list[str]:
+    """Wider net: any page whose name starts with / contains a North brand, whatever its size.
+    Many Fetch addresses leave out the pack size, which is only on the page itself."""
+    m = _matcher(mcfg, north)
+    brands = {m.key(o).brand for o in north} - {None, ""}
+    out = []
+    for u in urls:
+        k = m.key(Offer(source="", side="S", store="", name=slug_name(u), price=0, currency="EUR"))
+        if k.brand in brands:
+            out.append(u)
+    return out
+
 
 
 def read_product(http: Http, url: str) -> list[Offer]:
@@ -134,21 +150,69 @@ def staple_urls(urls: list[str], words: list[str], per_word: int) -> list[str]:
     return list(dict.fromkeys(out))
 
 
+CACHE = Path(__file__).resolve().parents[2] / "data" / "raw" / "fetch_cache.json"
+
+
+def _seller_ok(cfg: dict):
+    inc = re.compile(cfg.get("seller_include") or ".", re.I)
+    exc = re.compile(cfg["seller_exclude"], re.I) if cfg.get("seller_exclude") else None
+    return lambda name: bool(inc.search(name)) and not (exc and exc.search(name))
+
+
+def plan(cache: dict, likely: list[str], staples: list[str], wide: list[str], today: date, cfg: dict) -> list[str]:
+    """Which pages to read today, most useful first:
+    1. likely pairs (same brand + size) and staples never read yet,
+    2. pages that had a supermarket price, once they are `refresh_days` old,
+    3. the wider net (any page of a North brand), oldest first, re-checked every `recheck_days`."""
+    refresh, recheck = int(cfg.get("refresh_days", 3)), int(cfg.get("recheck_days", 21))
+    age = lambda u: (today - date.fromisoformat(cache[u]["t"])).days if u in cache else 10**6  # noqa: E731
+    first = [u for u in dict.fromkeys(likely + staples) if u not in cache]
+    stale = sorted((u for u, c in cache.items() if c["offers"] and age(u) >= refresh), key=age, reverse=True)
+    wide = sorted((u for u in dict.fromkeys(likely + staples + wide)
+                   if u not in cache or (not cache[u]["offers"] and age(u) >= recheck)), key=age, reverse=True)
+    return list(dict.fromkeys(first + stale + wide))
+
+
 def scrape(http: Http, cfg: dict) -> list[Offer]:
+    """Reads up to `pages_per_day` pages (or `max_minutes`), keeping what it learns in
+    data/raw/fetch_cache.json, so the number of products grows day by day."""
     north = cfg.get("_north") or []
     if not north:
         log.warning("fetch: no North products available to pick candidates from")
         return []
+    cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     urls = product_urls(http)
-    picks = candidates(urls, north, cfg.get("_matching", {}), int(cfg.get("max_products", 2500)))
-    picks += [u for u in staple_urls(urls, cfg.get("staples") or [], int(cfg.get("staples_per_word", 40)))
-              if u not in set(picks)]
-    offers: list[Offer] = []
-    for i, u in enumerate(picks, 1):
+    live = set(urls)
+    cache = {u: c for u, c in cache.items() if u in live}          # products Fetch no longer lists
+    mcfg = cfg.get("_matching", {})
+    likely = candidates(urls, north, mcfg, 10**9)
+    staples = staple_urls(urls, cfg.get("staples") or [], int(cfg.get("staples_per_word", 40)))
+    wide = brand_urls(urls, north, mcfg)
+    today = datetime.now(timezone.utc).date()
+    todo = plan(cache, likely, staples, wide, today, cfg)
+    budget, stop_at = int(cfg.get("pages_per_day", 6000)), time.monotonic() + 60 * float(cfg.get("max_minutes", 180))
+    log.info("fetch: %d likely, %d staple, %d brand pages; %d in cache; %d to read, reading up to %d",
+             len(likely), len(staples), len(wide), len(cache), len(todo), budget)
+    ok = _seller_ok(cfg)
+    read = 0
+    for u in todo[:budget]:
+        if time.monotonic() > stop_at:
+            log.info("fetch: time limit reached")
+            break
         try:
-            offers += read_product(http, u)
+            offers = [o for o in read_product(http, u) if ok(o.store)]
         except Exception as e:  # noqa: BLE001
             log.warning("fetch: %s failed: %s", u, e)
-        if i % 250 == 0:
-            log.info("  fetch: %d / %d pages, %d prices", i, len(picks), len(offers))
-    return offers
+            continue
+        cache[u] = {"t": today.isoformat(), "offers": [o.to_dict() for o in offers]}
+        read += 1
+        if read % 500 == 0:
+            log.info("  fetch: %d pages read", read)
+            CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    fresh = int(cfg.get("keep_days", 10))
+    out = [Offer.from_dict(d) for u, c in cache.items()
+           if (today - date.fromisoformat(c["t"])).days <= fresh for d in c["offers"]]
+    log.info("fetch: read %d pages today; %d supermarket prices on %d products in use",
+             read, len(out), sum(1 for c in cache.values() if c["offers"]))
+    return out

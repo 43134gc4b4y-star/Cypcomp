@@ -23,7 +23,13 @@ fetch:
   type: fetchcy                       # South delivery marketplace; reads only pages that look like North products
   side: S
   store: Fetch (South shops)
-  max_products: 2500                  # product pages read per day (1 per second)
+  # Fetch has ~290,000 product pages, too many for one day. Each day it reads up to
+  # `pages_per_day` pages (1 per second) and remembers them, so coverage grows every day:
+  pages_per_day: 6000
+  max_minutes: 200
+  refresh_days: 3                     # prices re-read every 3 days (shops change prices weekly-ish)
+  recheck_days: 21                    # pages with no supermarket price are looked at again after 3 weeks
+  keep_days: 10                       # a price not re-read for 10 days is dropped
   # only supermarkets, grocers and pharmacies count as a South price (kiosks charge far more)
   seller_include: "supermarket|super market|grocery|mini market|market|melco|cheap basket|etherio|discount store|pharmacy"
   seller_exclude: "periptero|kiosk|bakery|confectionery|pet people|convenience|eat some more|pow!"

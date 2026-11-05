@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 debug/
 .venv/
+data/raw/fetch_cache.json
