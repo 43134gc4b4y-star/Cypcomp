@@ -182,7 +182,7 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
                 if kn.size.unit != ka.size.unit:
                     continue
                 ratio = kn.size.total / ka.size.total
-                if not 0.2 <= ratio <= 5 or (o.url, pid) in banned:
+                if not 0.4 <= ratio <= 2.5 or (o.url, pid) in banned:   # e.g. 1.5 L bottle vs 330 ml can is too different
                     continue
                 if ("can" in ka.words) != ("can" in kn.words):
                     continue   # cans vs bottles are priced differently per litre

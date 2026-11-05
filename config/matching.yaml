@@ -230,6 +230,10 @@ synonyms:
   dana: beef
   kola: cola
   findikli: hazelnut
+  gevrek: cereal
+  gevregi: cereal
+  biscuit: biscuits
+  cookie: cookies
   findik: hazelnut
   sutlu: milk
   cilek: strawberry
@@ -286,7 +290,7 @@ conflicts: [sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, 
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
             wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi,
-            mix, spreadable, treat, odul]
+            mix, spreadable, treat, odul, vegan, lasagne, lazanya, biscuits]
 
 # Words that only describe the kind of product ("chocolate", "biscuits", "can").
 # If one name has nothing left except these, brand + size is enough to pair.
@@ -300,7 +304,7 @@ stopwords: [the, and, with, of, ile, ve, for, new, yeni, adet, li, lu, pcs, pack
             koli, kampanya, indirim, firsat, promo, offer, tem, temachia, temaxia]
 
 # How similar the rest of the names must be (0 = anything, 1 = identical).
-min_similarity: 0.34
+min_similarity: 0.4
 
 # First words that are NOT brands (so they're never used to pair products).
 not_brands: [baby, fresh, spring, golden, elite, delta, flora, super, mega, mini, classic, original, premium,

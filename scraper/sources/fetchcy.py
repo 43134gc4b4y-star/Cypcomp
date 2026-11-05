@@ -62,6 +62,7 @@ def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> l
         k = m.key(o)
         if k.brand and k.size:
             by_brand[k.brand].append(k)
+    from ..match import Key
     scored = []
     for u in urls:
         k = m.key(Offer(source="", side="S", store="", name=slug_name(u), price=0, currency="EUR"))
@@ -69,7 +70,16 @@ def candidates(urls: list[str], north: list[Offer], mcfg: dict, limit: int) -> l
             continue
         best = max((m.score(nk, k) for nk in by_brand[k.brand]), default=0)
         if best > 0:
-            scored.append((best, u))
+            scored.append((2 + best, u))          # same pack size: read first
+            continue
+        # similar pack size (compared per kg / litre on the site)
+        for nk in by_brand[k.brand]:
+            if nk.size.unit != k.size.unit or not 0.4 <= nk.size.total / k.size.total <= 2.5:
+                continue
+            ca, cn = k.words - m.filler, nk.words - m.filler
+            if (ca <= cn or cn <= ca) and len(ca ^ cn) <= 1 and m.score(Key(nk.brand, k.size, nk.words), k) >= 0.7:
+                scored.append((1, u))
+                break
     scored.sort(key=lambda x: -x[0])
     log.info("fetch: %d of %d product pages look like North products", len(scored), len(urls))
     return [u for _, u in scored[:limit]]
