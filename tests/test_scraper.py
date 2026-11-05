@@ -295,8 +295,9 @@ def test_fetch_candidates(mcfg):
     urls = ["https://fetch.com.cy/p/pringles-original-165g", "https://fetch.com.cy/p/pringles-original-200g",
             "https://fetch.com.cy/p/urino-vet-dog-16gr"]
     north = [N("PRINGLES ORIGINAL 165 G", 149.9)]
-    # same brand and size first; other sizes are only in the wide net; unrelated products skipped
-    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g"]
+    # same brand and size first, then a close size (the page may show the real size); unrelated skipped
+    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g",
+                                                          "https://fetch.com.cy/p/pringles-original-200g"]
     assert fetchcy.brand_urls(urls, north, mcfg) == urls[:2]
 
 

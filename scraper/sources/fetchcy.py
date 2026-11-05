@@ -20,7 +20,7 @@ from pathlib import Path
 from collections import defaultdict
 from urllib.parse import quote_plus
 
-from ..match import Matcher
+from ..match import Key, Matcher
 from ..models import Offer
 from ..net import Http
 from ..text import tokens
@@ -83,7 +83,16 @@ def _scored(urls: list[str], north: list[Offer], mcfg: dict) -> list[tuple[float
             continue
         best = max((m.score(nk, k) for nk in by_brand[k.brand]), default=0)
         if best > 0:
-            scored.append((2 + best, u))          # same pack size
+            scored.append((2 + best, u))          # same pack size in the address
+            continue
+        # close pack size in the address: often the page itself shows the same size as the North product
+        for nk in by_brand[k.brand]:
+            if nk.size.unit != k.size.unit or not 0.4 <= nk.size.total / k.size.total <= 2.5:
+                continue
+            ca, cn = k.words - m.filler, nk.words - m.filler
+            if (ca <= cn or cn <= ca) and len(ca ^ cn) <= 1 and m.score(Key(nk.brand, k.size, nk.words), k) >= 0.7:
+                scored.append((1, u))
+                break
     return scored
 
 
