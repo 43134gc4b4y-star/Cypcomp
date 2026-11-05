@@ -51,7 +51,8 @@ def find_report(http: Http, today: date, months_back: int = 4) -> tuple[list[str
         for href in dict.fromkeys(re.findall(r'href="([^"]*/announcements/\d+/\?ctype=ar)"', page)):
             href = urljoin(listing, href)
             art = http.text(href)
-            t = re.search(TITLE + r"\s*-\s*(\w+)\s+(\d{4})", art)
+            head = re.search(r"<title>(.*?)</title>", art, re.S)       # this page's own title, not related links
+            t = re.search(TITLE + r"\s*-\s*(\w+)\s+(\d{4})", head.group(1) if head else "")
             pdfs = [urljoin(href, u) for u in dict.fromkeys(re.findall(r'href="([^"]+\.pdf)"', art))
                     if "layout/docs" not in u]
             if not (t and pdfs) or t.group(1) not in MONTHS:
