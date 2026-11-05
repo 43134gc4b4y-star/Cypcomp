@@ -25,12 +25,12 @@ from . import fx
 from .match import Group, generic, match
 from .models import Offer
 from .net import Http
-from .sources import ekalathi, shop_html, shopify, woocommerce
+from .sources import ekalathi, fetchcy, shop_html, shopify, woocommerce
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 SITE_DATA = ROOT / "site" / "data"
-SCRAPERS = {"ekalathi": ekalathi.scrape, "shopify": shopify.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape}
+SCRAPERS = {"ekalathi": ekalathi.scrape, "shopify": shopify.scrape, "fetchcy": fetchcy.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape}
 
 log = logging.getLogger("compare-cyprus")
 
@@ -123,13 +123,21 @@ CATEGORY_MAP = [
 ]
 
 
+SITE_CATEGORIES = {name for _, name in CATEGORY_MAP} | {"Coffee", "Snacks", "Personal care", "Other"}
+
+
 def tidy_category(c: str) -> str:
-    if not c or not c.isupper():
-        return c or "Other"
-    for keys, name in CATEGORY_MAP:
-        if any(k in c for k in keys):
+    if not c:
+        return "Other"
+    if c in SITE_CATEGORIES:
+        return c
+    up = c.upper()
+    for keys, name in CATEGORY_MAP + [(("DAIRY", "BEVERAGE", "DRINK"), "Drinks"), (("SWEET", "CRISP", "SNACK"), "Snacks"),
+                                      (("HOUSEHOLD", "DETERGENT"), "Cleaning"), (("BEAUTY", "HEALTH", "HYGIENE"), "Personal care"),
+                                      (("PET",), "Pets"), (("MEAT", "DELI"), "Cold cuts"), (("GROCER", "PANTRY", "FOOD"), "Pantry")]:
+        if any(k in up for k in keys):
             return name
-    return c.title()
+    return c.title() if c.isupper() else c
 
 
 PINNED: list[str] = []
@@ -181,6 +189,11 @@ def main(argv=None):
             if not cfg.get("enabled", True) or (args.only and sid not in args.only):
                 continue
             log.info("=== %s ===", sid)
+            if cfg["type"] == "fetchcy":   # needs today's North products to pick candidates
+                cfg = {**cfg, "_matching": load_yaml("matching.yaml"),
+                       "_north": [Offer.from_dict(d) for s2, c2 in shops.items()
+                                  if c2.get("side") == "N" and c2.get("enabled", True) and read_raw(s2)
+                                  for d in read_raw(s2)["offers"]]}
             report.append(scrape_shop(http, sid, cfg))
 
     north, south, stamps = [], [], {}

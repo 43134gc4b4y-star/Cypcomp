@@ -18,6 +18,13 @@ ekalathi:
   pinned_stores: [Lidl, AlphaMega]
   # skip_chains: [Metro]               # uncomment to leave chains out
 
+fetch:
+  enabled: true
+  type: fetchcy                       # South delivery marketplace; reads only pages that look like North products
+  side: S
+  store: Fetch (South shops)
+  max_products: 2500                  # product pages read per day (1 per second)
+
 starling:
   enabled: true
   type: shop_html

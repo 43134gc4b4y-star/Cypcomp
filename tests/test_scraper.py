@@ -269,3 +269,37 @@ def test_ekalathi_pinned_chain_added():
     offers = ekalathi.scrape(FakeHttp(routes), {"always_include_chain_ids": [471]})
     stores = {o.store for o in offers if o.product_id == "2194"}
     assert stores == {"Sklavenitis", "Lidl", "AlphaMega"}
+
+
+FETCH_PAGE = """<html><head>
+<script type="application/ld+json">{"@type":"BreadcrumbList","itemListElement":[{"name":"Home"},{"name":"Food Cupboard"},{"name":"Crisps"},{"name":"Pringles Original 165g"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Pringles Original 165g",
+ "image":["https://img/p.webp"],"gtin13":"5053990101573",
+ "offers":{"@type":"Offer","url":"https://fetch.com.cy/p/pringles-original-165g","price":2.45,"priceCurrency":"EUR",
+ "availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Grocery Island"}}}</script>
+</head><body></body></html>"""
+
+
+def test_fetch_product_page():
+    from scraper.sources import fetchcy
+    offers = fetchcy.read_product(FakeHttp({"fetch.com.cy/p/": FETCH_PAGE}), "https://fetch.com.cy/p/pringles-original-165g")
+    assert len(offers) == 1
+    o = offers[0]
+    assert (o.store, o.price, o.barcode, o.category) == ("Grocery Island", 2.45, "5053990101573", "Crisps")
+    assert o.product_id == "gtin-5053990101573"
+
+
+def test_fetch_candidates(mcfg):
+    from scraper.sources import fetchcy
+    urls = ["https://fetch.com.cy/p/pringles-original-165g", "https://fetch.com.cy/p/pringles-original-200g",
+            "https://fetch.com.cy/p/urino-vet-dog-16gr"]
+    north = [N("PRINGLES ORIGINAL 165 G", 149.9)]
+    assert fetchcy.candidates(urls, north, mcfg, 10) == ["https://fetch.com.cy/p/pringles-original-165g"]
+
+
+def test_barcode_decides(mcfg):
+    a = N("PRINGLES ORIGINAL 165 G", 149.9); a.barcode = "5053990101573"
+    b = N("PRINGLES ORIGINAL 165 G", 139.9, url="other"); b.barcode = "1111111111111"
+    s = S("Pringles Original 165g", 2.45, "gtin-5053990101573"); s.barcode = "5053990101573"; s.source = "fetch"
+    groups = match([a, b], [s], mcfg)
+    assert [[o.url for o in g.north] for g in groups] == [[a.url]]   # different barcode is rejected

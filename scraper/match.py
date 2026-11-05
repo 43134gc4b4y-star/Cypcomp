@@ -122,6 +122,20 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
     for o in south:
         anchors[o.product_id or o.name].append(o)
     akeys = {pid: m.key(offs[0]) for pid, offs in anchors.items()}
+
+    # the same product listed by e-kalathi and by another South source -> one item
+    ek = [pid for pid, offs in anchors.items() if offs[0].source == "ekalathi"]
+    ek_by_brand = defaultdict(list)
+    for pid in ek:
+        if akeys[pid].brand and akeys[pid].size:
+            ek_by_brand[akeys[pid].brand].append(pid)
+    for pid in [p for p, offs in anchors.items() if offs[0].source != "ekalathi"]:
+        k = akeys[pid]
+        best = max(((m.score(k, akeys[e]), e) for e in ek_by_brand.get(k.brand, [])), default=(0, None))
+        if best[0] >= 0.8:
+            anchors[best[1]].extend(anchors.pop(pid))
+            akeys.pop(pid)
+    barcodes = {pid: {o.barcode for o in offs if o.barcode} for pid, offs in anchors.items()}
     by_brand: dict[str, list[str]] = defaultdict(list)
     for pid, k in akeys.items():
         if k.brand and k.size:
@@ -137,7 +151,12 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
         for pid in by_brand.get(k.brand, []):
             if (o.url, pid) in banned:
                 continue
-            s = m.score(k, akeys[pid])
+            if o.barcode and barcodes.get(pid):
+                if o.barcode not in barcodes[pid]:
+                    continue          # both sides have barcodes and they differ: not the same product
+                s = 2.0               # same barcode: certain match
+            else:
+                s = m.score(k, akeys[pid])
             if s > best_s:
                 best, best_s = pid, s
         if best:
