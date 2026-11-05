@@ -190,10 +190,15 @@ def publish_progress(sid: str, offers: list) -> None:
         "source": sid, "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "offers": [o.to_dict() for o in offers]}, ensure_ascii=False, indent=0), encoding="utf-8")
     page = SITE_DATA / "prices.json"
-    before = json.loads(page.read_text(encoding="utf-8"))["items"] if page.exists() else None
+    old_text = page.read_text(encoding="utf-8") if page.exists() else ""
+    before = json.loads(old_text)["items"] if old_text else None
     subprocess.run([sys.executable, "-m", "scraper.run", "--offline"], cwd=ROOT, check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     after = json.loads(page.read_text(encoding="utf-8"))
+    if before and after["count"] < 0.9 * len(before):      # still catching up: don't show fewer items
+        page.write_text(old_text, encoding="utf-8")
+        log.info("  progress: only %d items so far (site has %d) - not published yet", after["count"], len(before))
+        return
     if after["items"] == before:
         log.info("  progress: nothing new to publish")
         return

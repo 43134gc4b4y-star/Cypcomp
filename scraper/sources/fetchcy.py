@@ -191,14 +191,15 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
         return []
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     urls = product_urls(http)
-    live = set(urls)
-    cache = {u: c for u, c in cache.items() if u in live}          # products Fetch no longer lists
+    # (the sitemap is sometimes incomplete, so pages missing from it are kept; old prices expire via keep_days)
+    prev_raw = CACHE.parent / "fetch.json"
+    known_good = [d["url"] for d in json.loads(prev_raw.read_text(encoding="utf-8"))["offers"]] if prev_raw.exists() else []
     mcfg = cfg.get("_matching", {})
     likely = candidates(urls, north, mcfg, 10**9)
     staples = staple_urls(urls, cfg.get("staples") or [], int(cfg.get("staples_per_word", 40)))
     wide = brand_urls(urls, north, mcfg)
     today = datetime.now(timezone.utc).date()
-    todo = plan(cache, likely, staples, wide, today, cfg)
+    todo = plan(cache, list(dict.fromkeys(known_good + likely)), staples, wide, today, cfg)
     budget, stop_at = int(cfg.get("pages_per_day", 6000)), time.monotonic() + 60 * float(cfg.get("max_minutes", 180))
     log.info("fetch: %d likely, %d staple, %d brand pages; %d in cache; %d to read, reading up to %d",
              len(likely), len(staples), len(wide), len(cache), len(todo), budget)
