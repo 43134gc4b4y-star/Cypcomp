@@ -19,7 +19,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: daily-prices
+  # website changes (push) don't wait for the long daily scrape
+  group: daily-prices-${{ github.event_name == 'push' && 'site' || 'scrape' }}
   cancel-in-progress: false
 
 jobs:

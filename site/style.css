@@ -73,3 +73,4 @@ button.main,label.main{margin:0 0 14px;width:100%;padding:12px;border:0;border-r
 .addlink{display:block;margin:0 2px 12px;color:var(--south);font-weight:700;font-size:14px;text-decoration:none}
 .listhead{margin-top:4px}
 .ttl .name{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+/* sort row */
