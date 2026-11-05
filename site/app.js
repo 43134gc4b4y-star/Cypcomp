@@ -141,13 +141,13 @@
 
   function drawChips() {
     chips($("trending"), TRENDING.map(function (t) { return { t: t, v: t }; }), query, function (v) {
-      query = query === v ? "" : v; $("q").value = query; shown = 40; drawChips(); render();
+      query = query === v ? "" : v; cat = ""; $("q").value = query; shown = 40; drawChips(); render();
     });
     var counts = {};
     DATA.items.forEach(function (i) { counts[i.category] = (counts[i.category] || 0) + 1; });
     var cats = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 20);
     chips($("cats"), [{ t: "All", v: "" }].concat(cats.map(function (c) { return { t: c + " (" + counts[c] + ")", v: c }; })), cat, function (v) {
-      cat = v; shown = 40; drawChips(); render();
+      cat = v; query = ""; $("q").value = ""; shown = 40; drawChips(); render();
     });
   }
 
