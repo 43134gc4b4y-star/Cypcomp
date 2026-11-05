@@ -129,6 +129,7 @@ _COUNT_X = re.compile(r"\b(?:x|×)\s*(\d+)\b|\b(\d+)\s*(?:x|×)\b")
 def parse_size(name: str) -> Size | None:
     """Extract the pack size from a product name. Returns None if none found."""
     s = fold(name)
+    s = re.sub(r"(?<=\d)\s*(?:ch|[χΧ])\s*(?=\d)", "x", s)   # Greek chi used as "x" in 4Χ185g (folded to "ch")
     s = re.sub(r"(\d),(\d)", r"\1.\2", s)
     s = re.sub(r"\+\s*\d+(?:\.\d+)?\s*(?:g|gr|ml)\b\s*(?:free|bedava|hediye)?", " ", s)  # "400g+80g free" -> 400 g
     for rx, order in ((_MULTI1, "cqu"), (_MULTI2, "quc"), (_MULTI3, "cqu")):

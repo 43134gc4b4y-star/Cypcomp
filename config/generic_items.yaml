@@ -566,7 +566,7 @@
   name: Baby cereal / rice cream (per kg)
   category: Baby
   per: kg
-  north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
+  north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [comformil, aptamil, formula, nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
   south: {cat: [baby food]}
 
 # --- staples the price observatory doesn't cover; South prices come from Fetch
@@ -611,7 +611,7 @@
   name: Vinegar (any brand)
   category: Sauces & spreads
   per: l
-  north: {any: [sirke], not: [limon, balzamik, elma, uzum, nar, sos, cips, krema, glaze]}
+  north: {any: [sirke], not: [limon, balzamik, balsamik, balsamic, elma, uzum, nar, sos, cips, krema, glaze]}
   south: {any: [vinegar], not: [grape, red, balsamic, apple, cider, wine, crisps, chips, glaze, cream, raspberry, rice, sherry, pomegranate]}
 - id: bulgur
   name: Bulgur wheat (any brand)

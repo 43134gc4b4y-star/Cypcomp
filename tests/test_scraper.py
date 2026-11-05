@@ -200,10 +200,14 @@ def test_generic_milk_per_litre():
     items = run.load_yaml("generic_items.yaml")
     north = [N("GULGUN UHT YAGLI SUT 1000 ML", 63.9), N("PINAR CIKOLATALI SUT 200 ML", 20), N("SUTAS AYRAN 1 LT", 40)]
     south = [S("Alambra Fresh Cyprus Milk Full Fat (Blue) 2L", 2.70, 1, cat="FRESH MILK"),
+             S("Lanitis Milk Full Fat 1L", 1.45, 3, cat="FRESH MILK"),
              S("Lanitis Chocolate Milk 1L", 1.5, 2, cat="FRESH MILK")]
     g = [x for x in generic(north, south, items) if x.id == "gen-milk"][0]
     assert [(o.name, o.price) for o in g.north] == [("GULGUN UHT YAGLI SUT 1000 ML", 63.9)]
-    assert [(o.name, o.price) for o in g.south] == [("Alambra Fresh Cyprus Milk Full Fat (Blue) 2L", 1.35)]  # per litre
+    assert [(o.name, o.price) for o in g.south] == [("Lanitis Milk Full Fat 1L", 1.45)]   # same 1 L pack, shelf price
+    assert g.unit == "1 L"
+    # no same-size pack on the South side -> not compared
+    assert not [x for x in generic(north, south[:1], items) if x.id == "gen-milk"]
 
 
 def test_cheapest_store_comes_first():
@@ -250,10 +254,7 @@ def test_pack_size_pass(mcfg):
     north = [N("KERRYGOLD TEREYAGI TUZSUZ FOLYO 200 G", 275), N("NESCAFE GOLD BLEND ALTA RICA SISE 95 G", 495)]
     south = [S("Kerrygold Butter Unsalted 250g Foil", 3.65, 20), S("Nescafé Gold Blend 190g Jar", 6.48, 21)]
     groups = {g.id: g for g in match(north, south, mcfg)}
-    assert set(groups) == {"ps-20"}                       # Alta Rica is a different coffee
-    g = groups["ps-20"]
-    assert g.north[0].price == 1375.0 and g.south[0].price == 14.6   # both per kg
-    assert "pack sizes differ" in g.unit
+    assert set(groups) == set()       # 200 g vs 250 g: different packs are never compared per kg
 
 
 def test_ekalathi_pinned_chain_added():
