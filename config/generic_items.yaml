@@ -631,3 +631,166 @@
   per: 100 pc
   north: {any: ["poset cay", "bardak poset", "tea bags", "teabags"], not: [demlik, yesil, green, bitki, meyve, ihlamur, adacayi, papatya, kusburnu, nane, limon, elma, ice, soguk, herbal]}
   south: {any: ["tea bags", "teabags", "black tea"], not: [green, herbal, chamomile, mint, fruit, iced, ice, lemon, rooibos, camomile, jasmine, peach, berry, ginger, loose, decaf, sage, mountain, infusion, chai]}
+
+# --- fresh, sold by weight: compared per kg (loose: true). South = government monthly average ---
+- id: tomatoes
+  name: Tomatoes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["tomato", "domates"], not: ["cherry", "sauce", "salca", "paste", "ketcap", "ketchup", "chips", "kurutulmus", "dried", "konserve", "tin", "rende", "soup", "puree", "chopped", "cips", "kraker"]}
+  south: {any: ["tomatoes 1 kg"]}
+- id: potatoes
+  name: Potatoes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["potato", "patates"], not: ["chips", "cips", "crisps", "fries", "sweet", "tatli", "pure", "puree", "salad", "salata", "kizartma", "dondurulmus", "frozen", "wedges"]}
+  south: {any: ["potatoes 1 kg"]}
+- id: cucumbers
+  name: Cucumbers (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["cucumber", "salatalik", "hiyar"], not: ["tursu", "pickle", "pickled"]}
+  south: {any: ["cucumbers 1 kg"]}
+- id: onions
+  name: Onions (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["onion", "sogan"], not: ["green", "yesil", "taze", "shallot", "chips", "cips", "crisps", "rings", "halka", "toz", "powder", "sour cream", "cream", "soup", "dried", "kuru sogan cips"]}
+  south: {any: ["onions 1 kg"]}
+- id: carrots
+  name: Carrots (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["carrot", "havuc"], not: ["juice", "suyu", "cake", "kek", "baby food", "mama", "bebek"]}
+  south: {any: ["carrots 1 kg"]}
+- id: lemons
+  name: Lemons (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["lemon", "limon"], not: ["juice", "suyu", "sos", "sauce", "tuz", "salt", "lime", "kolonya", "cay", "tea", "aroma", "flavour", "flavor", "drink", "soda", "gazoz", "cake", "kek", "biskuvi", "sakiz", "gum", "deterjan", "bulasik", "cleaner"]}
+  south: {any: ["lemons 1 kg"]}
+- id: bananas
+  name: Bananas (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["banana", "muz"], not: ["chips", "cips", "milk", "sut", "yogurt", "aroma", "flavour", "cake", "kek", "puree", "mama", "bebek", "plantain"]}
+  south: {any: ["bananas 1 kg"]}
+- id: apples
+  name: Apples (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["red apple", "green apple", "apple", "elma"], not: ["juice", "suyu", "sirke", "vinegar", "chips", "cips", "cake", "kek", "puree", "mama", "bebek", "aroma", "flavour", "tea", "cay", "sampuan", "pie", "turta", "kuru", "dried"]}
+  south: {any: ["apples 1 kg"]}
+- id: oranges
+  name: Oranges (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["orange", "portakal"], not: ["juice", "suyu", "fanta", "soda", "gazoz", "aroma", "flavour", "cake", "kek", "marmelat", "jam", "receli", "drink", "icecek", "chocolate", "cikolata"]}
+  south: {any: ["oranges 1 kg"]}
+- id: mandarins
+  name: Mandarins (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["mandarin"], not: ["juice", "suyu", "beverage", "icecek", "kizilay", "soda", "gazoz", "aroma"]}
+  south: {any: ["mandarins 1 kg"]}
+- id: pears
+  name: Pears (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["pear", "armut"], not: ["juice", "suyu", "nectar", "nektar", "aroma"]}
+  south: {any: ["pears 1 kg"]}
+- id: grapes
+  name: Grapes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["grape", "uzum"], not: ["juice", "suyu", "raisin", "kuru", "sirke", "vinegar", "pekmez", "molasses", "seed", "cekirdek"]}
+  south: {any: ["grapes 1 kg"]}
+- id: kiwi
+  name: Kiwi (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["kiwi"], not: ["juice", "suyu", "aroma", "flavour", "drink"]}
+  south: {any: ["kiwi 1 kg"]}
+- id: courgettes
+  name: Courgettes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["zucchini", "courgette", "kabak"], not: ["tatli", "dessert", "cekirdek", "cekirdeg", "seed"]}
+  south: {any: ["courgettes 1 kg"]}
+- id: aubergines
+  name: Aubergines (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["eggplant", "aubergine", "patlican"], not: ["salad", "salata", "tursu", "pickled", "pure", "sos"]}
+  south: {any: ["aubergines 1 kg"]}
+- id: mushrooms
+  name: Mushrooms (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["mushroom", "mantar"], not: ["soup", "corba", "sauce", "sos", "konserve", "tin", "canned", "jar", "pizza", "dried"]}
+  south: {any: ["mushrooms 1 kg"]}
+- id: cabbage
+  name: Cabbage (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["cabbage", "lahana"], not: ["cicek", "tursu", "pickled", "salad", "salata", "bruksel", "brussels"]}
+  south: {any: ["cabbage 1 kg"]}
+- id: cauliflower
+  name: Cauliflower (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["cauliflower", "karnabahar"], not: ["frozen", "dondurulmus"]}
+  south: {any: ["cauliflower 1 kg"]}
+- id: broccoli
+  name: Broccoli (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["broccoli", "brokoli"], not: ["frozen", "dondurulmus", "soup", "corba"]}
+  south: {any: ["broccoli 1 kg"]}
+- id: beetroot
+  name: Beetroot (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["beetroot", "pancar"], not: ["juice", "suyu", "tursu", "pickled", "seker"]}
+  south: {any: ["beetroot 1 kg"]}
+- id: beef-mince
+  name: Beef mince (per kg)
+  category: Meat
+  per: kg
+  loose: true
+  north: {any: ["beef mince", "ground beef", "dana kiyma", "kiyma"], not: ["tavuk", "chicken", "hindi", "turkey", "kofte", "meatball", "burger", "sos", "sauce", "pide", "borek", "pizza", "frozen", "dondurulmus", "soya"]}
+  south: {any: ["beef mince 1 kg"]}
+- id: whole-chicken
+  name: Whole chicken (per kg)
+  category: Meat
+  per: kg
+  loose: true
+  north: {any: ["whole chicken", "butun tavuk", "piliç bütün", "tavuk butun"], not: ["roast", "rotisserie", "cevirme", "doner", "smoked"]}
+  south: {any: ["whole chicken 1 kg"]}
+- id: chicken-breast
+  name: Chicken breast fillet (per kg)
+  category: Meat
+  per: kg
+  loose: true
+  north: {any: ["chicken breast", "chicken sirloin", "chicken fillet", "tavuk gogus", "tavuk bonfile", "gogus fileto"], not: ["sauce", "sos", "nugget", "schnitzel", "sinitzel", "pane", "breaded", "smoked", "fume", "jambon", "salam", "doner", "marinated", "kelebek", "skewer", "sis"]}
+  south: {any: ["chicken breast fillet 1 kg"]}

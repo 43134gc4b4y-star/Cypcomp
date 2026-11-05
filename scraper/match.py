@@ -313,6 +313,17 @@ def _pack(o: Offer, per: str):
     return None
 
 
+def _fresh(o: Offer, it: dict) -> bool:
+    """Loose fresh goods, not a packaged product that mentions them (tinned tomatoes, banana biscuits):
+    sold per kg, typed in from a shop/app, or a short name that starts with the produce word."""
+    t = fold(o.name)
+    if re.search(r"\bkg\b|\(kg\)", t) or o.source in ("reported", "contrib"):
+        return True
+    words = re.findall(r"[a-z]+", t)
+    starts = {fold(w).split()[0] for w in (it.get("north") or {}).get("any", [])}
+    return bool(words) and len(words) <= 4 and any(words[0].startswith(w) for w in starts)
+
+
 def _plain_name(name: str) -> str:
     """'Butter (any brand, per kg)' -> 'Butter (any brand)'; 'Eggs (price for 15)' -> 'Eggs'."""
     name = re.sub(r",\s*(per|price for)\b[^)]*\)", ")", name)
@@ -334,6 +345,15 @@ def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[G
                 floor = min(x.price for x in ok) if ok else 0
                 picked = [(o, z) for o, z in picked if o.price / z.total >= floor - 1e-12]
             sides[side] = picked
+        if it.get("loose"):          # fresh produce / meat: weighed goods, compared per kg (agreed with the owner)
+            n_pu = sorted((c for c in (_as_per_unit(o, per) for o, _ in sides["north"] if _fresh(o, it)) if c),
+                          key=lambda c: c.price)
+            s_pu = sorted((c for c in (_as_per_unit(o, per) for o, _ in sides["south"]) if c), key=lambda c: c.price)
+            if n_pu and s_pu:
+                out.append(Group(id=f"gen-{it['id']}", name=_plain_name(it["name"]), unit="per kg",
+                                 category=it.get("category", ""), north=n_pu, south=s_pu, kind="generic",
+                                 note="Fresh, sold by weight: compared per kg. Pack or average shown under each store."))
+            continue
         best = None
         for o, z in sides["south"]:
             n_same = [x for x, zx in sides["north"] if zx.same_as(z)]

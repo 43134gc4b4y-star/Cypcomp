@@ -375,3 +375,31 @@ def test_fetch_staple_urls():
     got = staple_urls(urls, ["white-sugar", "toothpaste"], 5)
     assert got == ["https://fetch.com.cy/p/white-sugar", "https://fetch.com.cy/p/cyprus-white-sugar-1kg",
                    "https://fetch.com.cy/p/colgate-toothpaste-75ml"]
+
+
+def test_observatory_rows():
+    from scraper.sources.observatory import parse_rows
+    text = """183 Αμνοερίφια μικρά σε κομμάτια (Kg) 11.95 8.95 10.69
+185 Βοδινός κιμάς (Kg) 13.50 5.60 8.56
+186 Κοτόπουλο ολόκληρο (Kg) (Χαμηλότερη Τιμή) 8.10 3.15 3.78
+202 Ντομάτες Α (Kg) 2.74 1.42 2.15
+204 Χόρτα Δέσμης 1.95 0.37 0.62"""
+    rows = {r[0]: r for r in parse_rows(text)}
+    assert rows["Tomatoes"] == ("Tomatoes", 2.74, 1.42, 2.15)
+    assert rows["Beef mince"][3] == 8.56 and rows["Whole chicken"][3] == 3.78 and rows["Lamb"][3] == 10.69
+    assert len(rows) == 4
+
+
+def test_loose_items_compare_per_kg():
+    from scraper.match import generic
+    items = [{"id": "tomatoes", "name": "Tomatoes (per kg)", "per": "kg", "loose": True,
+              "north": {"any": ["tomato", "domates"], "not": ["cherry", "salca"]},
+              "south": {"any": ["tomatoes 1 kg"]}}]
+    north = [Offer(source="x", side="N", store="Feed Me", name="Tomato 500 g", price=105.0, currency="TRY"),
+             Offer(source="x", side="N", store="Shop", name="DOMATES KG", price=180.0, currency="TRY"),
+             Offer(source="x", side="N", store="Shop", name="Cherry Tomato 500 g", price=187.5, currency="TRY")]
+    south = [Offer(source="observatory", side="S", store="avg", name="Tomatoes 1 kg", price=2.15, currency="EUR"),
+             Offer(source="f", side="S", store="x", name="Heinz Chopped Tomatoes 400G", price=1.38, currency="EUR")]
+    g = generic(north, south, items)[0]
+    assert g.unit == "per kg" and [o.price for o in g.north] == [180.0, 210.0]
+    assert [o.name for o in g.south] == ["Tomatoes 1 kg"]

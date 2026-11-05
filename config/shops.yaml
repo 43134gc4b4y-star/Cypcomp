@@ -18,6 +18,12 @@ ekalathi:
   pinned_stores: [Lidl, AlphaMega]
   # skip_chains: [Metro]               # uncomment to leave chains out
 
+observatory:
+  enabled: true
+  type: observatory                   # South government monthly price report: fresh fruit, veg and meat per kg
+  side: S
+  store: South Cyprus average (gov. price report)
+
 fetch:
   enabled: true
   type: fetchcy                       # South delivery marketplace; reads only pages that look like North products
