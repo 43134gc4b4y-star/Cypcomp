@@ -1,0 +1,7 @@
+{
+  "form_action": "",
+  "fields": {
+    "side": "", "shop": "", "town": "", "product": "", "barcode": "",
+    "size": "", "price": "", "currency": "", "note": ""
+  }
+}

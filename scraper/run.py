@@ -22,7 +22,7 @@ from pathlib import Path
 
 import yaml
 
-from . import fx
+from . import contrib, fx
 from .match import Group, generic, match
 from .models import Offer
 from .net import Http
@@ -95,6 +95,8 @@ def offer_json(o: Offer, rate: float) -> dict:
     tl = o.price if o.currency == "TRY" else o.price * rate
     d = {"store": o.store, "town": o.town, "eur": round(eur, 2), "try": round(tl, 2),
          "currency": o.currency, "url": o.url, "maps": o.maps, "name": o.name}
+    if o.barcode:
+        d["barcode"] = o.barcode
     if o.extra.get("shelf_price"):
         sp = o.extra["shelf_price"]
         d["shelf"] = {"name": o.extra["shelf_name"], "price": sp,
@@ -221,6 +223,22 @@ def main(argv=None):
     rate = rate_info["eur_try"]
 
     PINNED[:] = shops.get("ekalathi", {}).get("pinned_stores", [])
+    # approved shopper prices (and a review list of new ones)
+    known = {}
+    for o in north + south:
+        if o.barcode:
+            name, prices = known.setdefault(o.barcode, (o.name, {"N": [], "S": []}))
+            if o.currency == "EUR":
+                prices[o.side].append(o.price)
+    contributed = contrib.load(http, load_yaml("contributions.yaml") if (ROOT / "config" / "contributions.yaml").exists() else {},
+                               known, ROOT)
+    for o in contributed:
+        (north if o.side == "N" else south).append(o)
+    if contributed:
+        stamps["contrib"] = {"store": "Shopper reports (reviewed)", "side": "N+S",
+                             "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                             "products": len(contributed)}
+
     overrides = load_yaml("overrides.yaml") if (ROOT / "config" / "overrides.yaml").exists() else {}
     groups = match(north, south, load_yaml("matching.yaml"), overrides)
     groups += generic(north, south, load_yaml("generic_items.yaml") or [])

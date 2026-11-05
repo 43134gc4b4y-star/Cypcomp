@@ -311,3 +311,44 @@ def test_sugar_free_is_not_sugar(mcfg):
     north = [N("POKKA BLACK COFFEE NO SUGAR 240ML", 60)]
     south = [S("Pokka Black Coffee with sugar 240ml", 1.1, 30)]
     assert match(north, south, mcfg) == []
+
+
+# --- shopper contributions ---
+from scraper import contrib
+
+
+def test_ean_check_digit():
+    assert contrib.ean_ok("5449000000996")      # Coca-Cola 330ml
+    assert not contrib.ean_ok("5449000000997")
+    assert not contrib.ean_ok("12345")
+
+
+def test_contrib_row_to_offer():
+    row = {"Timestamp": "2026-11-05 10:00:00", "Side": "North", "Shop": "Molto", "Town": "Lefkoşa",
+           "Product": "Coca-Cola", "Barcode": "5449000000996", "Pack size": "330 ml", "Price": "45,50",
+           "Currency": "TRY", "Approved": "yes"}
+    o = contrib.to_offer(row)
+    assert o.side == "N" and o.currency == "TRY" and o.price == 45.5
+    assert o.name == "Coca-Cola 330 ml" and o.barcode == "5449000000996"
+    assert "shopper" in o.town
+    assert contrib.to_offer({"Side": "South", "Product": "", "Price": "1"}) is None
+
+
+def test_contrib_review_and_approval(tmp_path):
+    (tmp_path / "data").mkdir()
+
+    class FakeHttp:
+        pass
+
+    rows = [
+        {"Side": "South", "Shop": "Sklavenitis", "Product": "Coke", "Barcode": "5449000000996",
+         "Price": "9.99", "Currency": "EUR", "Approved": ""},
+        {"Side": "South", "Shop": "Lidl", "Product": "Coke", "Barcode": "5449000000996",
+         "Price": "0.89", "Currency": "EUR", "Approved": "yes"},
+    ]
+    contrib.read_rows = lambda http, url: rows
+    got = contrib.load(FakeHttp(), {"csv_url": "x"}, {"5449000000996": ("Coca-Cola 330ml", {"N": [], "S": [0.8, 1.0]})},
+                       tmp_path)
+    assert len(got) == 1 and got[0].store == "Lidl"
+    review = (tmp_path / "data" / "contributions_review.md").read_text()
+    assert "Sklavenitis" in review and "⚠️" in review

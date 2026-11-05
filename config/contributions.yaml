@@ -1,0 +1,5 @@
+# Shopper prices from the site's "Add a price" form.
+# csv_url: the Google Sheet of form answers, published as CSV
+#   (Sheet > File > Share > Publish to web > choose the answers tab > CSV > Publish, copy the link).
+# Leave empty until the form is set up.
+csv_url: ""

@@ -171,7 +171,7 @@
   $("more").addEventListener("click", function () { shown += 40; render(); });
 
   fetch("data/prices.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
-    DATA = d; DATA.items.forEach(index);
+    DATA = d; window.CC_DATA = d; DATA.items.forEach(index);
     TRENDING = TRENDING_CANDIDATES.filter(function (t) { return DATA.items.some(function (it) { return score(it, t) >= 2.5; }); }).slice(0, 12);
     header(); drawChips(); render();
   }).catch(function () {

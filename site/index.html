@@ -21,11 +21,46 @@
 <div class="sechead">Trending</div>
 <div class="chips" id="trending"></div>
 <div class="chips" id="cats"></div>
+<a class="addlink" href="#contrib">📷 Seen a price in a shop? Add it</a>
 
 <main id="out" aria-live="polite"></main>
 <button class="main more" id="more" hidden>Show more</button>
 
+<section class="card contrib" id="contrib">
+  <div class="ctitle">📷 Add a price you saw</div>
+  <p class="small">Seen a price in a shop? Scan the barcode (or take a photo of it), fill in the price and send it.
+    Every price is checked by hand before it appears on the site.</p>
+  <div class="scanrow">
+    <button type="button" class="main" id="scanbtn">Scan barcode</button>
+    <label class="main ghost" for="scanphoto">Use a photo</label>
+    <input type="file" id="scanphoto" accept="image/*" capture="environment" hidden>
+  </div>
+  <div id="scanbox" hidden><video id="scanvid" playsinline muted></video><button type="button" class="link" id="scanstop">Stop camera</button></div>
+  <div id="scanmsg" class="small"></div>
+  <form id="cform" autocomplete="off">
+    <label>Barcode <span class="opt">(the numbers under the stripes)</span><input name="barcode" inputmode="numeric" pattern="[0-9 ]*"></label>
+    <div class="seg" role="radiogroup" aria-label="Which side">
+      <label><input type="radio" name="side" value="North" required> North (₺)</label>
+      <label><input type="radio" name="side" value="South" required> South (€)</label>
+    </div>
+    <label>Product<input name="product" required placeholder="e.g. Coca-Cola Zero"></label>
+    <label>Pack size<input name="size" placeholder="e.g. 1.5 L, 500 g, 6 x 330 ml"></label>
+    <div class="two">
+      <label>Price<input name="price" required inputmode="decimal" placeholder="0.00"></label>
+      <label>Currency<select name="currency"><option>TRY</option><option>EUR</option></select></label>
+    </div>
+    <div class="two">
+      <label>Shop<input name="shop" required placeholder="e.g. Molto, Lidl"></label>
+      <label>Town<input name="town" placeholder="e.g. Girne, Larnaca"></label>
+    </div>
+    <label>Note <span class="opt">(optional – offer price, date seen…)</span><input name="note"></label>
+    <button class="main" type="submit">Send price</button>
+    <div id="cmsg" class="small"></div>
+  </form>
+</section>
+
 <footer class="card small" id="foot"></footer>
 <script src="app.js"></script>
+<script src="contribute.js"></script>
 </body>
 </html>

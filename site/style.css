@@ -47,8 +47,27 @@ details.others summary{cursor:pointer;color:var(--muted);font-weight:700}
 .small a{color:inherit}
 .empty{text-align:center;padding:26px 14px}
 .empty .big{font-size:38px}
-button.main{margin:0 0 14px;width:100%;padding:12px;border:0;border-radius:12px;background:var(--text);color:var(--bg);font-size:15px;font-weight:700;cursor:pointer}
+button.main,label.main{margin:0 0 14px;width:100%;padding:12px;border:0;border-radius:12px;background:var(--text);color:var(--bg);font-size:15px;font-weight:700;cursor:pointer}
 @media (max-width:380px){.pr{font-size:19px}.sides{gap:7px}.side{padding:8px}}
 .chains{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px;color:var(--muted)}
 .chains b{color:var(--south)}
 .unitp{font-size:12px;font-weight:700;color:var(--text);margin-top:4px;background:var(--bg);border-radius:8px;padding:3px 6px;display:inline-block}
+.contrib .ctitle{font-weight:800;font-size:17px;margin-bottom:4px}
+.contrib form{display:grid;gap:10px;margin-top:10px}
+.contrib label{display:grid;gap:4px;font-size:13px;font-weight:700;color:var(--muted)}
+.contrib input:not([type=radio]),.contrib select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:16px inherit}
+.contrib .opt{font-weight:400}
+.contrib .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contrib .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.contrib .seg label{display:flex;align-items:center;gap:6px;justify-content:center;padding:11px;border:1px solid var(--line);border-radius:12px;color:var(--text);cursor:pointer}
+.contrib .seg label:has(input:checked){border-color:var(--text);background:var(--bg)}
+.scanrow{display:flex;gap:8px;margin-top:8px}
+.scanrow .main{flex:1;text-align:center;margin:0}
+.main.ghost{background:var(--bg);color:var(--text);cursor:pointer;display:block}
+#scanbox{margin-top:10px}
+#scanvid{width:100%;border-radius:14px;background:#000;max-height:260px;object-fit:cover}
+.link{border:0;background:none;color:var(--south);font:600 14px inherit;cursor:pointer;padding:6px 0}
+#scanmsg,#cmsg{margin-top:6px}
+.found{background:var(--bg);border-radius:12px;padding:10px;margin-top:8px}
+.contrib form button.main{margin:4px 0 0}
+.addlink{display:block;margin:0 2px 12px;color:var(--south);font-weight:700;font-size:14px;text-decoration:none}
