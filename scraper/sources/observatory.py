@@ -5,6 +5,7 @@ per-kg fresh items are used (shown as "South Cyprus average")."""
 from __future__ import annotations
 
 import io
+from urllib.parse import urljoin
 import logging
 import re
 from datetime import date
@@ -44,16 +45,18 @@ def find_report(http: Http, today: date, months_back: int = 4) -> tuple[str, str
     best = None
     y, m = today.year, today.month
     for _ in range(months_back):
-        page = http.text(f"{BASE}/en/press-room/announcements/?archive={m}-{y}")
+        listing = f"{BASE}/en/press-room/announcements/?archive={m}-{y}"   # (the site counts months from 0)
+        page = http.text(listing)
         for href in dict.fromkeys(re.findall(r'href="([^"]*/announcements/\d+/\?ctype=ar)"', page)):
-            art = http.text(href if href.startswith("http") else BASE + href)
+            href = urljoin(listing, href)
+            art = http.text(href)
             t = re.search(TITLE + r"\s*-\s*(\w+)\s+(\d{4})", art)
             pdf = re.search(r'href="([^"]+\.pdf)"', art)
             if not (t and pdf) or t.group(1) not in MONTHS:
                 continue
             key = (int(t.group(2)), MONTHS[t.group(1)])
             if not best or key > best[0]:
-                url = pdf.group(1) if pdf.group(1).startswith("http") else BASE + pdf.group(1)
+                url = urljoin(href, pdf.group(1))
                 best = (key, url, f"{EN_MONTH[key[1]]} {key[0]}")
         if best:
             break
