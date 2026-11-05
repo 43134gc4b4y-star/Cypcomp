@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
-  var DATA = null, query = "", cat = "", shown = 40;
+  var DATA = null, query = "", cat = "", shown = 40, sortBy = "eur";
 
   var TRENDING = [];
   // English search words -> Turkish/Greek words shops use, so "milk" also finds "süt"
@@ -66,6 +66,10 @@
     return best;
   }
 
+  // money saved on one pack: difference between the cheapest shelf price on each side (in €)
+  function shelfEur(o) { return o ? (o.shelf ? o.shelf.eur : o.eur) : 0; }
+  function gap(it) { return Math.abs(shelfEur(it.north[0]) - shelfEur(it.south[0])); }
+
   function perLabel(it) {
     var m = /price (per [^·]+)/.exec(it.unit || "");
     return m ? m[1].trim().replace(/^per 1 l$/, "per litre").replace(/^per 1 kg$/, "per kg").replace(/^per 1 /, "per ") : "";
@@ -97,7 +101,7 @@
   function card(it) {
     var n = it.north[0], s = it.south[0];
     var badge = it.cheaper === "=" ? '<span class="sv E">Same price</span>'
-      : '<span class="sv ' + it.cheaper + '">' + (it.cheaper === "N" ? "North" : "South") + " saves " + Math.round(it.saving_pct) + "%" + (perLabel(it) && /pack sizes differ/.test(it.unit) ? " " + esc(perLabel(it)) : "") + "</span>";
+      : '<span class="sv ' + it.cheaper + '">' + (it.cheaper === "N" ? "North" : "South") + " saves " + Math.round(it.saving_pct) + "% · " + eur(gap(it)) + (perLabel(it) && /pack sizes differ/.test(it.unit) ? " " + esc(perLabel(it)) : "") + "</span>";
     var img = safeUrl(it.image) ? '<img loading="lazy" alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
     var more = "";
     if (it.north.length > 1 || it.south.length > 1) {
@@ -121,9 +125,14 @@
     var q = fold(query).trim();
     var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.category === cat) ? score(it, q) : 0 }; })
       .filter(function (x) { return x.s > 0; })
-      .sort(function (a, b) { return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || b.it.saving_pct - a.it.saving_pct; })
+      .sort(function (a, b) {
+        var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct : gap(b.it) - gap(a.it);
+        return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || bySaving;
+      })
       .map(function (x) { return x.it; });
-    var html = list.slice(0, shown).map(card).join("");
+    var title = q ? "" : '<div class="sechead listhead">' + (cat ? esc(cat) + ": " : "") +
+      (sortBy === "pct" ? "Biggest % difference first" : "Biggest price difference first") + "</div>";
+    var html = (list.length ? title : "") + list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
       html = '<div class="card empty"><div class="big">⏳</div><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
     } else if (!list.length) {
@@ -146,6 +155,9 @@
     var counts = {};
     DATA.items.forEach(function (i) { counts[i.category] = (counts[i.category] || 0) + 1; });
     var cats = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 20);
+    chips($("sort"), [{ t: "Biggest € difference", v: "eur" }, { t: "Biggest % difference", v: "pct" }], sortBy, function (v) {
+      sortBy = v; shown = 40; drawChips(); render();
+    });
     chips($("cats"), [{ t: "All", v: "" }].concat(cats.map(function (c) { return { t: c + " (" + counts[c] + ")", v: c }; })), cat, function (v) {
       cat = v; query = ""; $("q").value = ""; shown = 40; drawChips(); render();
     });
