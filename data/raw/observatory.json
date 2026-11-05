@@ -1,0 +1,215 @@
+{
+"source": "observatory",
+"fetched_at": "2026-11-05T16:24:57+00:00",
+"offers": [
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Lamb 1 kg",
+"price": 14.2,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €10.50)",
+"maps": "",
+"extra": {
+"lowest": 10.5,
+"highest": 38.72
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Beef (boneless) 1 kg",
+"price": 16.88,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €12.06)",
+"maps": "",
+"extra": {
+"lowest": 12.06,
+"highest": 29.91
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Beef mince 1 kg",
+"price": 12.21,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €6.42)",
+"maps": "",
+"extra": {
+"lowest": 6.42,
+"highest": 25.09
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Whole chicken 1 kg",
+"price": 3.74,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €2.99)",
+"maps": "",
+"extra": {
+"lowest": 2.99,
+"highest": 8.88
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Chicken breast fillet 1 kg",
+"price": 7.46,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €3.03)",
+"maps": "",
+"extra": {
+"lowest": 3.03,
+"highest": 13.5
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Pork chops 1 kg",
+"price": 6.18,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €3.99)",
+"maps": "",
+"extra": {
+"lowest": 3.99,
+"highest": 10.52
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Pork mince 1 kg",
+"price": 5.24,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €2.87)",
+"maps": "",
+"extra": {
+"lowest": 2.87,
+"highest": 8.86
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Cucumbers (greenhouse) 1 kg",
+"price": 1.1,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €0.48)",
+"maps": "",
+"extra": {
+"lowest": 0.48,
+"highest": 2.69
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Cucumbers 1 kg",
+"price": 2.21,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €1.28)",
+"maps": "",
+"extra": {
+"lowest": 1.28,
+"highest": 5.49
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Tomatoes 1 kg",
+"price": 2.21,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €1.45)",
+"maps": "",
+"extra": {
+"lowest": 1.45,
+"highest": 5.66
+}
+},
+{
+"source": "observatory",
+"side": "S",
+"store": "South Cyprus average (gov. price report)",
+"name": "Potatoes 1 kg",
+"price": 1.72,
+"currency": "EUR",
+"url": "https://consumer.gov.cy/assets/modules/wnp/articles/202601/291/docs/paratiritirio_september_2026.pdf",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average of ~400 shops, Sep 2026 (lowest €0.77)",
+"maps": "",
+"extra": {
+"lowest": 0.77,
+"highest": 4.96
+}
+}
+]
+}
