@@ -582,7 +582,7 @@
   category: Baking & cooking
   per: kg
   north: {any: ["sofra tuzu", "iyotlu tuz", "kaya tuzu", "tuz "], not: [salamura, bulasik, makine, kraker, cips, tuzsuz, biber, baharat, limon, deniz, himalaya, pembe, "az tuzlu", tuzlu, fistik, findik, badem]}
-  south: {any: ["table salt", "iodised salt", "iodized salt", "salt "], not: [sea, himalayan, pink, dishwasher, crisps, chips, salted, unsalted, pepper, flakes, smoked, celery, garlic, "low salt", butter, nuts, peanut, caramel, crackers, popcorn, bath]}
+  south: {any: ["table salt", "iodised salt", "iodized salt", "fine salt", "cooking salt", "salt fine", "salt 1kg", "salt 500g", "salt 1 kg"], not: [vinegar, lays, crisp, "x10", sea, himalayan, pink, dishwasher, crisps, chips, salted, unsalted, pepper, flakes, smoked, celery, garlic, "low salt", butter, nuts, peanut, caramel, crackers, popcorn, bath]}
 - id: lentils
   name: Red lentils (any brand)
   category: Rice, pasta & pulses
@@ -606,13 +606,13 @@
   category: Personal care
   per: 100 ml
   north: {any: ["dis macunu", toothpaste], not: [firca, cocuk, kids, junior, bebek, set]}
-  south: {any: [toothpaste], not: [brush, kids, junior, baby, set, travel, "+ brush"]}
+  south: {any: [toothpaste], not: [barbie, frozen, disney, spiderman, paw, minions, princess, cars, peppa, kid, brush, kids, junior, baby, set, travel, "+ brush"]}
 - id: vinegar
   name: Vinegar (any brand)
   category: Sauces & spreads
   per: l
   north: {any: [sirke], not: [limon, balzamik, elma, uzum, nar, sos, cips, krema, glaze]}
-  south: {any: [vinegar], not: [balsamic, apple, cider, wine, crisps, chips, glaze, cream, raspberry, rice, sherry, pomegranate]}
+  south: {any: [vinegar], not: [grape, red, balsamic, apple, cider, wine, crisps, chips, glaze, cream, raspberry, rice, sherry, pomegranate]}
 - id: bulgur
   name: Bulgur wheat (any brand)
   category: Rice, pasta & pulses
