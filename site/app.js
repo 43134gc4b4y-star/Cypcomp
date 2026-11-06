@@ -78,17 +78,30 @@
   function side(label, cls, o, win, it, per) {
     // a shelf-edge label: coloured strip, big shelf price, lira, then where to buy
     var shelfEur = o.shelf ? o.shelf.eur : o.eur, shelfTry = o.shelf ? o.shelf.try : o.try;
-    var unit = o.shelf && per ? '<div class="unitp">' + eur(o.eur) + " " + esc(per) + " · " + tl(o.try) + "</div>" : "";
+    var unit = o.shelf && per ? '<div class="unitp">' + eur(o.eur) + " " + esc(per) + ", " + tl(o.try) + "</div>" : "";
     var links = "";
     if (safeUrl(o.maps)) links += '<a target="_blank" rel="noopener" href="' + esc(o.maps) + '">Map</a>';
     if (safeUrl(o.url)) links += '<a target="_blank" rel="noopener" href="' + esc(o.url) + '">Shop page</a>';
-    var sticker = win ? '<div class="sticker"><b>' + eur(gap(it)) + ' less</b><span>' + Math.round(it.saving_pct) + "% cheaper</span></div>" : "";
+    var sticker = win ? '<div class="sticker"><b>' + eur(gap(it)) + " less</b><span>" + Math.round(it.saving_pct) + "% cheaper</span></div>"
+                      : '<div class="sticker ghost" aria-hidden="true"><b>&nbsp;</b><span>&nbsp;</span></div>';
     var prod = o.shelf ? o.shelf.name : o.name;
-    return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + "</div>" + sticker +
-      '<div class="pr">' + eur(shelfEur) + '</div><div class="pl">' + tl(shelfTry) + "</div>" + unit +
-      '<div class="sn">' + esc(o.store) + "</div>" + (o.town ? '<div class="tw">' + esc(o.town) + "</div>" : "") +
-      '<div class="pn">' + esc(prod) + "</div>" + (links ? '<div class="links">' + links + "</div>" : "") + "</div>";
+    return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + "</div>" +
+      '<div class="pr">' + eur(shelfEur) + '</div><div class="pl">' + tl(shelfTry) + "</div>" + unit + sticker +
+      '<div class="where"><div class="sn">' + esc(o.store) + "</div>" + (o.town ? '<div class="tw">' + esc(o.town) + "</div>" : "") +
+      '<div class="pn">' + esc(nice(prod)) + "</div></div>" + (links ? '<div class="links">' + links + "</div>" : "") + "</div>";
   }
+
+  function nice(name) {                 // shout-case words to Title case: "GILLETTE MACH3 4LU" -> "Gillette Mach3 4lu"
+    var n = String(name).replace(/\s+/g, " ").trim();
+    return n.split(" ").map(function (w) {
+      if (!/[A-ZÇĞİÖŞÜ]{2}/.test(w) || /[a-zçğıöşü]/.test(w)) return w;          // already mixed case, or not a word
+      var l = w.replace(/İ/g, "i").toLowerCase();
+      if (/^\d/.test(l)) return l.replace(/^(\d+(?:[.,]\d+)?)(ml|gr|g|kg|lt|l|cl)$/, "$1 $2");
+      if (/^(ml|gr|g|kg|lt|cl|pcs)$/.test(l)) return l;
+      return l.replace(/(^|[(&\-\/])([a-zçğıöşü])/g, function (m, a, c) { return a + c.toUpperCase(); });
+    }).join(" ");
+  }
+
 
   function others(list, cur) {
     return list.slice(1).map(function (o) {
@@ -116,7 +129,7 @@
     }).filter(Boolean).join("");
     var chainRow = chains ? '<div class="chains">In the South at ' + chains + "</div>" : "";
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + (n.date ? " (" + esc(n.date) + ")" : "") + "</p>" : "";
-    return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(it.name) +
+    return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(", ")) + "</div></div></div>" + same + '<div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it, perLabel(it)) + side("South", "S", s, it.cheaper === "S", it, perLabel(it)) + "</div>" +
       chainRow + more + note + "</article>";
