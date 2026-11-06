@@ -209,6 +209,21 @@ def publish_progress(sid: str, offers: list) -> None:
         subprocess.run(["bash", str(script), f"{after['count']} items"], cwd=ROOT, check=False)
 
 
+def stamp_assets() -> None:
+    """Add ?v=<hash> to the site's CSS/JS links so phones load the new files after a change."""
+    import hashlib
+    page = ROOT / "site" / "index.html"
+    html = page.read_text(encoding="utf-8")
+    new = html
+    for f in ("style.css", "app.js", "contribute.js", "wanted.js"):
+        p = ROOT / "site" / f
+        if p.exists():
+            v = hashlib.sha1(p.read_bytes()).hexdigest()[:8]
+            new = re.sub(re.escape(f) + r"(\?v=[0-9a-z]*)?(?=[\"'])", f"{f}?v={v}", new)
+    if new != html:
+        page.write_text(new, encoding="utf-8")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", nargs="*", help="only scrape these shop ids")
@@ -288,6 +303,7 @@ def main(argv=None):
         w = wanted.build(north, south, groups, load_yaml("wanted.yaml"), rate)
         (SITE_DATA / "wanted.json").write_text(json.dumps(w, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    stamp_assets()
     write_report(report, out, len(north), len(south), http.count)
     if report and all(r["status"] == "failed" for r in report):
         sys.exit(1)

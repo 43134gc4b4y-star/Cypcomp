@@ -16,7 +16,7 @@
       return UNITS.test(w) || /^\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1);
     }).join(" ");
   }
-  var CAM = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+  var CAM = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
 
   function rows() {
     var list = need === "S" ? W.need_south : W.need_north, q = fold($("wq").value).trim();
