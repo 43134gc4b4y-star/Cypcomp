@@ -127,7 +127,7 @@
       var e = o.shelf ? o.shelf.eur : o.eur, t = o.shelf ? o.shelf.try : o.try;
       return "<span><b>" + c + "</b> " + eur(e) + ' <span class="pl">' + tl(t) + "</span></span>";
     }).filter(Boolean).join("");
-    var chainRow = chains ? '<div class="chains">In the South at ' + chains + "</div>" : "";
+    var chainRow = chains ? '<div class="chains">In the <b class="tS">South</b> at ' + chains + "</div>" : "";
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + (n.date ? " (" + esc(n.date) + ")" : "") + "</p>" : "";
     return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(", ")) + "</div></div></div>" + same + '<div class="tags">' +
@@ -150,7 +150,7 @@
     if (!DATA.items.length) {
       html = '<div class="empty"><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
     } else if (!list.length) {
-      html = '<div class="empty"><div class="name">No comparison for “' + esc(query) + '” yet</div><p class="small">An item shows up once the same product (brand and size) is on sale in both North and South. Try a shorter word, such as a brand name.</p></div>';
+      html = '<div class="empty"><div class="name">No comparison for “' + esc(query) + '” yet</div><p class="small">An item shows up once the same product (brand and size) is on sale in both <span class="tN">North</span> and <span class="tS">South</span>. Try a shorter word, such as a brand name.</p></div>';
     }
     $("out").innerHTML = html;
     $("more").hidden = list.length <= shown;
@@ -187,8 +187,8 @@
     var when = isNaN(d) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
     var tot = Math.max(1, DATA.cheaper_north + DATA.cheaper_south);
     var np = Math.round(100 * DATA.cheaper_north / tot);
-    var lead = DATA.cheaper_south > DATA.cheaper_north ? "The South has more cheaper items" :
-      DATA.cheaper_north > DATA.cheaper_south ? "The North has more cheaper items" : "Both sides have the same number of cheaper items";
+    var lead = DATA.cheaper_south > DATA.cheaper_north ? 'The <span class="tS">South</span> has more cheaper items' :
+      DATA.cheaper_north > DATA.cheaper_south ? 'The <span class="tN">North</span> has more cheaper items' : "Both sides have the same number of cheaper items";
     $("stats").innerHTML = '<p class="score-h">' + lead + "</p>" +
       '<div class="score"><div class="sc N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span></div>" +
       '<div class="sc S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span></div></div>" +
@@ -199,8 +199,8 @@
       return esc(s.store) + " (" + s.products + " products, " + (isNaN(t) ? "" : t.toLocaleDateString("en-GB")) + ")";
     }).join(" · ");
     $("foot").innerHTML = "<p><b>Exchange rate:</b> 1 € = " + (DATA.fx ? DATA.fx.eur_try.toFixed(2) : "?") + " ₺ (" + esc(DATA.fx && DATA.fx.date) +
-      ", European Central Bank)</p><p><b>Sources:</b> " + (src || "none yet") + ". South prices come from the Cyprus government’s " +
-      '<a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory; North prices are the shops’ own online prices.</p>' +
+      ", European Central Bank)</p><p><b>Sources:</b> " + (src || "none yet") + ". <span class=\"tS\">South</span> prices come from the Cyprus government’s " +
+      '<a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory; <span class="tN">North</span> prices are the shops’ own online prices.</p>' +
       "<p>Prices are read automatically once a day and can change or differ in store. Products are paired like for like: same brand and same pack size; " +
       "“any brand” items compare the cheapest pack of the same size on both sides. Different pack sizes are never compared.</p>";
   }

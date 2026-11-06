@@ -92,7 +92,7 @@
   category: Pantry
   per: l
   north: {any: [zeytinyag, "zeytin yag", "olive oil", sizma], not: [pirina, pomace, sprey, sabun, krem, sampuan, ton, sardalya, zeytinyagli, enginar, dolma, sarma, kozmetik, cilt, vucut]}
-  south: {cat: [olive oil], not: [pomace, "spray"]}
+  south: {cat: [olive oil], not: [pomace, "spray", blend, mixed, sunflower, "60", "με"]}
 
 - id: butter
   name: Butter (any brand, per kg)

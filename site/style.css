@@ -190,3 +190,9 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .wnone { color: var(--muted); padding: 14px 0; }
 .cfor { background: var(--lemon); color: var(--lemon-ink); border-radius: 8px; padding: 10px 12px; margin-top: 12px; font-size: 14px; }
 .contrib { scroll-margin-top: 76px; }
+
+/* North / South words always in their side's colour */
+.tN { color: var(--north); } .tS { color: var(--south); }
+.wtabs i { font-style: normal; font-weight: 700; }
+.wtabs button.on i { color: #fff; }
+.cfor .tN, .cfor .tS { background: var(--paper); padding: 0 5px; border-radius: 4px; }

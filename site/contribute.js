@@ -133,7 +133,7 @@
     form.product.value = w.name; form.size.value = w.size || ""; form.barcode.value = w.barcode || "";
     form.price.value = ""; $("cmsg").textContent = ""; $("scanmsg").textContent = "";
     $("cfor").hidden = false;
-    $("cfor").innerHTML = "Adding the <b>" + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
+    $("cfor").innerHTML = 'Adding the <b class="' + (side === "North" ? "tN" : "tS") + '">' + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
       "Photograph the barcode, then type the price and shop.";
     document.getElementById("contrib").scrollIntoView({ behavior: "smooth", block: "start" });
     if (openCamera) $("scanphoto").click();

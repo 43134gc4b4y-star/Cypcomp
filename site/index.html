@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=2101e5cb">
+<link rel="stylesheet" href="style.css?v=ff361796">
 </head>
 <body>
 <div class="page">
@@ -44,8 +44,8 @@
   <p class="small">Each of these has a price on one side only. Seen one on a shelf? Tap <b>Add</b>, photograph the barcode
     and type the price, and it joins the comparison.</p>
   <div class="wtabs" role="tablist">
-    <button type="button" role="tab" data-need="N"><span>North prices needed</span><b id="wcN"></b></button>
-    <button type="button" role="tab" data-need="S" class="on"><span>South prices needed</span><b id="wcS"></b></button>
+    <button type="button" role="tab" data-need="N"><span><i class="tN">North</i> prices needed</span><b id="wcN"></b></button>
+    <button type="button" role="tab" data-need="S" class="on"><span><i class="tS">South</i> prices needed</span><b id="wcS"></b></button>
   </div>
   <input id="wq" type="search" placeholder="Filter, e.g. Nivea, Nescafé" autocomplete="off" aria-label="Filter wanted products">
   <div class="chips" id="wbrands"></div>
@@ -68,8 +68,8 @@
   <form id="cform" autocomplete="off">
     <label>Barcode <span class="opt">(the numbers under the stripes)</span><input name="barcode" inputmode="numeric" pattern="[0-9 ]*"></label>
     <div class="seg" role="radiogroup" aria-label="Which side">
-      <label><input type="radio" name="side" value="North" required> North (₺)</label>
-      <label><input type="radio" name="side" value="South" required> South (€)</label>
+      <label><input type="radio" name="side" value="North" required> <span class="tN">North</span> (₺)</label>
+      <label><input type="radio" name="side" value="South" required> <span class="tS">South</span> (€)</label>
     </div>
     <label>Product<input name="product" required placeholder="e.g. Coca-Cola Zero"></label>
     <label>Pack size<input name="size" placeholder="e.g. 1.5 L, 500 g, 6 x 330 ml"></label>
@@ -89,8 +89,8 @@
 
 <footer class="foot small" id="foot"></footer>
 </div>
-<script src="app.js?v=15ecac6b"></script>
-<script src="contribute.js?v=8f2e47d1"></script>
+<script src="app.js?v=5d4a57d0"></script>
+<script src="contribute.js?v=8675a4b2"></script>
 <script src="wanted.js?v=e6205ece"></script>
 </body>
 </html>
