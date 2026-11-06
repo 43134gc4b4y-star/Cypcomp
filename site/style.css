@@ -87,10 +87,10 @@ a { color: var(--south); }
 .tag:not(.win) .pr { color: var(--muted); font-weight: 600; }
 .pl { font-size: 14px; color: var(--muted); margin-top: 3px; }
 .unitp { font-size: 13px; color: var(--muted); margin-top: 4px; }
-.sticker { margin: 10px 0 2px; background: var(--lemon); color: var(--lemon-ink); padding: 5px 10px 6px; border-radius: 4px;
+.sticker { margin: 12px 0 4px; background: var(--lemon); color: var(--lemon-ink); padding: 7px 14px 8px; border-radius: 5px;
   line-height: 1.1; transform: rotate(-2deg); box-shadow: 0 1px 0 rgba(0,0,0,.18); }
-.sticker b { display: block; font: 800 18px/1 var(--display); }
-.sticker span { font-size: 11px; font-weight: 600; }
+.sticker b { display: block; font: 800 25px/1 var(--display); }
+.sticker span { display: block; font-size: 14px; font-weight: 700; margin-top: 2px; }
 .sticker.ghost { visibility: hidden; }
 .where { width: 100%; margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--rule); flex: 1; }
 .sn { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; color: var(--ink); }
@@ -147,7 +147,7 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
   .pr { font-size: 36px; }
   .item { padding: 14px 12px; }
   .tag { padding: 0 8px 12px; } .tag .strip { margin: 0 -8px 12px; }
-  .sticker b { font-size: 16px; }
+  .sticker { padding: 6px 10px 7px; } .sticker b { font-size: 22px; } .sticker span { font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) { .bar .bN { transition: none; } }
 
