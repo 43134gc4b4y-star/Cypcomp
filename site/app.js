@@ -174,8 +174,8 @@
     var when = isNaN(d) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
     var tot = Math.max(1, DATA.cheaper_north + DATA.cheaper_south);
     var np = Math.round(100 * DATA.cheaper_north / tot);
-    var lead = DATA.cheaper_south > DATA.cheaper_north ? "The South is ahead today" :
-      DATA.cheaper_north > DATA.cheaper_south ? "The North is ahead today" : "It's a dead heat today";
+    var lead = DATA.cheaper_south > DATA.cheaper_north ? "The South has more cheaper items" :
+      DATA.cheaper_north > DATA.cheaper_south ? "The North has more cheaper items" : "Both sides have the same number of cheaper items";
     $("stats").innerHTML = '<p class="score-h">' + lead + "</p>" +
       '<div class="score"><div class="sc N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span></div>" +
       '<div class="sc S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span></div></div>" +
