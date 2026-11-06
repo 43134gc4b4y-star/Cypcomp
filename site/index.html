@@ -6,31 +6,33 @@
 <title>Compare Cyprus – North vs South prices</title>
 <meta name="description" content="Is it cheaper in North or South Cyprus? Daily supermarket prices side by side, with the cheapest store and a map link.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="flag">🇨🇾</div>
+<div class="page">
+<header class="top">
   <h1>Compare Cyprus</h1>
-  <p class="sub">North vs South prices side by side, with the cheapest store and a map link. Updated every morning.</p>
-  <div class="stats" id="stats"></div>
+  <p class="lede">The same products, priced in North and South Cyprus. Shelf prices in euro, with lira underneath.</p>
+  <div class="split" id="stats" aria-live="polite"></div>
 </header>
 
 <div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
 
-<div class="sechead">Trending</div>
-<div class="chips" id="trending"></div>
-<div class="sechead">Categories</div>
-<div class="chips" id="cats"></div>
-<div class="sechead">Sort by</div>
-<div class="chips" id="sort"></div>
-<a class="addlink" href="#contrib">📷 Seen a price in a shop? Add it</a>
+<nav class="filters" aria-label="Filters">
+  <div class="frow"><span class="flab">Popular</span><div class="chips" id="trending"></div></div>
+  <div class="frow"><span class="flab">Category</span><div class="chips" id="cats"></div></div>
+  <div class="frow"><span class="flab">Sort</span><div class="chips" id="sort"></div></div>
+</nav>
+<a class="addlink" href="#contrib">Seen a price in a shop? Add it</a>
 
 <main id="out" aria-live="polite"></main>
 <button class="main more" id="more" hidden>Show more</button>
 
 <section class="card contrib" id="contrib">
-  <div class="ctitle">📷 Add a price you saw</div>
+  <h2 class="ctitle">Add a price you saw</h2>
   <p class="small">Seen a price in a shop? Scan the barcode (or take a photo of it), fill in the price and send it.
     Every price is checked by hand before it appears on the site.</p>
   <div class="scanrow">
@@ -62,7 +64,8 @@
   </form>
 </section>
 
-<footer class="card small" id="foot"></footer>
+<footer class="foot small" id="foot"></footer>
+</div>
 <script src="app.js"></script>
 <script src="contribute.js"></script>
 </body>

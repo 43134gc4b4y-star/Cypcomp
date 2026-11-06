@@ -75,18 +75,19 @@
     return m ? m[1].trim().replace(/^per 1 l$/, "per litre").replace(/^per 1 kg$/, "per kg").replace(/^per 1 /, "per ") : "";
   }
 
-  function side(label, cls, o, win, mainCur, per) {
-    // shelf price large; for per-kg/litre comparisons the unit price goes underneath
+  function side(label, cls, o, win, it, per) {
+    // a shelf-edge label: coloured strip, big shelf price, lira, then where to buy
     var shelfEur = o.shelf ? o.shelf.eur : o.eur, shelfTry = o.shelf ? o.shelf.try : o.try;
-    var big = eur(shelfEur), small = tl(shelfTry);
     var unit = o.shelf && per ? '<div class="unitp">' + eur(o.eur) + " " + esc(per) + " · " + tl(o.try) + "</div>" : "";
-    var btn = "";
-    if (safeUrl(o.maps)) btn += '<a class="go" target="_blank" rel="noopener" href="' + esc(o.maps) + '">📍 Map</a>';
-    if (safeUrl(o.url)) btn += '<a class="go" target="_blank" rel="noopener" href="' + esc(o.url) + '">🛒 Shop page</a>';
-    var shelf = o.shelf ? '<div class="tw">' + esc(o.shelf.name) + "</div>" : '<div class="tw">' + esc(o.name) + "</div>";
-    return '<div class="side ' + cls + (win ? " win" : "") + '"><div class="lab"><span>' + label + "</span>" + (win ? '<span class="tag">CHEAPER</span>' : "") +
-      '</div><div class="pr">' + big + '</div><div class="pl">' + small + "</div>" + unit + '<div class="sn">' + esc(o.store) + "</div>" +
-      (o.town ? '<div class="tw">' + esc(o.town) + "</div>" : "") + shelf + '<div class="btns">' + btn + "</div></div>";
+    var links = "";
+    if (safeUrl(o.maps)) links += '<a target="_blank" rel="noopener" href="' + esc(o.maps) + '">Map</a>';
+    if (safeUrl(o.url)) links += '<a target="_blank" rel="noopener" href="' + esc(o.url) + '">Shop page</a>';
+    var sticker = win ? '<div class="sticker"><b>' + eur(gap(it)) + ' less</b><span>' + Math.round(it.saving_pct) + "% cheaper</span></div>" : "";
+    var prod = o.shelf ? o.shelf.name : o.name;
+    return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + "</div>" + sticker +
+      '<div class="pr">' + eur(shelfEur) + '</div><div class="pl">' + tl(shelfTry) + "</div>" + unit +
+      '<div class="sn">' + esc(o.store) + "</div>" + (o.town ? '<div class="tw">' + esc(o.town) + "</div>" : "") +
+      '<div class="pn">' + esc(prod) + "</div>" + (links ? '<div class="links">' + links + "</div>" : "") + "</div>";
   }
 
   function others(list, cur) {
@@ -100,13 +101,12 @@
 
   function card(it) {
     var n = it.north[0], s = it.south[0];
-    var badge = it.cheaper === "=" ? '<span class="sv E">Same price</span>'
-      : '<span class="sv ' + it.cheaper + '">' + (it.cheaper === "N" ? "North" : "South") + " saves " + Math.round(it.saving_pct) + "% · " + eur(gap(it)) + (perLabel(it) && /pack sizes differ/.test(it.unit) ? " " + esc(perLabel(it)) : "") + "</span>";
+    var same = it.cheaper === "=" ? '<div class="same">Same price on both sides</div>' : "";
     var img = safeUrl(it.image) ? '<img loading="lazy" alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
     var more = "";
     if (it.north.length > 1 || it.south.length > 1) {
-      more = '<details class="others"><summary>Other stores</summary><div class="olist"><div style="display:block">' + others(it.north, "EUR") +
-        '</div><div style="display:block">' + others(it.south, "EUR") + "</div></div></details>";
+      more = '<details class="others"><summary>Other shops (' + (it.north.length + it.south.length - 2) + ')</summary><div class="olist"><div class="N">' +
+        others(it.north, "EUR") + '</div><div class="S">' + others(it.south, "EUR") + "</div></div></details>";
     }
     var chains = ["Lidl", "AlphaMega"].map(function (c) {
       var o = it.south.filter(function (x) { return x.store === c; })[0];
@@ -114,11 +114,12 @@
       var e = o.shelf ? o.shelf.eur : o.eur, t = o.shelf ? o.shelf.try : o.try;
       return "<span><b>" + c + "</b> " + eur(e) + ' <span class="pl">' + tl(t) + "</span></span>";
     }).filter(Boolean).join("");
-    var chainRow = chains ? '<div class="chains">South chains: ' + chains + "</div>" : "";
-    var note = it.kind !== "exact" && it.note ? '<div class="note">' + esc(it.note) + (n.date ? " · " + esc(n.date) : "") + "</div>" : "";
-    return '<article class="card"><div class="head"><div class="art">' + img + '</div><div class="ttl"><div class="name">' + esc(it.name) +
-      '</div><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + badge + '</div><div class="sides">' +
-      side("NORTH", "N", n, it.cheaper === "N", "EUR", perLabel(it)) + side("SOUTH", "S", s, it.cheaper === "S", "EUR", perLabel(it)) + "</div>" + chainRow + more + note + "</article>";
+    var chainRow = chains ? '<div class="chains">In the South at ' + chains + "</div>" : "";
+    var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + (n.date ? " (" + esc(n.date) + ")" : "") + "</p>" : "";
+    return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(it.name) +
+      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(", ")) + "</div></div></div>" + same + '<div class="tags">' +
+      side("North", "N", n, it.cheaper === "N", it, perLabel(it)) + side("South", "S", s, it.cheaper === "S", it, perLabel(it)) + "</div>" +
+      chainRow + more + note + "</article>";
   }
 
   function render() {
@@ -130,13 +131,13 @@
         return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || bySaving;
       })
       .map(function (x) { return x.it; });
-    var title = q ? "" : '<div class="sechead listhead">' + (cat ? esc(cat) + ": " : "") +
-      (sortBy === "pct" ? "Biggest % difference first" : "Biggest price difference first") + "</div>";
+    var title = q ? "" : '<h2 class="listhead">' + (cat ? esc(cat) + ", " : "") +
+      (sortBy === "pct" ? "biggest % difference first" : "biggest price difference first") + "</h2>";
     var html = (list.length ? title : "") + list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
-      html = '<div class="card empty"><div class="big">⏳</div><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
+      html = '<div class="empty"><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
     } else if (!list.length) {
-      html = '<div class="card empty"><div class="big">🔎</div><div class="name">No comparison for “' + esc(query) + '” yet</div><p class="small">An item shows up once the same product (brand and size) is on sale in both North and South. Try a shorter word, such as a brand name.</p></div>';
+      html = '<div class="empty"><div class="name">No comparison for “' + esc(query) + '” yet</div><p class="small">An item shows up once the same product (brand and size) is on sale in both North and South. Try a shorter word, such as a brand name.</p></div>';
     }
     $("out").innerHTML = html;
     $("more").hidden = list.length <= shown;
@@ -166,8 +167,12 @@
   function header() {
     var d = new Date(DATA.updated);
     var when = isNaN(d) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
-    $("stats").innerHTML = "<span>" + DATA.count + " items compared</span><span>North cheaper: " + DATA.cheaper_north +
-      "</span><span>South cheaper: " + DATA.cheaper_south + "</span>" + (when ? "<span>Updated " + when + "</span>" : "");
+    var tot = Math.max(1, DATA.cheaper_north + DATA.cheaper_south);
+    var np = Math.round(100 * DATA.cheaper_north / tot);
+    $("stats").innerHTML = '<p class="sum">Of <b>' + DATA.count + "</b> products found on both sides, <b class=\"tN\">" + DATA.cheaper_north +
+      '</b> are cheaper in the North and <b class="tS">' + DATA.cheaper_south + "</b> in the South.</p>" +
+      '<div class="bar" role="img" aria-label="' + np + '% of products cheaper in the North"><span class="bN" style="width:' + np + '%"></span><span class="bS"></span></div>' +
+      '<div class="barlab"><span>North ' + np + "%</span><span>" + (when ? "Updated " + when : "") + "</span><span>South " + (100 - np) + "%</span></div>";
     var src = Object.keys(DATA.sources || {}).map(function (k) {
       var s = DATA.sources[k], t = new Date(s.fetched_at);
       return esc(s.store) + " (" + s.products + " products, " + (isNaN(t) ? "" : t.toLocaleDateString("en-GB")) + ")";
@@ -187,6 +192,6 @@
     TRENDING = TRENDING_CANDIDATES.filter(function (t) { return DATA.items.some(function (it) { return score(it, t) >= 2.5; }); }).slice(0, 12);
     header(); drawChips(); render();
   }).catch(function () {
-    $("out").innerHTML = '<div class="card empty"><div class="big">⚠️</div><div class="name">Could not load prices</div><p class="small">Please try again in a moment.</p></div>';
+    $("out").innerHTML = '<div class="empty"><div class="name">Prices didn’t load</div><p class="small">Check your connection and pull down to refresh.</p></div>';
   });
 })();
