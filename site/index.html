@@ -26,18 +26,22 @@
   <div class="frow"><span class="flab">Category</span><div class="chips" id="cats"></div></div>
   <div class="frow"><span class="flab">Sort</span><div class="chips" id="sort"></div></div>
 </nav>
-<p class="addlinks"><a href="#wanted">Wanted: prices we're missing</a><a href="#contrib">Add a price you saw</a></p>
+<a class="wbanner" href="#wanted">
+  <span class="wb-k" id="wbCount">Wanted</span>
+  <span class="wb-t"><b>Prices we're missing</b><span>Spot one in a shop? Add it in seconds.</span></span>
+  <svg class="wb-cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+</a>
 
 <main id="out" aria-live="polite"></main>
 <button class="main more" id="more" hidden>Show more</button>
 
 <section class="wanted" id="wanted">
   <h2 class="ctitle">Wanted</h2>
-  <p class="small">These products have a price on one side only. If you see one in a shop, tap <b>Add price</b>,
-    take a photo of the barcode and type the shelf price. That's all it takes for it to join the comparison.</p>
+  <p class="small">Each of these has a price on one side only. Seen one on a shelf? Tap <b>Add</b>, photograph the barcode
+    and type the price, and it joins the comparison.</p>
   <div class="wtabs" role="tablist">
-    <button type="button" role="tab" data-need="S" class="on">Need a South price <span id="wcS"></span></button>
-    <button type="button" role="tab" data-need="N">Need a North price <span id="wcN"></span></button>
+    <button type="button" role="tab" data-need="S" class="on"><span>South prices needed</span><b id="wcS"></b></button>
+    <button type="button" role="tab" data-need="N"><span>North prices needed</span><b id="wcN"></b></button>
   </div>
   <input id="wq" type="search" placeholder="Filter, e.g. Nivea, Nescafé" autocomplete="off" aria-label="Filter wanted products">
   <div class="chips" id="wbrands"></div>
