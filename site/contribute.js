@@ -42,6 +42,7 @@
     }
     $("scanmsg").innerHTML = msg;
     if (navigator.vibrate) navigator.vibrate(80);
+    if (!$("cfor").hidden) form.price.focus();
   }
 
   // Reader: the phone's own barcode reader if it has one (Android Chrome), otherwise ZXing.
@@ -124,6 +125,21 @@
     r.addEventListener("change", function () { form.currency.value = r.value === "North" ? "TRY" : "EUR"; });
   });
 
+  // From the Wanted list: fill in what we already know, then open the camera for the barcode
+  window.CC_prefill = function (w, openCamera) {
+    var side = w.need === "S" ? "South" : "North";
+    form.side.forEach(function (r) { r.checked = r.value === side; });
+    form.currency.value = side === "North" ? "TRY" : "EUR";
+    form.product.value = w.name; form.size.value = w.size || ""; form.barcode.value = w.barcode || "";
+    form.price.value = ""; $("cmsg").textContent = ""; $("scanmsg").textContent = "";
+    $("cfor").hidden = false;
+    $("cfor").innerHTML = "Adding the <b>" + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
+      "Photograph the barcode, then type the price and shop.";
+    document.getElementById("contrib").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (openCamera) $("scanphoto").click();
+    else setTimeout(function () { form.price.focus(); }, 400);
+  };
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var v = {
@@ -143,6 +159,7 @@
     fetch(CFG.form_action, { method: "POST", mode: "no-cors", body: body }).then(function () {
       $("cmsg").textContent = "✅ Thank you! It will be checked and should appear within a day or two.";
       ["product", "size", "price", "barcode", "note"].forEach(function (k) { form[k].value = ""; });
+      $("cfor").hidden = true;
       $("scanmsg").textContent = "";
     }).catch(function () { $("cmsg").textContent = "Couldn't send – check your connection and try again."; });
   });

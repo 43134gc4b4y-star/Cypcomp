@@ -23,7 +23,7 @@ from pathlib import Path
 
 import yaml
 
-from . import contrib, fx
+from . import contrib, fx, wanted
 from .match import Group, generic, match
 from .models import Offer
 from .net import Http
@@ -283,6 +283,10 @@ def main(argv=None):
            "cheaper_north": sum(i["cheaper"] == "N" for i in items),
            "cheaper_south": sum(i["cheaper"] == "S" for i in items), "items": items}
     (SITE_DATA / "prices.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    if (ROOT / "config" / "wanted.yaml").exists():
+        w = wanted.build(north, south, groups, load_yaml("wanted.yaml"), rate)
+        (SITE_DATA / "wanted.json").write_text(json.dumps(w, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     write_report(report, out, len(north), len(south), http.count)
     if report and all(r["status"] == "failed" for r in report):

@@ -1,0 +1,11 @@
+# Brands sold on both sides of the island. Products of these brands that have a
+# price on only one side go on the site's "Wanted" list, so shoppers can add
+# the missing price. Most popular first (the list is shown in this order).
+brands: [Nivea, Nescafe, Nestle, Lipton, Knorr, Barilla, Coca-Cola, Fanta, Sprite, Pepsi, Schweppes, Red Bull, Monster,
+  Nutella, Kinder, Milka, Oreo, Pringles, Lay's, Doritos, Twix, Snickers, Mars, Bounty, Haribo, Kellogg's,
+  Heinz, Hellmann's, Philadelphia, Lurpak, Activia, Danone, President, Bonne Maman, Lavazza, Jacobs, Tchibo,
+  Aptamil, SMA, HiPP, Pampers, Huggies, Johnson's, Dove, Gillette, Oral-B, Colgate, Sensodyne, Listerine,
+  Pantene, Head & Shoulders, Garnier, L'Oreal, Rexona, Axe, Palmolive, Always, Ariel, Persil, Fairy, Finish,
+  Domestos, Vanish, Lenor, Whiskas, Felix, Purina, Pedigree, Friskies]
+per_side: 400
+per_brand: 30
