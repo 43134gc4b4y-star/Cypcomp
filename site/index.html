@@ -9,24 +9,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=29e14cc8">
+<link rel="stylesheet" href="style.css?v=020db3db">
 </head>
 <body>
 <div class="page">
 <header class="top">
   <h1>Compare Cyprus</h1>
   <p class="tagline">One island, two price tags.</p>
-  <p class="lede">Every morning we read supermarket prices in the North and the South, line up the exact same products,
-    and show you which side wins, by how much, and which shop to head for.</p>
+  <p class="lede">Fresh supermarket prices from both sides of the island every morning, matched product for product,
+    so you know where to shop and how much you'll save.</p>
   <div class="split" id="stats" aria-live="polite"></div>
 </header>
 
 <div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
 
 <nav class="filters" aria-label="Filters">
-  <div class="frow"><span class="flab">Popular</span><div class="chips" id="trending"></div></div>
-  <div class="frow"><span class="flab">Category</span><div class="chips" id="cats"></div></div>
-  <div class="frow"><span class="flab">Sort</span><div class="chips" id="sort"></div></div>
+  <div class="chips" id="trending" aria-label="Popular searches"></div>
+  <div class="selects">
+    <label class="sel"><span>Category</span><select id="cats"></select></label>
+    <label class="sel"><span>Sort by</span><select id="sort"></select></label>
+  </div>
 </nav>
 <a class="wbanner" href="#wanted">
   <span class="wb-k" id="wbCount">Wanted</span>
@@ -87,7 +89,7 @@
 
 <footer class="foot small" id="foot"></footer>
 </div>
-<script src="app.js?v=3ac09634"></script>
+<script src="app.js?v=03a56cfb"></script>
 <script src="contribute.js?v=8f2e47d1"></script>
 <script src="wanted.js?v=e6205ece"></script>
 </body>

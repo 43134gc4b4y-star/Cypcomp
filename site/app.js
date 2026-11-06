@@ -132,7 +132,7 @@
       })
       .map(function (x) { return x.it; });
     var title = q ? "" : '<h2 class="listhead">' + (cat ? esc(cat) + ", " : "") +
-      (sortBy === "pct" ? "biggest % difference first" : "biggest price difference first") + "</h2>";
+      (sortBy === "pct" ? "biggest % savings first" : "biggest savings first") + "</h2>";
     var html = (list.length ? title : "") + list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
       html = '<div class="empty"><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
@@ -156,12 +156,17 @@
     var counts = {};
     DATA.items.forEach(function (i) { counts[i.category] = (counts[i.category] || 0) + 1; });
     var cats = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 20);
-    chips($("sort"), [{ t: "Biggest € difference", v: "eur" }, { t: "Biggest % difference", v: "pct" }], sortBy, function (v) {
+    selectBox($("sort"), [{ t: "Most € saved", v: "eur" }, { t: "Most % saved", v: "pct" }], sortBy, function (v) {
       sortBy = v; shown = 40; drawChips(); render();
     });
-    chips($("cats"), [{ t: "All", v: "" }].concat(cats.map(function (c) { return { t: c + " (" + counts[c] + ")", v: c }; })), cat, function (v) {
+    selectBox($("cats"), [{ t: "All (" + DATA.items.length + ")", v: "" }].concat(cats.map(function (c) { return { t: c + " (" + counts[c] + ")", v: c }; })), cat, function (v) {
       cat = v; query = ""; $("q").value = ""; shown = 40; drawChips(); render();
     });
+  }
+
+  function selectBox(el, opts, active, onPick) {
+    el.innerHTML = opts.map(function (o) { return '<option value="' + esc(o.v) + '"' + (o.v === active ? " selected" : "") + ">" + esc(o.t) + "</option>"; }).join("");
+    el.onchange = function () { onPick(el.value); };
   }
 
   function header() {
