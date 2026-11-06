@@ -169,10 +169,13 @@
     var when = isNaN(d) ? "" : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
     var tot = Math.max(1, DATA.cheaper_north + DATA.cheaper_south);
     var np = Math.round(100 * DATA.cheaper_north / tot);
-    $("stats").innerHTML = '<p class="sum">Of <b>' + DATA.count + "</b> products found on both sides, <b class=\"tN\">" + DATA.cheaper_north +
-      '</b> are cheaper in the North and <b class="tS">' + DATA.cheaper_south + "</b> in the South.</p>" +
+    var lead = DATA.cheaper_south > DATA.cheaper_north ? "The South is ahead today" :
+      DATA.cheaper_north > DATA.cheaper_south ? "The North is ahead today" : "It's a dead heat today";
+    $("stats").innerHTML = '<p class="score-h">' + lead + "</p>" +
+      '<div class="score"><div class="sc N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span></div>" +
+      '<div class="sc S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span></div></div>" +
       '<div class="bar" role="img" aria-label="' + np + '% of products cheaper in the North"><span class="bN" style="width:' + np + '%"></span><span class="bS"></span></div>' +
-      '<div class="barlab"><span>North ' + np + "%</span><span>" + (when ? "Updated " + when : "") + "</span><span>South " + (100 - np) + "%</span></div>";
+      '<p class="score-f">Out of ' + DATA.count + " products found on both sides" + (when ? ", updated " + when : "") + ".</p>";
     var src = Object.keys(DATA.sources || {}).map(function (k) {
       var s = DATA.sources[k], t = new Date(s.fetched_at);
       return esc(s.store) + " (" + s.products + " products, " + (isNaN(t) ? "" : t.toLocaleDateString("en-GB")) + ")";

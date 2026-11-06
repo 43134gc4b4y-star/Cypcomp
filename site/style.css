@@ -28,19 +28,22 @@ a { color: var(--south); }
 :focus-visible { outline: 3px solid var(--lemon); outline-offset: 2px; }
 .small { font-size: 14px; color: var(--muted); }
 
-/* header: the north/south split is the hero */
-.top { padding: 28px 0 18px; }
-.top h1 { font: 800 clamp(44px, 12vw, 72px)/.9 var(--display); letter-spacing: -.01em; margin: 0; }
-.lede { margin: 10px 0 18px; color: var(--muted); max-width: 34em; }
-.sum { margin: 0 0 10px; font-size: 18px; line-height: 1.35; }
-.sum b { font: 700 24px/1 var(--display); }
-.tN { color: var(--north); } .tS { color: var(--south); }
+/* header: centred title, then the day's North v South scoreboard */
+.top { padding: 34px 0 18px; text-align: center; }
+.top h1 { font: 800 clamp(48px, 14vw, 84px)/.88 var(--display); letter-spacing: -.015em; margin: 0; }
+.tagline { font: 600 clamp(22px, 6vw, 30px)/1.1 var(--display); margin: 10px 0 0; color: var(--muted); }
+.lede { margin: 12px auto 26px; color: var(--muted); max-width: 30em; font-size: 16px; line-height: 1.55; }
+.split { max-width: 520px; margin: 0 auto; }
+.score-h { font: 700 15px var(--text); margin: 0 0 8px; }
+.score { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px; }
+.sc { display: grid; gap: 2px; }
+.sc.N { text-align: left; color: var(--north); } .sc.S { text-align: right; color: var(--south); }
+.sc b { font: 800 56px/.9 var(--display); }
+.sc span { font-size: 13px; font-weight: 600; }
 .bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; background: var(--south); }
 .bar .bN { background: var(--north); transition: width .8s cubic-bezier(.2, .8, .2, 1); }
 .bar .bS { flex: 1; }
-.barlab { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 6px; }
-.barlab span:first-child { color: var(--north); font-weight: 600; }
-.barlab span:last-child { color: var(--south); font-weight: 600; }
+.score-f { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
 
 /* search and filters */
 .searchwrap { position: sticky; top: 0; z-index: 5; background: var(--stone); padding: 10px 0; }
