@@ -1,0 +1,22 @@
+name: Store graphics
+# Makes the Google Play feature graphic and phone screenshots from the live site.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python store/shots.py
+      - name: Save graphics
+        run: |
+          git config user.name "compare-cyprus-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add store/graphics
+          git commit -m "Store graphics" || exit 0
+          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done

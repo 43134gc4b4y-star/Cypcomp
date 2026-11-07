@@ -200,7 +200,7 @@
     }).join(" · ");
     $("foot").innerHTML = "<p><b>Exchange rate:</b> 1 € = " + (DATA.fx ? DATA.fx.eur_try.toFixed(2) : "?") + " ₺ (" + esc(DATA.fx && DATA.fx.date) +
       ", European Central Bank)</p><p><b>Sources:</b> " + (src || "none yet") + ". <span class=\"tS\">South</span> prices come from the Cyprus government’s " +
-      '<a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory; <span class="tN">North</span> prices are the shops’ own online prices.</p>' +
+      '<a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory; <span class="tN">North</span> prices are the shops’ own online prices.</p><p><a href="privacy.html">Privacy policy</a></p>' +
       "<p>Prices are read automatically once a day and can change or differ in store. Products are paired like for like: same brand and same pack size; " +
       "“any brand” items compare the cheapest pack of the same size on both sides. Different pack sizes are never compared.</p>";
   }
