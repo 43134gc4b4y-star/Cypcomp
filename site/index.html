@@ -6,10 +6,17 @@
 <title>Compare Cyprus – North vs South prices</title>
 <meta name="description" content="Is it cheaper in North or South Cyprus? Daily supermarket prices side by side, with the cheapest store and a map link.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇾</text></svg>">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#edf0ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161d1b" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Compare CY">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=ff361796">
+<link rel="stylesheet" href="style.css?v=c287f667">
 </head>
 <body>
 <div class="page">
@@ -19,6 +26,12 @@
   <p class="lede">Fresh supermarket prices from both sides of the island every morning, matched product for product,
     so you know where to shop and how much you'll save.</p>
   <div class="split" id="stats" aria-live="polite"></div>
+  <div class="install" id="install" hidden>
+    <img src="icons/icon-192.png" alt="" width="40" height="40">
+    <div class="it"><b>Get the app</b><span id="installHow">Add Compare Cyprus to your home screen.</span></div>
+    <button type="button" id="installBtn">Install</button>
+    <button type="button" class="ix" id="installX" aria-label="Hide">✕</button>
+  </div>
 </header>
 
 <div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
@@ -91,6 +104,7 @@
 </div>
 <script src="app.js?v=5d4a57d0"></script>
 <script src="contribute.js?v=8675a4b2"></script>
+<script src="install.js?v=d9f7148f"></script>
 <script src="wanted.js?v=e6205ece"></script>
 </body>
 </html>

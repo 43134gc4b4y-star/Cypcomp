@@ -196,3 +196,14 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .wtabs i { font-style: normal; font-weight: 700; }
 .wtabs button.on i { color: #fff; }
 .cfor .tN, .cfor .tS { background: var(--paper); padding: 0 5px; border-radius: 4px; }
+
+/* get the app */
+.install { display: flex; align-items: center; gap: 12px; max-width: 560px; margin: 14px auto 0; padding: 10px 12px;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; text-align: left; }
+.install[hidden] { display: none; }
+.install img { border-radius: 9px; flex: 0 0 auto; }
+.install .it { flex: 1; min-width: 0; display: grid; line-height: 1.25; }
+.install .it b { font: 700 18px/1.1 var(--display); }
+.install .it span { font-size: 13px; color: var(--muted); }
+#installBtn { font: 700 14px var(--text); background: var(--ink); color: var(--stone); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+.install .ix { background: none; border: 0; color: var(--muted); font-size: 16px; padding: 6px; cursor: pointer; }

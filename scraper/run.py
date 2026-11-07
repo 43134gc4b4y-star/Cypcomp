@@ -215,7 +215,7 @@ def stamp_assets() -> None:
     page = ROOT / "site" / "index.html"
     html = page.read_text(encoding="utf-8")
     new = html
-    for f in ("style.css", "app.js", "contribute.js", "wanted.js"):
+    for f in ("style.css", "app.js", "contribute.js", "wanted.js", "install.js"):
         p = ROOT / "site" / f
         if p.exists():
             v = hashlib.sha1(p.read_bytes()).hexdigest()[:8]
