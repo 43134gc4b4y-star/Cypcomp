@@ -160,6 +160,10 @@ def _with_pinned(offers: list[dict], pinned: list[str], top: int = 5) -> list[di
     return out
 
 
+def _shelf(o: dict) -> float:
+    return (o.get("shelf") or o)["eur"]
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
     for g in groups:
@@ -169,6 +173,11 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
         n = _cheapest_per_store(n)
         s = _cheapest_per_store(s)
         bn, bs = n[0], s[0]
+        # same product can't honestly cost 4x more on one side: almost always a misread
+        # pack (a box of 24 sold as "34 g"), so leave it out rather than show a fake saving
+        lo, hi = sorted((_shelf(bn), _shelf(bs)))
+        if g.kind != "generic" and lo > 0 and hi / lo > 4:
+            continue
         diff = bs["eur"] - bn["eur"]
         win = "N" if diff > 0.005 else "S" if diff < -0.005 else "="
         pct = abs(diff) / max(bn["eur"], bs["eur"]) * 100 if win != "=" else 0
