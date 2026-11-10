@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-09T04:24:49+00:00",
+"fetched_at": "2026-11-10T04:40:04+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -63253,7 +63253,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Uriage Gentle Deodorant Roll On 50ml",
 "price": 12.5,
 "currency": "EUR",
@@ -63263,7 +63263,7 @@
 "barcode": "3661434002687",
 "product_id": "gtin-3661434002687",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -64789,7 +64789,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Christina Papagiorgiou - Larnaca",
 "name": "Max Factor Creme Puff Refill 05 Translucent",
 "price": 12.5,
 "currency": "EUR",
@@ -64799,7 +64799,7 @@
 "barcode": "50884315",
 "product_id": "gtin-50884315",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Papagiorgiou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -66981,7 +66981,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Christiana Kari",
 "name": "Centrum Immunity Vitamin C Max Sachets 14",
 "price": 10.9,
 "currency": "EUR",
@@ -66991,7 +66991,7 @@
 "barcode": "5054563121905",
 "product_id": "gtin-5054563121905",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christiana+Kari+Cyprus",
 "extra": {}
 },
 {
@@ -67013,7 +67013,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Apivita Bee Tech Concentrates C15 Propolis Correct Serum Anti-Wrinkle & Antioxidant Brightening Serum 30 ml",
 "price": 41.05,
 "currency": "EUR",
@@ -67023,7 +67023,7 @@
 "barcode": "5201279102760",
 "product_id": "gtin-5201279102760",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -67456,22 +67456,6 @@
 "product_id": "gtin-5201347000486",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
-"name": "Max Factor Colour Elixir Lip Liner 12 Ruby Red",
-"price": 7.5,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/max-factor-colour-elixir-lip-liner-12-ruby-red",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/1c5ed859-329c-43ed-bd29-60d632b0eb0e.jpg",
-"category": "Lip Liners",
-"barcode": "3614227128484",
-"product_id": "gtin-3614227128484",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -69541,9 +69525,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Max Factor Creme Puff golden #75",
-"price": 13.35,
+"price": 14.77,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/max-factor-creme-puff-golden-75",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/1f83210a-5c7f-41af-a1a1-a40f8f809a92.jpg",
@@ -69551,7 +69535,7 @@
 "barcode": "96077238",
 "product_id": "gtin-96077238",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -69701,7 +69685,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Christofides",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Dr.Jart+ Cicapair Tiger Grass Cc Treat 50Ml (05)",
 "price": 32.25,
 "currency": "EUR",
@@ -69711,7 +69695,7 @@
 "barcode": "8809724476151",
 "product_id": "gtin-8809724476151",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -71253,7 +71237,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Bioderma Pigmentbio Foaming Cream Brightening Cleanser For Dark Spots & Sensitive Skin 200ml",
 "price": 16.0,
 "currency": "EUR",
@@ -71263,7 +71247,7 @@
 "barcode": "3701129800546",
 "product_id": "gtin-3701129800546",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -102784,6 +102768,102 @@
 "product_id": "gtin-8011607282944",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Charis Christofides",
+"name": "Gum Sensivital Toothpaste 75ml",
+"price": 6.49,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/gum-sensivital-toothpaste-75ml",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/03/a7358da3-24bd-470d-9540-4aad63c78ff0.jpg",
+"category": "Toothpastes",
+"barcode": "7630019902984",
+"product_id": "gtin-7630019902984",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
+"name": "BLUEM TOOTHPASTE FLUORIDE 75ML",
+"price": 12.5,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/bluem-toothpaste-fluoride-75ml",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/02/990be85f-4c2f-4f04-9288-fe6034c5b479.jpg",
+"category": "Toothpastes",
+"barcode": "696859328367",
+"product_id": "gtin-696859328367",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "MAS supermarket Panagiotis Charalambous",
+"name": "PLATANIS RED GRAPE VINEGAR 500ML",
+"price": 0.8,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/grape-vinegar-platanis-red-500ml",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/27ee3c05-57a5-4f62-bd6d-fa4222cb795d.jpg",
+"category": "Vinegar",
+"barcode": "5290164000014",
+"product_id": "gtin-5290164000014",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Etherio Bio Stores - Larnakos Ave",
+"name": "Helmos Forest Honey 120G",
+"price": 3.5,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/helmos-forest-honey-120g",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/06/997be1e5-0755-4106-b481-30388c8db12a.png",
+"category": "Honey",
+"barcode": "",
+"product_id": "https://fetch.com.cy/p/helmos-forest-honey-120g",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Etherio+Bio+Stores+-+Larnakos+Ave+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Cheap Basket Supermarket - Larnaca",
+"name": "Yogi Tea Organic Breathe Deep 17 Tea Bags 30.6gr",
+"price": 3.98,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/yogi-tea-organic-breathe-deep-17-tea-bags-30-6gr",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/ad6de6f6-3186-493b-8380-296767332b0f/9fef1506-59e7-4dc4-80c8-d2c2b0c31e7a.jpg",
+"category": "Tea",
+"barcode": "4012824401037",
+"product_id": "gtin-4012824401037",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Vasilina Perissiou",
+"name": "Yogi Finest Selection Tea 18 Teabags",
+"price": 4.2,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/yogi-finest-selection-tea-18-teabags",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/a8046801-9195-4afd-b591-14371668ae20.jpg",
+"category": "Nutritional Drinks",
+"barcode": "4012824402881",
+"product_id": "gtin-4012824402881",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 }
 ]
