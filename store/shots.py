@@ -20,7 +20,7 @@ with sync_playwright() as p:
         pg.screenshot(path=str(OUT / f"phone-2-prices-{scheme}.png"))
         pg.fill("#q", "coffee"); pg.wait_for_timeout(800); pg.evaluate("window.scrollTo(0, document.querySelector('#out').offsetTop - 80)"); pg.wait_for_timeout(400)
         pg.screenshot(path=str(OUT / f"phone-3-search-{scheme}.png"))
-        pg.fill("#q", ""); pg.evaluate("document.getElementById('wanted').scrollIntoView()"); pg.wait_for_timeout(600)
+        pg.fill("#q", ""); pg.click(".tabbar a[data-view=wanted]"); pg.wait_for_timeout(600)
         pg.screenshot(path=str(OUT / f"phone-4-wanted-{scheme}.png"))
         ctx.close()
     b.close()

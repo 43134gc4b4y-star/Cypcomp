@@ -23,18 +23,18 @@
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--stone); color: var(--ink); font: 16px/1.5 var(--text); }
-.page { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; }
+.page { max-width: 640px; margin: 0 auto; padding: 0 16px 96px; }
+.view[hidden] { display: none; }
 a { color: var(--south); }
 :focus-visible { outline: 3px solid var(--lemon); outline-offset: 2px; }
 .small { font-size: 14px; color: var(--muted); }
 
 /* header: centred title, then the day's North v South scoreboard */
-.top { padding: 40px 0 8px; text-align: center; }
+.top { padding: 30px 0 4px; text-align: center; }
 .top h1 { font: 800 clamp(48px, 14vw, 84px)/.88 var(--display); letter-spacing: -.015em; margin: 0; }
 .tagline { font: 600 clamp(22px, 6vw, 30px)/1.1 var(--display); margin: 12px 0 0; color: var(--muted); }
-.lede { margin: 14px auto 28px; color: var(--muted); max-width: 26em; font-size: 16px; line-height: 1.55; }
+.lede { margin: 10px auto 22px; color: var(--muted); max-width: 26em; font-size: 16px; line-height: 1.55; }
 .split { max-width: 560px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; padding: 18px 18px 14px; }
-.score-h { font: 700 15px var(--text); margin: 0 0 8px; }
 .score { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 8px; }
 .sc { display: grid; gap: 2px; }
 .sc.N { text-align: left; color: var(--north); } .sc.S { text-align: right; color: var(--south); }
@@ -63,55 +63,56 @@ a { color: var(--south); }
   border: 1px solid var(--rule); border-radius: 10px; padding: 10px 32px 10px 12px; text-overflow: ellipsis; }
 .listhead { font: 700 20px/1.1 var(--display); color: var(--ink); margin: 26px 0 12px; } .listhead::first-letter { text-transform: uppercase; }
 
-/* item */
-.item { background: var(--paper); border-radius: 14px; padding: 16px; margin-bottom: 14px; border: 1px solid var(--rule); }
-.head { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; }
-.art { flex: 0 0 56px; height: 56px; border-radius: 8px; background: #fff; display: grid; place-items: center;
-  font-size: 30px; overflow: hidden; border: 1px solid var(--rule); }
+/* item: name, one two-sided price label, one verdict line; the rest opens on tap */
+.item { background: var(--paper); border-radius: 16px; padding: 14px; margin-bottom: 14px; border: 1px solid var(--rule); }
+.head { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+.art { flex: 0 0 48px; height: 48px; border-radius: 8px; background: #fff; display: grid; place-items: center;
+  font-size: 26px; overflow: hidden; border: 1px solid var(--rule); }
 .art img { width: 100%; height: 100%; object-fit: contain; }
 .ttl { min-width: 0; }
-.name { font: 700 22px/1.05 var(--display); margin: 0; overflow-wrap: anywhere;
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.name { font: 700 21px/1.08 var(--display); margin: 0; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .unit { font-size: 13px; color: var(--muted); margin-top: 3px; }
-.same { font-weight: 600; font-size: 14px; margin: -6px 0 10px; }
 
-/* shelf-edge labels: everything centred, price first */
-.tags { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.tag { display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid var(--rule); border-radius: 6px;
-  padding: 0 10px 14px; min-width: 0; background: var(--paper); overflow: hidden; }
-.tag .strip { align-self: stretch; margin: 0 -10px 14px; padding: 5px 10px; font: 700 15px/1.2 var(--display); letter-spacing: .04em; color: #fff; }
+.tags { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.tag { text-align: center; padding: 0 8px 12px; min-width: 0; }
+.tag + .tag { border-left: 1px solid var(--rule); }
+.tag .strip { margin: 0 -8px 12px; padding: 4px 8px; font: 700 14px/1.2 var(--display); letter-spacing: .05em; color: #fff; }
 .tag.N .strip { background: var(--north); } .tag.S .strip { background: var(--south); }
-.tag.N.win { border-color: var(--north); box-shadow: inset 0 0 0 1px var(--north); }
-.tag.S.win { border-color: var(--south); box-shadow: inset 0 0 0 1px var(--south); }
-.pr { font: 700 44px/1 var(--display); letter-spacing: -.01em; color: var(--ink); }
-.tag:not(.win) .pr { color: var(--muted); font-weight: 600; }
-.pl { font-size: 14px; color: var(--muted); margin-top: 3px; }
-.unitp { font-size: 13px; color: var(--muted); margin-top: 4px; }
-.sticker { margin: 12px 0 4px; background: var(--lemon); color: var(--lemon-ink); padding: 7px 14px 8px; border-radius: 5px;
-  line-height: 1.1; transform: rotate(-2deg); box-shadow: 0 1px 0 rgba(0,0,0,.18); }
-.sticker b { display: block; font: 800 25px/1 var(--display); }
-.sticker span { display: block; font-size: 14px; font-weight: 700; margin-top: 2px; }
-.sticker.ghost { visibility: hidden; }
-.where { width: 100%; margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--rule); flex: 1; }
-.sn { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; color: var(--ink); }
-.tw, .pn { font-size: 13px; color: var(--muted); line-height: 1.3; margin-top: 3px; overflow-wrap: anywhere; }
-.pn { font-style: italic; }
-.links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
-.links a + a { margin: 0; }
-.links a { font-size: 12px; font-weight: 600; color: var(--ink); text-decoration: none; border: 1px solid var(--rule); border-radius: 999px; padding: 4px 9px; white-space: nowrap; }
-.links a:active { background: var(--stone); }
+.pr { font: 700 40px/1 var(--display); letter-spacing: -.01em; color: var(--muted); }
+.tag.win .pr { color: var(--ink); font-weight: 800; }
+.pl { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.tag .sn { font-size: 14px; font-weight: 600; margin-top: 8px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.chains { font-size: 14px; color: var(--muted); margin-top: 12px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
-.chains b { color: var(--ink); }
-.chains .pl { display: inline; }
-.others { margin-top: 10px; font-size: 14px; }
-.others summary { cursor: pointer; font-weight: 600; color: var(--muted); padding: 4px 0; }
-.olist { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.verdict { margin-top: 10px; padding: 9px 12px; line-height: 1.2; border-radius: 10px; background: var(--lemon); color: var(--lemon-ink);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 15px; font-weight: 600; }
+.verdict b { font: 800 22px/1 var(--display); margin-right: 3px; white-space: nowrap; }
+.verdict div { min-width: 0; }
+.verdict span { font-weight: 700; white-space: nowrap; }
+.verdict.same { background: var(--stone); color: var(--ink); justify-content: center; }
+
+.chains { font-size: 13px; color: var(--muted); margin-top: 10px; }
+.chains b { color: var(--ink); font-weight: 600; }
+.more { margin-top: 8px; font-size: 14px; }
+.more summary { cursor: pointer; font-weight: 600; color: var(--muted); padding: 6px 0 2px; list-style: none; display: flex; align-items: center; gap: 6px; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+.more[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+.whs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+.wh { min-width: 0; font-size: 13px; color: var(--muted); line-height: 1.35; overflow-wrap: anywhere; }
+.wh > b { font: 700 14px var(--display); letter-spacing: .05em; }
+.wh .sn { font-size: 14px; font-weight: 600; color: var(--ink); }
+.wh .pn { font-style: italic; }
+.links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.links a { font-size: 12px; font-weight: 600; color: var(--ink); text-decoration: none; border: 1px solid var(--rule); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+.olist { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
 .olist > div > div { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--rule); }
-.olist .N { border-top: 3px solid var(--north); } .olist .S { border-top: 3px solid var(--south); }
+.olist > div:empty { border: 0; }
+.olist.one { grid-template-columns: 1fr; }
+.olist h4 { font: 700 14px var(--display); letter-spacing: .05em; margin: 0 0 2px; }
 .olist a { color: var(--ink); }
-.olist .pl { display: block; text-align: right; font-weight: 400; }
-.note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+.olist .pl { display: block; text-align: right; font-weight: 400; margin: 0; }
+.note { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
 
 .empty { background: var(--paper); border: 1px dashed var(--rule); border-radius: 14px; padding: 28px 20px; text-align: center; }
 .empty .name { font-size: 24px; }
@@ -120,8 +121,8 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .more { margin: 6px 0 24px; }
 
 /* add a price */
-.contrib { background: var(--paper); border-radius: 14px; padding: 18px 16px; border: 1px solid var(--rule); margin-top: 24px; }
-.ctitle { font: 700 28px/1 var(--display); margin: 0 0 6px; }
+
+.ctitle { font: 800 40px/1 var(--display); margin: 0 0 8px; }
 .contrib form { display: grid; gap: 12px; margin-top: 12px; }
 .contrib label { display: grid; gap: 4px; font-size: 14px; font-weight: 600; }
 .contrib .opt { font-weight: 400; color: var(--muted); }
@@ -143,27 +144,11 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .foot { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--rule); }
 .foot p { margin: 0 0 8px; }
 
-@media (max-width: 420px) {
-  .pr { font-size: 36px; }
-  .item { padding: 14px 12px; }
-  .tag { padding: 0 8px 12px; } .tag .strip { margin: 0 -8px 12px; }
-  .sticker { padding: 6px 10px 7px; } .sticker b { font-size: 22px; } .sticker span { font-size: 13px; }
-}
+@media (max-width: 380px) { .pr { font-size: 34px; } .verdict { font-size: 14px; } .verdict b { font-size: 20px; } }
 @media (prefers-reduced-motion: reduce) { .bar .bN { transition: none; } }
 
-/* wanted: banner near the top */
-.wbanner { display: flex; align-items: center; gap: 12px; margin: 4px 0 8px; padding: 10px 14px 10px 10px;
-  background: var(--lemon); color: var(--lemon-ink); border-radius: 12px; text-decoration: none; }
-.wb-k { flex: 0 0 auto; min-width: 54px; height: 44px; padding: 0 8px; display: grid; place-items: center; background: var(--lemon-ink); color: var(--lemon);
-  border-radius: 8px; font: 800 24px/1 var(--display); }
-.wb-t { flex: 1; min-width: 0; display: grid; line-height: 1.2; }
-.wb-t b { font: 700 20px/1.05 var(--display); }
-.wb-t span { font-size: 13px; }
-.wb-cam { flex: 0 0 26px; width: 26px; height: 26px; }
-.wbanner:active { transform: translateY(1px); }
-
 /* wanted list */
-.wanted { background: var(--paper); border-radius: 14px; padding: 18px 16px 8px; border: 1px solid var(--rule); margin-top: 24px; scroll-margin-top: 76px; }
+.wanted, .contrib { padding-top: 26px; }
 .wtabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 14px 0 10px; }
 .wtabs button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; font: 600 13px var(--text); padding: 10px 12px;
   border: 1px solid var(--rule); border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; }
@@ -189,7 +174,7 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .wadd:active { transform: scale(.96); }
 .wnone { color: var(--muted); padding: 14px 0; }
 .cfor { background: var(--lemon); color: var(--lemon-ink); border-radius: 8px; padding: 10px 12px; margin-top: 12px; font-size: 14px; }
-.contrib { scroll-margin-top: 76px; }
+
 
 /* North / South words always in their side's colour */
 .tN { color: var(--north); } .tS { color: var(--south); }
@@ -198,7 +183,7 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .cfor .tN, .cfor .tS { background: var(--paper); padding: 0 5px; border-radius: 4px; }
 
 /* get the app */
-.install { display: flex; align-items: center; gap: 12px; max-width: 560px; margin: 14px auto 0; padding: 10px 12px;
+.install { display: flex; align-items: center; gap: 12px; margin: 24px 0 0; padding: 10px 12px;
   background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; text-align: left; }
 .install[hidden] { display: none; }
 .install img { border-radius: 9px; flex: 0 0 auto; }
@@ -207,3 +192,16 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .install .it span { font-size: 13px; color: var(--muted); }
 #installBtn { font: 700 14px var(--text); background: var(--ink); color: var(--stone); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
 .install .ix { background: none; border: 0; color: var(--muted); font-size: 16px; padding: 6px; cursor: pointer; }
+
+/* bottom tab bar: Prices, Wanted, Add a price */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center;
+  background: var(--paper); border-top: 1px solid var(--rule); padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); }
+.tabbar a { position: relative; flex: 1; max-width: 200px; display: grid; justify-items: center; gap: 2px; padding: 6px 4px;
+  font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 10px; }
+.tabbar a.on { color: var(--ink); }
+.tabbar a.on svg { stroke-width: 2.6; }
+.tabbar .badge { position: absolute; top: 0; left: calc(50% + 8px); background: var(--lemon); color: var(--lemon-ink);
+  font: 700 11px/1 var(--text); padding: 3px 6px; border-radius: 999px; }
+.tabbar .badge:empty { display: none; }
+#wq { background: var(--paper); }
+.contrib input:not([type=radio]), .contrib select { background: var(--paper); }

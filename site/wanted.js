@@ -51,7 +51,7 @@
     $("wcN").textContent = d.need_north.length;
     $("wbCount").textContent = d.need_south.length + d.need_north.length;
     draw();
-  }).catch(function () { $("wanted").hidden = true; });
+  }).catch(function () { $("wlist").innerHTML = '<li class="wnone">The list didn\u2019t load. Check your connection and try again.</li>'; });
 
   document.querySelector(".wtabs").addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;

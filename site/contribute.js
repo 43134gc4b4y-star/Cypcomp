@@ -135,7 +135,7 @@
     $("cfor").hidden = false;
     $("cfor").innerHTML = 'Adding the <b class="' + (side === "North" ? "tN" : "tS") + '">' + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
       "Photograph the barcode, then type the price and shop.";
-    document.getElementById("contrib").scrollIntoView({ behavior: "smooth", block: "start" });
+    location.hash = "#contrib";
     if (openCamera) $("scanphoto").click();
     else setTimeout(function () { form.price.focus(); }, 400);
   };

@@ -558,7 +558,7 @@ synonyms:
 
 # Words that make two products different even with the same brand and size.
 # If one name has it and the other doesn't, they are NOT paired.
-conflicts: [men, baby, after, bedtime, bronze, alta, rica, riga, unscented, soya, oat, blackwhite, rollon, scrub, micellar, sourcream, hot, bbq, paprika, onion, garlic, honey, banana, apple, pineapple, raspberry, watermelon, grape, pomegranate, sourcherry, cocoa, wholewheat, glutenfree,
+conflicts: [men, baby, after, bedtime, aloevera, bronze, alta, rica, riga, unscented, soya, oat, blackwhite, rollon, scrub, micellar, sourcream, hot, bbq, paprika, onion, garlic, honey, banana, apple, pineapple, raspberry, watermelon, grape, pomegranate, sourcherry, cocoa, wholewheat, glutenfree,
             shampoo, bath, wash, conditioner, lotion, sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
             red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
