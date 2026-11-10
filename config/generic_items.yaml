@@ -63,8 +63,8 @@
   name: Rice (any type, per kg)
   category: Pantry
   per: kg
-  north: {any: [pirinc, "rice"], not: [unu, sutlac, patlak, cips, krem, gevrek, sirke, kraker, makarna, sake, "pirinc unu"]}
-  south: {cat: [rice]}
+  north: {any: [pirinc, "rice"], not: [aptamil, sutlu, bebek, hipp, holle, mama, unu, sutlac, patlak, cips, krem, gevrek, sirke, kraker, makarna, sake, "pirinc unu"]}
+  south: {cat: [rice], any: [rice, basmati, risotto, jasmine, parboiled, carolina, glace], not: [porridge, holle, baby, hipp, conchigliette, pasta, spaghetti, penne, bulgur, noodles, cakes, vinegar, milk, drink, pudding, flour, cream, crackers, macaroni, fusilli, orzo, couscous, quinoa, lentil, ready, microwave, express]}
 
 - id: pasta
   name: Dry pasta (any brand, per kg)
@@ -106,7 +106,7 @@
   category: Drinks
   per: l
   north: {any: ["su "], not: [maden, gazli, aroma, meyve, mango, limon, cilek, sabun, sampuan, "su bardak", hortum, pompa, isitici, sebil, sise, matara, "su tabanca", "su kabi"]}
-  south: {cat: [water], not: [sparkling, soda, flavour, lemon]}
+  south: {cat: [water], not: [sparkling, soda, flavour, lemon, bottle, thermo, flask, sigg, traveller, tumbler, cup, filter, jug, toner, micellar, rose, coconut, tonic, vitamin, baby, spray, mist, schweppes, portokali, orange, juice, cola, lemonade, tea, beer]}
 
 - id: cola
   name: Cola, regular (per litre)
@@ -124,12 +124,26 @@
 
 # Nappies are not compared per piece: North shop names rarely say how many are in the pack.
 
-- id: baby-milk
-  name: Baby formula milk (any brand or stage, per kg)
+- id: baby-milk-1
+  name: Baby formula milk, stage 1 (any brand)
   category: Baby
   per: kg
-  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
-  south: {cat: [baby milk], not: [cereal, rice, biscuit]}
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 1 ", sz1], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  south: {cat: [baby milk], all: [[" 1 ", sz1]], not: [cereal, rice, biscuit]}
+
+- id: baby-milk-2
+  name: Baby formula milk, stage 2 (any brand)
+  category: Baby
+  per: kg
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 2 ", sz2], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  south: {cat: [baby milk], all: [[" 2 ", sz2]], not: [cereal, rice, biscuit]}
+
+- id: baby-milk-3
+  name: Baby formula milk, stage 3 (any brand)
+  category: Baby
+  per: kg
+  north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 3 ", sz3], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
+  south: {cat: [baby milk], all: [[" 3 ", sz3]], not: [cereal, rice, biscuit]}
 
 - id: wet-wipes
   name: Baby wet wipes (per 100 wipes)
@@ -144,7 +158,7 @@
   category: Frozen
   per: l
   north: {any: [dondurma, "algida carte", "ice cream", magnum, "carte dor"], not: [kulah, sopa, cubuk, "mini", "kapsul", kaplama, "6 li", "4 lu", "makine", "kase"]}
-  south: {cat: [ice cream], not: [mini, multipack, "x4", "x6", stick, cone]}
+  south: {cat: [ice cream], not: [mini, multipack, "x4", "x6", stick, cone, doritos, bugles, crisps, chips, pizza, lays, cheetos, snack, wafer, biscuit]}
 
 - id: yoghurt-plain
   name: Plain yoghurt (any brand, per kg)
@@ -234,7 +248,7 @@
   name: Ketchup (per kg)
   category: Pantry
   per: kg
-  north: {any: [ketcap, ketchup], not: [cips, sos ", acili]}
+  north: {any: [ketcap, ketchup], not: [cips, sos ", acili, mayonez, mayo, hardal]}
   south: {cat: [sauces and dressings], any: [ketchup], not: [hot, spicy]}
 
 - id: mayonnaise
@@ -475,7 +489,7 @@
   category: Cheese
   per: kg
   north: {any: [edam, gouda], not: [rende, dilim, sos]}
-  south: {cat: [cheese], any: [edam, gouda]}
+  south: {cat: [cheese], any: [edam, gouda], not: [sliced, slices, grated]}
 
 - id: cottage-cheese
   name: Cottage cheese (per kg)
@@ -496,7 +510,7 @@
   category: Cheese
   per: kg
   north: {any: ["ucgen peynir", "la vache", "laughing cow", "porsiyon peynir", "ucgen", "happy cow ucgen", "kiri "], all: [[peynir, cheese, ucgen, kiri, vache]], not: [manti, kraker, burger, dilim]}
-  south: {cat: [cheese], any: ["portion", "vache qui rit portion"], not: [light, dippers]}
+  south: {cat: [cheese], any: ["portion", "vache qui rit portion"], not: [light, dippers, babybel, mini]}
 
 - id: mozzarella
   name: Mozzarella (per kg)
@@ -566,8 +580,8 @@
   name: Baby cereal / rice cream (per kg)
   category: Baby
   per: kg
-  north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [comformil, aptamil, formula, nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
-  south: {cat: [baby food]}
+  north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [sma, optipro, baslangic, gold, sz1, sz2, sz3, comformil, aptamil, formula, nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
+  south: {cat: [baby food], not: [almiron, formula, follow, nan, aptamil, optipro, sma, milk, puree, jar, pouch, biscuit, water, tea, juice]}
 
 # --- staples the price observatory doesn't cover; South prices come from Fetch
 #     (pages picked by the `staples` words in shops.yaml) ---
@@ -606,7 +620,7 @@
   category: Personal care
   per: 100 ml
   north: {any: ["dis macunu", toothpaste], not: [firca, cocuk, kids, junior, bebek, set]}
-  south: {any: [toothpaste], not: [barbie, frozen, disney, spiderman, paw, minions, princess, cars, peppa, kid, brush, kids, junior, baby, set, travel, "+ brush"]}
+  south: {any: [toothpaste], not: [children, childrens, child, years, barbie, frozen, disney, spiderman, paw, minions, princess, cars, peppa, kid, brush, kids, junior, baby, set, travel, "+ brush"]}
 - id: vinegar
   name: Vinegar (any brand)
   category: Sauces & spreads
@@ -623,8 +637,8 @@
   name: Honey (any brand)
   category: Breakfast & spreads
   per: kg
-  north: {any: ["bal "], not: [kabak, ikizi, seker, balik, balsam, balkabagi, kaymak, tahin, cubuk, mum, sakiz, sampuan, krem, sabun, gevrek, cips, "bal kabagi", cerez, aroma, sos, bisk, kek, tatli]}
-  south: {any: [honey], not: [mustard, cereal, roasted, nut, peanut, crisps, chips, shampoo, soap, cream, bar, biscuits, yoghurt, yogurt, sauce, glaze, chicken, ham, granola, loops, flakes, oats, candy, tea, lemon, lozenge, melon, honeydew, balm, wax]}
+  north: {any: ["bal "], not: [kabak, ikizi, seker, balik, balsam, balkabagi, kaymak, tahin, cubuk, mum, sakiz, sampuan, krem, sabun, gevrek, cips, "bal kabagi", cerez, aroma, sos, bisk, kek, tatli, peksemet, bakery, tarcin, kavanoz, kasikli, kasik, ahsap, bambu, hardal, findik, ceviz, fistik, sut, cay]}
+  south: {any: [honey], not: [mustard, cereal, roasted, nut, peanut, crisps, chips, shampoo, soap, cream, bar, biscuits, yoghurt, yogurt, sauce, glaze, chicken, ham, granola, loops, flakes, oats, candy, tea, lemon, lozenge, melon, honeydew, balm, wax, dumplings, body, desserts, scrub, mask, lip, hair, almond, baby, drink, milk, cake, wafer, pops, cheerios, spoon, dipper, jar empty]}
 - id: tea-bags
   name: Black tea bags (per 100 bags)
   category: Coffee & tea

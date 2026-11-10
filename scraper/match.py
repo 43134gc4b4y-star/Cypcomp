@@ -15,6 +15,9 @@ from .models import Offer
 from .text import SIZE_TOKEN_RE, Size, fold, parse_size, rule_text, size_codes, tokens
 
 
+_NUM_TOKEN = re.compile(r"n\d{1,2}|spf\d+|\d+h")
+
+
 class Matcher:
     def __init__(self, cfg: dict):
         self.synonyms = {fold(k): fold(v) for k, v in (cfg.get("synonyms") or {}).items()}
@@ -23,6 +26,15 @@ class Matcher:
         self.min_sim = float(cfg.get("min_similarity", 0.34))
         self.filler = {self.synonyms.get(fold(w), fold(w)) for w in cfg.get("filler") or []}
         self.generic_first = {fold(w) for w in cfg.get("not_brands") or []}
+        # multi-word terms rewritten before comparing: "dis macunu" -> "toothpaste" (longest first)
+        self.phrases = sorted(((" ".join(tokens(k)), " ".join(tokens(v))) for k, v in (cfg.get("phrases") or {}).items()),
+                              key=lambda x: -len(x[0]))
+        # only one of these can be true of a product: "men" on one side and "women" on the other is a mismatch
+        self.exclusive = [{fold(w) for w in g} for g in cfg.get("exclusive") or []]
+        self.one_gender = set(cfg.get("single_gender_brands") or [])
+        self.type_words = set().union(*self.exclusive) if self.exclusive else set()
+        # a lone shared word from this list is too little to pair on ("Original", "Fresh")
+        self.weak = self.conflicts | {fold(w) for w in cfg.get("weak") or []}
         # brand aliases, longest first so "coca cola zero" doesn't hit "cola"
         self.brand_aliases = sorted(
             ((" ".join(tokens(a)), name) for name, al in (cfg.get("brands") or {}).items()
@@ -38,22 +50,33 @@ class Matcher:
         return None
 
     def words(self, name: str, brand: str | None) -> set[str]:
-        t = " ".join(tokens(name))
-        t = size_codes(t)
-        t = re.sub(r"\b(?:no|without|zero|free of)\s+sugar\b|\bsugar\s+free\b|\bnon\s+sugar\b", " sugarfree ", t)
-        # drop pack sizes: "8x330 ml", "330ml x8", "1 lt", "12 li", "x8"
-        t = re.sub(r"\b\d+\s*x\s*\d+\b|\bx\s*\d+\b|\b\d+\s*x\b", " ", t)
-        t = re.sub(r"\b\d+\s*(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l|li|lu|adet|pcs|tem|temachia)?\b", " ", t)
-        t = re.sub(r"\b(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l)\b", " ", t)
+        t = " " + " ".join(tokens(name)) + " "
+        for a, b in self.phrases:
+            if a in t:
+                t = t.replace(f" {a} ", f" {b} ")
         if brand:
             for alias, canon in self.brand_aliases:
                 if canon == brand:
                     t = re.sub(rf"\b{re.escape(alias)}\b", " ", t)
+        t = size_codes(t)
+        t = re.sub(r"\b(?:no|without|zero|free of)\s+sugar\b|\bsugar\s+free\b|\bnon\s+sugar\b", " sugarfree ", t)
+        t = re.sub(r"\bspf\s+(\d+)\b", r"spf\1", t)
+        # drop pack sizes: "8x330 ml", "330ml x8", "1 lt", "12 li", "x8"
+        t = re.sub(r"\b\d+\s*x\s*\d+\b|\bx\s*\d+\b|\b\d+\s*x\b", " ", t)
+        t = re.sub(r"\b\d+(?:\s\d+)?\s*(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l|li|lu|adet|pcs|pc|tem|temachia|pieces|tabs|caps)\b", " ", t)
+        t = re.sub(r"\b(?:kgr|kg|grams|gram|grm|gr|gm|g|ml|cl|ltr|lt|l)\b", " ", t)
+        # a small number left on its own is a variant ("Comfort 2", "2-5 years", "3.5% fat"): keep it as n2
+        t = re.sub(r"\b(\d{1,2})\b", r"n\1", t)
+        t = re.sub(r"\b\d+\b", " ", t)
         out = set()
         for w in t.split():
             if SIZE_TOKEN_RE.match(w) or w in self.stop or len(w) < 2 and not w.isdigit():
                 continue
-            out.add(self.synonyms.get(w, w))
+            if w not in self.synonyms and w.endswith("s") and (w[:-1] in self.conflicts or w[:-1] in self.synonyms):
+                w = w[:-1]            # bananas -> banana, lemons -> lemon
+            out.update(self.synonyms.get(w, w).split())
+        if brand in self.one_gender:
+            out -= {"men", "women"}
         return out
 
     def key(self, o: Offer) -> "Key":
@@ -63,23 +86,38 @@ class Matcher:
             w.add("multibuy")   # "1+1", "3 al 2 ode", "+1 free" deals are not the single product
         return Key(brand=b, size=parse_size(o.name), words=w)
 
+    def core(self, k: "Key") -> frozenset:
+        """The words that tell one variant of a product from another."""
+        return frozenset(k.words - self.filler - self.type_words)
+
     def score(self, a: "Key", b: "Key") -> float:
         if not a.brand or a.brand != b.brand or not a.size or not a.size.same_as(b.size, tol=0.01):
             return 0.0
         diff = a.words ^ b.words
         if diff & self.conflicts or "multibuy" in diff or any(re.fullmatch(r"sz\d+", w) for w in diff):
             return 0.0
-        ca, cb = a.words - self.filler, b.words - self.filler
-        if not ca or not cb:
-            return 0.6   # e.g. "Twix 50g Twin" vs "TWIX CIKOLATA 50 G"
-        a, b = Key(a.brand, a.size, ca), Key(b.brand, b.size, cb)
-        inter = len(a.words & b.words)
-        union = len(a.words | b.words) or 1
+        for g in self.exclusive:
+            ga, gb = a.words & g, b.words & g
+            if ga and gb and ga != gb:
+                return 0.0
+        na, nb = {w for w in a.words if _NUM_TOKEN.fullmatch(w)}, {w for w in b.words if _NUM_TOKEN.fullmatch(w)}
+        if na and nb and na != nb:
+            return 0.0            # "Comfort 2" vs "Comfort 3", "SPF30" vs "SPF50"
+        # compare only the words that tell variants apart: not "spray", "men", "chocolate", "can"...
+        drop = self.filler | self.type_words | (set() if (na and nb) else na | nb)
+        ca, cb = a.words - drop, b.words - drop
+        if not ca and not cb:
+            return 0.9   # e.g. "Twix 50g Twin" vs "TWIX CIKOLATA 50 G"
+        if not ca or not cb:      # one name is just brand + kind of product
+            rest = ca | cb
+            return 0.6 if len(rest) == 1 and not rest & self.weak else 0.0
+        inter, union = len(ca & cb), len(ca | cb)
         sim = inter / union
-        # a short name fully contained in a longer one is a good sign
-        small = min(len(a.words), len(b.words))
-        if small and inter == small:
-            sim = max(sim, 0.5 + 0.1 * small)
+        small = min(len(ca), len(cb))
+        if inter == small:        # the shorter name is fully contained in the longer one
+            extra = union - small
+            if (small >= 2 and extra <= small + 1) or (small == 1 and not (ca & cb) & self.weak):
+                sim = max(sim, 0.5 + 0.1 * small)
         return min(sim, 1.0) if sim >= self.min_sim else 0.0
 
 
@@ -148,7 +186,7 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
             joined[forced[o.url]].append(o)
             continue
         k = m.key(o)
-        best, best_s = None, 0.0
+        best, best_s, ties = None, 0.0, set()
         for pid in by_brand.get(k.brand, []):
             if (o.url, pid) in banned:
                 continue
@@ -158,9 +196,12 @@ def match(north: list[Offer], south: list[Offer], cfg: dict, overrides: dict | N
                 s = 2.0               # same barcode: certain match
             else:
                 s = m.score(k, akeys[pid])
-            if s > best_s:
-                best, best_s = pid, s
-        if best:
+            if s > best_s + 1e-9:
+                best, best_s, ties = pid, s, {m.core(akeys[pid])}
+            elif s and abs(s - best_s) <= 1e-9:
+                ties.add(m.core(akeys[pid]))
+        # equally good matches that are different variants ("Jelly Cola" / "Jelly Bananas"): can't tell which
+        if best and (best_s >= 2.0 or len(ties) == 1):
             joined[best].append(o)
 
     groups = []
@@ -354,20 +395,22 @@ def generic(north: list[Offer], south: list[Offer], items: list[dict]) -> list[G
                                  category=it.get("category", ""), north=n_pu, south=s_pu, kind="generic",
                                  note="Fresh, sold by weight: compared per kg. Pack or average shown under each store."))
             continue
-        best = None
+        # one item per pack size sold on both sides (1 L milk, 2 L milk...), most widely sold first
+        found, seen = [], []
         for o, z in sides["south"]:
+            if any(z.same_as(q) for q in seen):
+                continue
+            seen.append(z)
             n_same = [x for x, zx in sides["north"] if zx.same_as(z)]
             if not n_same:
                 continue
             s_same = [x for x, zx in sides["south"] if zx.same_as(z)]
-            rank = (len(n_same) + len(s_same), -z.total)
-            if best is None or rank > best[0]:
-                best = (rank, z, n_same, s_same)
-        if not best:
-            continue
-        _, z, n_same, s_same = best
-        out.append(Group(id=f"gen-{it['id']}", name=_plain_name(it["name"]), unit=z.label(),
-                         category=it.get("category", ""), north=n_same, south=s_same, kind="generic",
-                         note=f"Any brand, same pack size ({z.label()}) on both sides: cheapest shown. "
-                              "Product name shown under each store."))
+            found.append(((len(n_same) + len(s_same), -z.total), z, n_same, s_same))
+        found.sort(key=lambda f: f[0], reverse=True)
+        for i, (_, z, n_same, s_same) in enumerate(found[:int(it.get("sizes", 3))]):
+            gid = f"gen-{it['id']}" if i == 0 else f"gen-{it['id']}-{z.label().replace(' ', '').replace('×', 'x').lower()}"
+            out.append(Group(id=gid, name=_plain_name(it["name"]), unit=z.label(),
+                             category=it.get("category", ""), north=n_same, south=s_same, kind="generic",
+                             note=f"Any brand, same pack size ({z.label()}) on both sides: cheapest shown. "
+                                  "Product name shown under each store."))
     return out

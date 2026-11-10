@@ -203,8 +203,6 @@ synonyms:
   cips: crisps
   chips: crisps
   sampuan: shampoo
-  dis: tooth
-  macunu: paste
   toothpaste: toothpaste
   sabun: soap
   deterjan: detergent
@@ -264,7 +262,7 @@ synonyms:
   orjinal: original
   klasik: classic
   sac: hair
-  kremi: conditioner
+  kremi: cream
   dus: shower
   jeli: gel
   light: light
@@ -284,28 +282,401 @@ synonyms:
   kafes: coffee
   nero: water
 
+  # --- Turkish (and shop shorthand) -> English, added Nov 2026 ---
+  sprey: spray
+  spr: spray
+  deo: deodorant
+  deodorants: deodorant
+  antiperspirant: deodorant
+  erkek: men
+  erk: men
+  man: men
+  mens: men
+  bay: men
+  kadin: women
+  bayan: women
+  woman: women
+  womens: women
+  wmn: women
+  sutu: milk
+  tras: shaving men
+  tiras: shaving men
+  shave: shaving men
+  kopugu: foam
+  kopuk: foam
+  kop: foam
+  creme: cream
+  balm: balsam
+  trigger: spray
+  qinoa: quinoa
+  shaving: shaving men
+  parfumlu: scented
+  parfumsuz: unscented
+  karbo: carbon
+  karbon: carbon
+  yuz: face
+  nem: moisturizing
+  nemlendirici: moisturizing
+  nemlendirme: moisturizing
+  neml: moisturizing
+  moisturising: moisturizing
+  moisturizer: moisturizing
+  moisturiser: moisturizing
+  moisture: moisturizing
+  gunes: sun
+  hassas: sensitive
+  hass: sensitive
+  sens: sensitive
+  koruma: protection
+  koruyucu: protection
+  protect: protection
+  kuru: dry
+  losyon: lotion
+  losyonu: lotion
+  guclu: strong
+  temizleme: cleansing
+  temizleyici: cleansing
+  cleanser: cleansing
+  cilt: skin
+  beyazlatici: whitening
+  beyazlik: whitening
+  beyaz: white
+  bakim: care
+  bronzluk: bronze
+  bronz: bronze
+  enerji: energy
+  vucut: body
+  krem: cream
+  krm: cream
+  krma: cream
+  icecegi: drink
+  organik: organic
+  org: organic
+  bio: organic
+  sonrasi: after
+  sonr: after
+  onarim: repair
+  onarici: repair
+  karsi: anti
+  karsiti: anti
+  jel: gel
+  kavanoz: jar
+  yumusak: soft
+  hizli: fast
+  aktif: active
+  aktiv: active
+  activ: active
+  yagsiz: fatfree
+  sivi: liquid
+  yagi: oil
+  banyo: bathroom
+  ananas: pineapple
+  sos: sauce
+  sosu: sauce
+  soso: sauce
+  karisik: mixed
+  cayi: tea
+  lavanta: lavender
+  bicagi: razor
+  aromali: flavour
+  flavor: flavour
+  flavoured: flavour
+  vitamini: vitamin
+  kirmizi: red
+  gunluk: daily
+  siyah: black
+  hafif: light
+  mutfak: kitchen
+  seftali: peach
+  seftalili: peach
+  gul: rose
+  kraker: crackers
+  cracker: crackers
+  mayonez: mayonnaise
+  karpuz: watermelon
+  kiraz: cherry
+  visne: sourcherry
+  visneli: sourcherry
+  balli: honey
+  greyfurt: grapefruit
+  ayak: foot
+  orginal: original
+  armut: pear
+  havuc: carrot
+  margarin: margarine
+  strawbery: strawberry
+  strawerberry: strawberry
+  stawbery: strawberry
+  misir: corn
+  kapsul: capsules
+  capsule: capsules
+  kayisi: apricot
+  erik: plum
+  sabunu: soap
+  antibakteriyel: antibacterial
+  tuz: salt
+  yesil: green
+  mavi: blue
+  pembe: pink
+  sifir: sugarfree
+  tereyag: butter
+  yulaf: oat
+  yulafli: oat
+  oats: oat
+  muz: banana
+  muzlu: banana
+  kakao: cocoa
+  kakaolu: cocoa
+  cacao: cocoa
+  sarimsak: garlic
+  sarimsakli: garlic
+  biber: pepper
+  aci: hot
+  acili: hot
+  spicy: hot
+  peynirli: cheese
+  tavuklu: chicken
+  sigirli: beef
+  somonlu: salmon
+  somon: salmon
+  ton: tuna
+  baligi: fish
+  zeytinyagli: oliveoil
+  ceviz: walnut
+  cevizli: walnut
+  uzum: grape
+  nar: pomegranate
+  ahududu: raspberry
+  bogurtlen: blackberry
+  bugday: wheat
+  kepekli: wholewheat
+  integrale: wholewheat
+  wholemeal: wholewheat
+  cocuk: kids
+  children: kids
+  childrens: kids
+  yetiskin: adult
+  corba: soup
+  corbasi: soup
+  toz: powder
+  dilimli: sliced
+  dilim: sliced
+  slices: sliced
+  slice: sliced
+  rendelenmis: grated
+  pecete: napkins
+  yumusatici: softener
+  renkli: color
+  colour: color
+  colours: color
+  colors: color
+  gece: night
+  gunduz: day
+  sampuani: shampoo
+  maske: mask
+  maskesi: mask
+  peeling: scrub
+  tonik: toner
+  misel: micellar
+  micllr: micellar
+  makyaj: makeup
+  limonata: lemonade
+  portakalli: orange
+  elmali: apple
+  nektar: nectar
+  nektari: nectar
+  tropikal: tropical
+  egzotik: exotic
+  burgu: fusilli
+  kelebek: farfalle
+  fiyonk: farfalle
+  lazanya: lasagne
+  sehriye: orzo
+  cereals: cereal
+  candies: candy
+  sekerleme: candy
+  ketcap: ketchup
+  hardal: mustard
+  recel: jam
+  receli: jam
+  marmelat: marmalade
+  ekmek: bread
+  ekmegi: bread
+  tost: toast
+  dondurma: icecream
+  puresi: puree
+  kuzu: lamb
+  sebze: vegetables
+  sebzeli: vegetables
+  vegetable: vegetables
+  mantar: mushroom
+  mantarli: mushroom
+  mushrooms: mushroom
+  bezelye: peas
+  fasulye: beans
+  nohut: chickpeas
+  mercimek: lentils
+  bulgur: bulgur
+  tarcin: cinnamon
+  tarcinli: cinnamon
+  zencefil: ginger
+  kahveli: coffee
+  hindistancevizi: coconut
+  cevizi: coconut
+  invsbl: invisible
+  gorunmez: invisible
+  ferah: fresh
+  frsh: fresh
+  ferahlik: fresh
+  slvr: silver
+  gumus: silver
+  altin: gold
+  normal: normal
+  yagli: fullfat
+  uzun: long
+  ince: thin
+  kalin: thick
+  parlak: shine
+  parlaklik: shine
+  hacim: volume
+  besleyici: nourishing
+  canlandirici: revitalizing
+  dokulme: hairfall
+  dokulmelere: hairfall
+  kepek: dandruff
+  kepege: dandruff
+  antidandruff: dandruff
+  boyali: colored
+  dogal: natural
+  naturel: natural
+  ozel: special
+  tatli: sweet
+  baharatli: spiced
+  tuzlu: salted
+  kavrulmus: roasted
+  ic: kernel
+
 # Words that make two products different even with the same brand and size.
 # If one name has it and the other doesn't, they are NOT paired.
-conflicts: [shampoo, bath, wash, conditioner, lotion, sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
+conflicts: [men, baby, after, bedtime, bronze, alta, rica, riga, unscented, soya, oat, blackwhite, rollon, scrub, micellar, sourcream, hot, bbq, paprika, onion, garlic, honey, banana, apple, pineapple, raspberry, watermelon, grape, pomegranate, sourcherry, cocoa, wholewheat, glutenfree,
+            shampoo, bath, wash, conditioner, lotion, sugarfree, light, diet, decaf, lactosefree, fullfat, semi, skimmed, gold, classic,
             red, cherry, vanilla, lemon, lime, orange, peach, strawberry, mango,
             mint, menthol, extra, max, sensitive, whitening, kids, junior,
             chicken, beef, salmon, tuna, dark, white, hazelnut, almond, caramel, pistachio,
             wholenut, nut, nuts, fruit, raisin, crunch, protein, decaf, zero, max, mini, maxi,
             mix, spreadable, treat, odul, vegan, lasagne, lazanya, biscuits, cookies]
 
+# Multi-word terms rewritten before names are compared (left: as shops write it, right: what it means).
+phrases:
+  dis macunu: toothpaste
+  tooth paste: toothpaste
+  dis fircasi: toothbrush
+  tooth brush: toothbrush
+  agiz bakim suyu: mouthwash
+  agiz suyu: mouthwash
+  agiz bakim: mouthwash
+  mouth wash: mouthwash
+  tras kopugu: tras foam
+  tiras kopugu: tras foam
+  tras jeli: tras gel
+  tiras jeli: tras gel
+  gluten free: glutenfree
+  glutensiz: glutenfree
+  tras sonrasi: after shave
+  aftershave: after shave
+  after shave balsam: balsam
+  after shave balm: balsam
+  tras sonrasi balsam: balsam
+  tiras sonrasi balsam: balsam
+  roll on: rollon
+  el kremi: hand cream
+  sac kremi: conditioner
+  sac bakim kremi: conditioner
+  dus jeli: shower gel
+  gunes kremi: sun cream
+  gunes sonrasi: after sun
+  aftersun: after sun
+  hindistan cevizi: coconut
+  hind cev: coconut
+  hind cevizi: coconut
+  soya sutu: soya drink
+  badem sutu: almond drink
+  yulaf sutu: oat drink
+  vucut losyonu: body lotion
+  vucut sutu: body lotion
+  body milk: body lotion
+  soguk cay: ice tea
+  iced tea: ice tea
+  misir gevregi: cereal
+  corn flakes: cornflakes
+  aloe vera: aloevera
+  makyaj temizleme: makeup remover
+  black white: blackwhite
+  black and white: blackwhite
+  b w: blackwhite
+  b and w: blackwhite
+  sivi sabun: liquid soap
+  el sabunu: hand soap
+  islak mendil: wipes
+  islak havlu: wipes
+  wet wipes: wipes
+  baby wipes: baby wipes
+  camasir suyu: bleach
+  whole wheat: wholewheat
+  tam bugday: wholewheat
+  yer fistigi: peanut
+  fistik ezmesi: peanut butter
+  anti dandruff: dandruff
+  kepege karsi: dandruff
+  sour cream: sourcream
+  eksi krema: sourcream
+  sour cream and onion: sourcream onion
+  olive oil: oliveoil
+  zeytin yagi: oliveoil
+  extra virgin: extravirgin
+  sizma: extravirgin
+  hot chocolate: hotchocolate
+  sicak cikolata: hotchocolate
+  ice cream: icecream
+  peanut butter: peanutbutter
+  men care: men
+  men plus care: men
+
+# Only one word of each group can describe a product: different ones never pair.
+exclusive:
+  - [men, women, kids, baby]
+  - [spray, rollon, stick, cream, gel, foam, lotion, oil, soap, wipes]
+  - [day, night]
+  - [hand, face, foot, hair, lip, eye, body]
+  - [scented, unscented]
+  - [shampoo, conditioner, mask, toothpaste, toothbrush, mouthwash]
+  - [sliced, grated, block]
+  - [spaghetti, penne, fusilli, farfalle, lasagne, orzo, bukle, yuksuk, fiyonk, kesme, arpa, linguine, tagliatelle, fettucine, rigatoni, macaroni]
+  - [ketchup, mayonnaise, mustard]
+  - [liquid, powder, capsules, tablets]
+
+# Brands that only make products for one gender, so "men" in the name adds nothing.
+single_gender_brands: [Axe, Gillette, Old Spice, Arko, Bic, Lynx]
+
 # Words that only describe the kind of product ("chocolate", "biscuits", "can").
 # If one name has nothing left except these, brand + size is enough to pair.
 filler: [chocolate, biscuits, crisps, can, bottle, glass, twin, bar, wafer, cookies, gofret, sakiz, gum,
-         candy, drink, soda, juice, cereal, gevrek, coffee, tea, water, sparkling, paste, sauce, pack, multipack,
+         candy, drink, soda, juice, cereal, gevrek, coffee, tea, sparkling, paste, sauce, pack, multipack,
          pouch, tub, jar, kase, folyo, foil, pet, cam, kutu, sise, gazoz, icecek, tablet, tableti, cikolata,
-         biskuvi, cips, super, boy, mega, mini, family]
+         biskuvi, cips, super, boy, mega, mini, family,
+         deodorant, toothpaste, flavour, skin, care, milk, sun, sunscreen, bread, crispy, product, new, edt, edp, eko, paket, pou, pouch, adult, canned,
+         original, n7]
+
+# A single shared word from this list is not enough to pair two products.
+weak: [fresh, original, classic, sensitive, whitening, moisturizing, protection, care, normal, soft, active, power,
+       ultra, extra, natural, pure, clean, touch, jelly, baby, kids, mini, minis, water, cool, deep, dry, sport, repair, total, complete, plus, pro, gold, special]
 
 # Words ignored when comparing names.
 stopwords: [the, and, with, of, ile, ve, for, new, yeni, adet, li, lu, pcs, pack, x, tl, eur,
             koli, kampanya, indirim, firsat, promo, offer, tem, temachia, temaxia]
 
 # How similar the rest of the names must be (0 = anything, 1 = identical).
-min_similarity: 0.4
+min_similarity: 0.55
 
 # First words that are NOT brands (so they're never used to pair products).
 not_brands: [baby, fresh, spring, golden, elite, delta, flora, super, mega, mini, classic, original, premium,

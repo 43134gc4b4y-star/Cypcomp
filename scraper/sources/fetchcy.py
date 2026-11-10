@@ -90,7 +90,7 @@ def _scored(urls: list[str], north: list[Offer], mcfg: dict) -> list[tuple[float
             if nk.size.unit != k.size.unit or not 0.4 <= nk.size.total / k.size.total <= 2.5:
                 continue
             ca, cn = k.words - m.filler, nk.words - m.filler
-            if (ca <= cn or cn <= ca) and len(ca ^ cn) <= 1 and m.score(Key(nk.brand, k.size, nk.words), k) >= 0.7:
+            if (ca <= cn or cn <= ca) and len(ca ^ cn) <= 1 and m.score(Key(nk.brand, k.size, nk.words), k) >= 0.6:
                 scored.append((1, u))
                 break
     return scored

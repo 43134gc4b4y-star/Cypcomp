@@ -176,7 +176,7 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
         # same product can't honestly cost 4x more on one side: almost always a misread
         # pack (a box of 24 sold as "34 g"), so leave it out rather than show a fake saving
         lo, hi = sorted((_shelf(bn), _shelf(bs)))
-        if g.kind != "generic" and lo > 0 and hi / lo > 4:
+        if lo > 0 and hi / lo > (6 if g.unit == "per kg" else 4):
             continue
         diff = bs["eur"] - bn["eur"]
         win = "N" if diff > 0.005 else "S" if diff < -0.005 else "="
