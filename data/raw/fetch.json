@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-11T04:35:51+00:00",
+"fetched_at": "2026-11-11T04:57:24+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -7573,22 +7573,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
-"name": "Hipp Organic Baby Cereal 100% Rice 200G",
-"price": 4.54,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/hipp-organic-baby-cereal-100-rice-200g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/5a1a476d-aa46-4b7c-b08c-ffbfdd838f26.jpg",
-"category": "Baby Food",
-"barcode": "9062300139775",
-"product_id": "gtin-9062300139775",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Antonis Hadjiapostolou",
 "name": "Collistar Moisturizing Toning Body Lotion 200ml",
 "price": 22.97,
@@ -7893,7 +7877,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Lavish Care Xmas Merry Lemon Tart Bag Set 2024",
 "price": 17.9,
 "currency": "EUR",
@@ -7903,7 +7887,7 @@
 "barcode": "5200410664211",
 "product_id": "gtin-5200410664211",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -12647,7 +12631,7 @@
 "side": "S",
 "store": "Pharmacy Eleni Mamilou",
 "name": "Gehwol Toe Protection Ring G Medium Size",
-"price": 8.9,
+"price": 8.91,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/gehwol-toe-protection-ring-g-medium-size",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/26312df0-b3f1-42f5-8d0a-3bfc998ed10c.jpg",
@@ -13941,7 +13925,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Ayios Minas",
 "name": "Max Factor Facefinity 3In1 Foundation Spf20 40 Light Ivory 30ml",
 "price": 18.65,
 "currency": "EUR",
@@ -13951,7 +13935,7 @@
 "barcode": "5410076971350",
 "product_id": "gtin-5410076971350",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ayios+Minas+Cyprus",
 "extra": {}
 },
 {
@@ -14773,9 +14757,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Max Factor 2000 Calorie Mascara 04 Navy – 9ml",
-"price": 14.51,
+"price": 15.55,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/max-factor-2000-calorie-mascara-04-navy-9ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/7eff20a7-5bf0-4c30-b12e-8a68a3c4eaf6.jpg",
@@ -14783,7 +14767,7 @@
 "barcode": "50681686",
 "product_id": "gtin-50681686",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -15959,7 +15943,7 @@
 "side": "S",
 "store": "Pharmacy Aloe Nicosia - Strovolos",
 "name": "Gehwol Toe Separators G Medium X3",
-"price": 9.26,
+"price": 9.4461,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/gehwol-toe-separators-g-medium-x3",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/9628c6e6-0518-4041-84f3-157c2d5871db.jpg",
@@ -18407,7 +18391,7 @@
 "side": "S",
 "store": "Pharmacy Alexandros David",
 "name": "The Pionears Berry Moon Body Granita 200ml",
-"price": 18.7,
+"price": 13.6,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/the-pionears-berry-moon-body-granita-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/17fa20f6-e015-4ce8-b0cd-fbc8d8917d3f/5da0e3c0-72b2-479c-9cbb-7c46ed7e81ed.jpg",
@@ -21237,7 +21221,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Ayios Minas",
 "name": "Max Factor Miracle Touch Foundation 55 Blushing Beige",
 "price": 14.48,
 "currency": "EUR",
@@ -21247,7 +21231,7 @@
 "barcode": "5011321338388",
 "product_id": "gtin-5011321338388",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ayios+Minas+Cyprus",
 "extra": {}
 },
 {
@@ -22101,7 +22085,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elpida Petrou",
+"store": "Pharmacy IZK - Larnaca",
 "name": "Ninolac Ac 400gr",
 "price": 10.76,
 "currency": "EUR",
@@ -22111,7 +22095,7 @@
 "barcode": "5414752104230",
 "product_id": "gtin-5414752104230",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -23797,7 +23781,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
+"store": "Pharmacy Chara Nicolaou Mega Cross Platy",
 "name": "Gum Bio Toothpaste 75Ml",
 "price": 8.67,
 "currency": "EUR",
@@ -23807,7 +23791,7 @@
 "barcode": "7630019904063",
 "product_id": "gtin-7630019904063",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chara+Nicolaou+Mega+Cross+Platy+Cyprus",
 "extra": {}
 },
 {
