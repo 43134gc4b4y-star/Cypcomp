@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-11T04:23:48+00:00",
+"fetched_at": "2026-11-12T04:36:54+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -46053,7 +46053,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Apivita Bee After Sun Refreshing Gel Cream 100Ml",
 "price": 8.96,
 "currency": "EUR",
@@ -46063,7 +46063,7 @@
 "barcode": "5201279088460",
 "product_id": "gtin-5201279088460",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -47589,7 +47589,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Frezyderm Ice Eyes Stick Age Freezer Anti-Wrinkle Eye Gel 18 ml",
 "price": 38.4,
 "currency": "EUR",
@@ -47599,7 +47599,7 @@
 "barcode": "5202888271380",
 "product_id": "gtin-5202888271380",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -49461,7 +49461,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Alexandros David",
+"store": "Pharmacy All 4 You",
 "name": "Gum Technique Pro Compact Toothbrush Medium 528",
 "price": 5.75,
 "currency": "EUR",
@@ -49471,7 +49471,7 @@
 "barcode": "7630019901468",
 "product_id": "gtin-7630019901468",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Alexandros+David+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -50951,7 +50951,7 @@
 "side": "S",
 "store": "Pharmacy Rafael Neofitou",
 "name": "Foamie Shower Body Bar Hibiskiss Cleansing Soap 80g",
-"price": 7.95,
+"price": 7.5,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/foamie-shower-body-bar-hibiskiss-cleansing-soap-80g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/7ed82b5e-1548-4d8a-9cbc-c264df7ab9e1.jpg",
@@ -51223,7 +51223,7 @@
 "side": "S",
 "store": "Pharmacy Rafael Neofitou",
 "name": "The Pionears Body Better Resurfacing Peel Body Syrup 100ml",
-"price": 25.6,
+"price": 11.0,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/the-pionears-body-better-resurfacing-peel-body-syrup-spa-elixirs-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/3c6f8fdb-e9e0-42b1-a679-73ac97fca112/b6a1495b-1ea4-4396-abdc-408dbc1076c4.jpg",
@@ -51717,22 +51717,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
-"name": "L'Oreal Infaillible Matte Resistance Lipstick 601 – matte lipstick, long-lasting color",
-"price": 15.55,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/loreal-infallible-matte-resistance-lipstick-601-worth-it-48ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/25734e23-3d76-446e-9e91-260db4d60b6e.jpeg",
-"category": "Lipsticks",
-"barcode": "30188617",
-"product_id": "gtin-30188617",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Sana Vita Eye Drops 10Ml Drops S41",
 "price": 14.0,
@@ -51973,7 +51957,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy IZK - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Anatomic Help 0505 Wrist And Forearm Splint-Medium",
 "price": 45.29,
 "currency": "EUR",
@@ -51983,7 +51967,7 @@
 "barcode": "5204914381926",
 "product_id": "gtin-5204914381926",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -52037,7 +52021,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Intermed Eva Intima Moist Long Acting Ph 3.0 9 Applicators",
 "price": 16.62,
 "currency": "EUR",
@@ -52047,7 +52031,7 @@
 "barcode": "5205152012467",
 "product_id": "gtin-5205152012467",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -126768,6 +126752,22 @@
 "product_id": "gtin-5200375300209",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Vasilina Perissiou",
+"name": "Teaology Glowing Black Tea Vitamin C Mask,1 sheet mask",
+"price": 7.0,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/teaology-glowing-black-tea-vitamin-c-mask1-sheet-mask",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/5023d254-3fa5-4a6f-a91d-b16bfa62f7f4.jpg",
+"category": "Beauty Masks",
+"barcode": "8050148504023",
+"product_id": "gtin-8050148504023",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 }
 ]
