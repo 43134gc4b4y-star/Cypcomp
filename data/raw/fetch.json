@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-12T04:24:09+00:00",
+"fetched_at": "2026-11-13T04:35:41+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -47141,7 +47141,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "MAX FACTOR FACE FINITY ALL DAY FLAWLESS 3 IN 1 FOUNDATION - A VARIETY OF SHADES CARAMEL 85",
 "price": 19.46,
 "currency": "EUR",
@@ -47151,7 +47151,7 @@
 "barcode": "3614225851698",
 "product_id": "gtin-3614225851698",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -63093,7 +63093,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Uriage Gentle Deodorant Roll On 50ml",
 "price": 12.5,
 "currency": "EUR",
@@ -63103,7 +63103,7 @@
 "barcode": "3661434002687",
 "product_id": "gtin-3661434002687",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -63269,7 +63269,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Anua Heartleaf Quercetinol Pore Deep Cleansing Foam 150ml",
 "price": 16.95,
 "currency": "EUR",
@@ -63279,7 +63279,7 @@
 "barcode": "8809640735622",
 "product_id": "gtin-8809640735622",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -63461,22 +63461,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
-"name": "Woodwick Vanilla & Sea Salt Mini Hourglass Wood Wick Candle 85G",
-"price": 14.95,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/woodwick-vanilla-sea-salt-mini-hourglass-wood-wick-candle-85g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/af9aa659-1a2d-419f-b378-bdcd1bbd9d01.jpg",
-"category": "Scented Candles",
-"barcode": "5038581055282",
-"product_id": "gtin-5038581055282",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Melco Express Discount Supermarket",
 "name": "Lays Olikis Tomato & Red Pepper Flavour Potato Chips 95Gr",
 "price": 1.75,
@@ -63573,7 +63557,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy All 4 You",
 "name": "Anatomichelp Wrist Narthex Medium Left",
 "price": 27.2,
 "currency": "EUR",
@@ -63583,7 +63567,7 @@
 "barcode": "5204914317352",
 "product_id": "gtin-5204914317352",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -63639,7 +63623,7 @@
 "side": "S",
 "store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Gillette Blue Ii Men'S Disposable Twin Blade 5 Razors",
-"price": 2.08,
+"price": 2.15,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/gillette-blue-i-i-chromium-coating-razor-5",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/6f8146f8-1687-47b8-a294-32821b8de23d.jpg",
@@ -63893,7 +63877,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Vasilina Perissiou",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Daiquiri Passion Body Lotion 300 Ml",
 "price": 6.0,
 "currency": "EUR",
@@ -63903,7 +63887,7 @@
 "barcode": "5200410664129",
 "product_id": "gtin-5200410664129",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -66341,22 +66325,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
-"name": "Forticare Advanced Mango & Peach High-Protein Nutritional Medical Drink 4 X 125Ml",
-"price": 17.67,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/forticare-advanced-mango-peach-high-protein-nutritional-medical-drink-4-x-125ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/5095c059-0b78-4e3a-8fad-e9137bd5e0ee/468439c8-6802-4b2e-a219-e8a5d21152c2.jpg",
-"category": "Nutritional Drinks",
-"barcode": "8716900583780",
-"product_id": "gtin-8716900583780",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Nektaria Konstantinou - Lakatamia",
 "name": "Decosta Hydrogen Peroxide 6%, Liquid, 1L x 20volumes",
 "price": 5.55,
@@ -66629,7 +66597,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Vital Silver 50+ 30 Capsules",
 "price": 20.08,
 "currency": "EUR",
@@ -66639,7 +66607,7 @@
 "barcode": "5601653003216",
 "product_id": "gtin-5601653003216",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -66821,7 +66789,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Christiana Kari",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Centrum Immunity Vitamin C Max Sachets 14",
 "price": 10.9,
 "currency": "EUR",
@@ -66831,7 +66799,7 @@
 "barcode": "5054563121905",
 "product_id": "gtin-5054563121905",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christiana+Kari+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -69525,7 +69493,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Charis Christofides",
 "name": "Dr.Jart+ Cicapair Tiger Grass Cc Treat 50Ml (05)",
 "price": 32.25,
 "currency": "EUR",
@@ -69535,7 +69503,7 @@
 "barcode": "8809724476151",
 "product_id": "gtin-8809724476151",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
 "extra": {}
 },
 {
@@ -70453,7 +70421,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Karamanidou",
 "name": "Isothermic Bag For Insulin",
 "price": 28.5,
 "currency": "EUR",
@@ -70463,7 +70431,7 @@
 "barcode": "5213001913247",
 "product_id": "gtin-5213001913247",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karamanidou+Cyprus",
 "extra": {}
 },
 {
@@ -70533,7 +70501,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Tania Argyrou",
+"store": "Pharmacy IZK - Larnaca",
 "name": "Lactacyd Girl Ultra Mild Intimate Cleansing Gel 200ml",
 "price": 7.42,
 "currency": "EUR",
@@ -70543,7 +70511,7 @@
 "barcode": "5391520947612",
 "product_id": "gtin-5391520947612",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
