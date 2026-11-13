@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=8e06d38e">
+<link rel="stylesheet" href="style.css?v=83dd8fd2">
 </head>
 <body>
 <div class="page">
@@ -25,19 +25,19 @@
 <header class="top">
   <h1>Compare Cyprus</h1>
   <p class="tagline">One island, two price tags.</p>
-  <p class="lede">Supermarket prices from both sides, matched product for product, fresh every morning.</p>
-  <div class="split" id="stats" aria-live="polite"></div>
 </header>
 
 <div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
-<nav class="filters" aria-label="Filters">
-  <div class="chips" id="trending" aria-label="Popular searches"></div>
-  <div class="selects">
-    <label class="sel"><span>Category</span><select id="cats"></select></label>
-    <label class="sel"><span>Sort by</span><select id="sort"></select></label>
-  </div>
-</nav>
 
+<h2 class="sect">Shop by category</h2>
+<div class="cats" id="cats"></div>
+
+<div class="split" id="stats" aria-live="polite"></div>
+
+<div class="listbar">
+  <h2 class="listhead" id="listhead"></h2>
+  <div class="sortseg" id="sort" role="group" aria-label="Sort by"></div>
+</div>
 <main id="out" aria-live="polite"></main>
 <button class="main more" id="more" hidden>Show more</button>
 
@@ -106,7 +106,7 @@
   <a href="#contrib" data-view="contrib"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Add a price</span></a>
 </nav>
 
-<script src="app.js?v=7ebfe040"></script>
+<script src="app.js?v=4031ced4"></script>
 <script src="contribute.js?v=cdc1d8d5"></script>
 <script src="install.js?v=d9f7148f"></script>
 <script src="wanted.js?v=0db13283"></script>

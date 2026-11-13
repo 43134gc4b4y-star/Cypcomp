@@ -36,10 +36,23 @@
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
   function icon(it) { for (var i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.category + " " + it.name)) return CAT_ICON[i][1]; return "🛒"; }
 
+  // a handful of plain categories instead of every shop's own shelf names
+  var GROUPS = [
+    ["Baby", "👶", /baby|bebek/i],
+    ["Personal care", "🧴", /personal|deodor|body|shav|hand cream|mouthwash|toothpaste|sunscreen|conditioner|skincare|bath|shower|hair|intimate/i],
+    ["Household", "🧽", /clean|laundry|household|paper|pets?$|detergent/i],
+    ["Drinks", "🥤", /drinks?|coffee|tea$|juice|water|beer|wine/i],
+    ["Dairy & eggs", "🥛", /milk|dairy|cheese|egg|yog/i],
+    ["Snacks & sweets", "🍫", /snack|cookie|cracker|wafer|chocolate|sweet|biscuit|crisps/i],
+    ["Fresh & frozen", "🥩", /cold cuts|fruit|veg|frozen|meat|fish/i],
+    ["Food cupboard", "🥫", /./]
+  ];
+  function groupOf(it) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][2].test(it.category || "")) return GROUPS[i][0]; return "Food cupboard"; }
+
   function words(t) { return fold(t).split(/[^a-z0-9]+/).filter(Boolean); }
 
   function index(it) {
-    it._n = words(it.name);
+    it._n = words(it.name); it.group = groupOf(it);
     var all = [it.name, it.category, it.unit];
     it.north.concat(it.south).forEach(function (o) { all.push(o.name, o.store, o.shelf ? o.shelf.name : ""); });
     it._a = words(all.join(" "));
@@ -75,11 +88,12 @@
     return m ? m[1].trim().replace(/^per 1 l$/, "per litre").replace(/^per 1 kg$/, "per kg").replace(/^per 1 /, "per ") : "";
   }
 
-  function side(label, cls, o, win) {
-    // one half of the price label: side, shelf price in euro, lira, shop
+  function side(label, cls, o, win, it) {
+    // one half of the price label; the cheaper half is filled with its side's colour and carries the saving
     var e = o.shelf ? o.shelf.eur : o.eur, t = o.shelf ? o.shelf.try : o.try;
-    return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + '</div><div class="pr">' + eur(e) +
-      '</div><div class="pl">' + tl(t) + '</div><div class="sn">' + esc(o.store.split("|")[0].trim()) + "</div></div>";
+    var sticker = win ? '<div class="sticker"><b>' + eur(gap(it)) + " less</b><span>" + Math.round(it.saving_pct) + "% cheaper</span></div>" : "";
+    return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + (win ? " is cheaper" : "") + '</div><div class="pr">' + eur(e) +
+      '</div><div class="pl">' + tl(t) + "</div>" + sticker + '<div class="sn">' + esc(o.store.split("|")[0].trim()) + "</div></div>";
   }
 
   function where(label, cls, o, per) {
@@ -115,9 +129,7 @@
   function card(it) {
     var n = it.north[0], s = it.south[0], per = perLabel(it);
     var img = safeUrl(it.image) ? '<img loading="lazy" alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
-    var verdict = it.cheaper === "=" ? '<div class="verdict same">Same price on both sides</div>' :
-      '<div class="verdict ' + it.cheaper + '"><div><b>' + eur(gap(it)) + " cheaper</b> in the " + (it.cheaper === "N" ? "North" : "South") +
-      "</div><span>" + Math.round(it.saving_pct) + "% less</span></div>";
+    var verdict = it.cheaper === "=" ? '<div class="verdict same">Same price on both sides</div>' : "";
     var chains = ["Lidl", "AlphaMega"].map(function (c) {
       var o = it.south.filter(function (x) { return x.store === c; })[0];
       return o && o !== s ? "<b>" + c + "</b> " + eur(o.shelf ? o.shelf.eur : o.eur) : "";
@@ -129,7 +141,7 @@
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
     return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></div><div class="tags">' +
-      side("North", "N", n, it.cheaper === "N") + side("South", "S", s, it.cheaper === "S") + "</div>" + verdict +
+      side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
       '<details class="more"><summary>Shops and details' + (extra > 0 ? " (" + extra + " more " + (extra === 1 ? "price" : "prices") + ")" : "") +
       '</summary><div class="whs">' + where("North", "N", n, per) + where("South", "S", s, per) + "</div>" + more + note + "</details></article>";
@@ -137,16 +149,16 @@
 
   function render() {
     var q = fold(query).trim();
-    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.category === cat) ? score(it, q) : 0 }; })
+    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) ? score(it, q) : 0 }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) {
         var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct : gap(b.it) - gap(a.it);
         return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || bySaving;
       })
       .map(function (x) { return x.it; });
-    var title = '<h2 class="listhead">' + (q ? list.length + (list.length === 1 ? " result" : " results") :
-      (cat ? esc(cat) + ", " : "") + (sortBy === "pct" ? "biggest % savings first" : "biggest savings first")) + "</h2>";
-    var html = (list.length ? title : "") + list.slice(0, shown).map(card).join("");
+    $("listhead").textContent = q ? list.length + (list.length === 1 ? " result" : " results") + " for “" + query + "”" :
+      (cat || "All products") + " (" + list.length + ")";
+    var html = list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
       html = '<div class="empty"><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
     } else if (!list.length) {
@@ -163,23 +175,27 @@
   }
 
   function drawChips() {
-    chips($("trending"), TRENDING.map(function (t) { return { t: t, v: t }; }), query, function (v) {
-      query = query === v ? "" : v; cat = ""; $("q").value = query; shown = 40; drawChips(); render();
-    });
     var counts = {};
-    DATA.items.forEach(function (i) { counts[i.category] = (counts[i.category] || 0) + 1; });
-    var cats = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 20);
-    selectBox($("sort"), [{ t: "Most € saved", v: "eur" }, { t: "Most % saved", v: "pct" }], sortBy, function (v) {
-      sortBy = v; shown = 40; drawChips(); render();
-    });
-    selectBox($("cats"), [{ t: "All (" + DATA.items.length + ")", v: "" }].concat(cats.map(function (c) { return { t: c + " (" + counts[c] + ")", v: c }; })), cat, function (v) {
-      cat = v; query = ""; $("q").value = ""; shown = 40; drawChips(); render();
-    });
-  }
-
-  function selectBox(el, opts, active, onPick) {
-    el.innerHTML = opts.map(function (o) { return '<option value="' + esc(o.v) + '"' + (o.v === active ? " selected" : "") + ">" + esc(o.t) + "</option>"; }).join("");
-    el.onchange = function () { onPick(el.value); };
+    DATA.items.forEach(function (i) { counts[i.group] = (counts[i.group] || 0) + 1; });
+    var tiles = [["", "🛒", DATA.items.length, "All"]].concat(GROUPS.filter(function (g) { return counts[g[0]]; })
+      .map(function (g) { return [g[0], g[1], counts[g[0]], g[0]]; }));
+    $("cats").innerHTML = tiles.map(function (t) {
+      return '<button type="button" class="cat' + (t[0] === cat && !query ? " on" : "") + '" data-v="' + esc(t[0]) + '" aria-pressed="' + (t[0] === cat && !query) +
+        '"><span class="ce" aria-hidden="true">' + t[1] + "</span><span class=\"cl\">" + esc(t[3]) + '</span><span class="cn">' + t[2] + "</span></button>";
+    }).join("");
+    $("cats").onclick = function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      cat = b.getAttribute("data-v"); query = ""; $("q").value = ""; shown = 40; drawChips(); render();
+      var y = $("listhead").getBoundingClientRect().top + window.pageYOffset - 84;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    };
+    $("sort").innerHTML = [["eur", "€ saved"], ["pct", "% saved"]].map(function (o) {
+      return '<button type="button" class="' + (sortBy === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (sortBy === o[0]) + '">' + o[1] + "</button>";
+    }).join("");
+    $("sort").onclick = function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      sortBy = b.getAttribute("data-v"); shown = 40; drawChips(); render();
+    };
   }
 
   function header() {
@@ -192,7 +208,7 @@
     $("stats").innerHTML = '<div class="score"><div class="sc N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span></div>" +
       '<div class="sc S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span></div></div>" +
       '<div class="bar" role="img" aria-label="' + np + '% of products cheaper in the North"><span class="bN" style="width:' + np + '%"></span><span class="bS"></span></div>' +
-      '<p class="score-f">' + lead + ". " + DATA.count + " products compared" + (when ? ", updated " + when : "") + ".</p>";
+      '<p class="score-f">' + DATA.count + " products compared" + (when ? ", updated " + when : "") + ".</p>";
     var src = Object.keys(DATA.sources || {}).map(function (k) {
       var s = DATA.sources[k], t = new Date(s.fetched_at);
       return esc(s.store) + " (" + s.products + " products, " + (isNaN(t) ? "" : t.toLocaleDateString("en-GB")) + ")";
@@ -224,7 +240,6 @@
 
   fetch("data/prices.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     DATA = d; window.CC_DATA = d; DATA.items.forEach(index);
-    TRENDING = TRENDING_CANDIDATES.filter(function (t) { return DATA.items.some(function (it) { return score(it, t) >= 2.5; }); }).slice(0, 12);
     header(); drawChips(); render();
   }).catch(function () {
     $("out").innerHTML = '<div class="empty"><div class="name">Prices didn’t load</div><p class="small">Check your connection and pull down to refresh.</p></div>';
