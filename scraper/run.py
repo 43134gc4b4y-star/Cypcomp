@@ -164,6 +164,16 @@ def _shelf(o: dict) -> float:
     return (o.get("shelf") or o)["eur"]
 
 
+def _photo(g: Group, win: str) -> str:
+    """A photo for an any-brand item: the cheapest product on the cheaper side, else the nearest one that has a photo."""
+    first, second = (g.north, g.south) if win == "N" else (g.south, g.north)
+    for offers in (first, second):
+        for o in sorted(offers, key=lambda o: o.price):
+            if o.image:
+                return o.image
+    return ""
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
     for g in groups:
@@ -183,7 +193,7 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
         pct = abs(diff) / max(bn["eur"], bs["eur"]) * 100 if win != "=" else 0
         items.append({
             "id": g.id, "name": g.name, "unit": g.unit, "category": tidy_category(g.category),
-            "kind": g.kind, "note": g.note, "image": g.image, "cheaper": win, "saving_pct": round(pct, 1),
+            "kind": g.kind, "note": g.note, "image": g.image or _photo(g, win), "cheaper": win, "saving_pct": round(pct, 1),
             "north": n[:5], "south": _with_pinned(s, PINNED), "north_count": len(n), "south_count": len(s),
         })
     items.sort(key=lambda x: -x["saving_pct"])

@@ -22,9 +22,17 @@
   };
   var TRENDING_CANDIDATES = ["milk", "coffee", "cola", "eggs", "halloumi", "cheese", "butter", "chocolate", "crisps",
     "shampoo", "deodorant", "baby milk", "nappies", "tissue", "olive oil", "cereal", "cat food", "honey", "tea", "water"];
-  var CAT_ICON = [[/fuel|petrol|diesel/i, "⛽"], [/milk|dairy|cheese|yogh|egg/i, "🥛"], [/coffee|tea/i, "☕"], [/drink|soft|water|juice|beverage/i, "🥤"],
-    [/fruit|veg/i, "🥬"], [/meat|chicken|fish/i, "🍗"], [/baby|nappy|diaper/i, "🍼"], [/bread|bak/i, "🍞"], [/snack|choc|sweet|biscuit/i, "🍫"],
-    [/clean|detergent|household/i, "🧴"], [/personal|care|hygiene|shampoo/i, "🧼"], [/paper|tissue/i, "🧻"], [/pet/i, "🐾"]];
+  // picture shown only if a product photo fails to load: first match on the product name, then the category
+  var CAT_ICON = [[/mince|beef|steak|lamb|pork|sausage|frankfurter|ham\b/i, "🥩"], [/chicken|turkey/i, "🍗"], [/tomato(es)?$|^tomato/i, "🍅"],
+    [/potatoes|^potato/i, "🥔"], [/cucumber/i, "🥒"], [/egg/i, "🥚"], [/cheese|halloumi|cheddar/i, "🧀"], [/butter|margarine/i, "🧈"],
+    [/toothpaste|toothbrush|mouthwash/i, "🪥"], [/razor|shav|gillette|mach3/i, "🪒"], [/baby|formula|napp|diaper/i, "🍼"],
+    [/coffee|nescaf/i, "☕"], [/\btea\b/i, "🍵"], [/juice|nectar/i, "🧃"], [/water/i, "💧"], [/cola|pepsi|fanta|sprite|drink|energy/i, "🥤"],
+    [/milk|yog/i, "🥛"], [/chocolate|cocoa/i, "🍫"], [/crisps|chips|pringles|doritos/i, "🍿"], [/biscuit|cookie|wafer|cracker/i, "🍪"],
+    [/pasta|spaghetti|penne|barilla/i, "🍝"], [/rice|bulgur|chickpea|lentil/i, "🍚"], [/oil\b/i, "🫒"], [/tuna|fish|salmon/i, "🐟"],
+    [/bread|toast|flour/i, "🍞"], [/cereal|corn flakes|oats|porridge|weetabix/i, "🥣"], [/pizza/i, "🍕"], [/ice cream/i, "🍨"], [/honey/i, "🍯"],
+    [/almond|nut/i, "🥜"], [/ketchup|mayonnaise|sauce|paste|pesto|mustard/i, "🥫"], [/soap|shower|bath/i, "🧼"],
+    [/pads|tissue|paper|wipes/i, "🧻"], [/cleaner|softener|detergent|drain|bleach|dettol|fairy|finish/i, "🧽"], [/cat food|dog food|whiskas|pet/i, "🐾"],
+    [/shampoo|conditioner|lotion|cream|deodor|spray|sun|nivea|dove|axe/i, "🧴"], [/fruit|veg/i, "🥬"], [/snack|sweet/i, "🍬"]];
 
   function fold(s) {
     return (s || "").toLowerCase().replace(/ı/g, "i").replace(/ş/g, "s").replace(/ğ/g, "g").replace(/ç/g, "c").replace(/ö/g, "o").replace(/ü/g, "u")
@@ -34,7 +42,12 @@
   function eur(v) { return "€" + v.toFixed(2); }
   function tl(v) { return v.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " ₺"; }
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
-  function icon(it) { for (var i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.category + " " + it.name)) return CAT_ICON[i][1]; return "🛒"; }
+  function icon(it) {
+    var i;
+    for (i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.name)) return CAT_ICON[i][1];
+    for (i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.category || "")) return CAT_ICON[i][1];
+    return "🛒";
+  }
 
   // a handful of plain categories instead of every shop's own shelf names
   var GROUPS = [
@@ -128,7 +141,9 @@
 
   function card(it) {
     var n = it.north[0], s = it.south[0], per = perLabel(it);
-    var img = safeUrl(it.image) ? '<img loading="lazy" alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
+    var img = safeUrl(it.image) ? '<div class="art"><img loading="lazy" decoding="async" alt="" src="' + esc(it.image) +
+      '" onerror="this.parentNode.className=\'art noimg\';this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))"></div>' :
+      '<div class="art noimg">' + icon(it) + "</div>";
     var verdict = it.cheaper === "=" ? '<div class="verdict same">Same price on both sides</div>' : "";
     var chains = ["Lidl", "AlphaMega"].map(function (c) {
       var o = it.south.filter(function (x) { return x.store === c; })[0];
@@ -139,7 +154,7 @@
     var more = extra > 0 ? '<div class="olist' + (on && os ? "" : " one") + '">' + (on ? '<div class="N"><h4 class="tN">Other North shops</h4>' + on + "</div>" : "") +
       (os ? '<div class="S"><h4 class="tS">Other South shops</h4>' + os + "</div>" : "") + "</div>" : "";
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
-    return '<article class="item"><div class="head"><div class="art">' + img + '</div><div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
+    return '<article class="item"><div class="head">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></div><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
