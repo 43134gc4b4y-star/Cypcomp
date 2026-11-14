@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-13T04:22:46+00:00",
+"fetched_at": "2026-11-14T04:33:50+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -261,7 +261,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "MAS supermarket Panagiotis Charalambous",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Nescafe Classic Coffee 200G",
 "price": 5.69,
 "currency": "EUR",
@@ -271,7 +271,7 @@
 "barcode": "5201219046154",
 "product_id": "gtin-5201219046154",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -1109,7 +1109,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Apivita Bee Sun Safe Hydra Fresh Face & Body Milk Spf50 200ml",
 "price": 21.52,
 "currency": "EUR",
@@ -1119,7 +1119,7 @@
 "barcode": "5201279080235",
 "product_id": "gtin-5201279080235",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -1877,7 +1877,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Alexandros David",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Hs Hiskin Crazy Hair Moisturizing Shampoo Medium Power 300Ml",
 "price": 6.9,
 "currency": "EUR",
@@ -1887,7 +1887,7 @@
 "barcode": "5905359806158",
 "product_id": "gtin-5905359806158",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Alexandros+David+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -2245,7 +2245,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "La Roche Posay Anthelios Uvmune 400 Anti-Dark Spots Fluid Spf 50+ 50Ml",
 "price": 29.72,
 "currency": "EUR",
@@ -2255,7 +2255,7 @@
 "barcode": "3337875917407",
 "product_id": "gtin-3337875917407",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -2725,7 +2725,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy All 4 You",
 "name": "Vitamin C 1500Mg Mango Sapiens X 20 Eff Tabs",
 "price": 8.99,
 "currency": "EUR",
@@ -2735,7 +2735,7 @@
 "barcode": "5292935003019",
 "product_id": "gtin-5292935003019",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -3637,7 +3637,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "HEALTH PRO Stress, Dietary Supplement For The Normal Functioning Of The Nervous System 30caps",
 "price": 11.73,
 "currency": "EUR",
@@ -3647,7 +3647,7 @@
 "barcode": "5214002572099",
 "product_id": "gtin-5214002572099",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -4471,7 +4471,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Schar Salins Sticks Gluten Free 75G",
-"price": 2.21,
+"price": 2.46,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/schar-salins-sticks-gluten-free-75g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/8008698041055.jpg",
@@ -4837,7 +4837,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Lavish Care Choco Freakshake Body Scrub 250ml",
 "price": 6.0,
 "currency": "EUR",
@@ -4847,7 +4847,7 @@
 "barcode": "5200410657336",
 "product_id": "gtin-5200410657336",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -4949,7 +4949,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Nutriburst Ultra D3 Gummies 60",
 "price": 13.9,
 "currency": "EUR",
@@ -4959,7 +4959,7 @@
 "barcode": "5060709741197",
 "product_id": "gtin-5060709741197",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -5621,7 +5621,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "MAS supermarket Panagiotis Charalambous",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "LIPTON PEACH Iced Tea 6 X 330ML",
 "price": 4.05,
 "currency": "EUR",
@@ -5631,7 +5631,7 @@
 "barcode": "5290047001190",
 "product_id": "gtin-5290047001190",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -5973,7 +5973,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Grocery Island",
 "name": "NIVEA CREME Moisturizing Body Cream 150ML",
 "price": 2.55,
 "currency": "EUR",
@@ -5983,7 +5983,7 @@
 "barcode": "4005808157952",
 "product_id": "gtin-4005808157952",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Grocery+Island+Cyprus",
 "extra": {}
 },
 {
@@ -6391,7 +6391,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Axe Spray Apollo 150Ml",
-"price": 3.25,
+"price": 3.26,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/axe-spray-apollo-150ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/fd957251-c379-4dfb-8bc6-a5423d450f3b.jpg",
@@ -7463,7 +7463,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Kleenex Ultra Clean Kitchen Paper Towels 74 Sheets X 2Ply 2Pcs",
-"price": 4.36,
+"price": 4.66,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/kleenex-ultra-clean-kitchen-paper-towels-74-sheets-x-2ply-2pcs",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/d67de5f3-36e2-4a98-a50d-5b1cea1bef09.jpg",
@@ -8519,7 +8519,7 @@
 "side": "S",
 "store": "Pharmacy Charis Georgiou",
 "name": "Now Adam Softgels 90 X 100mg",
-"price": 36.75,
+"price": 35.93,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/now-adam-mens-multivitamin-90-softgels-complete-daily-nutrition",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/03/00b140ab-ce92-4620-b603-0d11df1719dd.png",
@@ -9367,7 +9367,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Axe Body Spray Adrenalin 150ml",
-"price": 3.25,
+"price": 3.26,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nivea-dry-comfort-roll-on-deodorant-50ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/02/95ee420b-950a-4e6f-90c9-caa960db7a3e.jpg",
