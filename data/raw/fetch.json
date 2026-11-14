@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-14T06:17:02+00:00",
+"fetched_at": "2026-11-14T04:21:07+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -155952,6 +155952,54 @@
 "product_id": "gtin-5203069011467",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Yiangou+-+Egkomi+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Eleni Stamatogianni",
+"name": "Mad Beauty Body Puff Princess Ariel",
+"price": 9.0,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/mad-beauty-body-puff-princess-ariel",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/174b0269-c00b-4dbc-b996-3c019d484f23.jpg",
+"category": "Bath & Shower Products",
+"barcode": "5060895835694",
+"product_id": "gtin-5060895835694",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Stamatogianni+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Etherio Bio Stores - Larnakos Ave",
+"name": "Andechser, Fruit Yogurt Mango 150G Bio",
+"price": 1.25,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/andechser-fruit-yogurt-mango-150g-bio",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/06/ac087904-8568-4348-a5bd-32c5351aad0e.jpg",
+"category": "Yogurt Desserts",
+"barcode": "4104060026386",
+"product_id": "gtin-4104060026386",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Etherio+Bio+Stores+-+Larnakos+Ave+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Antzelina - Larnaca",
+"name": "Snickers Protein Crisp Flavour Bar 62G",
+"price": 3.26,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/snickers-protein-flavour-crisp-bar-62g",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/74bca768-e3ca-427f-983f-431dc8064b43.jpg",
+"category": "Chocolate Bars",
+"barcode": "5056357904428",
+"product_id": "gtin-5056357904428",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 }
 ]
