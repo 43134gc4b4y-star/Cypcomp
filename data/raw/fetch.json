@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-14T04:33:50+00:00",
+"fetched_at": "2026-11-14T04:56:47+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -11061,7 +11061,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Anaplasis Playfull Body Butter Gift Set,3X",
 "price": 14.95,
 "currency": "EUR",
@@ -11071,7 +11071,7 @@
 "barcode": "5200137594556",
 "product_id": "gtin-5200137594556",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -11573,7 +11573,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy All 4 You",
 "name": "Higher Nature Pro-Daily For A Healthy Gut 90 Capsules",
 "price": 23.99,
 "currency": "EUR",
@@ -11583,7 +11583,7 @@
 "barcode": "5031013101106",
 "product_id": "gtin-5031013101106",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -12997,7 +12997,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Doppelherz Immuntive Elderberry Hot Or Cold To Boost The Immune System 10 Sachets",
 "price": 7.95,
 "currency": "EUR",
@@ -13007,7 +13007,7 @@
 "barcode": "4009932007756",
 "product_id": "gtin-4009932007756",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -13895,7 +13895,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Tik Tak Gel Extra Power Pine 750Ml",
-"price": 2.45,
+"price": 2.84,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/tik-tak-gel-extra-power-pine-750ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/05/864675c6-4797-4dde-8f1f-496be7f824df.jpg",
@@ -15093,7 +15093,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Ayios Minas",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Loreal Paris Excellence Crème Triple Protection Color 100% Coverage Hair Dye Mahogany Brown 48Ml",
 "price": 9.0,
 "currency": "EUR",
@@ -15103,7 +15103,7 @@
 "barcode": "5601036205602",
 "product_id": "gtin-5601036205602",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ayios+Minas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -15893,7 +15893,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "MAS supermarket Panagiotis Charalambous",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Sailor Cooking Sea Salt 1kg",
 "price": 0.73,
 "currency": "EUR",
@@ -15903,7 +15903,7 @@
 "barcode": "5290022000064",
 "product_id": "gtin-5290022000064",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -18133,7 +18133,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Savvas Rotos",
 "name": "Polyflame Paw Patrol Hair Gel for Kids – 30ml Tube",
 "price": 5.9,
 "currency": "EUR",
@@ -18143,7 +18143,7 @@
 "barcode": "3661075297077",
 "product_id": "gtin-3661075297077",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Savvas+Rotos+Cyprus",
 "extra": {}
 },
 {
@@ -20151,7 +20151,7 @@
 "side": "S",
 "store": "MAS supermarket Panagiotis Charalambous",
 "name": "2X Snickers Chocolate Peanut Candy Bar 80G",
-"price": 1.14,
+"price": 1.08,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/2x-snickers-80g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/cf986281-8961-4d7c-8c1b-d535816a8ef1.jpeg",
@@ -21093,7 +21093,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy All 4 You",
 "name": "Ice Power Sport Spray 125ml",
 "price": 13.3,
 "currency": "EUR",
@@ -21103,7 +21103,7 @@
 "barcode": "6418029901217",
 "product_id": "gtin-6418029901217",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -21285,7 +21285,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Grigi Essenza 01 Bergamot Bliss Body Mist 90ml",
 "price": 16.9,
 "currency": "EUR",
@@ -21295,7 +21295,7 @@
 "barcode": "5207042460303",
 "product_id": "gtin-5207042460303",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -21365,7 +21365,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Kiza",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Purple Musk Body Lotion 300ml",
 "price": 6.0,
 "currency": "EUR",
@@ -21375,7 +21375,7 @@
 "barcode": "5200410641632",
 "product_id": "gtin-5200410641632",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Kiza+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -22805,7 +22805,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Robinsons Squash Summer Fruit Barley 1L (No Added Sugar)",
 "price": 2.28,
 "currency": "EUR",
@@ -22815,7 +22815,7 @@
 "barcode": "5000147030682",
 "product_id": "gtin-5000147030682",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -23365,7 +23365,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Christina Nikiforou - Limassol",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Batiste Dry Shampoo Original Classic Fresh Spray 200Ml",
 "price": 4.83,
 "currency": "EUR",
@@ -23375,7 +23375,7 @@
 "barcode": "5010724527481",
 "product_id": "gtin-5010724527481",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Nikiforou+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -23877,7 +23877,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Christofides",
+"store": "Pharmacy All 4 You",
 "name": "Kin Gingival Toothpaste 75Ml",
 "price": 6.9,
 "currency": "EUR",
@@ -23887,7 +23887,7 @@
 "barcode": "8436026215609",
 "product_id": "gtin-8436026215609",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -26085,7 +26085,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Grocery Island",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Violanta Zero Cookies Vanilla With Dark Chocolate Chips 170G",
 "price": 2.6,
 "currency": "EUR",
@@ -26095,7 +26095,7 @@
 "barcode": "5200100942537",
 "product_id": "gtin-5200100942537",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Grocery+Island+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -26423,7 +26423,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "HELL energy drink 24x250ml - apple",
-"price": 13.69,
+"price": 13.685,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/hell-energy-drink-24x250ml-apple",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/6df05000-7c15-4788-a757-110131ae7e0b.jpg",
@@ -27015,7 +27015,7 @@
 "side": "S",
 "store": "Pharmacy Eleni Michael - Limassol",
 "name": "Medicube Txa Niacinamide Dark Spot Correcting Capsule Cream 55G",
-"price": 30.26,
+"price": 31.9,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/medicube-txa-niacinamide-dark-spot-correcting-capsule-cream-55g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/1cb115bb-18bd-422a-832c-0b285597eaaf/0921440f-482d-4630-9348-270510181089.jpg",
@@ -28229,7 +28229,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Leperdik - Ayios Andreas",
 "name": "Bentholia Derma Arnica Crackling Foam 150Ml",
 "price": 12.5,
 "currency": "EUR",
@@ -28239,7 +28239,7 @@
 "barcode": "5200424600038",
 "product_id": "gtin-5200424600038",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leperdik+-+Ayios+Andreas+Cyprus",
 "extra": {}
 },
 {
@@ -28357,7 +28357,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Purple Musk-Body Mist 200 ml",
 "price": 7.5,
 "currency": "EUR",
@@ -28367,7 +28367,7 @@
 "barcode": "5200410659545",
 "product_id": "gtin-5200410659545",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
