@@ -25,7 +25,7 @@
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--stone); color: var(--ink); font: 16px/1.5 var(--text); }
-.page { max-width: 640px; margin: 0 auto; padding: 0 16px 96px; }
+.page { max-width: 640px; margin: 0 auto; padding: 0 16px 112px; }
 .view[hidden] { display: none; }
 a { color: var(--south); }
 :focus-visible { outline: 3px solid var(--lemon); outline-offset: 2px; }
@@ -199,16 +199,22 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 #installBtn { font: 700 14px var(--text); background: var(--ink); color: var(--stone); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
 .install .ix { background: none; border: 0; color: var(--muted); font-size: 16px; padding: 6px; cursor: pointer; }
 
-/* bottom tab bar: Prices, Wanted, Add a price */
-.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center;
-  background: var(--paper); border-top: 1px solid var(--rule); padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); }
-.tabbar a { position: relative; flex: 1; max-width: 200px; display: grid; justify-items: center; gap: 2px; padding: 6px 4px;
-  font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; border-radius: 10px; }
-.tabbar a.on { color: var(--ink); }
-.tabbar a.on svg { stroke-width: 2.6; }
-.tabbar .badge { position: absolute; top: 0; left: calc(50% + 8px); background: var(--lemon); color: var(--lemon-ink);
-  font: 700 11px/1 var(--text); padding: 3px 6px; border-radius: 999px; }
+/* bottom tab bar: three clear buttons, the current one filled */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center; gap: 8px;
+  background: var(--paper); border-top: 1px solid var(--rule); box-shadow: 0 -6px 18px rgba(0,0,0,.10);
+  padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); }
+.tabbar a { position: relative; flex: 1; max-width: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  min-height: 56px; padding: 6px 4px; font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none;
+  background: var(--stone); border: 1px solid var(--rule); border-radius: 14px; }
+.tabbar a svg { opacity: .75; }
+.tabbar a.on { background: var(--ink); color: var(--stone); border-color: var(--ink); box-shadow: 0 2px 0 rgba(0,0,0,.25); }
+.tabbar a.on svg { opacity: 1; stroke-width: 2.4; }
+.tabbar a:active { transform: translateY(1px); }
+.tabbar .badge { position: absolute; top: -7px; right: 8px; background: var(--lemon); color: var(--lemon-ink);
+  font: 800 12px/1 var(--text); padding: 4px 7px; border-radius: 999px; box-shadow: 0 1px 0 rgba(0,0,0,.2); }
 .tabbar .badge:empty { display: none; }
+/* both prices sit on one line, whatever their size */
+.tag .pr { height: 46px; display: flex; align-items: center; justify-content: center; }
 #wq { background: var(--paper); }
 .contrib input:not([type=radio]), .contrib select { background: var(--paper); }
 
@@ -226,4 +232,4 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .sortseg { flex: 0 0 auto; display: flex; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; }
 .sortseg button { font: 700 13px var(--text); padding: 7px 12px; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
 .sortseg button.on { background: var(--ink); color: var(--stone); }
-.tag:not(.win) .pr { margin-top: auto; }
+.tag.win { border: 1px solid transparent; } .tag.win .strip { border-bottom: 1px solid transparent; }
