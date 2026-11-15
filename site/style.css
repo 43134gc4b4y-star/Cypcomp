@@ -25,7 +25,7 @@
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--stone); color: var(--ink); font: 16px/1.5 var(--text); }
-.page { max-width: 640px; margin: 0 auto; padding: 0 16px 112px; }
+.page { max-width: 640px; margin: 0 auto; padding: 0 16px 124px; }
 .view[hidden] { display: none; }
 a { color: var(--south); }
 :focus-visible { outline: 3px solid var(--lemon); outline-offset: 2px; }
@@ -199,19 +199,21 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 #installBtn { font: 700 14px var(--text); background: var(--ink); color: var(--stone); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
 .install .ix { background: none; border: 0; color: var(--muted); font-size: 16px; padding: 6px; cursor: pointer; }
 
-/* bottom tab bar: three clear buttons, the current one filled */
+/* bottom bar: a solid dark bar holding three raised buttons; the current page is yellow */
 .tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: center; gap: 8px;
-  background: var(--paper); border-top: 1px solid var(--rule); box-shadow: 0 -6px 18px rgba(0,0,0,.10);
-  padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); }
-.tabbar a { position: relative; flex: 1; max-width: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-  min-height: 56px; padding: 6px 4px; font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none;
-  background: var(--stone); border: 1px solid var(--rule); border-radius: 14px; }
-.tabbar a svg { opacity: .75; }
-.tabbar a.on { background: var(--ink); color: var(--stone); border-color: var(--ink); box-shadow: 0 2px 0 rgba(0,0,0,.25); }
-.tabbar a.on svg { opacity: 1; stroke-width: 2.4; }
-.tabbar a:active { transform: translateY(1px); }
-.tabbar .badge { position: absolute; top: -7px; right: 8px; background: var(--lemon); color: var(--lemon-ink);
-  font: 800 12px/1 var(--text); padding: 4px 7px; border-radius: 999px; box-shadow: 0 1px 0 rgba(0,0,0,.2); }
+  background: #121917; border-top: 3px solid var(--lemon); box-shadow: 0 -8px 22px rgba(0,0,0,.28);
+  padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); }
+.tabbar a { position: relative; flex: 1; max-width: 210px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  min-height: 60px; padding: 6px 4px 5px; text-decoration: none; text-transform: uppercase;
+  font: 800 17px/1 var(--display); letter-spacing: .05em; color: #fff;
+  background: #3a4a45; border-radius: 14px; border-bottom: 4px solid #232e2b; }
+.tabbar a svg { width: 26px; height: 26px; }
+.tabbar a.on { background: var(--lemon); color: var(--lemon-ink); border-bottom-color: #c2a21c; }
+.tabbar a.on svg { stroke-width: 2.4; }
+.tabbar a:active { transform: translateY(2px); border-bottom-width: 2px; margin-bottom: 2px; }
+.tabbar .badge { position: absolute; top: -8px; right: 6px; background: var(--lemon); color: var(--lemon-ink);
+  font: 800 12px/1 var(--text); letter-spacing: 0; padding: 4px 7px; border-radius: 999px; border: 2px solid #121917; }
+.tabbar a.on .badge { background: #121917; color: var(--lemon); border-color: var(--lemon); }
 .tabbar .badge:empty { display: none; }
 /* both prices sit on one line, whatever their size */
 .tag .pr { height: 46px; display: flex; align-items: center; justify-content: center; }
@@ -293,3 +295,4 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
   .view:not([hidden]) .psticker { animation: stick .45s .1s both cubic-bezier(.2, 1.6, .4, 1); }
 }
 @keyframes stick { from { transform: rotate(-10deg) scale(.6); opacity: 0; } }
+.tabbar a span { white-space: nowrap; text-align: center; }
