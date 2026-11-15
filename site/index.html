@@ -16,16 +16,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=377e26cb">
+<link rel="stylesheet" href="style.css?v=b6bb5ba1">
 </head>
 <body>
 <div class="page">
 <button type="button" class="help" id="helpBtn" aria-label="What is this page for?">?</button>
 
 <section class="view" id="prices">
-<header class="top">
-  <h1>Compare Cyprus</h1>
-  <p class="tagline">One island, two price tags.</p>
+<header class="pagehead">
+  <h1 class="ptitle">Compare Cyprus</h1>
+  <p class="psticker">One island, two price tags</p>
 </header>
 
 <div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
@@ -52,9 +52,11 @@
 </section>
 
 <section class="view wanted" id="wanted" hidden>
-  <h2 class="ctitle">Wanted</h2>
-  <p class="small">Each of these has a price on one side only. Seen one on a shelf? Tap <b>Add</b>, photograph the barcode
-    and type the price, and it joins the comparison.</p>
+  <header class="pagehead">
+    <h2 class="ptitle">Wanted</h2>
+    <p class="psticker">Prices we're still missing</p>
+    <p class="pintro">Each of these has a price on one side only. Seen one on a shelf? Tap <b>Add</b> and it joins the comparison.</p>
+  </header>
   <div class="wtabs" role="tablist">
     <button type="button" role="tab" data-need="N"><span><i class="tN">North</i> prices needed</span><b id="wcN"></b></button>
     <button type="button" role="tab" data-need="S" class="on"><span><i class="tS">South</i> prices needed</span><b id="wcS"></b></button>
@@ -66,9 +68,11 @@
 </section>
 
 <section class="view contrib" id="contrib" hidden>
-  <h2 class="ctitle">Add a price</h2>
-  <p class="small">Seen a price in a shop? Scan the barcode (or take a photo of it), fill in the price and send it.
-    Every price is checked by hand before it appears on the site.</p>
+  <header class="pagehead">
+    <h2 class="ptitle">Add a price</h2>
+    <p class="psticker">Seen it? Snap it</p>
+    <p class="pintro">Scan the barcode or take a photo of it, type the price and send. Every price is checked before it appears.</p>
+  </header>
   <div class="scanrow">
     <button type="button" class="main" id="scanbtn">Scan barcode</button>
     <label class="main ghost" for="scanphoto">Use a photo</label>

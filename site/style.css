@@ -279,3 +279,17 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 @keyframes pulse { 50% { transform: scale(1.35); } }
 @keyframes sweep { 0% { transform: translate(-150px, -10px); opacity: 0; } 30% { opacity: 1; } 100% { transform: none; } }
 @keyframes scan { to { top: 62px; } }
+
+/* the same heading on every page: title split red and blue like the island, with a yellow sticker underneath */
+.pagehead { text-align: center; padding: 26px 34px 6px; }
+.wanted, .contrib { padding-top: 0; }
+.ptitle { display: inline-block; margin: 0; font: 800 clamp(44px, 12.5vw, 64px)/.92 var(--display); letter-spacing: -.015em;
+  color: var(--north); background: linear-gradient(90deg, var(--north) 0 50%, var(--south) 50% 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 4px; }
+.psticker { display: table; margin: 8px auto 0; padding: 5px 14px 6px; background: var(--lemon); color: var(--lemon-ink);
+  font: 700 19px/1.1 var(--display); border-radius: 6px; transform: rotate(-2deg); box-shadow: 0 2px 0 rgba(0,0,0,.18); }
+.pintro { margin: 16px auto 0; max-width: 30em; font-size: 15px; line-height: 1.5; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .view:not([hidden]) .psticker { animation: stick .45s .1s both cubic-bezier(.2, 1.6, .4, 1); }
+}
+@keyframes stick { from { transform: rotate(-10deg) scale(.6); opacity: 0; } }
