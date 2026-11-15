@@ -106,7 +106,7 @@
   category: Drinks
   per: l
   north: {any: ["su "], not: [maden, gazli, aroma, meyve, mango, limon, cilek, sabun, sampuan, "su bardak", hortum, pompa, isitici, sebil, sise, matara, "su tabanca", "su kabi"]}
-  south: {cat: [water], not: [sparkling, soda, flavour, lemon, bottle, thermo, flask, sigg, traveller, tumbler, cup, filter, jug, toner, micellar, rose, coconut, tonic, vitamin, baby, spray, mist, schweppes, portokali, orange, juice, cola, lemonade, tea, beer]}
+  south: {cat: [water], not: [sparkling, soda, flavour, lemon, bottle, thermo, flask, sigg, traveller, tumbler, cup, filter, jug, toner, micellar, rose, coconut, tonic, vitamin, baby, spray, mist, schweppes, portokali, orange, juice, cola, lemonade, tea, beer, powerade, gatorade, isotonic, sport, sports, energy, lucozade, blast, aquarius, zero, peach, apple, berry, strawberry, mango, cucumber, mint, aloe, protein, kombucha]}
 
 - id: cola
   name: Cola, regular (per litre)
