@@ -149,18 +149,82 @@
       var o = it.south.filter(function (x) { return x.store === c; })[0];
       return o && o !== s ? "<b>" + c + "</b> " + eur(o.shelf ? o.shelf.eur : o.eur) : "";
     }).filter(Boolean).join(", ");
-    var extra = it.north.length + it.south.length - 2;
-    var on = others(it.north), os = others(it.south);
-    var more = extra > 0 ? '<div class="olist' + (on && os ? "" : " one") + '">' + (on ? '<div class="N"><h4 class="tN">Other North shops</h4>' + on + "</div>" : "") +
-      (os ? '<div class="S"><h4 class="tS">Other South shops</h4>' + os + "</div>" : "") + "</div>" : "";
-    var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
-    return '<article class="item"><div class="head">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
-      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></div><div class="tags">' +
+    var total = it.north.length + it.south.length;
+    var href = "#item=" + encodeURIComponent(it.id);
+    return '<article class="item"><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
+      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></a><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
-      '<details class="more"><summary>Shops and details' + (extra > 0 ? " (" + extra + " more " + (extra === 1 ? "price" : "prices") + ")" : "") +
-      '</summary><div class="whs">' + where("North", "N", n, per) + where("South", "S", s, per) + "</div>" + more + note + "</details></article>";
+      '<a class="seeall" href="' + href + '">See all ' + total + " prices and shops</a></article>";
   }
+
+  // ---- product page: everything about one product, opened by tapping its card ----
+  function sheet(it) {
+    var rows = [];
+    it.north.forEach(function (o) { rows.push({ o: o, side: "N" }); });
+    it.south.forEach(function (o) { rows.push({ o: o, side: "S" }); });
+    var price = function (r) { return r.o.shelf ? r.o.shelf.eur : r.o.eur; };
+    var lira = function (r) { return r.o.shelf ? r.o.shelf.try : r.o.try; };
+    rows.sort(function (a, b) { return price(a) - price(b); });
+    var max = Math.max.apply(null, rows.map(price)) || 1, per = perLabel(it);
+    var img = safeUrl(it.image) ? '<img alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
+    var win = it.cheaper === "N" ? "North" : "South";
+    var banner = it.cheaper === "=" ? '<div class="pv same">Same price on both sides</div>' :
+      '<div class="pv ' + it.cheaper + '"><span>Cheaper in the ' + win + "</span><b>" + eur(gap(it)) + " less</b><span>" + Math.round(it.saving_pct) + "% cheaper</span></div>";
+    var best = { N: it.north[0], S: it.south[0] };
+    var duo = ["N", "S"].map(function (k) {
+      var o = best[k];
+      return '<div class="pd ' + k + (it.cheaper === k ? " win" : "") + '"><i>' + (k === "N" ? "North" : "South") + "</i><b>" + eur(o.shelf ? o.shelf.eur : o.eur) +
+        "</b><span>" + tl(o.shelf ? o.shelf.try : o.try) + "</span></div>";
+    }).join("");
+    var list = rows.map(function (r, i) {
+      var o = r.o, links = "";
+      if (safeUrl(o.maps)) links += '<a target="_blank" rel="noopener" href="' + esc(o.maps) + '">Map</a>';
+      if (safeUrl(o.url)) links += '<a target="_blank" rel="noopener" href="' + esc(o.url) + '">Shop page</a>';
+      var pname = nice(o.shelf ? o.shelf.name : o.name);
+      return '<li class="pr-row ' + r.side + '"><div class="prt"><span class="chip ' + r.side + '">' + (r.side === "N" ? "North" : "South") + "</span>" +
+        (i === 0 ? '<span class="chip best">Cheapest</span>' : "") + '<b class="pp">' + eur(price(r)) + '</b></div><div class="prs">' + esc(o.store.split("|")[0].trim()) +
+        '<span class="ptl">' + tl(lira(r)) + '</span></div><div class="pbar"><span style="width:' + Math.max(6, Math.round(100 * price(r) / max)) + '%"></span></div>' +
+        '<div class="pmeta">' + esc([o.town, pname].filter(Boolean).join(" · ")) + (o.shelf && per ? " · " + eur(o.eur) + " " + esc(per) : "") + "</div>" +
+        (links ? '<div class="links">' + links + "</div>" : "") + "</li>";
+    }).join("");
+    var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
+    var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
+    return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
+      '<div class="phero"><div class="pimg">' + img + '</div><h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
+      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + '<div class="pduo">' + duo + "</div>" + banner +
+      '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
+  }
+
+  var sheetEl = document.createElement("div");
+  sheetEl.className = "psheet"; sheetEl.hidden = true;
+  document.body.appendChild(sheetEl);
+  function closeSheet() {
+    if (sheetEl.hidden) return;
+    sheetEl.classList.remove("show"); document.body.classList.remove("noscroll");
+    setTimeout(function () { sheetEl.hidden = true; sheetEl.innerHTML = ""; }, 240);
+  }
+  function openSheet(id) {
+    var it = DATA && DATA.items.filter(function (x) { return x.id === id; })[0];
+    if (!it) return false;
+    sheetEl.innerHTML = sheet(it); sheetEl.hidden = false; sheetEl.scrollTop = 0;
+    document.body.classList.add("noscroll");
+    requestAnimationFrame(function () { sheetEl.classList.add("show"); });
+    $("pclose").focus({ preventScroll: true });
+    $("pclose").onclick = function () { if (history.length > 1 && cameFromList) history.back(); else location.hash = "#prices"; };
+    if ($("pshare")) $("pshare").onclick = function () {
+      navigator.share({ title: nice(it.name) + " – Compare Cyprus", text: nice(it.name) + ": " + (it.cheaper === "=" ? "same price North and South" :
+        eur(gap(it)) + " cheaper in the " + (it.cheaper === "N" ? "North" : "South")), url: location.href }).catch(function () {});
+    };
+    return true;
+  }
+  var cameFromList = false;
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#item="]');
+    if (a) cameFromList = true;
+    if (e.target === sheetEl) $("pclose").click();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sheetEl.hidden) $("pclose").click(); });
 
   function render() {
     var q = fold(query).trim();
@@ -236,16 +300,27 @@
   }
 
   // three views, one at a time: Prices, Wanted, Add a price
+  var curView = null;
   function showView() {
     var v = (location.hash || "").slice(1);
+    if (v.indexOf("item=") === 0) {                      // a product page sits on top of the Prices list
+      if (curView === null) setView("prices", true);
+      if (DATA && !openSheet(decodeURIComponent(v.slice(5)))) location.hash = "#prices";
+      return;
+    }
+    closeSheet();
     if (["prices", "wanted", "contrib"].indexOf(v) < 0) v = "prices";
+    setView(v, v !== curView);
+  }
+  function setView(v, scroll) {
+    curView = v;
     ["prices", "wanted", "contrib"].forEach(function (id) { $(id).hidden = id !== v; });
     Array.prototype.forEach.call(document.querySelectorAll(".tabbar a"), function (a) {
       var on = a.getAttribute("data-view") === v;
       a.classList.toggle("on", on);
       if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
-    window.scrollTo(0, 0);
+    if (scroll) window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", showView);
   showView();
@@ -256,6 +331,7 @@
   fetch("data/prices.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     DATA = d; window.CC_DATA = d; DATA.items.forEach(index);
     header(); drawChips(); render();
+    if ((location.hash || "").indexOf("#item=") === 0) showView();
   }).catch(function () {
     $("out").innerHTML = '<div class="empty"><div class="name">Prices didn’t load</div><p class="small">Check your connection and pull down to refresh.</p></div>';
   });
