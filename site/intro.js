@@ -1,5 +1,5 @@
-// A short animated welcome for each of the three pages. Shown the first time a page is opened
-// on this phone; the "?" button at the top brings it back.
+// A short animated welcome for each of the three pages. Shown once per page every time the site
+// is opened; the "?" button at the top brings it back.
 (function () {
   "use strict";
   var TAGS = '<div class="ia ia-prices" aria-hidden="true"><div class="it itN"><i>North</i><b>€2.40</b></div>' +
@@ -24,8 +24,8 @@
   document.body.appendChild(box);
   var last = null;
 
-  function seen(v) { try { return localStorage.getItem("cc-intro-" + v) === "1"; } catch (e) { return false; } }
-  function mark(v) { try { localStorage.setItem("cc-intro-" + v, "1"); } catch (e) { /* private mode: shows again next time */ } }
+  function seen(v) { try { return sessionStorage.getItem("cc-intro-" + v) === "1"; } catch (e) { return false; } }
+  function mark(v) { try { sessionStorage.setItem("cc-intro-" + v, "1"); } catch (e) { /* private mode: shows again next time */ } }
   function view() { var v = (location.hash || "").slice(1); return PAGES[v] ? v : "prices"; }
 
   function open(v) {
