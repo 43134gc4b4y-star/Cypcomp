@@ -233,3 +233,49 @@ button.main, label.main { display: block; width: 100%; font: 600 16px var(--text
 .sortseg button { font: 700 13px var(--text); padding: 7px 12px; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
 .sortseg button.on { background: var(--ink); color: var(--stone); }
 .tag.win { border: 1px solid transparent; } .tag.win .strip { border-bottom: 1px solid transparent; }
+
+/* welcome pop-ups (one per page) and the "?" that brings them back */
+.page { position: relative; }
+.help { position: absolute; top: 6px; right: 10px; z-index: 6; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--rule);
+  background: var(--paper); color: var(--ink); font: 800 18px var(--display); cursor: pointer; }
+.intro { position: fixed; inset: 0; z-index: 30; display: flex; align-items: flex-end; justify-content: center; padding: 16px;
+  background: rgba(10, 16, 14, 0); transition: background .22s ease; }
+.intro[hidden] { display: none; }
+.intro.show { background: rgba(10, 16, 14, .55); }
+.intro-card { width: 100%; max-width: 440px; background: var(--paper); color: var(--ink); border-radius: 22px; padding: 22px 20px 18px; text-align: center;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35); transform: translateY(40px) scale(.96); opacity: 0;
+  transition: transform .32s cubic-bezier(.2, 1.3, .4, 1), opacity .2s ease; margin-bottom: calc(8px + env(safe-area-inset-bottom)); }
+.intro.show .intro-card { transform: none; opacity: 1; }
+.intro-card h2 { font: 800 32px/1 var(--display); margin: 14px 0 8px; }
+.intro-card p { margin: 0 auto 18px; max-width: 30em; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.ia { position: relative; height: 120px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+.it { width: 112px; border-radius: 12px; padding: 0 0 12px; overflow: hidden; border: 1px solid var(--rule); background: var(--paper); }
+.it i { display: block; font: 700 13px/1.2 var(--display); font-style: normal; letter-spacing: .05em; padding: 4px; margin-bottom: 8px; }
+.it b { display: block; font: 800 30px/1 var(--display); }
+.itN i { color: var(--north); border-bottom: 1px solid var(--rule); } .itN b { color: var(--muted); }
+.itS { background: var(--south-fill); border-color: transparent; color: #fff; } .itS i { background: rgba(0,0,0,.18); }
+.itS em { display: inline-block; margin-top: 8px; font: 800 14px/1 var(--display); font-style: normal; background: var(--lemon); color: var(--lemon-ink); padding: 4px 8px; border-radius: 5px; }
+.itQ { border: 2px dashed var(--south); } .itQ i { color: var(--south); } .itQ b { color: var(--south); }
+.lens { position: absolute; right: calc(50% - 96px); bottom: 6px; color: var(--ink); }
+.bars { position: relative; display: flex; gap: 5px; align-items: stretch; height: 74px; padding: 8px 12px; background: #fff; border-radius: 10px; border: 1px solid var(--rule); }
+.bars span { width: 5px; background: #1f2a27; } .bars span:nth-child(3n) { width: 9px; } .bars span:nth-child(4n) { width: 2px; }
+.scan { position: absolute; left: 4px; right: 4px; top: 8px; height: 3px; background: #e0245e; border-radius: 2px; box-shadow: 0 0 8px #e0245e; }
+.typed { font: 800 34px/1 var(--display); background: var(--lemon); color: var(--lemon-ink); padding: 10px 14px; border-radius: 8px; }
+@media (prefers-reduced-motion: no-preference) {
+  .intro.show .ia-prices .itN { animation: inL .5s .15s both cubic-bezier(.2, 1.2, .4, 1); }
+  .intro.show .ia-prices .itS { animation: inR .5s .3s both cubic-bezier(.2, 1.2, .4, 1); }
+  .intro.show .itS em { animation: pop .45s .85s both cubic-bezier(.2, 1.6, .4, 1); }
+  .intro.show .ia-wanted .itN { animation: inL .5s .15s both; }
+  .intro.show .itQ { animation: inR .5s .3s both; }
+  .intro.show .itQ b { animation: pulse 1.2s .9s 3; }
+  .intro.show .lens { animation: sweep 2.2s .7s both ease-in-out; }
+  .intro.show .bars { animation: pop .45s .15s both; }
+  .intro.show .scan { animation: scan 1.1s .5s 3 alternate ease-in-out; }
+  .intro.show .typed { animation: pop .45s 1.3s both cubic-bezier(.2, 1.6, .4, 1); }
+}
+@keyframes inL { from { transform: translateX(-70px) rotate(-8deg); opacity: 0; } }
+@keyframes inR { from { transform: translateX(70px) rotate(8deg); opacity: 0; } }
+@keyframes pop { from { transform: scale(0); opacity: 0; } }
+@keyframes pulse { 50% { transform: scale(1.35); } }
+@keyframes sweep { 0% { transform: translate(-150px, -10px); opacity: 0; } 30% { opacity: 1; } 100% { transform: none; } }
+@keyframes scan { to { top: 62px; } }
