@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-15T04:33:51+00:00",
+"fetched_at": "2026-11-15T04:45:03+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -53413,22 +53413,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
-"name": "Badgequo Technic Dream Tint Lipstick 1.85G",
-"price": 4.39,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/badgequo-technic-dream-tint-lipstick-185g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/34c84bda-d513-473e-9475-47cd71a60702.jpg",
-"category": "Lipsticks",
-"barcode": "",
-"product_id": "https://fetch.com.cy/p/badgequo-technic-dream-tint-lipstick-185g",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Christina Papagiorgiou - Larnaca",
 "name": "Molton Brown London Delicious Rhubarb & Rose Body Wash300Ml",
 "price": 30.0,
@@ -55381,7 +55365,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Frou Frou Morning Coffee",
 "price": 0.89,
 "currency": "EUR",
@@ -55391,7 +55375,7 @@
 "barcode": "",
 "product_id": "https://fetch.com.cy/p/frou-frou-morning-coffee",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -56341,7 +56325,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy VTC",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Pampers Premium Care No 6 (15+ Kg) 31 Pants",
 "price": 17.82,
 "currency": "EUR",
@@ -56351,7 +56335,7 @@
 "barcode": "8001090759917",
 "product_id": "gtin-8001090759917",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -56549,7 +56533,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Vit Ultra Omega3 High Pote 60c",
 "price": 21.01,
 "currency": "EUR",
@@ -56559,7 +56543,7 @@
 "barcode": "5021265222575",
 "product_id": "gtin-5021265222575",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -57861,7 +57845,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Pharmasept Cryo Power Gel 100ml",
 "price": 10.45,
 "currency": "EUR",
@@ -57871,7 +57855,7 @@
 "barcode": "5205122000647",
 "product_id": "gtin-5205122000647",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -58263,7 +58247,7 @@
 "side": "S",
 "store": "Pharmacy Eleni Michael - Limassol",
 "name": "Dettol Antibacterial Wipes Original 40 Wipes",
-"price": 3.5,
+"price": 3.6,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/dettol-surface-cleaner-wipes-40-wipes",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/212aa786-c459-4853-90ed-6873d42b0b4b.jpg",
@@ -58293,7 +58277,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
+"store": "Pharmacy All 4 You",
 "name": "NIVEA SHAVING FOAM SENSITIVE 200ML",
 "price": 3.33,
 "currency": "EUR",
@@ -58303,7 +58287,7 @@
 "barcode": "4005808222667",
 "product_id": "gtin-4005808222667",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -59111,7 +59095,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "METALTEX CAKE SERVER IMPERIAL",
-"price": 2.62,
+"price": 3.47,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/metaltex-cake-server-imperial",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/34d4a956-9984-466e-a702-c8636bb81efe.jpg",
@@ -60629,7 +60613,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Christiana Kari",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Apivita Cool and Sooth Face and Body Gel-Cream After Sun 100 millilitres",
 "price": 9.9,
 "currency": "EUR",
@@ -60639,7 +60623,7 @@
 "barcode": "5201279080679",
 "product_id": "gtin-5201279080679",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christiana+Kari+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -61399,7 +61383,7 @@
 "side": "S",
 "store": "Pharmacy IZK - Larnaca",
 "name": "WELLA-KOLESTON-MS 307/2 MAT MEDIUM BLONDE",
-"price": 5.5,
+"price": 3.95,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/wella-koleston-ms-3072-matte-medium-blond-hair-dye",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/7c55c401-8951-4f5a-a73f-ca521bf1d58c.jpg",
@@ -61637,7 +61621,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Mad Beauty Ice Cream Lip Balm Apple",
 "price": 6.5,
 "currency": "EUR",
@@ -61647,7 +61631,7 @@
 "barcode": "5060599183268",
 "product_id": "gtin-5060599183268",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+%26+Victoria+Varelia%E2%80%99s+Cyprus",
 "extra": {}
 },
 {
@@ -61765,7 +61749,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Spiritou - Strovolos",
 "name": "Mny Brow Ultra Slim 06 Black Brown",
 "price": 9.28,
 "currency": "EUR",
@@ -61775,13 +61759,13 @@
 "barcode": "3600531579470",
 "product_id": "gtin-3600531579470",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Spiritou+-+Strovolos+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Magda Papadopoulou",
 "name": "Manhae Menopause 30 Capsules  includes endophospholipids, iron, zinc, borage, vitamin B9, and omega-3, promoting comfort and well-being.",
 "price": 15.75,
 "currency": "EUR",
@@ -61791,7 +61775,7 @@
 "barcode": "3515450122563",
 "product_id": "gtin-3515450122563",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Magda+Papadopoulou+Cyprus",
 "extra": {}
 },
 {
@@ -86901,7 +86885,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy All 4 You",
 "name": "Chicco Baby Cotton Buds 0M+, 60Pcs",
 "price": 3.75,
 "currency": "EUR",
@@ -86911,7 +86895,7 @@
 "barcode": "8058664134403",
 "product_id": "gtin-8058664134403",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
