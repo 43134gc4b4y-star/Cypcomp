@@ -195,8 +195,8 @@
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
     return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
       '<div class="phero"><div class="pimg">' + img + '</div><h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
-      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + '<div class="pduo">' + duo + "</div>" + banner +
-      '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + cheaper + share + "</div>";
+      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + '<div class="pduo">' + duo + "</div>" + banner + cheaper +
+      '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
   }
 
   // drag a pop-up down to close it
