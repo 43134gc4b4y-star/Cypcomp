@@ -1,8 +1,8 @@
 # Compare Cyprus - daily run
 
-- Updated: 2026-11-15T06:18+00:00
+- Updated: 2026-11-15T06:22+00:00
 - 1 EUR = 55.6667 TRY (2026-11-13)
 - North products read: 13478, South prices read: 14710
-- **Compared items on the website: 235** (cheaper in North: 73, South: 159)
+- **Compared items on the website: 235** (cheaper in North: 74, South: 158)
 - Web requests: 0
 
