@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-14T04:21:07+00:00",
+"fetched_at": "2026-11-15T04:33:51+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -45383,7 +45383,7 @@
 "side": "S",
 "store": "Pharmacy Eleni Michael - Limassol",
 "name": "WELLA KOLESTON MS Hair Dye Cream No 306/7 Chocolate Brown",
-"price": 5.5,
+"price": 3.95,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/wella-koleston-ms-hair-dye-cream-no-3067-chocolate-brown",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/94258160-f6b1-4f2f-b6c1-c64864b7f29e.png",
@@ -45925,7 +45925,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Zenon & Papaellinas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Korres Drama Volume Mascara 02 Brown 13Ml",
 "price": 18.75,
 "currency": "EUR",
@@ -45935,7 +45935,7 @@
 "barcode": "5203069132421",
 "product_id": "gtin-5203069132421",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Zenon+%26+Papaellinas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -46279,7 +46279,7 @@
 "side": "S",
 "store": "Pharmacy IZK - Larnaca",
 "name": "Apivita Lip Balm Bee Princess 4.4g",
-"price": 6.3,
+"price": 6.45,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/apivita-lip-balm-bee-princess-44g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/b4ff438c-b332-48cc-8ed8-919c4408d445.jpg",
@@ -46485,7 +46485,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Robinsons Squash Apple & Blackcurrant 1L (No Added Sugar)",
 "price": 2.28,
 "currency": "EUR",
@@ -46495,7 +46495,7 @@
 "barcode": "5000147030149",
 "product_id": "gtin-5000147030149",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -47111,7 +47111,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "CYCLOPS Ice Scoop Plastic - medium",
-"price": 1.37,
+"price": 1.55,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/cyclops-ice-scoop-plastic-medium",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/b341c304-1206-4d74-b096-9ba13d89667f.jpg",
@@ -47559,7 +47559,7 @@
 "side": "S",
 "store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Ahava Dead Sea Mud Nourishing Body Cream 200ml",
-"price": 25.9,
+"price": 25.41,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-dead-sea-mud-nourishing-body-cream-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/24c07292-65e8-4d69-b7ed-b539fff5dff7.png",
@@ -48485,22 +48485,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
-"name": "KAREN Latex Disposable Powdered Single Use Gloves White 100pcs - Disposable Product",
-"price": 4.99,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/karen-latex-examination-gloves-size-medium",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/11/a012461a-255d-4f35-b83d-11094c6490a3.jpg",
-"category": "Disposable Gloves",
-"barcode": "5290251000897",
-"product_id": "gtin-5290251000897",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Rimmel Lasting Finish Lip Liner 505",
 "price": 5.29,
@@ -48631,7 +48615,7 @@
 "side": "S",
 "store": "Pharmacy Eleni Michael - Limassol",
 "name": "Calson Control Body Lady Tights 40 Den",
-"price": 6.5,
+"price": 6.95,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/calson-control-body-lady-tights-40-den",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/s-l1600_2.webp",
@@ -49365,9 +49349,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Jack Link'S Beef Jerky Original",
-"price": 2.6,
+"price": 2.23,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nestle-fitness-bar-cookies-cream-235g-1y5r",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/5e96a4a6-e64b-49c9-813f-f6a590c746b5.jpg",
@@ -49375,7 +49359,7 @@
 "barcode": "4251097402888",
 "product_id": "gtin-4251097402888",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -50821,7 +50805,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Eleni Kiza",
 "name": "Apivita Pure Jasmine Moisturizing Body Milk 200ml",
 "price": 16.42,
 "currency": "EUR",
@@ -50831,7 +50815,7 @@
 "barcode": "5201279073251",
 "product_id": "gtin-5201279073251",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Kiza+Cyprus",
 "extra": {}
 },
 {
@@ -50917,7 +50901,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Lorvenn Argan Oil for Daily Care Precious Hair Oil for Daily Care, Protection, Strength & Excellent Shine in Colored Hair, 50ml",
 "price": 7.4,
 "currency": "EUR",
@@ -50927,7 +50911,7 @@
 "barcode": "5201641723128",
 "product_id": "gtin-5201641723128",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -51957,7 +51941,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy IZK - Larnaca",
 "name": "Anatomic Help 0505 Wrist And Forearm Splint-Medium",
 "price": 45.29,
 "currency": "EUR",
@@ -51967,7 +51951,7 @@
 "barcode": "5204914381926",
 "product_id": "gtin-5204914381926",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -52021,7 +52005,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Intermed Eva Intima Moist Long Acting Ph 3.0 9 Applicators",
 "price": 16.62,
 "currency": "EUR",
@@ -52031,7 +52015,7 @@
 "barcode": "5205152012467",
 "product_id": "gtin-5205152012467",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -53189,7 +53173,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Maybeline Tattoo Brow 36H Medium Brown 05",
 "price": 9.68,
 "currency": "EUR",
@@ -53199,7 +53183,7 @@
 "barcode": "3600531630317",
 "product_id": "gtin-3600531630317",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
