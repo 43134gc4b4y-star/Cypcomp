@@ -128,12 +128,16 @@
   // From the Wanted list: fill in what we already know, then open the camera for the barcode
   window.CC_prefill = function (w, openCamera) {
     var side = w.need === "S" ? "South" : "North";
-    form.side.forEach(function (r) { r.checked = r.value === side; });
-    form.currency.value = side === "North" ? "TRY" : "EUR";
+    if (w.need) {
+      form.side.forEach(function (r) { r.checked = r.value === side; });
+      form.currency.value = side === "North" ? "TRY" : "EUR";
+    }
     form.product.value = w.name; form.size.value = w.size || ""; form.barcode.value = w.barcode || "";
     form.price.value = ""; $("cmsg").textContent = ""; $("scanmsg").textContent = "";
     $("cfor").hidden = false;
-    $("cfor").innerHTML = 'Adding the <b class="' + (side === "North" ? "tN" : "tS") + '">' + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
+    if (!w.need) $("cfor").innerHTML = "Adding a cheaper price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
+      'Photograph the barcode, pick <b class="tN">North</b> or <b class="tS">South</b>, then type the price and shop.';
+    else $("cfor").innerHTML = 'Adding the <b class="' + (side === "North" ? "tN" : "tS") + '">' + side + "</b> price for <b>" + w.name.replace(/</g, "&lt;") + "</b>. " +
       "Photograph the barcode, then type the price and shop.";
     location.hash = "#contrib";
     if (openCamera) $("scanphoto").click();

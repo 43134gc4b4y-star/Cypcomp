@@ -189,12 +189,39 @@
         (links ? '<div class="links">' + links + "</div>" : "") + "</li>";
     }).join("");
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
+    var cheaper = '<div class="pscan"><h3>Seen it cheaper?</h3><p>Scan here and we will add it to the site.</p>' +
+      '<button type="button" class="pscanb" id="pscan"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">' +
+      '<path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>Scan the barcode</button></div>';
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
     return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
       '<div class="phero"><div class="pimg">' + img + '</div><h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
       esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + '<div class="pduo">' + duo + "</div>" + banner +
-      '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
+      '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + cheaper + share + "</div>";
   }
+
+  // drag a pop-up down to close it
+  function swipeClose(box, card, canStart, done) {
+    var y0 = null, dy = 0;
+    box.addEventListener("touchstart", function (e) {
+      y0 = e.touches.length === 1 && canStart() ? e.touches[0].clientY : null; dy = 0;
+    }, { passive: true });
+    box.addEventListener("touchmove", function (e) {
+      if (y0 === null) return;
+      dy = e.touches[0].clientY - y0;
+      if (dy <= 0 || !canStart()) { dy = 0; card.style.transform = ""; card.style.transition = ""; return; }
+      if (e.cancelable) e.preventDefault();
+      card.style.transition = "none"; card.style.transform = "translateY(" + dy + "px)";
+    }, { passive: false });
+    var end = function () {
+      if (y0 === null) return;
+      y0 = null; card.style.transition = "";
+      if (dy > 90) { card.style.transform = "translateY(100%)"; done(); setTimeout(function () { card.style.transform = ""; }, 300); }
+      else card.style.transform = "";
+      dy = 0;
+    };
+    box.addEventListener("touchend", end); box.addEventListener("touchcancel", end);
+  }
+  window.CC_swipe = swipeClose;
 
   var sheetEl = document.createElement("div");
   sheetEl.className = "psheet"; sheetEl.hidden = true;
@@ -212,6 +239,11 @@
     requestAnimationFrame(function () { sheetEl.classList.add("show"); });
     $("pclose").focus({ preventScroll: true });
     $("pclose").onclick = function () { if (history.length > 1 && cameFromList) history.back(); else location.hash = "#prices"; };
+    $("pscan").onclick = function () {
+      if (window.CC_prefill) window.CC_prefill({ name: nice(it.name), size: it.unit, barcode: it.barcode }, true);
+      else location.hash = "#contrib";
+    };
+    swipeClose(sheetEl, sheetEl.firstChild, function () { return sheetEl.scrollTop <= 0; }, function () { $("pclose").click(); });
     if ($("pshare")) $("pshare").onclick = function () {
       navigator.share({ title: nice(it.name) + " – Compare Cyprus", text: nice(it.name) + ": " + (it.cheaper === "=" ? "same price North and South" :
         eur(gap(it)) + " cheaper in the " + (it.cheaper === "N" ? "North" : "South")), url: location.href }).catch(function () {});
