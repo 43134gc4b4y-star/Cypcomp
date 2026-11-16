@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-16T04:56:58+00:00",
+"fetched_at": "2026-11-16T05:30:34+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -71749,7 +71749,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy VTC",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "POWER HEALTH VITAMIN B12 500MCG 30s",
 "price": 9.12,
 "currency": "EUR",
@@ -71759,7 +71759,7 @@
 "barcode": "5013007076683",
 "product_id": "gtin-5013007076683",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -72037,7 +72037,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Elina Tsielepi",
 "name": "First Step Pregnancy Test x1",
 "price": 10.0,
 "currency": "EUR",
@@ -72047,7 +72047,7 @@
 "barcode": "5201938122467",
 "product_id": "gtin-5201938122467",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -75831,7 +75831,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "VILEDA ACTIVE MOP SET",
-"price": 14.67,
+"price": 11.75,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/vileda-active-mop-set",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/03/1deedd39-3c9e-4090-b42e-e34caa30de18.jpg",
@@ -78439,7 +78439,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Melissa Cannelloni 250G",
-"price": 2.24,
+"price": 2.2365,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/melissa-cannelloni-250g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/05/cc80f704-0f35-4175-a7c0-8918d08a26af.jpg",
@@ -80327,7 +80327,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Mars Miniatures 150G",
-"price": 2.89,
+"price": 2.8875,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/mars-miniatures-150g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/05/f2da3424-a83b-4512-b30e-d732313ad74d.jpg",
@@ -80997,7 +80997,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Lavish Care Hydro Boost Overnight Reviving Facial Oil 30Ml",
 "price": 8.9,
 "currency": "EUR",
@@ -81007,7 +81007,7 @@
 "barcode": "5200410660930",
 "product_id": "gtin-5200410660930",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -104135,7 +104135,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Schar Gluten Free Crackers 175G - Zwieback",
-"price": 4.69,
+"price": 5.23,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/schar-gluten-free-crackers-175g-zwieback",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/8008698028605.jpg",
@@ -105655,7 +105655,7 @@
 "side": "S",
 "store": "MAS supermarket Panagiotis Charalambous",
 "name": "Vileda Glitzi Kitchen Cleaning Sponge Scourer",
-"price": 0.7,
+"price": 0.63,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/vileda-glitzi-kitchen-cleaning-sponge-scourer",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/2eeca748-46f9-4a47-9f06-bd130bda5b6b.jpg",
@@ -106919,7 +106919,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "BARILLA farfalle 500g (n.65)",
-"price": 1.98,
+"price": 2.0,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/barilla-farfalle-500g-n65",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/05/580d7b0f-f6ae-4f38-a946-3171d19b5397.jpg",
@@ -108165,7 +108165,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Eleni Socratous",
 "name": "Myprotein Clean Whey Isolate 488G Orange Mango",
 "price": 46.0,
 "currency": "EUR",
@@ -108175,7 +108175,7 @@
 "barcode": "5056281177738",
 "product_id": "gtin-5056281177738",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Socratous+Cyprus",
 "extra": {}
 },
 {
@@ -111941,7 +111941,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Pharmasept Kid Soft Bath Body & Intimate Area 500ml",
 "price": 12.2,
 "currency": "EUR",
@@ -111951,7 +111951,7 @@
 "barcode": "5205122001774",
 "product_id": "gtin-5205122001774",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+%26+Victoria+Varelia%E2%80%99s+Cyprus",
 "extra": {}
 },
 {
@@ -112181,7 +112181,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Mira Market 2 - Strovolos",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Dermisis Oat Soft Biscuits Dark Chocolate 12X150Gr",
 "price": 1.89,
 "currency": "EUR",
@@ -112191,7 +112191,7 @@
 "barcode": "",
 "product_id": "https://fetch.com.cy/p/dermisis-oat-soft-biscuits-dark-chocolate-12x150gr",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Mira+Market+2+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -114437,7 +114437,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Margarita Antoniou - Agios Dometios",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "Milupa Aptamil 2 Baby Formula 400G",
 "price": 8.1,
 "currency": "EUR",
@@ -114447,7 +114447,7 @@
 "barcode": "8712400806169",
 "product_id": "gtin-8712400806169",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Margarita+Antoniou+-+Agios+Dometios+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -114725,7 +114725,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Pampers Premium Care (4) 9-14Kg X52  Baby Diapers",
 "price": 13.99,
 "currency": "EUR",
@@ -114735,7 +114735,7 @@
 "barcode": "4015400278818",
 "product_id": "gtin-4015400278818",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -114837,7 +114837,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Christina Papagiorgiou - Larnaca",
 "name": "Max Factor Colour Elixir Soft Matte Lipstick 4G",
 "price": 15.34,
 "currency": "EUR",
@@ -114847,7 +114847,7 @@
 "barcode": "",
 "product_id": "https://fetch.com.cy/p/max-factor-colour-elixir-soft-matte-lipstick-4g",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Papagiorgiou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -115973,7 +115973,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Garden Chocolate Magic Set Moisturizing Body Lotion, 300Ml & Lip Balm, 5.2G",
 "price": 11.68,
 "currency": "EUR",
@@ -115983,7 +115983,7 @@
 "barcode": "5205962010967",
 "product_id": "gtin-5205962010967",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -117029,7 +117029,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy VTC",
 "name": "Dr Muller Arnica Ointment 50Ml",
 "price": 7.5,
 "currency": "EUR",
@@ -117039,7 +117039,7 @@
 "barcode": "8595610402372",
 "product_id": "gtin-8595610402372",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
 "extra": {}
 },
 {
@@ -117559,7 +117559,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Axe Deodorant Body Spray Gold 150Ml",
-"price": 3.25,
+"price": 3.26,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/axe-deodorant-body-spray-gold-150ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/06/94d5964c-40ec-4533-9763-5f8214a454c6.jpg",
@@ -138311,7 +138311,7 @@
 "side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Comfort Perfume Collection 3L - Luscious",
-"price": 7.44,
+"price": 8.15,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/comfort-perfume-collection-3l-luscious",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/07f314cf-7fb6-4b3a-8917-94cb81226b72.jpg",
@@ -138869,7 +138869,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Power Health Vitamin C 1+1 Free Vitamin C 1000Mg",
 "price": 16.95,
 "currency": "EUR",
@@ -138879,7 +138879,7 @@
 "barcode": "5200321011869",
 "product_id": "gtin-5200321011869",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -139925,7 +139925,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Leti At4 Atopic Skin Spf50+ Defense Face & Body Fluid Lotion 100Ml",
 "price": 19.5,
 "currency": "EUR",
@@ -139935,7 +139935,7 @@
 "barcode": "8431166182149",
 "product_id": "gtin-8431166182149",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -140869,7 +140869,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Cheap Basket Supermarket - Larnaca",
 "name": "KERRYGOLD RED CHEDDAR Cheese 12X200GR",
 "price": 4.99,
 "currency": "EUR",
@@ -140879,7 +140879,7 @@
 "barcode": "5000165026766",
 "product_id": "gtin-5000165026766",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
