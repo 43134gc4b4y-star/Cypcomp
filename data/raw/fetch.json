@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-16T04:44:44+00:00",
+"fetched_at": "2026-11-17T04:36:46+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -1269,7 +1269,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Power Health  Energy Booster Now With Stevia 20 Effervescent Tablets",
 "price": 15.95,
 "currency": "EUR",
@@ -1279,7 +1279,7 @@
 "barcode": "5200321011050",
 "product_id": "gtin-5200321011050",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -1349,7 +1349,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy All 4 You",
 "name": "Gum 901 Kids Monster Soft Tooth Brush 36Years",
 "price": 3.68,
 "currency": "EUR",
@@ -1359,7 +1359,7 @@
 "barcode": "7630019902557",
 "product_id": "gtin-7630019902557",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -3637,7 +3637,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "HEALTH PRO Stress, Dietary Supplement For The Normal Functioning Of The Nervous System 30caps",
 "price": 11.73,
 "currency": "EUR",
@@ -3647,7 +3647,7 @@
 "barcode": "5214002572099",
 "product_id": "gtin-5214002572099",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -4101,7 +4101,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Avene Spf50+ Teinte Blue Light Ultra Fluid Tinted Face Sunscreen 50Ml",
 "price": 27.2,
 "currency": "EUR",
@@ -4111,7 +4111,7 @@
 "barcode": "3282770392692",
 "product_id": "gtin-3282770392692",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -5973,7 +5973,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Grocery Island",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "NIVEA CREME Moisturizing Body Cream 150ML",
 "price": 2.55,
 "currency": "EUR",
@@ -5983,7 +5983,7 @@
 "barcode": "4005808157952",
 "product_id": "gtin-4005808157952",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Grocery+Island+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -7877,7 +7877,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Xmas Merry Lemon Tart Bag Set 2024",
 "price": 17.9,
 "currency": "EUR",
@@ -7887,7 +7887,7 @@
 "barcode": "5200410664211",
 "product_id": "gtin-5200410664211",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -7973,7 +7973,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elpida Petrou",
+"store": "Pharmacy All 4 You",
 "name": "Intermed Luxurious Vanilla Madagascar Body Cream 280Ml",
 "price": 9.5,
 "currency": "EUR",
@@ -7983,7 +7983,7 @@
 "barcode": "5205152016861",
 "product_id": "gtin-5205152016861",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
