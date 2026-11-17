@@ -2,7 +2,22 @@
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
-  var DATA = null, query = "", cat = "", shown = 40, sortBy = "eur";
+  var DATA = null, query = "", cat = "", shown = 40, sortBy = "eur", kindF = "";
+  // "My list": products the shopper saved on this phone (kept in this browser only)
+  var MYKEY = "cc-mylist", mine = [];
+  try { mine = JSON.parse(localStorage.getItem(MYKEY) || "[]") || []; } catch (e) { mine = []; }
+  function isMine(id) { return mine.indexOf(id) >= 0; }
+  function toggleMine(id) {
+    var i = mine.indexOf(id);
+    if (i >= 0) mine.splice(i, 1); else mine.push(id);
+    saveMine();
+  }
+  function saveMine() {
+    try { localStorage.setItem(MYKEY, JSON.stringify(mine)); } catch (e) { /* private mode: kept until the page closes */ }
+    drawMine();
+  }
+  var STAR = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg>';
+  function sameKind(it) { return it.kind !== "generic"; }
 
   var TRENDING = [];
   // English search words -> Turkish/Greek words shops use, so "milk" also finds "süt"
@@ -151,11 +166,18 @@
     }).filter(Boolean).join(", ");
     var total = it.north.length + it.south.length;
     var href = "#item=" + encodeURIComponent(it.id);
-    return '<article class="item" data-href="' + href + '"><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
-      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></a><div class="tags">' +
+    var on = isMine(it.id);
+    return '<article class="item" data-href="' + href + '"><button type="button" class="star' + (on ? " on" : "") + '" data-id="' + esc(it.id) + '" aria-pressed="' + on +
+      '" aria-label="' + (on ? "Remove from" : "Add to") + ' my list">' + STAR + '</button><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
+      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div>" + kindPill(it) + '</div></a><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
       '<a class="seeall" href="' + href + '">See all ' + total + " prices and shops</a></article>";
+  }
+
+  function kindPill(it) {
+    return sameKind(it) ? '<span class="kind same" title="Same brand and pack size on both sides">✓ Same product</span>' :
+      '<span class="kind any" title="Cheapest of any brand, same pack size">Any brand</span>';
   }
 
   // ---- product page: everything about one product, opened by tapping its card ----
@@ -195,15 +217,19 @@
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
     return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
       '<div class="phero"><div class="pimg">' + img + '</div><h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
-      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div></div>" + '<div class="pduo">' + duo + "</div>" + banner + cheaper +
+      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div>" + kindPill(it) + "</div>" + '<div class="pduo">' + duo + "</div>" + banner +
+      '<button type="button" class="psave' + (isMine(it.id) ? " on" : "") + '" id="psave" data-id="' + esc(it.id) + '">' + STAR + "<span>" +
+      (isMine(it.id) ? "On my list" : "Add to my list") + "</span></button>" + cheaper +
       '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
   }
 
   // drag a pop-up down to close it
-  function swipeClose(box, card, canStart, done) {
-    var y0 = null, dy = 0;
+  function swipeClose(box, cardOf, canStart, done) {
+    var y0 = null, dy = 0, card = box;
+    var cardNow = typeof cardOf === "function" ? cardOf : function () { return cardOf; };
     box.addEventListener("touchstart", function (e) {
       y0 = e.touches.length === 1 && canStart() ? e.touches[0].clientY : null; dy = 0;
+      card = cardNow() || box;
     }, { passive: true });
     box.addEventListener("touchmove", function (e) {
       if (y0 === null) return;
@@ -229,27 +255,83 @@
   function closeSheet() {
     if (sheetEl.hidden) return;
     sheetEl.classList.remove("show"); document.body.classList.remove("noscroll");
-    setTimeout(function () { sheetEl.hidden = true; sheetEl.innerHTML = ""; }, 240);
+    setTimeout(function () { sheetEl.hidden = true; sheetEl.innerHTML = ""; drawMine(); }, 240);
   }
-  function openSheet(id) {
-    var it = DATA && DATA.items.filter(function (x) { return x.id === id; })[0];
-    if (!it) return false;
-    sheetEl.innerHTML = sheet(it); sheetEl.hidden = false; sheetEl.scrollTop = 0;
+  swipeClose(sheetEl, function () { return sheetEl.firstChild; }, function () { return sheetEl.scrollTop <= 0; },
+    function () { if ($("pclose")) $("pclose").click(); });
+  function showPanel(html) {
+    sheetEl.innerHTML = html; sheetEl.hidden = false; sheetEl.scrollTop = 0;
     document.body.classList.add("noscroll");
     requestAnimationFrame(function () { sheetEl.classList.add("show"); });
     $("pclose").focus({ preventScroll: true });
     $("pclose").onclick = function () { if (history.length > 1 && cameFromList) history.back(); else location.hash = "#prices"; };
+  }
+  function openSheet(id) {
+    var it = DATA && DATA.items.filter(function (x) { return x.id === id; })[0];
+    if (!it) return false;
+    showPanel(sheet(it));
+    $("psave").onclick = function () {
+      toggleMine(it.id);
+      var on = isMine(it.id);
+      this.classList.toggle("on", on); this.lastChild.textContent = on ? "On my list" : "Add to my list";
+    };
     $("pscan").onclick = function () {
       if (window.CC_prefill) window.CC_prefill({ name: nice(it.name), size: it.unit, barcode: it.barcode }, true);
       else location.hash = "#contrib";
     };
-    swipeClose(sheetEl, sheetEl.firstChild, function () { return sheetEl.scrollTop <= 0; }, function () { $("pclose").click(); });
     if ($("pshare")) $("pshare").onclick = function () {
       navigator.share({ title: nice(it.name) + " – Compare Cyprus", text: nice(it.name) + ": " + (it.cheaper === "=" ? "same price North and South" :
         eur(gap(it)) + " cheaper in the " + (it.cheaper === "N" ? "North" : "South")), url: location.href }).catch(function () {});
     };
     return true;
   }
+  // ---- My list: saved products and what the whole basket costs on each side ----
+  function shelfEur(o) { return o.shelf ? o.shelf.eur : o.eur; }
+  function listPanel() {
+    var items = mine.map(function (id) { return DATA.items.filter(function (x) { return x.id === id; })[0]; }).filter(Boolean);
+    var gone = mine.length - items.length;
+    var tn = 0, ts = 0;
+    items.forEach(function (it) { tn += shelfEur(it.north[0]); ts += shelfEur(it.south[0]); });
+    var head = '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
+      '<div class="phero"><div class="pimg mylogo">' + STAR + '</div><h2 id="ptitle">My list</h2><div class="unit">Saved on this phone · cheapest shop on each side</div></div>';
+    if (!items.length) {
+      return head + '<div class="mempty"><p>Tap the <b>☆ star</b> on any product to add it here.</p><p>You will see what your whole shop costs in the <span class="tN">North</span> and in the <span class="tS">South</span>.</p></div>' +
+        (gone ? '<p class="note">' + gone + " saved item" + (gone > 1 ? "s are" : " is") + " no longer compared.</p>" : "") + "</div>";
+    }
+    var d = tn - ts, win = d > 0.005 ? "S" : d < -0.005 ? "N" : "=";
+    var duo = '<div class="pduo"><div class="pd N' + (win === "N" ? " win" : "") + '"><i>North total</i><b>' + eur(tn) + "</b><span>" + tl(tn * DATA.fx.eur_try) + "</span></div>" +
+      '<div class="pd S' + (win === "S" ? " win" : "") + '"><i>South total</i><b>' + eur(ts) + "</b><span>" + tl(ts * DATA.fx.eur_try) + "</span></div></div>";
+    var banner = win === "=" ? '<div class="pv same">Same total on both sides</div>' :
+      '<div class="pv ' + win + '"><span>Your list is cheaper in the ' + (win === "N" ? "North" : "South") + "</span><b>" + eur(Math.abs(d)) + " less</b><span>" +
+      Math.round(Math.abs(d) / Math.max(tn, ts) * 100) + "% cheaper</span></div>";
+    var rows = items.map(function (it) {
+      var n = shelfEur(it.north[0]), s = shelfEur(it.south[0]);
+      return '<li class="mrow"><a href="#item=' + encodeURIComponent(it.id) + '"><b>' + esc(nice(it.name)) + "</b><small>" + esc(it.unit || "") +
+        "</small></a><span class=\"mp N" + (it.cheaper === "N" ? " win" : "") + '">' + eur(n) + '</span><span class="mp S' + (it.cheaper === "S" ? " win" : "") + '">' + eur(s) +
+        '</span><button type="button" class="mrm" data-id="' + esc(it.id) + '" aria-label="Remove ' + esc(nice(it.name)) + '">✕</button></li>';
+    }).join("");
+    return head + duo + banner + '<h3 class="ph3">' + items.length + " item" + (items.length > 1 ? "s" : "") + '</h3><div class="mhead"><span></span><span class="tN">North</span><span class="tS">South</span><span></span></div><ul class="mlist">' + rows + "</ul>" +
+      (gone ? '<p class="note">' + gone + " saved item" + (gone > 1 ? "s are" : " is") + " no longer compared.</p>" : "") +
+      '<button type="button" class="main ghost" id="mclear">Clear my list</button></div>';
+  }
+  function openList() {
+    showPanel(listPanel());
+    sheetEl.onclick = function (e) {
+      var rm = e.target.closest(".mrm");
+      if (rm) { toggleMine(rm.getAttribute("data-id")); var y = sheetEl.scrollTop; openList(); sheetEl.scrollTop = y; render(); return; }
+      if (e.target.id === "mclear") { mine = []; saveMine(); openList(); render(); }
+    };
+  }
+  var pill = document.createElement("button");
+  pill.type = "button"; pill.className = "mypill"; pill.hidden = true;
+  document.body.appendChild(pill);
+  pill.onclick = function () { cameFromList = true; location.hash = "#list"; };
+  function drawMine() {
+    var n = mine.filter(function (id) { return !DATA || DATA.items.some(function (x) { return x.id === id; }); }).length;
+    pill.innerHTML = STAR + "<span>My list</span><b>" + n + "</b>";
+    pill.hidden = !n || curView !== "prices" || !sheetEl.hidden;
+  }
+
   var cameFromList = false;
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#item="]');
@@ -257,10 +339,17 @@
     if (e.target === sheetEl) $("pclose").click();
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sheetEl.hidden) $("pclose").click(); });
+  $("out").addEventListener("click", function (e) {          // star on a card
+    var b = e.target.closest(".star"); if (!b) return;
+    var id = b.getAttribute("data-id"); toggleMine(id);
+    var on = isMine(id);
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); b.setAttribute("aria-label", (on ? "Remove from" : "Add to") + " my list");
+    b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop");
+  });
 
   function render() {
     var q = fold(query).trim();
-    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) && (!sideF || it.cheaper === sideF) ? score(it, q) : 0 }; })
+    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) && (!sideF || it.cheaper === sideF) && (!kindF || (kindF === "same") === sameKind(it)) ? score(it, q) : 0 }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) {
         var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct : gap(b.it) - gap(a.it);
@@ -268,7 +357,7 @@
       })
       .map(function (x) { return x.it; });
     $("listhead").textContent = q ? list.length + (list.length === 1 ? " result" : " results") + " for “" + query + "”" :
-      (cat || "All products") + " (" + list.length + ")";
+      (cat || (kindF === "same" ? "Same product" : kindF === "any" ? "Any brand" : "All products")) + " (" + list.length + ")";
     $("sidef").hidden = !sideF;
     if (sideF) $("sidef").innerHTML = 'Only cheaper in the <b class="' + (sideF === "N" ? "tN" : "tS") + '">' + (sideF === "N" ? "North" : "South") + "</b> <span>✕ Show all</span>";
     Array.prototype.forEach.call(document.querySelectorAll("#stats .sc"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-s") === sideF); });
@@ -307,6 +396,13 @@
     $("sort").innerHTML = [["eur", "Biggest € saving"], ["pct", "Biggest % saving"]].map(function (o) {
       return '<button type="button" class="' + (sortBy === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (sortBy === o[0]) + '">' + o[1] + "</button>";
     }).join("");
+    $("kindf").innerHTML = [["", "All"], ["same", "Same product"], ["any", "Any brand"]].map(function (o) {
+      return '<button type="button" class="' + (kindF === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (kindF === o[0]) + '">' + o[1] + "</button>";
+    }).join("");
+    $("kindf").onclick = function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      kindF = b.getAttribute("data-v"); shown = 40; drawChips(); render();
+    };
     $("sort").onclick = function (e) {
       var b = e.target.closest("button"); if (!b) return;
       sortBy = b.getAttribute("data-v"); shown = 40; drawChips(); render();
@@ -341,9 +437,18 @@
     var v = (location.hash || "").slice(1);
     if (v.indexOf("item=") === 0) {                      // a product page sits on top of the Prices list
       if (curView === null) setView("prices", true);
+      sheetEl.onclick = null;
       if (DATA && !openSheet(decodeURIComponent(v.slice(5)))) location.hash = "#prices";
+      drawMine();
       return;
     }
+    if (v === "list") {                                   // My list sits on top of the Prices list too
+      if (curView === null) setView("prices", true);
+      if (DATA) openList();
+      drawMine();
+      return;
+    }
+    sheetEl.onclick = null;
     closeSheet();
     if (["prices", "wanted", "contrib"].indexOf(v) < 0) v = "prices";
     setView(v, v !== curView);
@@ -357,6 +462,7 @@
       if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     if (scroll) window.scrollTo(0, 0);
+    drawMine();
   }
   window.addEventListener("hashchange", showView);
   showView();
@@ -382,8 +488,8 @@
 
   fetch("data/prices.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (d) {
     DATA = d; window.CC_DATA = d; DATA.items.forEach(index);
-    header(); drawChips(); render();
-    if ((location.hash || "").indexOf("#item=") === 0) showView();
+    header(); drawChips(); render(); drawMine();
+    if (/^#(item=|list$)/.test(location.hash || "")) showView();
   }).catch(function () {
     $("out").innerHTML = '<div class="empty"><div class="name">Prices didn’t load</div><p class="small">Check your connection and pull down to refresh.</p></div>';
   });

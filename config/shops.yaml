@@ -42,8 +42,17 @@ fetch:
   seller_exclude: "periptero|kiosk|bakery|confectionery|pet people|convenience|eat some more|pow!"
   # also read pages for these everyday items (compared as "any brand" in generic_items.yaml)
   staples: [white-sugar, granulated-sugar, table-salt, iodised-salt, red-lentils, chickpeas, tomato-paste,
-            tomato-puree, toothpaste, vinegar, bulgur, pourgouri, honey, tea-bags, teabags, black-tea]
-  staples_per_word: 40
+            tomato-puree, toothpaste, vinegar, bulgur, pourgouri, honey, tea-bags, teabags, black-tea,
+            # everyday any-brand items (see generic_items.yaml), so both sides have the same pack sizes to compare
+            sea-salt, icing-sugar, chopped-tomatoes, glass-cleaner, window-cleaner, kitchen-spray, kitchen-cleaner,
+            bathroom-spray, bathroom-cleaner, washing-up-liquid, dishwashing-liquid, dishwash-liquid, thick-bleach,
+            bleach, cream-cleaner, floor-cleaner, fabric-softener, dishwasher-tablets, dishwasher-capsules,
+            kitchen-roll, toilet-rolls, toilet-paper, baby-wipes, wet-wipes, cotton-buds, cotton-pads, tampons,
+            pantyliners, sanitary-pads, hand-cream, mouthwash, conditioner, shower-gel, body-lotion, body-milk,
+            deodorant-spray, roll-on, shaving-foam, shaving-gel, baby-oil, baby-shampoo, micellar-water, lip-balm,
+            after-sun, hair-spray, iced-tea, ice-tea, energy-drink, margarine, butter, cheddar, mozzarella,
+            digestive, cashew-nuts, liquid-soap, hand-wash, shampoo]
+  staples_per_word: 50
 
 starling:
   enabled: true

@@ -403,3 +403,21 @@ def test_loose_items_compare_per_kg():
     g = generic(north, south, items)[0]
     assert g.unit == "per kg" and [o.price for o in g.north] == [180.0, 210.0]
     assert [o.name for o in g.south] == ["Tomatoes 1 kg"]
+
+
+def test_generic_personal_care_keeps_types_apart():
+    items = run.load_yaml("generic_items.yaml")
+    north = [N("NIVEA DEO SPREY KADIN DRY FRESH 150 ML", 200), N("XO DEO MEN 150ML SENSITIVE", 100),
+             N("KOTEX TAMPON NORMAL 16LI", 210), N("ORKID MAXI GECE 16 ADET", 150)]
+    south = [S("Dove Deodorant Spray Soft Feel Woman 150ml", 2.70, 1, cat="Deodorants"),
+             S("Axe Men Deodorant Bodyspray 150ml", 3.26, 2, cat="Deodorants"),
+             S("Tampax Compak Super Tampons 16pcs", 2.78, 3, cat="Tampons"),
+             S("Always Maxi Night Pads 16 pcs", 3.10, 4, cat="Menstrual Pads"),
+             S("Sani Sensitive Lady Discreet Pads 16 pcs", 2.10, 5, cat="Menstrual Protection")]
+    by = {g.id: g for g in generic(north, south, items)}
+    assert [o.name for o in by["gen-deo-spray-women"].south] == ["Dove Deodorant Spray Soft Feel Woman 150ml"]
+    assert [o.name for o in by["gen-deo-spray-men"].north] == ["XO DEO MEN 150ML SENSITIVE"]
+    assert [o.name for o in by["gen-tampons"].north] == ["KOTEX TAMPON NORMAL 16LI"]
+    pads = by["gen-sanitary-pads"]                     # tampons and incontinence pads are not sanitary pads
+    assert [o.name for o in pads.north] == ["ORKID MAXI GECE 16 ADET"]
+    assert [o.name for o in pads.south] == ["Always Maxi Night Pads 16 pcs"]

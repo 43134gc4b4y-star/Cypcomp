@@ -425,3 +425,44 @@ body{background:linear-gradient(180deg,#ffe98a 0,#f3ecc9 240px,#cfe0f3 700px,#c6
 .cat{box-shadow:0 4px 12px rgba(20,35,59,.14)}
 :root{--muted:#46546b}
 .searchwrap{background:linear-gradient(180deg,#ffe98a 0,#f3ecc9 240px,#cfe0f3 700px,#c6d9ee 100%) fixed;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* darker still: deeper gold into steel blue so white boxes pop */
+body,.searchwrap{background:linear-gradient(180deg,#f5c93a 0,#d9cf9e 240px,#9fbcdc 700px,#91b1d6 100%) fixed;background-color:#91b1d6}
+.sect,.listhead{color:#0f1c30}
+.sortrow,.sortrow span{color:#22324a}
+.item,.split{box-shadow:0 8px 22px rgba(15,28,48,.22)}
+.foot,footer{color:#1d2b40}
+
+/* ---- My list, star buttons, same-product / any-brand labels ---- */
+.item{position:relative}
+.star{position:absolute;top:10px;right:10px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;display:grid;place-items:center;cursor:pointer;
+  background:#f1f4f9;color:#8a97ab;-webkit-tap-highlight-color:transparent}
+.star svg,.psave svg,.mypill svg,.mylogo svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+.star.on{background:#fff4c2;color:#c48a00}
+.star.on svg,.psave.on svg,.mypill svg,.mylogo svg{fill:currentColor}
+.star.pop{animation:starpop .35s cubic-bezier(.2,1.6,.4,1)}
+@keyframes starpop{0%{transform:scale(.7)}100%{transform:scale(1)}}
+.kind{display:inline-block;margin-top:7px;font-size:12px;font-weight:800;letter-spacing:.02em;padding:3px 10px;border-radius:999px}
+.kind.same{background:#e1f5ea;color:#0b6b3a}
+.kind.any{background:#eef0f6;color:#46546b}
+.psave{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:10px;padding:13px;border-radius:12px;cursor:pointer;
+  font:800 16px var(--text);background:#fff;color:var(--ink);border:2px solid #e3b400}
+.psave.on{background:#fff4c2;color:#7a5600}
+.psave svg{color:#c48a00}
+.mypill{position:fixed;left:14px;bottom:calc(108px + env(safe-area-inset-bottom));z-index:9;display:flex;align-items:center;gap:7px;padding:10px 14px 10px 12px;border-radius:999px;
+  border:0;cursor:pointer;background:var(--lemon);color:var(--lemon-ink);font:800 15px var(--text);box-shadow:0 6px 16px rgba(15,28,48,.3)}
+.mypill b{background:#14233b;color:#fff;border-radius:999px;min-width:24px;padding:2px 7px;font-size:13px;text-align:center}
+.mypill[hidden]{display:none}
+.mylogo{color:#c48a00;background:#fff4c2}
+.mylogo svg{width:84px;height:84px}
+.mempty{text-align:center;padding:10px 6px 4px;font-size:16px}
+.mhead{display:grid;grid-template-columns:1fr 70px 70px 34px;gap:6px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:0 10px 4px;text-align:right}
+.mlist{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px}
+.mrow{display:grid;grid-template-columns:1fr 70px 70px 34px;gap:6px;align-items:center;background:#f6f9fd;border:1px solid var(--rule);border-radius:12px;padding:10px}
+.mrow a{text-decoration:none;color:var(--ink);min-width:0}
+.mrow a b{display:block;font-size:15px;line-height:1.2}
+.mrow a small{color:var(--muted)}
+.mp{text-align:right;font:700 17px var(--display);color:var(--muted)}
+.mp.win.N{color:var(--north)}.mp.win.S{color:var(--south)}
+.mp.win{font-size:19px}
+.mrm{width:34px;height:34px;border-radius:50%;border:0;background:#e8edf5;color:var(--ink);font-weight:800;cursor:pointer}
+#mclear{width:100%}

@@ -57,7 +57,7 @@
   category: Coffee
   per: 100 g
   north: {any: ["turk kahve", "kibris kahve", "kahve dunyasi turk", "dibek"], not: [makine, fincan, cezve, kupa, cikolata, "3u 1", "seker"]}
-  south: {cat: [cyprus coffee]}
+  south: {cat: [cyprus coffee, cypriot coffee]}
 
 - id: rice
   name: Rice (any type, per kg)
@@ -71,7 +71,8 @@
   category: Pantry
   per: kg
   north: {any: [makarna, spagetti, spaghetti, penne, fusilli, burgu, kelebek], not: [sos, salata, hazir, cup, bardak, noodle, tavuk, bebek, maskarpone, kapak, suzgec, tencere]}
-  south: {cat: [pasta and pasta sauces], not: [sauce, pesto, napoletana, bolognese, sugo]}
+  south: {cat: [pasta and pasta sauces, pasta], any: [spaghetti, penne, fusilli, pasta, macaroni, linguine, rigatoni, farfalle, tagliatelle, makaronia, kritharaki, orzo, conchiglie, spirali, tortiglioni, bucatini],
+          not: [sauce, pesto, napoletana, bolognese, sugo, tomato, tomatoes, noodle, noodles, pizza, ravioli, tortellini, kids, minions, peppa, cup, ready, frozen, salad]}
 
 - id: flour
   name: Flour (any brand, per kg)
@@ -85,21 +86,22 @@
   category: Pantry
   per: l
   north: {any: [aycicek, aycicegi, sunflower], all: [[yag, oil]], not: [mayonez, ton, sardalya, cips, margarin]}
-  south: {cat: [cooking oils], any: [sunflower]}
+  south: {cat: [cooking oils, "oil, vinegar", groceries, pantry], any: [sunflower]}
 
 - id: olive-oil
   name: Olive oil (per litre)
   category: Pantry
   per: l
+  sizes: 4
   north: {any: [zeytinyag, "zeytin yag", "olive oil", sizma], not: [pirina, pomace, sprey, sabun, krem, sampuan, ton, sardalya, zeytinyagli, enginar, dolma, sarma, kozmetik, cilt, vucut]}
-  south: {cat: [olive oil], not: [pomace, "spray", blend, mixed, sunflower, "60", "με"]}
+  south: {cat: [olive oil, "oil, vinegar"], any: [olive, elaiolado, "eleolado"], not: [vinegar, balsamic, pomace, "spray", blend, mixed, sunflower, "60", "με"]}
 
 - id: butter
   name: Butter (any brand, per kg)
   category: Milk & dairy
   per: kg
-  north: {any: [tereyag, "butter"], not: [chicken, tavuk, masala, sos, tereyagli, hamur, milfoy, borek, pogaca, kruvasan, kraker, margarin, kurabiye, aroma, bisküvi, biskuvi, kek, krem, "fistik", "peanut", sos, cips, misir]}
-  south: {cat: [butter and margatine], any: [butter], not: [margarine, spread, spreadable, flora, becel, "peanut"]}
+  north: {any: [tereyag, "butter"], not: [chicken, tavuk, masala, sos, tereyagli, hamur, milfoy, borek, pogaca, kruvasan, kraker, margarin, kurabiye, cookies, cookie, aroma, bisküvi, biskuvi, kek, krem, "fistik", "peanut", sos, cips, misir]}
+  south: {cat: [butter and margatine, butter], any: [butter], not: [margarine, spread, spreadable, flora, becel, "peanut"]}
 
 - id: water
   name: Still water (per litre, any bottle size)
@@ -120,7 +122,7 @@
   category: Paper & tissues
   per: 1 pc
   north: {any: ["tuvalet kagidi", "tuvalet kağıdı", "toilet"], not: [islak, nemli, sabun, temizleyici, tutacak, aparat]}
-  south: {cat: [toilet paper], any: [toilet, roll], not: [wet, tissue, kitchen]}
+  south: {cat: [toilet paper, "toilet & household papers"], any: [toilet, roll], not: [wet, tissue, kitchen]}
 
 # Nappies are not compared per piece: North shop names rarely say how many are in the pack.
 
@@ -129,21 +131,21 @@
   category: Baby
   per: kg
   north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 1 ", sz1], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
-  south: {cat: [baby milk], all: [[" 1 ", sz1]], not: [cereal, rice, biscuit]}
+  south: {cat: [baby milk, "baby food & formula"], all: [[" 1 ", sz1]], not: [cereal, rice, biscuit]}
 
 - id: baby-milk-2
   name: Baby formula milk, stage 2 (any brand)
   category: Baby
   per: kg
   north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 2 ", sz2], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
-  south: {cat: [baby milk], all: [[" 2 ", sz2]], not: [cereal, rice, biscuit]}
+  south: {cat: [baby milk, "baby food & formula"], all: [[" 2 ", sz2]], not: [cereal, rice, biscuit]}
 
 - id: baby-milk-3
   name: Baby formula milk, stage 3 (any brand)
   category: Baby
   per: kg
   north: {any: [aptamil, bebelac, "nan ", hipp, "devam sutu", "bebek sutu", "biberon mamasi", almiron, "sma "], all: [[" 3 ", sz3], [sut, sutu, formula, devam, baslangic, combiotic, optipro, pronutra, sz1, sz2, sz3, sz4, gold]], not: [eriste, tavuk, sebze, seb, corba, yemek, biberon, emzik, kase, kasik, puree, puresi, pure, kavanoz,  bisküvi, biskuvi, meyve, pirinc, tahil, kavanoz, "su ", "suyu", "bebek suyu", cikolata, irmik, tatli, puding, gevrek, kek]}
-  south: {cat: [baby milk], all: [[" 3 ", sz3]], not: [cereal, rice, biscuit]}
+  south: {cat: [baby milk, "baby food & formula"], all: [[" 3 ", sz3]], not: [cereal, rice, biscuit]}
 
 - id: wet-wipes
   name: Baby wet wipes (per 100 wipes)
@@ -172,28 +174,28 @@
   category: Cheese
   per: kg
   north: {any: [cheddar, "cedar peynir"], not: [sos, cips, kraker, burger, tost]}
-  south: {cat: [cheese], any: [cheddar], not: [sauce, slices]}
+  south: {cat: [cheese, cheddar, "dairy & eggs"], any: [cheddar], not: [sauce, slices]}
 
 - id: cheese-slices
   name: Cheese slices / toast cheese (per kg)
   category: Cheese
   per: kg
   north: {any: ["dilim peynir", "dilimli", "tost peynir", "toast"], all: [[peynir, cheese, kasar, cheddar]], not: [krem, labne, beyaz]}
-  south: {cat: [cheese], any: [slices, toast], not: [cream]}
+  south: {cat: [cheese, "dairy & eggs"], any: [slices, toast], not: [cream]}
 
 - id: cream-cheese
   name: Cream cheese (per kg)
   category: Cheese
   per: kg
   north: {any: ["krem peynir", philadelphia, "cream cheese", labne], not: [kek, tatli, sos, kraker]}
-  south: {cat: [cheese], any: ["cream cheese", philadelphia, "cream ch"], not: [light]}
+  south: {cat: [cheese, cream cheese], any: ["cream cheese", philadelphia, "cream ch"], not: [light]}
 
 - id: margarine
   name: Margarine / spread (per kg)
   category: Milk & dairy
   per: kg
   north: {any: [margarin], not: [kek, kurabiye, hamur]}
-  south: {cat: [butter and margatine], any: [margarine, spread, becel, flora, spry], not: [butter]}
+  south: {cat: [butter and margatine, butter], any: [margarine, spread, becel, flora, spry], not: [butter]}
 
 - id: cereal-cornflakes
   name: Corn flakes (any brand, per kg)
@@ -206,78 +208,79 @@
   name: Potato crisps (any brand, per 100 g)
   category: Snacks
   per: 100 g
-  north: {any: [cips, chips, pringles, lays, ruffles, doritos], not: [iceland, "straight cut", "cut chips", donuk, dondurulmus, kizartma, frozen, mccain, kraker, tahil, cracker, misir, tortilla, nacho, doritos, cubuk, sebze, mercimek, nohut, sandvic]}
-  south: {cat: [potato / corn / rice chips], not: [garidakia, popcorn, tortilla, nacho, doritos, corn, rice, puffs]}
+  sizes: 5
+  north: {any: [cips, chips, pringles, lays, ruffles, doritos], not: [iceland, "straight cut", "cut chips", donuk, dondurulmus, kizartma, frozen, mccain, kraker, tahil, cracker, misir, tortilla, nacho, doritos, cubuk, sebze, mercimek, nohut, sandvic, cheetos, patlamis, popcorn]}
+  south: {cat: [potato / corn / rice chips, chips], not: [garidakia, popcorn, tortilla, nacho, doritos, corn, rice, puffs, lentil, veggie, vegetable, hummus, quinoa, protein, pita]}
 
 - id: milk-chocolate
   name: Milk chocolate bar (any brand, per 100 g)
   category: Snacks
   per: 100 g
   north: {any: [cikolata, chocolate], all: [[sutlu, milk, "dairy milk"]], not: [cikolatali, burcak, digestive, biscuit, cookie, cookies, homeblest, findik, badem, fistik, bisküvi, biskuvi, gofret, kek, gevrek, icecek, sut ", puding, dondurma, krem, sos, kaplama, draje, mini, "kutu"]}
-  south: {cat: [chocolates], any: [milk, "dairy milk"], not: [hazelnut, almond, nut, biscuit, wafer, mini, celebration, tub, box, bueno]}
+  south: {cat: [chocolates, chocolate bars, "chocolates, candies"], any: [milk, "dairy milk"], not: [hazelnut, almond, nut, biscuit, wafer, mini, celebration, tub, box, bueno]}
 
 - id: biscuits-digestive
   name: Digestive biscuits (per kg)
   category: Snacks
   per: kg
   north: {any: [digestive, "kepekli biskuvi"], not: [cikolata, cikolatali]}
-  south: {cat: [buscuits], any: [digestive], not: [chocolate]}
+  south: {cat: [buscuits, cookies, biscuits], any: [digestive], not: [chocolate]}
 
 - id: orange-juice
   name: Orange juice (per litre)
   category: Drinks
   per: l
   north: {any: ["portakal suyu", "portakal meyve suyu", "orange juice", "portakal %100"], not: [aroma, toz, tang, nektar, "meyveli icecek", gazli]}
-  south: {cat: [fruit and vegetable juices], any: [orange], not: [carrot, apple, mango, multi, peach, nectar, drink]}
+  south: {cat: [fruit and vegetable juices, juices], any: [orange], not: [carrot, apple, mango, multi, peach, nectar, drink]}
 
 - id: sparkling-water
   name: Sparkling / mineral water (per litre)
   category: Drinks
   per: l
   north: {any: ["maden suyu", "soda ", sparkling], not: [aroma, meyveli, limon, mango, cilek, elma, karpuz, ananas, frenk, karadut, portakal, nar, kiraz, mandalina, ginger]}
-  south: {cat: [water], any: [sparkling, soda], not: [lemon, flavour]}
+  south: {cat: [water, sparkling water, "soda & tonic"], any: [sparkling, soda], not: [lemon, flavour]}
 
 - id: tuna
   name: Canned tuna (per 100 g)
   category: Pantry
   per: 100 g
   north: {any: ["ton balig", "ton bal", tuna], not: [salata, sandvic, pizza, mama, kedi]}
-  south: {cat: [canned fish], any: [tuna], not: [salad, pate]}
+  south: {cat: [canned fish, "canned & jarred"], any: [tuna], not: [salad, pate]}
 
 - id: ketchup
   name: Ketchup (per kg)
   category: Pantry
   per: kg
   north: {any: [ketcap, ketchup], not: [cips, sos ", acili, mayonez, mayo, hardal]}
-  south: {cat: [sauces and dressings], any: [ketchup], not: [hot, spicy]}
+  south: {cat: [sauces and dressings, ketchup, condiments], any: [ketchup], not: [hot, spicy]}
 
 - id: mayonnaise
   name: Mayonnaise (per kg)
   category: Pantry
   per: kg
   north: {any: [mayonez, mayonnaise], not: [light, sos ", ketcap, hardal]}
-  south: {cat: [sauces and dressings], any: [mayonnaise], not: [light]}
+  south: {cat: [sauces and dressings, mayonnaise, condiments], any: [mayonnaise], not: [light]}
 
 - id: frozen-peas
   name: Frozen peas (per kg)
   category: Frozen
   per: kg
   north: {any: [bezelye], all: [[donuk, dondurulmus, superfresh, feast, iceland, emborg, sff]], not: [havuc, garnitur, konserve, cam]}
-  south: {cat: [frozen vegetables], any: [peas], not: [carrot, mix, corn]}
+  south: {cat: [frozen vegetables, frozen], any: [peas], not: [carrot, mix, corn]}
 
 - id: frozen-fries
   name: Frozen chips / fries (per kg)
   category: Frozen
   per: kg
   north: {any: ["patates kizartma", "parmak patates", fries, "elma dilim", "dondurulmus patates"], not: [cips, baharat, makine]}
-  south: {cat: [frozen vegetables and potato], any: [fries, chips, potato, wedges], not: [sweet, croquette]}
+  south: {cat: [frozen vegetables and potato, frozen], any: [fries, chips, potato, wedges], not: [sweet, croquette]}
 
 - id: frozen-pizza
   name: Frozen pizza (per kg)
   category: Frozen
   per: kg
   north: {any: [pizza], all: [[donuk, dondurulmus, superfresh, dr oetker, "dr. oetker", ristorante, feast, iceland]], not: [sos, hamur, harc, kesici, tava, "pizza peyniri"]}
-  south: {cat: [frozen pasta, pizza], any: [pizza], not: [mini, bites]}
+  south: {cat: [frozen pasta, pizza, frozen], any: [pizza], not: [mini, bites]}
 
 - id: ham-turkey
   name: Sliced turkey / chicken ham (per kg)
@@ -298,57 +301,58 @@
   category: Pets
   per: kg
   north: {any: ["kedi mama", "cat food", "kuru kedi"], all: [[kuru, dry, yetiskin, adult, whiskas, felix, "pro plan", "royal canin", purina, "cat chow", "reflex", "n d"]], not: [islak, pouch, konserve, odul, "sos ", "85 g", "100 g", jole, jelly]}
-  south: {cat: [animal food], any: [cat, whiskas, felix, friskies], all: [[dry, kg]], not: [wet, pouch, can, dog]}
+  south: {cat: [animal food, cat food], any: [cat, whiskas, felix, friskies], all: [[dry, kg]], not: [wet, pouch, can, dog]}
 
 - id: dry-dog-food
   name: Dry dog food (per kg)
   category: Pets
   per: kg
   north: {any: ["kopek mama", "dog food", "kuru kopek"], not: [islak, konserve, odul, biscrok, markies, kemik, stick, "sos "]}
-  south: {cat: [animal food], any: [dog, pedigree], not: [biscrok, treat, wet, can, cat]}
+  south: {cat: [animal food, dog food], any: [dog, pedigree], not: [biscrok, treat, wet, can, cat]}
 
 - id: fabric-softener
   name: Fabric softener (per litre)
   category: Cleaning
   per: l
   north: {any: [yumusatici, softener, "camasir yumusatici", lenor, comfort, vernel, yumos, softlan], not: [kova, kovasi, mop, paspas, vivident, sakiz, kagit, mendil, sprey, "bebek deterjani"]}
-  south: {cat: [fabric softeners]}
+  south: {cat: [fabric softeners, laundry softeners], not: [detergent, washing, powder, capsules, pods]}
 
 - id: shampoo
   name: Shampoo (any brand, per litre)
   category: Personal care
   per: l
-  north: {any: [sampuan, shampoo], not: [kopek, kedi, hali, oto, araba, kuru, "sac kremi", conditioner, "2 si 1", "2si1", "2in1", "3 u 1", bebek, baby, mini, seyahat, travel]}
-  south: {cat: [shampoos and conditioners], any: [shampoo], not: [conditioner, baby, "2in1", "2 in 1", mini]}
+  north: {any: [sampuan, shampoo], not: [kopek, kedi, hali, oto, araba, kuru, "sac kremi", conditioner, "2 si 1", "2si1", "2in1", "2 1 ", "3 u 1", bebek, baby, mini, seyahat, travel]}
+  south: {cat: [shampoos and conditioners, shampoos], any: [shampoo], not: [conditioner, baby, "2in1", "2 in 1", mini, dry, lice, travel, set, gift]}
 
 - id: liquid-soap
   name: Liquid hand soap (per litre)
   category: Personal care
   per: l
   north: {any: ["sivi sabun", "el sabunu", handwash, "hand wash"], not: [bulasik, camasir, "kati sabun"]}
-  south: {cat: [soaps], any: [handwash, "hand wash", liquid, cream wash], not: [bar, bath, shower]}
+  south: {cat: [soaps, hand washes], any: [handwash, "hand wash", liquid, cream wash], not: [bar, bath, shower, intimate, feminine, "for women", foot]}
 
 - id: bar-soap
   name: Bar soap (per 100 g)
   category: Personal care
   per: 100 g
   north: {any: [sabun], not: [sivi, bulasik, camasir, "el sabunu", kalip, dispenser, kap, "sabunluk", "sabun kutusu", koku, "sabun koku", kopek, kedi]}
-  south: {cat: [soaps], any: [soap, bar, beauty], not: [liquid, handwash, wash, bath, shower, refill]}
+  south: {cat: [soaps, bar soaps], any: [soap, bar, beauty], not: [liquid, handwash, wash, bath, shower, refill]}
 
 - id: kitchen-roll
   name: Kitchen roll (price per roll)
   category: Paper & tissues
   per: 1 pc
   north: {any: ["kagit havlu", "kitchen roll", "kitchen towel"], not: [tutacak, aparat, islak]}
-  south: {cat: [napkings and kitchen roll], any: [kitchen, roll, towel], not: [napkins, professional, "x1 "]}
+  south: {cat: [napkings and kitchen roll, "toilet & household papers"], any: [kitchen, roll, towel], not: [napkins, professional, "x1 "]}
 
 - id: sanitary-pads
   name: Sanitary pads (per pad)
   category: Personal care
   per: 1 pc
   min_pieces: 5
-  north: {any: ["hijyenik ped", "ped ", always, orkid, molped, "kotex"], not: [daily, anydays, gunluk, liners, gunluk, "gunluk ped", liner, emzirme, gogus, yatak, kedi, kopek]}
-  south: {cat: [sanitary napkins], not: [liners, daily, dailies, pantyliner, panty]}
+  sizes: 4
+  north: {any: ["hijyenik ped", "ped ", always, orkid, molped, "kotex"], not: [daily, anydays, gunluk, liners, gunluk, "gunluk ped", liner, emzirme, gogus, yatak, kedi, kopek, tampon, lightdays, "light days", "g ped", "g/ped"]}
+  south: {cat: [sanitary napkins, menstrual pads, menstrual protection, intimate hygiene], any: [pads, pad, towels, napkins, always, "every day", everyday, alw, ultra, maxi, night], not: [liners, daily, dailies, pantyliner, panty, tampon, tampons, cup, wash, gel, wipes, maternity, breast, molicare, incontinence, drop, drops, tena, lady, discreet, carefree, flexiform]}
 
 - id: adult-diapers
   name: Adult incontinence pads / diapers (per piece)
@@ -356,70 +360,70 @@
   per: 1 pc
   min_pieces: 5
   north: {any: ["yetiskin bezi", "hasta bezi", "mesane bezi", tena], not: [ortu, alez]}
-  south: {cat: [adult diapers]}
+  south: {cat: [adult diapers, incontinence]}
 
 - id: dish-liquid
   name: Washing-up liquid (per litre)
   category: Cleaning
   per: l
-  north: {any: ["bulasik deterjan", "elde bulasik", fairy, pril, "sivi bulasik"], not: [tablet, kapsul, makine, "makinesi", parlatici, tuz, temizleyici, eldiven]}
-  south: {cat: [household cleaning], any: [fairy, "washing up", dish, "lemon liquid"], not: [tablet, caps, dishwasher, machine]}
+  north: {any: ["bulasik deterjan", "elde bulasik", fairy, pril, "sivi bulasik"], not: [tablet, kapsul, makine, "makinesi", parlatici, tuz, temizleyici, eldiven, sprey, spray]}
+  south: {cat: [household cleaning, dishwashing, dish liquids], any: [fairy, "washing up", dish, "lemon liquid"], not: [tablet, caps, dishwasher, machine]}
 
 - id: bleach
   name: Bleach (per litre)
   category: Cleaning
   per: l
   north: {any: ["camasir suyu", domestos, bleach], not: [jel ", sprey, mendil]}
-  south: {cat: [household cleaning], any: [bleach, domestos, "clorox"], not: [cleaner, smac, "with bleach", spray, wipes, gel ", toilet]}
+  south: {cat: [household cleaning, cleaning agents, disinfectants], any: [bleach, domestos, "clorox"], not: [cleaner, smac, "with bleach", spray, wipes, gel ", toilet]}
 
 - id: almonds
   name: Almonds (per kg)
   category: Nuts & dried fruit
   per: kg
   north: {any: [badem, almond], all: [[cig, kavrulmus, naturel, natural, raw, roasted, tuzlu, tuzsuz, kuruyemis, peyman, tuccaroglu, cerci, bahceden, "ic badem", "badem ici", cerez]], not: [dus, jel, sabun, krem, losyon, bademli, musli, granola, gevrek, citir, balli, pop, corn, misir, "yer fistik", karisik, cips, kraker, bar, sekerleme, nutzz, dondurma, magnum, algida, cookie, mini, helva, pasta, cikolata, sut, sutu, yag, ezme, krem, kurabiye, unu, sabun, sampuan, sekeri, draje, bar, kek, gofret, sos, icecek, lokum, findik]}
-  south: {cat: [dry fruit and nuts], any: [almond, amygdal]}
+  south: {cat: [dry fruit and nuts, nuts, dried fruit], any: [almond, amygdal]}
 
 - id: cashews
   name: Cashew nuts (per kg)
   category: Nuts & dried fruit
   per: kg
   north: {any: ["kaju ", cashew], not: [kajun, baharat, cikolata, ezme, krem, bar, mix, karisik]}
-  south: {cat: [dry fruit and nuts], any: [cashew, kasious]}
+  south: {cat: [dry fruit and nuts, nuts, dried fruit], any: [cashew, kasious], not: [flavored, flavoured, pizza, chili, chilli, honey, bbq, smoked, salted, roasted, coated, chocolate, mix]}
 
 - id: mixed-nuts
   name: Mixed nuts (per kg)
   category: Nuts & dried fruit
   per: kg
   north: {any: ["karisik kuruyemis", "mixed nuts", "kokteyl kuruyemis", "karisik cerez", "lux karisik", "super karisik"], not: [cikolata, bar, meyve]}
-  south: {cat: [dry fruit and nuts], any: [mixed nuts]}
+  south: {cat: [dry fruit and nuts, nuts, dried fruit], any: [mixed nuts]}
 
 - id: pistachios
   name: Pistachios (per kg)
   category: Nuts & dried fruit
   per: kg
   north: {any: ["antep fistik", "antep fistigi", pistachio, "fistik kavrulmus"], all: [[antep, pistachio]], not: [granola, kakao, musli, gevrek, fistikli, nutymax, solen, helva, halva, cikolata, ezme, krem, baklava, lokum, kurabiye, dondurma, gofret, tatli, kek, puding]}
-  south: {cat: [dry fruit and nuts], any: [xalepian, chalepian, pistach]}
+  south: {cat: [dry fruit and nuts, nuts, dried fruit], any: [xalepian, chalepian, pistach]}
 
 - id: fish-fingers
   name: Fish fingers (per kg)
   category: Frozen
   per: kg
   north: {any: ["balik parmak", "fish finger", "fish stick", "balik kroket", "balik stick"], not: [kedi, kopek, mama]}
-  south: {cat: [frozen fish], any: [fish fingers, fish sticks]}
+  south: {cat: [frozen fish, frozen], any: [fish fingers, fish sticks]}
 
 - id: battered-fish
   name: Breaded / battered fish fillets (per kg)
   category: Frozen
   per: kg
   north: {any: ["pane balik", "battered", "breaded", "kaplamali balik", "panelenmis balik", "cod fillet", "morina"], not: [kedi, kopek, mama, salata]}
-  south: {cat: [frozen fish], any: [battered, breaded], not: [fingers, sticks]}
+  south: {cat: [frozen fish, frozen], any: [battered, breaded], not: [fingers, sticks]}
 
 - id: shrimps
   name: Cooked / peeled prawns (per kg)
   category: Frozen
   per: kg
   north: {any: [karides, shrimp, prawn], all: [[donuk, dondurulmus, frozen, haslanmis, ayiklanmis, cooked, peeled, iceland, superfresh, kg]], not: [skips, coctail, pringles, cocktail, chips, cips, cips, kraker, aroma, sos, cesni, kedi, cubuk, salata]}
-  south: {cat: [frozen fish], any: [garides, shrimp, prawn], not: [crab]}
+  south: {cat: [frozen fish, frozen], any: [garides, shrimp, prawn], not: [crab]}
 
 - id: salmon
   name: Salmon fillets / portions (per kg)
@@ -433,28 +437,28 @@
   category: Frozen
   per: kg
   north: {any: [surimi, "yengec", "crab stick", "crab sticks"], not: [salata, sos]}
-  south: {cat: [frozen fish], any: [crab]}
+  south: {cat: [frozen fish, frozen], any: [crab]}
 
 - id: oats
   name: Oats / porridge (per kg)
   category: Breakfast
   per: kg
   north: {any: ["yulaf ezme", "yulaf ezmesi", oats, porridge, "quaker"], not: [cikolata, bar, biskuvi, kurabiye, sut, icecek, granola, muesli, musli, meyveli, bal, kek, "yulaf sutu", krem]}
-  south: {cat: [breakfast cereals], any: [oats, oat bags], not: [chocolate, mpoukies]}
+  south: {cat: [breakfast cereals, "cereal, oatmeal"], any: [oats, oat bags], not: [chocolate, mpoukies]}
 
 - id: filo-pastry
   name: Filo / yufka pastry (per kg)
   category: Frozen
   per: kg
   north: {any: [yufka, "filo ", phyllo, baklavalik], not: [dog, cat, kedi, kopek, borek, sigara, tatli, kesici, oklava]}
-  south: {cat: [frozen pasta, pizza and pastries], any: [fillo, filo, phyllo]}
+  south: {cat: [frozen pasta, pizza and pastries, frozen], any: [fillo, filo, phyllo]}
 
 - id: puff-pastry
   name: Puff pastry (per kg)
   category: Frozen
   per: kg
   north: {any: [milfoy, "puff pastry", "sfoliata"], not: [borek, tatli, poğaca, pogaca, kurabiye]}
-  south: {cat: [frozen pasta, pizza and pastries], any: [sfoliata, puff]}
+  south: {cat: [frozen pasta, pizza and pastries, frozen], any: [sfoliata, puff]}
 
 - id: ravioli
   name: Ravioli (per kg)
@@ -489,7 +493,7 @@
   category: Cheese
   per: kg
   north: {any: [edam, gouda], not: [rende, dilim, sos]}
-  south: {cat: [cheese], any: [edam, gouda], not: [sliced, slices, grated]}
+  south: {cat: [cheese, gouda, "dairy & eggs"], any: [edam, gouda], not: [sliced, slices, grated]}
 
 - id: cottage-cheese
   name: Cottage cheese (per kg)
@@ -503,7 +507,7 @@
   category: Cheese
   per: kg
   north: {any: ["rende", rendelenmis, grated, "rende kasar", "rende peynir"], all: [[peynir, kasar, cheese, cheddar, parmesan, mozzarella, mozarella]], not: [rende ", "rende alet", "rende makine"]}
-  south: {cat: [cheese], any: [grated, trimma]}
+  south: {cat: [cheese, "dairy & eggs"], any: [grated, trimma]}
 
 - id: cheese-portions
   name: Spreadable cheese triangles (per kg)
@@ -517,21 +521,21 @@
   category: Cheese
   per: kg
   north: {any: [mozzarella, mozarella], not: [rende, pizza, stick, kroket, cubuk, sos]}
-  south: {cat: [cheese], any: [mozzarella], not: [grated, sticks]}
+  south: {cat: [cheese, mozzarella, "dairy & eggs"], any: [mozzarella], not: [grated, sticks]}
 
 - id: washing-powder
   name: Laundry powder (per kg)
   category: Cleaning
   per: kg
   north: {any: ["toz deterjan", "camasir deterjani toz", "matik"], all: [[toz, powder, matik]], not: [sivi, jel, kapsul, bulasik, "elde yikama", sabun]}
-  south: {cat: [laundry detergents], any: [powder, kg]}
+  south: {cat: [laundry detergents, detergents], any: [powder, kg]}
 
 - id: washing-liquid
   name: Laundry liquid / gel (per litre)
   category: Cleaning
   per: l
   north: {any: ["sivi deterjan", "sivi camasir", "jel deterjan", "camasir jel", "laundry gel", "liquid detergent"], not: [bulasik, toz, kapsul, yumusatici, "elde", bebek, "yun", "siyah"]}
-  south: {cat: [laundry detergents], any: [gel, liquid, l ], not: [powder, pods, kg, baby, proderm, wool]}
+  south: {cat: [laundry detergents, detergents], any: [gel, liquid, l ], not: [powder, pods, kg, baby, proderm, wool]}
 
 - id: laundry-pods
   name: Laundry capsules / pods (per pod)
@@ -539,49 +543,49 @@
   per: 1 pc
   min_pieces: 8
   north: {any: [kapsul, pods, caps], all: [[camasir, ariel, persil, fairy, omo, laundry, deterjan]], not: [bulasik, makine, dishwasher, kahve, coffee, vitamin, ilac]}
-  south: {cat: [laundry detergents], any: [pods, caps, capsules]}
+  south: {cat: [laundry detergents, detergents], any: [pods, caps, capsules]}
 
 - id: cream-cleaner
   name: Cream cleaner (Cif-type, per litre)
   category: Cleaning
   per: l
   north: {any: ["krem temizleyici", "cif krem", "cif cream", "krem jel"], not: [cilt, yuz, el kremi, sac]}
-  south: {cat: [household cleaning], any: [cream], not: [spray]}
+  south: {cat: [household cleaning, cleaning agents], any: [cream], not: [spray]}
 
 - id: floor-cleaner
   name: Floor / surface cleaner (per litre)
   category: Cleaning
   per: l
   north: {any: ["yuzey temizleyici", "yer temizleyici", "genel temizlik", "zemin temizleyici", ajax, "fabuloso", "mr proper", "mr. proper"], not: [sprey, sprey, mendil, krem, "cam temizleyici", "banyo", "mutfak", "wc", "kirec", "tablet"]}
-  south: {cat: [household cleaning], any: [floor, ajax, "lavender 1000"], not: [spray, trigger, drain]}
+  south: {cat: [household cleaning, cleaning agents, floor treatments, multi-purpose], any: [floor, ajax, "lavender 1000"], not: [spray, trigger, drain]}
 
 - id: drain-opener
   name: Drain opener (per kg / litre equivalent)
   category: Cleaning
   per: l
   north: {any: ["lavabo acici", "gider acici", drano, "drain"], not: [tablet, granul, toz]}
-  south: {cat: [household cleaning], any: [drano], not: [flup]}
+  south: {cat: [household cleaning, drain cleaners, cleaning agents], any: [drano], not: [flup]}
 
 - id: apple-juice
   name: Apple juice (per litre)
   category: Drinks
   per: l
   north: {any: ["elma suyu", "elma meyve suyu", "apple juice", "%100 elma"], not: [aroma, toz, "meyveli icecek", gazli, sirke, karisik, havuc, nektar]}
-  south: {cat: [fruit and vegetable juices], any: [apple juice], not: [carrot, cocktail]}
+  south: {cat: [fruit and vegetable juices, juices], any: [apple juice], not: [carrot, cocktail]}
 
 - id: mixed-juice
   name: Mixed fruit juice (per litre)
   category: Drinks
   per: l
   north: {any: ["karisik meyve suyu", "karisik meyve", "multi fruit", "kokteyl meyve", "multivitamin"], not: [aroma, toz, gazli, kurusu, recel, yogurt, kek, sekerleme]}
-  south: {cat: [fruit and vegetable juices], any: [cocktail, "5 fruit"]}
+  south: {cat: [fruit and vegetable juices, juices], any: [cocktail, "5 fruit"]}
 
 - id: baby-cereal
   name: Baby cereal / rice cream (per kg)
   category: Baby
   per: kg
   north: {all: [[bebek, bebe, hipp, bebelac, "kasik mamasi"], [mama, mamasi, pirinc, irmik, tahil, tahilli, krem, kremasi, cereal]], not: [sma, optipro, baslangic, gold, sz1, sz2, sz3, comformil, aptamil, formula, nesquik, gevrek, kakao, "devam sutu", "bebek sutu", biberon, emzik, kavanoz, puresi, biskuvi, "meyve suyu", "su ", ekmek, sandvic, sabun, sampuan, krem ", losyon, yag, pisik]}
-  south: {cat: [baby food], not: [almiron, formula, follow, nan, aptamil, optipro, sma, milk, puree, jar, pouch, biscuit, water, tea, juice]}
+  south: {cat: [baby food, baby food], not: [almiron, formula, follow, nan, aptamil, optipro, sma, milk, puree, jar, pouch, biscuit, water, tea, juice]}
 
 # --- staples the price observatory doesn't cover; South prices come from Fetch
 #     (pages picked by the `staples` words in shops.yaml) ---
@@ -808,3 +812,408 @@
   loose: true
   north: {any: ["chicken breast", "chicken sirloin", "chicken fillet", "tavuk gogus", "tavuk bonfile", "gogus fileto"], not: ["sauce", "sos", "nugget", "schnitzel", "sinitzel", "pane", "breaded", "smoked", "fume", "jambon", "salam", "doner", "marinated", "kelebek", "skewer", "sis"]}
   south: {any: ["chicken breast fillet 1 kg"]}
+
+# ---- added: everyday personal care, drinks and household, any brand, same pack size ----
+- id: deo-spray-women
+  name: Deodorant spray, women (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    all:
+      - [deo, deodorant, antiperspirant]
+      - [kadin, women, woman, for her, femme]
+    not: [roll on, rollon, roll, stick, erkek, men , krem, cream, parfum, perfume, edt, edp, set, kalem, mendil]
+  south:
+    all:
+      - [deodorant, deo spray, antiperspirant spray, deo ]
+      - [women, woman, for her, femme, female, ladies]
+    not: [roll on, rollon, roll, stick, men , cream, perfume, parfum, eau de, set, gift, wipes, pack of, x2, 2x]
+
+- id: deo-spray-men
+  name: Deodorant spray, men (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    all:
+      - [deo, deodorant, antiperspirant]
+      - [erkek, men , man , for men, homme]
+    not: [roll on, rollon, roll, stick, kadin, women, krem, cream, parfum, perfume, edt, edp, set, kalem, mendil]
+  south:
+    all:
+      - [deodorant, deo spray, antiperspirant spray, deo ]
+      - [men , man , for men, homme, male]
+    not: [roll on, rollon, roll, stick, women, woman, cream, perfume, parfum, eau de, set, gift, wipes, pack of, x2, 2x]
+
+- id: rollon-women
+  name: Roll-on deodorant, women (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    all:
+      - [roll on, rollon]
+      - [kadin, women, woman, for her, femme]
+    not: [erkek, men , set]
+  south:
+    all:
+      - [roll on, rollon]
+      - [women, woman, for her, femme, female, ladies]
+    not: [men , set, gift, x2, 2x, pack of]
+
+- id: rollon-men
+  name: Roll-on deodorant, men (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    all:
+      - [roll on, rollon]
+      - [erkek, men , man , for men, homme]
+    not: [kadin, women, set]
+  south:
+    all:
+      - [roll on, rollon]
+      - [men , man , for men, homme, male]
+    not: [women, woman, set, gift, x2, 2x, pack of]
+
+- id: shower-gel
+  name: Shower gel (any brand)
+  category: Personal care
+  per: l
+  sizes: 3
+  north:
+    any: [dus jeli, dus jel, shower gel, dus ve banyo jeli]
+    not: [bebek, baby, cocuk, kids, set, sampuan, shampoo, agiz suyu, listerine, 2in1, 3in1, 2 si 1, 3 u 1, mini, seyahat, travel, yedek, refill]
+  south:
+    any: [shower gel, showergel, body wash, shower cream]
+    not: [baby, kids, child, set, gift, shampoo, 2in1, 3in1, 2 in 1, 3 in 1, mini, travel, refill, pack of, x2, 2x, x3, 3x, intimate]
+
+- id: body-lotion
+  name: Body lotion (any brand)
+  category: Personal care
+  per: l
+  sizes: 3
+  north:
+    any: [vucut losyonu, vucut sutu, body lotion, body milk, vucut kremi, vucut nemlendirici]
+    not: [gunes, sun, spf, bronz, bebek, baby, cocuk, kids, sinek, kovucu, okaliptus, "off ", sivrisinek, set, selulit, cellulite, sikilastirici, firming, mini]
+  south:
+    any: [body lotion, body milk]
+    not: [sun, spf, after sun, aftersun, tan, bronz, baby, kids, child, months, bebble, insect, mosquito, repellent, set, gift, cellulite, firming, mini, travel, x2, 2x, pack of, perfume, body mist]
+
+- id: hand-cream
+  name: Hand cream (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 3
+  north:
+    any: [el kremi, el krem, hand cream, el ve tirnak, el bakim kremi]
+    not: [set, sabun, soap, dezenfektan, kolonya]
+  south:
+    any: [hand cream, hand and nail cream, hand nail cream, hand & nail]
+    not: [set, gift, trio, duo, x2, 2x, x3, 3x, pack of, soap, wash, sanitizer]
+
+- id: shaving-foam
+  name: Shaving foam (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [tiras kopugu, shaving foam, shave foam]
+    not: [set, kadin, women, jel, gel]
+  south:
+    any: [shaving foam, shave foam]
+    not: [set, gift, women, gel, x2, 2x, pack of, travel, mini]
+
+- id: shaving-gel
+  name: Shaving gel (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [tiras jeli, shaving gel, shave gel]
+    not: [set, kadin, women, kopuk, foam]
+  south:
+    any: [shaving gel, shave gel]
+    not: [set, gift, women, foam, x2, 2x, pack of, travel, mini]
+
+- id: conditioner
+  name: Hair conditioner (any brand)
+  category: Personal care
+  per: l
+  sizes: 3
+  north:
+    any: [sac kremi, sac bakim kremi, conditioner]
+    not: [sampuan, shampoo, 2in1, 2 si 1, 3 u 1, bebek, baby, cocuk, kids, durulanmayan, leave in, sprey, spray, maske, mask, set, mini]
+  south:
+    any: [conditioner]
+    not: [shampoo, 2in1, 2 in 1, baby, kids, child, leave in, leave-in, spray, mask, set, gift, mini, travel, x2, 2x, pack of, fabric, softener, dry]
+
+- id: mouthwash
+  name: Mouthwash (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 3
+  north:
+    any: [agiz suyu, agiz bakim suyu, mouthwash, mouth wash]
+    not: [cocuk, kids, set, sprey, spray]
+  south:
+    any: [mouthwash, mouth wash, mouthrinse, mouth rinse]
+    not: [kids, children, child, junior, set, gift, spray, x2, 2x, pack of, tablets]
+
+- id: baby-shampoo
+  name: Baby shampoo (any brand)
+  category: Baby
+  per: 100 ml
+  sizes: 2
+  north:
+    all:
+      - [sampuan, shampoo]
+      - [bebek, baby]
+    not: [set, sac kremi, conditioner, yag, oil]
+  south:
+    all:
+      - [shampoo]
+      - [baby]
+    not: [set, gift, conditioner, oil, x2, 2x, pack of, lice]
+
+- id: baby-oil
+  name: Baby oil (any brand)
+  category: Baby
+  per: 100 ml
+  sizes: 2
+  north:
+    all:
+      - [yag, oil, yagi]
+      - [bebek, baby]
+    not: [set, sampuan, shampoo, mama, puree, sut]
+  south:
+    all:
+      - [oil]
+      - [baby]
+    not: [set, gift, shampoo, x2, 2x, pack of, food, milk, lotion, moisturiser, moisturizer, cream, wash, gel]
+
+- id: micellar-water
+  name: Micellar water (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 3
+  north:
+    any: [micellar, misel]
+    not: [set, mendil, wipes, ped, pad, jel, gel]
+  south:
+    any: [micellar water, micellar cleansing water, micellar]
+    not: [set, gift, wipes, pads, gel, oil, serum, x2, 2x, pack of, mini, travel]
+
+- id: lip-balm
+  name: Lip balm (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    any: [lip balm, dudak koruyucu, dudak nemlendirici, lip care, dudak bakim]
+    not: [set, ruj, gloss, lipstick, kalem, pencil, 2li, 2 li]
+  south:
+    any: [lip balm, lip care, lipbalm]
+    not: [set, gift, gloss, lipstick, pencil, liner, duo, x2, 2x, pack of, cheek, tinted]
+
+- id: energy-drink
+  name: Energy drink (any brand)
+  category: Drinks
+  per: l
+  sizes: 2
+  north:
+    any: [enerji icecegi, energy drink, red bull, redbull, monster energy, burn , dark blue]
+    not: [zero, sekersiz, sugar free, sugarfree, light, 4 lu, 4lu, 6 li, 6li, 24 lu, x4, x6, x24, toz]
+  south:
+    any: [energy drink, red bull, redbull, monster energy]
+    not: [zero, sugar free, sugarfree, no sugar, light, x4, 4x, x6, 6x, x24, 24x, pack of, multipack, powder]
+
+- id: iced-tea
+  name: Iced tea (any brand)
+  category: Drinks
+  per: l
+  sizes: 3
+  north:
+    any: [soguk cay, ice tea, iced tea, icetea]
+    not: [toz, powder, zero, sekersiz, sugar free, light, 4 lu, 6 li, x4, x6, x24]
+  south:
+    any: [iced tea, ice tea, icetea]
+    not: [powder, zero, sugar free, sugarfree, no sugar, light, x4, 4x, x6, 6x, x24, 24x, pack of, multipack]
+
+- id: hair-spray
+  name: Hair spray (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [sac spreyi, hair spray, hairspray]
+    not: [set, bebek, baby, cocuk, kids, kolay tarama, detangling, renk, color, kuru sampuan, dry shampoo]
+  south:
+    any: [hair spray, hairspray]
+    not: [set, gift, kids, detangling, color, colour, dry shampoo, x2, 2x, pack of, travel, mini]
+
+- id: chopped-tomatoes
+  name: Chopped tomatoes, tinned (any brand)
+  category: Food cupboard
+  per: kg
+  sizes: 2
+  north:
+    any: [dogranmis domates, domates dograma, chopped tomato, kup domates, dograma domates]
+    not: [salca, ketcap, sos, sauce, x3, 3 lu, 4 lu]
+  south:
+    any: [chopped tomato, chopped tomatoes, diced tomato, diced tomatoes]
+    not: [x3, 3x, x4, 4x, pack of, sauce, soup, basil, garlic, chilli, onion, herbs]
+
+- id: icing-sugar
+  name: Icing sugar (any brand)
+  category: Baking & cooking
+  per: kg
+  sizes: 2
+  north:
+    any: [pudra sekeri, pudra seker, icing sugar]
+    not: [vanilin, vanilya, kakao]
+  south:
+    any: [icing sugar, powdered sugar, sugar icing]
+    not: [vanilla, cocoa, x2, 2x]
+
+- id: cotton-pads
+  name: Cotton pads (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    any: [pamuk ped, makyaj pamugu, cotton pads, cotton pad, temizleme pamugu]
+    not: [set, mendil, micellar, misel]
+  south:
+    any: [cotton pads, cotton pad, cotton rounds]
+    not: [set, gift, micellar, wipes, x2, 2x, pack of 2, reusable]
+
+- id: cotton-buds
+  name: Cotton buds (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 2
+  north:
+    any: [kulak cubugu, kulak temizleme cubugu, cotton buds, pamuklu cubuk]
+    not: [bebek, baby, set]
+  south:
+    any: [cotton buds, cotton swabs, q tips, qtips, cotton sticks]
+    not: [baby, set, gift, x2, 2x, pack of 2]
+
+- id: bathroom-cleaner
+  name: Bathroom cleaner spray (any brand)
+  category: Household
+  per: l
+  sizes: 2
+  north:
+    any: [banyo sprey, banyo temizleyici, banyo temizlik, bathroom]
+    not: [havlu, paspas, set, mendil, yedek, refill]
+  south:
+    any: [bathroom spray, bathroom cleaner, bathroom]
+    not: [towel, mat, set, wipes, refill, x2, 2x, pack of, tissue, toilet roll, paper]
+
+- id: kitchen-cleaner
+  name: Kitchen cleaner spray (any brand)
+  category: Household
+  per: l
+  sizes: 2
+  north:
+    any: [mutfak sprey, mutfak temizleyici, kitchen spray, kitchen cleaner, mutfak yag cozucu]
+    not: [havlu, kagit, set, mendil, yedek, refill, bulasik]
+  south:
+    any: [kitchen spray, kitchen cleaner, kitchen trigger, degreaser]
+    not: [towel, roll, paper, set, wipes, refill, x2, 2x, pack of, dish, dishwasher]
+
+- id: glass-cleaner
+  name: Glass cleaner (any brand)
+  category: Household
+  per: l
+  sizes: 2
+  north:
+    any: [cam temizleyici, camsil, cam temizlik, glass cleaner, cam sil]
+    not: [mendil, bez, set, yedek, refill, oto, araba]
+  south:
+    any: [glass cleaner, window cleaner, glass & window, glass and window, glass spray]
+    not: [wipes, cloth, set, refill, x2, 2x, pack of, car]
+
+- id: dishwasher-tablets
+  name: Dishwasher tablets (any brand)
+  category: Household
+  per: 1 pc
+  sizes: 3
+  north:
+    all:
+      - [tablet, kapsul, caps, tabs]
+      - [bulasik makine, makine, dishwasher, finish, fairy]
+    not: [temizleyici, cleaner, parlatici, tuz, salt, koku, deodorizer, rinse]
+  south:
+    all:
+      - [tablets, tabs, capsules, caps, pods]
+      - [dishwasher, finish, fairy]
+    not: [cleaner, rinse, salt, freshener, deodoriser, deodorizer, x2, 2x]
+
+- id: tampons
+  name: Tampons (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 3
+  north:
+    any: [tampon]
+    not: [set]
+  south:
+    any: [tampon, tampons]
+    not: [set, gift, x2, 2x]
+
+- id: pantyliners
+  name: Panty liners (any brand)
+  category: Personal care
+  per: 1 pc
+  sizes: 3
+  north:
+    any: [gunluk ped, panty liner, pantyliner, slip ped]
+    not: [set]
+  south:
+    any: [panty liner, pantyliner, pantiliner, liners]
+    not: [set, gift, x2, 2x]
+
+- id: face-wash
+  name: Face wash gel (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [yuz yikama jeli, yuz temizleme jeli, face wash, yuz yikama, yuz temizleme kopugu]
+    not: [set, mendil, wipes, maske, mask, tonik, tonic, peeling, scrub]
+  south:
+    any: [face wash, facial wash, cleansing gel, face cleanser, cleansing foam, foaming cleanser]
+    not: [set, gift, wipes, mask, toner, scrub, exfoliat, x2, 2x, pack of, mini, travel, body]
+
+- id: after-sun
+  name: After-sun lotion (any brand)
+  category: Personal care
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [gunes sonrasi, after sun, aftersun]
+    not: [set, bebek, baby, cocuk, kids]
+  south:
+    any: [after sun, aftersun, after-sun]
+    not: [set, gift, kids, baby, child, x2, 2x, pack of, mini, travel]
+
+- id: baby-wipes
+  name: Baby wipes (any brand)
+  category: Baby
+  per: 1 pc
+  sizes: 3
+  north:
+    all:
+      - [islak mendil, islak havlu, wipes, mendil]
+      - [bebek, baby, babies, pampers, huggies, sleepy, molfix, familia]
+    not: [kozmetik, makyaj, temizlik, yuzey, cam, dezenfektan, x3, 3 lu, 3lu, 4 lu, 12 li]
+  south:
+    all:
+      - [wipes]
+      - [baby, babies, pampers, huggies]
+    not: [x2, 2x, x3, 3x, x4, 4x, x12, 12x, pack of, multipack, cosmetic, makeup, surface, disinfect, bottle]
