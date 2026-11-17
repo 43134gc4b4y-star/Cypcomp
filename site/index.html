@@ -7,7 +7,7 @@
 <meta name="description" content="Is it cheaper in North or South Cyprus? Daily supermarket prices side by side, with the cheapest store and a map link.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇾</text></svg>">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#f5c93a">
+<meta name="theme-color" content="#1f3a5f">
 <meta name="color-scheme" content="light">
 <link rel="icon" type="image/png" href="icons/favicon-64.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=8e7ecc8b">
+<link rel="stylesheet" href="style.css?v=e80ddade">
 </head>
 <body>
 <div class="page">
@@ -38,8 +38,12 @@
 <div class="listbar">
   <h2 class="listhead" id="listhead"></h2>
   <button type="button" class="sidef" id="sidef" hidden></button>
-  <div class="sortrow"><span>Sort by</span><div class="sortseg" id="sort" role="group" aria-label="Sort by"></div></div>
-  <div class="sortrow"><span>Show</span><div class="sortseg" id="kindf" role="group" aria-label="Which comparisons to show"></div></div>
+  <div class="tools">
+    <label class="pick"><span>Sort</span><select id="sortsel" aria-label="Sort by">
+      <option value="eur">Biggest € saving</option><option value="pct">Biggest % saving</option><option value="az">A to Z</option></select></label>
+    <label class="pick"><span>Show</span><select id="kindsel" aria-label="Which comparisons to show">
+      <option value="">Everything</option><option value="same">Same product only</option><option value="any">Any brand only</option></select></label>
+  </div>
 </div>
 <main id="out" aria-live="polite"></main>
 <button type="button" class="totop" id="totop" aria-label="Back to top" hidden>↑ Top</button>
@@ -60,6 +64,7 @@
     <p class="psticker">Prices we're still missing</p>
     <p class="pintro">Each of these has a price on one side only. Seen one on a shelf? Tap <b>Add</b> and it joins the comparison.</p>
   </header>
+  <div class="panel">
   <div class="wtabs" role="tablist">
     <button type="button" role="tab" data-need="N"><span><i class="tN">North</i> prices needed</span><b id="wcN"></b></button>
     <button type="button" role="tab" data-need="S" class="on"><span><i class="tS">South</i> prices needed</span><b id="wcS"></b></button>
@@ -68,6 +73,7 @@
   <div class="chips" id="wbrands"></div>
   <ul class="wlist" id="wlist"></ul>
   <button type="button" class="main ghost more" id="wmore" hidden>Show more</button>
+  </div>
 </section>
 
 <section class="view contrib" id="contrib" hidden>
@@ -76,6 +82,7 @@
     <p class="psticker">Seen it? Snap it</p>
     <p class="pintro">Scan the barcode or take a photo of it, type the price and send. Every price is checked before it appears.</p>
   </header>
+  <div class="panel">
   <div class="scanrow">
     <button type="button" class="main" id="scanbtn">Scan barcode</button>
     <label class="main ghost" for="scanphoto">Use a photo</label>
@@ -104,6 +111,7 @@
     <button class="main" type="submit">Send price</button>
     <div id="cmsg" class="small"></div>
   </form>
+  </div>
 </section>
 
 </div>
@@ -114,7 +122,7 @@
   <a href="#contrib" data-view="contrib"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Add price</span></a>
 </nav>
 
-<script src="app.js?v=88e9faac"></script>
+<script src="app.js?v=ad64e70b"></script>
 <script src="contribute.js?v=d329b02f"></script>
 <script src="install.js?v=d9f7148f"></script>
 <script src="intro.js?v=fb647530"></script>

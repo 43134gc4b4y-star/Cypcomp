@@ -352,7 +352,8 @@
     var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) && (!sideF || it.cheaper === sideF) && (!kindF || (kindF === "same") === sameKind(it)) ? score(it, q) : 0 }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) {
-        var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct : gap(b.it) - gap(a.it);
+        var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct :
+          sortBy === "az" ? nice(a.it.name).localeCompare(nice(b.it.name)) : gap(b.it) - gap(a.it);
         return b.s - a.s || (q ? a.it.name.length - b.it.name.length : 0) || bySaving;
       })
       .map(function (x) { return x.it; });
@@ -393,21 +394,10 @@
       var y = $("listhead").getBoundingClientRect().top + window.pageYOffset - 84;
       window.scrollTo({ top: y, behavior: "smooth" });
     };
-    $("sort").innerHTML = [["eur", "Biggest € saving"], ["pct", "Biggest % saving"]].map(function (o) {
-      return '<button type="button" class="' + (sortBy === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (sortBy === o[0]) + '">' + o[1] + "</button>";
-    }).join("");
-    $("kindf").innerHTML = [["", "All"], ["same", "Same product"], ["any", "Any brand"]].map(function (o) {
-      return '<button type="button" class="' + (kindF === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (kindF === o[0]) + '">' + o[1] + "</button>";
-    }).join("");
-    $("kindf").onclick = function (e) {
-      var b = e.target.closest("button"); if (!b) return;
-      kindF = b.getAttribute("data-v"); shown = 40; drawChips(); render();
-    };
-    $("sort").onclick = function (e) {
-      var b = e.target.closest("button"); if (!b) return;
-      sortBy = b.getAttribute("data-v"); shown = 40; drawChips(); render();
-    };
+    $("sortsel").value = sortBy; $("kindsel").value = kindF;
   }
+  $("sortsel").addEventListener("change", function () { sortBy = this.value; shown = 40; render(); });
+  $("kindsel").addEventListener("change", function () { kindF = this.value; shown = 40; render(); });
 
   function header() {
     var d = new Date(DATA.updated);

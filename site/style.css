@@ -394,7 +394,6 @@ button.sc[aria-pressed="true"]{background:var(--stone);box-shadow:inset 0 0 0 2p
 .sidef{white-space:nowrap}
 
 /* ---- bright theme (always light, whatever the phone is set to) ---- */
-body{background:linear-gradient(180deg,#fff6cc 0,#fdfbf2 260px,#f1f7ff 700px,#f1f7ff 100%) fixed;background-color:#f1f7ff}
 .searchwrap{background:transparent}
 #q{border-color:var(--south);border-radius:999px;box-shadow:0 6px 18px rgba(11,121,179,.18);padding-left:20px}
 #q:focus{outline:3px solid var(--lemon);outline-offset:1px}
@@ -416,21 +415,11 @@ body{background:linear-gradient(180deg,#fff6cc 0,#fdfbf2 260px,#f1f7ff 700px,#f1
 .tabbar a.on{background:var(--lemon);border-bottom-color:#c9a700}
 .pclose,.totop{background:#14233b;color:#fff}
 .pr-row{background:#f6f9fd}
-.searchwrap{background:rgba(250,250,244,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
 .qx{right:24px}
-/* deeper background so the white boxes stand out */
-body{background:linear-gradient(180deg,#ffe98a 0,#f3ecc9 240px,#cfe0f3 700px,#c6d9ee 100%) fixed;background-color:#c6d9ee}
-.searchwrap{background:rgba(226,232,232,.85)}
 .item,.split{box-shadow:0 6px 20px rgba(20,35,59,.16)}
 .cat{box-shadow:0 4px 12px rgba(20,35,59,.14)}
 :root{--muted:#46546b}
-.searchwrap{background:linear-gradient(180deg,#ffe98a 0,#f3ecc9 240px,#cfe0f3 700px,#c6d9ee 100%) fixed;-webkit-backdrop-filter:none;backdrop-filter:none}
-/* darker still: deeper gold into steel blue so white boxes pop */
-body,.searchwrap{background:linear-gradient(180deg,#f5c93a 0,#d9cf9e 240px,#9fbcdc 700px,#91b1d6 100%) fixed;background-color:#91b1d6}
-.sect,.listhead{color:#0f1c30}
-.sortrow,.sortrow span{color:#22324a}
 .item,.split{box-shadow:0 8px 22px rgba(15,28,48,.22)}
-.foot,footer{color:#1d2b40}
 
 /* ---- My list, star buttons, same-product / any-brand labels ---- */
 .item{position:relative}
@@ -466,3 +455,40 @@ body,.searchwrap{background:linear-gradient(180deg,#f5c93a 0,#d9cf9e 240px,#9fbc
 .mp.win{font-size:19px}
 .mrm{width:34px;height:34px;border-radius:50%;border:0;background:#e8edf5;color:var(--ink);font-weight:800;cursor:pointer}
 #mclear{width:100%}
+
+/* ==== one solid deep-blue page; white boxes sit on top of it ==== */
+:root { --bg: #1f3a5f; }
+body, .searchwrap { background: var(--bg); }
+.searchwrap { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+.qx { right: 24px; }
+#q { border-color: transparent; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.sect, .listhead { color: #fff; }
+.ptitle { background: linear-gradient(90deg, #ff5a8c 0 50%, #45bbff 50% 100%); -webkit-background-clip: text; background-clip: text; }
+.pintro { color: #d6e1f0; }
+.pintro b { color: #fff; }
+.help { border-color: transparent; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.item, .split { box-shadow: 0 8px 22px rgba(0,0,0,.28); }
+.cat { box-shadow: 0 4px 12px rgba(0,0,0,.22); }
+.cat.on { background: var(--lemon); color: var(--lemon-ink); box-shadow: 0 0 0 3px #fff inset, 0 4px 12px rgba(0,0,0,.3); }
+.cat.on .cn { color: var(--lemon-ink); }
+.panel { background: var(--paper); color: var(--ink); border-radius: 20px; padding: 6px 16px 16px; margin-top: 18px; box-shadow: 0 8px 22px rgba(0,0,0,.28); }
+.panel .scanrow { margin-top: 12px; }
+.foot { background: var(--paper); color: var(--muted); border: 0; border-radius: 16px; padding: 16px; margin-top: 28px; }
+.main.more, #more { background: #fff; color: var(--ink); border-color: #fff; }
+.panel .main.more { background: transparent; border-color: var(--ink); }
+.totop { background: #fff; color: var(--ink); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.tabbar { background: #0d1828; }
+.tabbar a { background: #2a4469; border-bottom-color: #081120; }
+.sidef { border-color: transparent; }
+
+/* sort and filter: one tidy row of two drop-downs */
+.listbar { gap: 12px; }
+.tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+.pick { position: relative; display: grid; gap: 2px; text-align: left; background: #fff; border-radius: 14px; padding: 8px 34px 8px 14px; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.22); }
+.pick span { font: 800 11px var(--text); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+.pick select { appearance: none; -webkit-appearance: none; border: 0; background: transparent; padding: 0; margin: 0; width: 100%;
+  font: 700 15px var(--text); color: var(--ink); cursor: pointer; outline: none; }
+.pick::after { content: ""; position: absolute; right: 15px; top: 50%; width: 8px; height: 8px; margin-top: -6px;
+  border-right: 2.5px solid var(--south); border-bottom: 2.5px solid var(--south); transform: rotate(45deg); pointer-events: none; }
+.pick:focus-within { box-shadow: 0 0 0 3px var(--lemon), 0 4px 12px rgba(0,0,0,.22); }
