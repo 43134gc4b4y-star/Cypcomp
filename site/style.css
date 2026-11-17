@@ -1,26 +1,20 @@
 /* Compare Cyprus. Shelf-edge labels on limestone.
    North = pomegranate, South = harbour blue, savings = lemon sticker. */
 :root {
-  --stone: #edf0ec;
+  --stone: #f4f8ff;
   --paper: #ffffff;
-  --ink: #1f2a27;
-  --muted: #5d6a66;
-  --rule: #d3dad5;
-  --north: #b3264f;
-  --south: #0e6a86;
-  --lemon: #f5d547;
-  --north-fill: #b3264f;
-  --south-fill: #0e6a86;
+  --ink: #14233b;
+  --muted: #56657d;
+  --rule: #dbe4f0;
+  --north: #d81e5b;
+  --south: #0b79b3;
+  --lemon: #ffd60a;
+  --north-fill: #d81e5b;
+  --south-fill: #0b79b3;
   --lemon-ink: #3a3000;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --text: "Figtree", system-ui, sans-serif;
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --stone: #161d1b; --paper: #202a27; --ink: #e8eeea; --muted: #9fb0aa; --rule: #34423e;
-    --north: #e2577f; --south: #3fa6c6;
-  }
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -398,3 +392,29 @@ button.sc[aria-pressed="true"]{background:var(--stone);box-shadow:inset 0 0 0 2p
 .sortrow span{white-space:nowrap}
 .sortseg button{padding:9px 11px}
 .sidef{white-space:nowrap}
+
+/* ---- bright theme (always light, whatever the phone is set to) ---- */
+body{background:linear-gradient(180deg,#fff6cc 0,#fdfbf2 260px,#f1f7ff 700px,#f1f7ff 100%) fixed;background-color:#f1f7ff}
+.searchwrap{background:transparent}
+#q{border-color:var(--south);border-radius:999px;box-shadow:0 6px 18px rgba(11,121,179,.18);padding-left:20px}
+#q:focus{outline:3px solid var(--lemon);outline-offset:1px}
+.item,.split{border-color:transparent;box-shadow:0 4px 18px rgba(20,35,59,.09);border-radius:20px}
+.art{border:0;box-shadow:0 3px 12px rgba(20,35,59,.12)}
+.art.noimg{background:linear-gradient(135deg,#fff1a8,#ffd60a)}
+.tag{background:#f6f9fd;border-color:var(--rule)}
+.tag.N.win{background:linear-gradient(160deg,#ec2f6c,#c2134c)}
+.tag.S.win{background:linear-gradient(160deg,#1596d6,#0a6ea6)}
+.seeall{background:#eef5ff;border-color:#cfe2f7;color:#0a5d8c}
+.cat{border:0;box-shadow:0 3px 10px rgba(20,35,59,.08);border-radius:16px}
+.cat:nth-child(9n+2){background:#ffe9ef}.cat:nth-child(9n+3){background:#e4f4ff}.cat:nth-child(9n+4){background:#fff4c7}
+.cat:nth-child(9n+5){background:#e3f8ee}.cat:nth-child(9n+6){background:#f0eaff}.cat:nth-child(9n+7){background:#ffeeda}
+.cat:nth-child(9n+8){background:#ffe4e1}.cat:nth-child(9n+9){background:#e6f7f5}.cat:nth-child(9n+1){background:#fff}
+.cat.on{background:var(--ink);color:#fff;box-shadow:0 4px 12px rgba(20,35,59,.3)}
+.sortseg{border-color:var(--south)}.sortseg button{color:var(--south)}.sortseg button.on{background:var(--south);color:#fff}
+.tabbar{background:#14233b}
+.tabbar a{background:#2b3f60;border-bottom-color:#0b1526}
+.tabbar a.on{background:var(--lemon);border-bottom-color:#c9a700}
+.pclose,.totop{background:#14233b;color:#fff}
+.pr-row{background:#f6f9fd}
+.searchwrap{background:rgba(250,250,244,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+.qx{right:24px}
