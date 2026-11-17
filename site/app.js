@@ -151,7 +151,7 @@
     }).filter(Boolean).join(", ");
     var total = it.north.length + it.south.length;
     var href = "#item=" + encodeURIComponent(it.id);
-    return '<article class="item"><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
+    return '<article class="item" data-href="' + href + '"><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + '</div></div></a><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
@@ -260,7 +260,7 @@
 
   function render() {
     var q = fold(query).trim();
-    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) ? score(it, q) : 0 }; })
+    var list = DATA.items.map(function (it) { return { it: it, s: (!cat || it.group === cat) && (!sideF || it.cheaper === sideF) ? score(it, q) : 0 }; })
       .filter(function (x) { return x.s > 0; })
       .sort(function (a, b) {
         var bySaving = sortBy === "pct" ? b.it.saving_pct - a.it.saving_pct : gap(b.it) - gap(a.it);
@@ -269,11 +269,15 @@
       .map(function (x) { return x.it; });
     $("listhead").textContent = q ? list.length + (list.length === 1 ? " result" : " results") + " for “" + query + "”" :
       (cat || "All products") + " (" + list.length + ")";
+    $("sidef").hidden = !sideF;
+    if (sideF) $("sidef").innerHTML = 'Only cheaper in the <b class="' + (sideF === "N" ? "tN" : "tS") + '">' + (sideF === "N" ? "North" : "South") + "</b> <span>✕ Show all</span>";
+    Array.prototype.forEach.call(document.querySelectorAll("#stats .sc"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-s") === sideF); });
+    $("qx").hidden = !query;
     var html = list.slice(0, shown).map(card).join("");
     if (!DATA.items.length) {
       html = '<div class="empty"><div class="name">Prices appear after the first daily run</div><p class="small">The scraper runs every morning and fills this page automatically.</p></div>';
     } else if (!list.length) {
-      html = '<div class="empty"><div class="name">No comparison for “' + esc(query) + '” yet</div><p class="small">An item shows up once the same product (brand and size) is on sale in both <span class="tN">North</span> and <span class="tS">South</span>. Try a shorter word, such as a brand name.</p></div>';
+      html = '<div class="empty"><div class="name">' + (query ? "No comparison for “" + esc(query) + "” yet" : "Nothing here yet") + '</div><p class="small">An item shows up once the same product (brand and size) is on sale in both <span class="tN">North</span> and <span class="tS">South</span>. Try a shorter word, such as a brand name.</p></div>';
     }
     $("out").innerHTML = html;
     $("more").hidden = list.length <= shown;
@@ -300,7 +304,7 @@
       var y = $("listhead").getBoundingClientRect().top + window.pageYOffset - 84;
       window.scrollTo({ top: y, behavior: "smooth" });
     };
-    $("sort").innerHTML = [["eur", "€ saved"], ["pct", "% saved"]].map(function (o) {
+    $("sort").innerHTML = [["eur", "Biggest € saving"], ["pct", "Biggest % saving"]].map(function (o) {
       return '<button type="button" class="' + (sortBy === o[0] ? "on" : "") + '" data-v="' + o[0] + '" aria-pressed="' + (sortBy === o[0]) + '">' + o[1] + "</button>";
     }).join("");
     $("sort").onclick = function (e) {
@@ -316,8 +320,8 @@
     var np = Math.round(100 * DATA.cheaper_north / tot);
     var lead = DATA.cheaper_south > DATA.cheaper_north ? 'The <span class="tS">South</span> has more cheaper items' :
       DATA.cheaper_north > DATA.cheaper_south ? 'The <span class="tN">North</span> has more cheaper items' : "Both sides have the same number of cheaper items";
-    $("stats").innerHTML = '<div class="score"><div class="sc N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span></div>" +
-      '<div class="sc S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span></div></div>" +
+    $("stats").innerHTML = '<div class="score"><button type="button" class="sc N" data-s="N"><b>' + DATA.cheaper_north + "</b><span>cheaper in the North</span><i>Tap to see them</i></button>" +
+      '<button type="button" class="sc S" data-s="S"><b>' + DATA.cheaper_south + "</b><span>cheaper in the South</span><i>Tap to see them</i></button></div>" +
       '<div class="bar" role="img" aria-label="' + np + '% of products cheaper in the North"><span class="bN" style="width:' + np + '%"></span><span class="bS"></span></div>' +
       '<p class="score-f">' + DATA.count + " products compared" + (when ? ", updated " + when : "") + ".</p>";
     var src = Object.keys(DATA.sources || {}).map(function (k) {
@@ -357,6 +361,22 @@
   window.addEventListener("hashchange", showView);
   showView();
 
+  var sideF = "";
+  function toList() { window.scrollTo({ top: $("listhead").getBoundingClientRect().top + window.pageYOffset - 84, behavior: "smooth" }); }
+  $("stats").addEventListener("click", function (e) {
+    var b = e.target.closest(".sc"); if (!b) return;
+    sideF = sideF === b.getAttribute("data-s") ? "" : b.getAttribute("data-s"); shown = 40; render(); if (sideF) toList();
+  });
+  $("sidef").addEventListener("click", function () { sideF = ""; shown = 40; render(); });
+  $("qx").addEventListener("click", function () { query = ""; $("q").value = ""; shown = 40; drawChips(); render(); $("q").focus(); });
+  $("out").addEventListener("click", function (e) {          // the whole product box opens its page
+    if (e.target.closest("a, button")) return;
+    var c = e.target.closest(".item[data-href]"); if (!c) return;
+    cameFromList = true; location.hash = c.getAttribute("data-href");
+  });
+  var topB = $("totop");
+  topB.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+  window.addEventListener("scroll", function () { topB.hidden = window.pageYOffset < 900 || curView !== "prices"; }, { passive: true });
   $("q").addEventListener("input", function () { query = this.value; shown = 40; drawChips(); render(); });
   $("more").addEventListener("click", function () { shown += 40; render(); });
 

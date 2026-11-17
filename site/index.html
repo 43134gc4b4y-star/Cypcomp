@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=377b7051">
+<link rel="stylesheet" href="style.css?v=0693a1d6">
 </head>
 <body>
 <div class="page">
@@ -28,7 +28,7 @@
   <p class="psticker">One island, two price tags</p>
 </header>
 
-<div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"></div>
+<div class="searchwrap"><input id="q" type="search" placeholder="Search milk, coffee, nappies…" autocomplete="off" aria-label="Search products"><button type="button" class="qx" id="qx" aria-label="Clear search" hidden>✕</button></div>
 
 <h2 class="sect">Shop by category</h2>
 <div class="cats" id="cats"></div>
@@ -37,9 +37,11 @@
 
 <div class="listbar">
   <h2 class="listhead" id="listhead"></h2>
-  <div class="sortseg" id="sort" role="group" aria-label="Sort by"></div>
+  <button type="button" class="sidef" id="sidef" hidden></button>
+  <div class="sortrow"><span>Sort by</span><div class="sortseg" id="sort" role="group" aria-label="Sort by"></div></div>
 </div>
 <main id="out" aria-live="polite"></main>
+<button type="button" class="totop" id="totop" aria-label="Back to top" hidden>↑ Top</button>
 <button class="main more" id="more" hidden>Show more</button>
 
 <div class="install" id="install" hidden>
@@ -111,7 +113,7 @@
   <a href="#contrib" data-view="contrib"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Add price</span></a>
 </nav>
 
-<script src="app.js?v=c8850b7f"></script>
+<script src="app.js?v=eeda1a39"></script>
 <script src="contribute.js?v=d329b02f"></script>
 <script src="install.js?v=d9f7148f"></script>
 <script src="intro.js?v=fb647530"></script>
