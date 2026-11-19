@@ -179,7 +179,7 @@
     var total = it.north.length + it.south.length;
     var href = "#item=" + encodeURIComponent(it.id);
     var on = isMine(it.id);
-    return '<article class="item" data-href="' + href + '"><button type="button" class="star' + (on ? " on" : "") + '" data-id="' + esc(it.id) + '" aria-pressed="' + on +
+    return '<article class="item" data-g="' + gkey(it) + '" data-href="' + href + '"><button type="button" class="star' + (on ? " on" : "") + '" data-id="' + esc(it.id) + '" aria-pressed="' + on +
       '" aria-label="' + (on ? "Remove from" : "Add to") + ' my list">' + STAR + '</button><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
       '</h3><div class="unit">' + esc(it.unit || "") + "</div>" + kindPill(it) + '</div></a><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
@@ -228,7 +228,7 @@
       '<button type="button" class="pscanb" id="pscan"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">' +
       '<path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>Scan the barcode</button></div>';
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
-    return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
+    return '<div class="psheet-in" data-g="' + gkey(it) + '" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
       '<div class="phero">' + photo(it, "pimg", 72) + '<h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
       esc(it.unit || "") + "</div>" + kindPill(it) + "</div>" + '<div class="pduo">' + duo + "</div>" + banner +
       '<button type="button" class="psave' + (isMine(it.id) ? " on" : "") + '" id="psave" data-id="' + esc(it.id) + '">' + STAR + "<span>" +
@@ -398,7 +398,7 @@
     var tiles = [["", "all", DATA.items.length, "All"]].concat(GROUPS.filter(function (g) { return counts[g[0]]; })
       .map(function (g) { return [g[0], g[1], counts[g[0]], g[0]]; }));
     $("cats").innerHTML = tiles.map(function (t) {
-      return '<button type="button" class="cat' + (t[0] === cat && !query ? " on" : "") + '" data-v="' + esc(t[0]) + '" aria-pressed="' + (t[0] === cat && !query) +
+      return '<button type="button" class="cat' + (t[0] === cat && !query ? " on" : "") + '" data-g="' + t[1] + '" data-v="' + esc(t[0]) + '" aria-pressed="' + (t[0] === cat && !query) +
         '"><span class="ce">' + svg(t[1], 26) + "</span><span class=\"cl\">" + esc(t[3]) + '</span><span class="cn">' + t[2] + "</span></button>";
     }).join("");
     $("cats").onclick = function (e) {
