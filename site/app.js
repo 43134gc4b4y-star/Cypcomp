@@ -37,17 +37,27 @@
   };
   var TRENDING_CANDIDATES = ["milk", "coffee", "cola", "eggs", "halloumi", "cheese", "butter", "chocolate", "crisps",
     "shampoo", "deodorant", "baby milk", "nappies", "tissue", "olive oil", "cereal", "cat food", "honey", "tea", "water"];
-  // picture shown only if a product photo fails to load: first match on the product name, then the category
-  var CAT_ICON = [[/mince|beef|steak|lamb|pork|sausage|frankfurter|ham\b/i, "🥩"], [/chicken|turkey/i, "🍗"], [/tomato(es)?$|^tomato/i, "🍅"],
-    [/potatoes|^potato/i, "🥔"], [/cucumber/i, "🥒"], [/egg/i, "🥚"], [/cheese|halloumi|cheddar/i, "🧀"], [/butter|margarine/i, "🧈"],
-    [/toothpaste|toothbrush|mouthwash/i, "🪥"], [/razor|shav|gillette|mach3/i, "🪒"], [/baby|formula|napp|diaper/i, "🍼"],
-    [/coffee|nescaf/i, "☕"], [/\btea\b/i, "🍵"], [/juice|nectar/i, "🧃"], [/water/i, "💧"], [/cola|pepsi|fanta|sprite|drink|energy/i, "🥤"],
-    [/milk|yog/i, "🥛"], [/chocolate|cocoa/i, "🍫"], [/crisps|chips|pringles|doritos/i, "🍿"], [/biscuit|cookie|wafer|cracker/i, "🍪"],
-    [/pasta|spaghetti|penne|barilla/i, "🍝"], [/rice|bulgur|chickpea|lentil/i, "🍚"], [/oil\b/i, "🫒"], [/tuna|fish|salmon/i, "🐟"],
-    [/bread|toast|flour/i, "🍞"], [/cereal|corn flakes|oats|porridge|weetabix/i, "🥣"], [/pizza/i, "🍕"], [/ice cream/i, "🍨"], [/honey/i, "🍯"],
-    [/almond|nut/i, "🥜"], [/ketchup|mayonnaise|sauce|paste|pesto|mustard/i, "🥫"], [/soap|shower|bath/i, "🧼"],
-    [/pads|tissue|paper|wipes/i, "🧻"], [/cleaner|softener|detergent|drain|bleach|dettol|fairy|finish/i, "🧽"], [/cat food|dog food|whiskas|pet/i, "🐾"],
-    [/shampoo|conditioner|lotion|cream|deodor|spray|sun|nivea|dove|axe/i, "🧴"], [/fruit|veg/i, "🥬"], [/snack|sweet/i, "🍬"]];
+  // simple line icons for the categories; also shown when a product photo is missing
+  var GI = {
+    all: '<path d="M3 4h2l2.4 10.2a1.5 1.5 0 0 0 1.5 1.1h7.7a1.5 1.5 0 0 0 1.4-1l2-6.3H6.2"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/>',
+    baby: '<path d="M9.5 2.5h5M10.5 2.5v2.4L9 6.5h6l-1.5-1.6V2.5"/><rect x="8" y="6.5" width="8" height="15" rx="2.6"/><path d="M8 11h3M8 14.5h3M8 18h3"/>',
+    care: '<path d="M10 2.5h5.5M12.5 2.5v4M10.5 6.5h4v2.5"/><rect x="7.5" y="9" width="10" height="12.5" rx="2.6"/><path d="M10.5 13.5h4"/>',
+    home: '<path d="M8 8.5h6l1 3v9a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 7 20.5v-9z"/><path d="M9 8.5V5h4.5l2.5 1.5"/><path d="M18.5 4.5h1.5M18.5 7h2M18.5 9.5h1.5"/>',
+    drink: '<path d="M6 7h12l-1.4 13a1.5 1.5 0 0 1-1.5 1.3H8.9a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M13 7l2-4.5h3"/><path d="M6.6 12h10.8"/>',
+    dairy: '<path d="M8 2.5h8v3l2 3.5v11a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 20V9l2-3.5z"/><path d="M6 9h12M8 5.5h8M12 9l2-3.5"/>',
+    snack: '<circle cx="12" cy="12" r="9"/><circle cx="9" cy="9.5" r=".9"/><circle cx="14.5" cy="8.5" r=".9"/><circle cx="15.2" cy="14.5" r=".9"/><circle cx="9.5" cy="15" r=".9"/><circle cx="12.2" cy="12" r=".9"/>',
+    fresh: '<path d="M12 7.5c-1.6-1.3-5.5-1.4-6.6 2.3-1 3.5 1.1 8.9 3.6 10.4 1.1.7 2 .3 3 .3s1.9.4 3-.3c2.5-1.5 4.6-6.9 3.6-10.4C17.5 6.1 13.6 6.2 12 7.5z"/><path d="M12 7.5c0-2 .8-3.6 2.8-4.5"/>',
+    meat: '<path d="M14.5 3.5c3.5 0 6 2.6 6 6 0 4.6-4.4 8.6-9.6 10.6-3.4 1.3-6.9-.6-7.3-3.9-.3-2.6 1.4-4.2 2.8-5.6 2-2 3.4-7.1 8.1-7.1z"/><circle cx="14" cy="9.8" r="2.3"/>',
+    cupboard: '<rect x="6" y="3" width="12" height="4" rx="1.2"/><path d="M7 7h10v12.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 19.5z"/><path d="M7 11.5h10v5H7"/>'
+  };
+  function svg(k, size) {
+    return '<svg class="gi" viewBox="0 0 24 24" width="' + (size || 24) + '" height="' + (size || 24) + '" fill="none" stroke="currentColor" stroke-width="1.7" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (GI[k] || GI.cupboard) + "</svg>";
+  }
+  // a product photo that fails to load is swapped for its category icon
+  window.CCimg = function (img) {
+    var box = img.parentNode; box.classList.add("noimg"); box.innerHTML = svg(img.getAttribute("data-g"), 48);
+  };
 
   function fold(s) {
     return (s || "").toLowerCase().replace(/ı/g, "i").replace(/ş/g, "s").replace(/ğ/g, "g").replace(/ç/g, "c").replace(/ö/g, "o").replace(/ü/g, "u")
@@ -57,23 +67,27 @@
   function eur(v) { return "€" + v.toFixed(2); }
   function tl(v) { return v.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " ₺"; }
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
-  function icon(it) {
-    var i;
-    for (i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.name)) return CAT_ICON[i][1];
-    for (i = 0; i < CAT_ICON.length; i++) if (CAT_ICON[i][0].test(it.category || "")) return CAT_ICON[i][1];
-    return "🛒";
+  function gkey(it) {
+    if (/mince|beef|lamb|pork|chicken|steak|meat|sausage/i.test(it.name)) return "meat";
+    for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][0] === it.group) return GROUPS[i][1];
+    return "cupboard";
+  }
+  function photo(it, cls, size) {
+    var k = gkey(it);
+    return safeUrl(it.image) ? '<div class="' + cls + '"><img loading="lazy" decoding="async" alt="" data-g="' + k + '" src="' + esc(it.image) + '" onerror="CCimg(this)"></div>' :
+      '<div class="' + cls + ' noimg">' + svg(k, size) + "</div>";
   }
 
   // a handful of plain categories instead of every shop's own shelf names
   var GROUPS = [
-    ["Baby", "👶", /baby|bebek/i],
-    ["Personal care", "🧴", /personal|deodor|body|shav|hand cream|mouthwash|toothpaste|sunscreen|conditioner|skincare|bath|shower|hair|intimate/i],
-    ["Household", "🧽", /clean|laundry|household|paper|pets?$|detergent/i],
-    ["Drinks", "🥤", /drinks?|coffee|tea$|juice|water|beer|wine/i],
-    ["Dairy & eggs", "🥛", /milk|dairy|cheese|egg|yog/i],
-    ["Snacks & sweets", "🍫", /snack|cookie|cracker|wafer|chocolate|sweet|biscuit|crisps/i],
-    ["Fresh & frozen", "🥩", /cold cuts|fruit|veg|frozen|meat|fish/i],
-    ["Food cupboard", "🥫", /./]
+    ["Baby", "baby", /baby|bebek/i],
+    ["Personal care", "care", /personal|deodor|body|shav|hand cream|mouthwash|toothpaste|sunscreen|conditioner|skincare|bath|shower|hair|intimate/i],
+    ["Household", "home", /clean|laundry|household|paper|pets?$|detergent/i],
+    ["Drinks", "drink", /drinks?|coffee|tea$|juice|water|beer|wine/i],
+    ["Dairy & eggs", "dairy", /milk|dairy|cheese|egg|yog/i],
+    ["Snacks & sweets", "snack", /snack|cookie|cracker|wafer|chocolate|sweet|biscuit|crisps/i],
+    ["Fresh & frozen", "fresh", /cold cuts|fruit|veg|frozen|meat|fish/i],
+    ["Food cupboard", "cupboard", /./]
   ];
   function groupOf(it) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][2].test(it.category || "")) return GROUPS[i][0]; return "Food cupboard"; }
 
@@ -156,9 +170,7 @@
 
   function card(it) {
     var n = it.north[0], s = it.south[0], per = perLabel(it);
-    var img = safeUrl(it.image) ? '<div class="art"><img loading="lazy" decoding="async" alt="" src="' + esc(it.image) +
-      '" onerror="this.parentNode.className=\'art noimg\';this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))"></div>' :
-      '<div class="art noimg">' + icon(it) + "</div>";
+    var img = photo(it, "art", 48);
     var verdict = it.cheaper === "=" ? '<div class="verdict same">Same price on both sides</div>' : "";
     var chains = ["Lidl", "AlphaMega"].map(function (c) {
       var o = it.south.filter(function (x) { return x.store === c; })[0];
@@ -169,14 +181,15 @@
     var on = isMine(it.id);
     return '<article class="item" data-href="' + href + '"><button type="button" class="star' + (on ? " on" : "") + '" data-id="' + esc(it.id) + '" aria-pressed="' + on +
       '" aria-label="' + (on ? "Remove from" : "Add to") + ' my list">' + STAR + '</button><a class="head" href="' + href + '">' + img + '<div class="ttl"><h3 class="name">' + esc(nice(it.name)) +
-      '</h3><div class="unit">' + esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div>" + kindPill(it) + '</div></a><div class="tags">' +
+      '</h3><div class="unit">' + esc(it.unit || "") + "</div>" + kindPill(it) + '</div></a><div class="tags">' +
       side("North", "N", n, it.cheaper === "N", it) + side("South", "S", s, it.cheaper === "S", it) + "</div>" + verdict +
       (chains ? '<div class="chains">Also in the <span class="tS">South</span>: ' + chains + "</div>" : "") +
-      '<a class="seeall" href="' + href + '">See all ' + total + " prices and shops</a></article>";
+      '<a class="seeall" href="' + href + '"><span>Compare all ' + total + " prices</span>" +
+      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></article>';
   }
 
   function kindPill(it) {
-    return sameKind(it) ? '<span class="kind same" title="Same brand and pack size on both sides">✓ Same product</span>' :
+    return sameKind(it) ? '<span class="kind same" title="Same brand and pack size on both sides">Same product</span>' :
       '<span class="kind any" title="Cheapest of any brand, same pack size">Any brand</span>';
   }
 
@@ -189,7 +202,6 @@
     var lira = function (r) { return r.o.shelf ? r.o.shelf.try : r.o.try; };
     rows.sort(function (a, b) { return price(a) - price(b); });
     var max = Math.max.apply(null, rows.map(price)) || 1, per = perLabel(it);
-    var img = safeUrl(it.image) ? '<img alt="" src="' + esc(it.image) + '" onerror="this.replaceWith(document.createTextNode(\'' + icon(it) + '\'))">' : icon(it);
     var win = it.cheaper === "N" ? "North" : "South";
     var banner = it.cheaper === "=" ? '<div class="pv same">Same price on both sides</div>' :
       '<div class="pv ' + it.cheaper + '"><span>Cheaper in the ' + win + "</span><b>" + eur(gap(it)) + " less</b><span>" + Math.round(it.saving_pct) + "% cheaper</span></div>";
@@ -207,7 +219,8 @@
       return '<li class="pr-row ' + r.side + '"><div class="prt"><span class="chip ' + r.side + '">' + (r.side === "N" ? "North" : "South") + "</span>" +
         (i === 0 ? '<span class="chip best">Cheapest</span>' : "") + '<b class="pp">' + eur(price(r)) + '</b></div><div class="prs">' + esc(o.store.split("|")[0].trim()) +
         '<span class="ptl">' + tl(lira(r)) + '</span></div><div class="pbar"><span style="width:' + Math.max(6, Math.round(100 * price(r) / max)) + '%"></span></div>' +
-        '<div class="pmeta">' + esc([o.town, pname].filter(Boolean).join(" · ")) + (o.shelf && per ? " · " + eur(o.eur) + " " + esc(per) : "") + "</div>" +
+        (o.town ? '<div class="pmeta">' + esc(o.town) + "</div>" : "") + '<div class="pmeta pname">' + esc(pname) + "</div>" +
+        (o.shelf && per ? '<div class="pmeta">' + eur(o.eur) + " " + esc(per) + "</div>" : "") +
         (links ? '<div class="links">' + links + "</div>" : "") + "</li>";
     }).join("");
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";
@@ -215,9 +228,9 @@
       '<button type="button" class="pscanb" id="pscan"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">' +
       '<path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>Scan the barcode</button></div>';
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
-    return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
-      '<div class="phero"><div class="pimg">' + img + '</div><h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
-      esc([it.unit, it.category].filter(Boolean).join(" · ")) + "</div>" + kindPill(it) + "</div>" + '<div class="pduo">' + duo + "</div>" + banner +
+    return '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
+      '<div class="phero">' + photo(it, "pimg", 72) + '<h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
+      esc(it.unit || "") + "</div>" + kindPill(it) + "</div>" + '<div class="pduo">' + duo + "</div>" + banner +
       '<button type="button" class="psave' + (isMine(it.id) ? " on" : "") + '" id="psave" data-id="' + esc(it.id) + '">' + STAR + "<span>" +
       (isMine(it.id) ? "On my list" : "Add to my list") + "</span></button>" + cheaper +
       '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
@@ -263,7 +276,7 @@
     sheetEl.innerHTML = html; sheetEl.hidden = false; sheetEl.scrollTop = 0;
     document.body.classList.add("noscroll");
     requestAnimationFrame(function () { sheetEl.classList.add("show"); });
-    $("pclose").focus({ preventScroll: true });
+    sheetEl.firstChild.focus({ preventScroll: true });   // the sheet itself, so no ring appears on a button nobody pressed
     $("pclose").onclick = function () { if (history.length > 1 && cameFromList) history.back(); else location.hash = "#prices"; };
   }
   function openSheet(id) {
@@ -292,8 +305,8 @@
     var gone = mine.length - items.length;
     var tn = 0, ts = 0;
     items.forEach(function (it) { tn += shelfEur(it.north[0]); ts += shelfEur(it.south[0]); });
-    var head = '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
-      '<div class="phero"><div class="pimg mylogo">' + STAR + '</div><h2 id="ptitle">My list</h2><div class="unit">Saved on this phone · cheapest shop on each side</div></div>';
+    var head = '<div class="psheet-in" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
+      '<div class="phero"><div class="pimg mylogo">' + STAR + '</div><h2 id="ptitle">My list</h2><div class="unit">Saved on this phone. Totals use the cheapest shop on each side.</div></div>';
     if (!items.length) {
       return head + '<div class="mempty"><p>Tap the <b>☆ star</b> on any product to add it here.</p><p>You will see what your whole shop costs in the <span class="tN">North</span> and in the <span class="tS">South</span>.</p></div>' +
         (gone ? '<p class="note">' + gone + " saved item" + (gone > 1 ? "s are" : " is") + " no longer compared.</p>" : "") + "</div>";
@@ -382,11 +395,11 @@
   function drawChips() {
     var counts = {};
     DATA.items.forEach(function (i) { counts[i.group] = (counts[i.group] || 0) + 1; });
-    var tiles = [["", "🛒", DATA.items.length, "All"]].concat(GROUPS.filter(function (g) { return counts[g[0]]; })
+    var tiles = [["", "all", DATA.items.length, "All"]].concat(GROUPS.filter(function (g) { return counts[g[0]]; })
       .map(function (g) { return [g[0], g[1], counts[g[0]], g[0]]; }));
     $("cats").innerHTML = tiles.map(function (t) {
       return '<button type="button" class="cat' + (t[0] === cat && !query ? " on" : "") + '" data-v="' + esc(t[0]) + '" aria-pressed="' + (t[0] === cat && !query) +
-        '"><span class="ce" aria-hidden="true">' + t[1] + "</span><span class=\"cl\">" + esc(t[3]) + '</span><span class="cn">' + t[2] + "</span></button>";
+        '"><span class="ce">' + svg(t[1], 26) + "</span><span class=\"cl\">" + esc(t[3]) + '</span><span class="cn">' + t[2] + "</span></button>";
     }).join("");
     $("cats").onclick = function (e) {
       var b = e.target.closest("button"); if (!b) return;
@@ -412,13 +425,14 @@
       '<p class="score-f">' + DATA.count + " products compared" + (when ? ", updated " + when : "") + ".</p>";
     var src = Object.keys(DATA.sources || {}).map(function (k) {
       var s = DATA.sources[k], t = new Date(s.fetched_at);
-      return esc(s.store) + " (" + s.products + " products, " + (isNaN(t) ? "" : t.toLocaleDateString("en-GB")) + ")";
-    }).join(" · ");
-    $("foot").innerHTML = "<p><b>Exchange rate:</b> 1 € = " + (DATA.fx ? DATA.fx.eur_try.toFixed(2) : "?") + " ₺ (" + esc(DATA.fx && DATA.fx.date) +
-      ", European Central Bank)</p><p><b>Sources:</b> " + (src || "none yet") + ". <span class=\"tS\">South</span> prices come from the Cyprus government’s " +
-      '<a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory; <span class="tN">North</span> prices are the shops’ own online prices.</p><p><a href="privacy.html">Privacy policy</a></p>' +
-      "<p>Prices are read automatically once a day and can change or differ in store. Products are paired like for like: same brand and same pack size; " +
-      "“any brand” items compare the cheapest pack of the same size on both sides. Different pack sizes are never compared.</p>";
+      return "<li><span>" + esc(s.store) + "</span><span>" + s.products.toLocaleString("en-GB") + " products</span></li>";
+    }).join("");
+    $("foot").innerHTML = '<h3>How prices are compared</h3><p>Prices are read automatically every morning and can differ in store. Products are paired like for like: ' +
+      "same brand and same pack size. <b>Any brand</b> items compare the cheapest pack of the same size on each side. Different pack sizes are never compared.</p>" +
+      "<p>1 € = " + (DATA.fx ? DATA.fx.eur_try.toFixed(2) : "?") + " ₺, European Central Bank rate of " + esc(DATA.fx && DATA.fx.date) + ".</p>" +
+      '<h3>Sources</h3><ul class="srcs">' + (src || "<li>None yet</li>") + "</ul>" +
+      '<p><span class="tS">South</span> prices come from the Cyprus government’s <a href="https://www.e-kalathi.gov.cy" target="_blank" rel="noopener">e-kalathi</a> price observatory and South shops online; ' +
+      '<span class="tN">North</span> prices are the shops’ own online prices.</p><p><a href="privacy.html">Privacy policy</a></p>';
   }
 
   // three views, one at a time: Prices, Wanted, Add a price

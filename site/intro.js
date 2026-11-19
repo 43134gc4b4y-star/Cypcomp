@@ -20,7 +20,7 @@
   };
   var box = document.createElement("div");
   box.className = "intro"; box.hidden = true;
-  box.innerHTML = '<div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="introH"><button type="button" class="intro-x" id="introX" aria-label="Close">✕</button><div id="introArt"></div><h2 id="introH"></h2><p id="introP"></p><button type="button" class="main" id="introB"></button></div>';
+  box.innerHTML = '<div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="introH" tabindex="-1"><button type="button" class="intro-x" id="introX" aria-label="Close">✕</button><div id="introArt"></div><h2 id="introH"></h2><p id="introP"></p><button type="button" class="main" id="introB"></button></div>';
   document.body.appendChild(box);
   var last = null;
 
@@ -36,7 +36,7 @@
     document.getElementById("introB").textContent = pg.b;
     last = document.activeElement;
     box.hidden = false;
-    requestAnimationFrame(function () { box.classList.add("show"); document.getElementById("introB").focus(); });
+    requestAnimationFrame(function () { box.classList.add("show"); box.firstChild.focus({ preventScroll: true }); });
     mark(v);
   }
   function close() {
