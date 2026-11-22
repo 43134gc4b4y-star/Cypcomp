@@ -122,7 +122,7 @@ def _brand_words(other: list[Offer], mcfg: dict) -> set[str]:
     for o in other:
         b = m.brand(o.name)
         if b:
-            words.add(re.sub(r"[^a-z0-9]+", "-", fold(b)).strip("-"))
+            words.add(re.sub(r"[^a-z0-9]+", "-", re.sub(r"['’`]", "", fold(b))).strip("-"))   # L'Oréal -> loreal
     return {w for w in words if len(w) >= 3}
 
 
