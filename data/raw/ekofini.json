@@ -1,0 +1,310 @@
+{
+"source": "ekofini",
+"fetched_at": "2026-11-22T20:49:13+00:00",
+"offers": [
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Avocados 1 kg",
+"price": 3.07,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.8,
+"greek": "Αβοκάντο"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Bananas 1 kg",
+"price": 1.7,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 0.8,
+"greek": "Μπανάνες ντόπιες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Green beans 1 kg",
+"price": 3.73,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 2.4,
+"greek": "Φασολάκι"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Broccoli 1 kg",
+"price": 3.95,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 3.02,
+"greek": "Μπρόκολο"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Cabbage 1 kg",
+"price": 0.83,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 0.58,
+"greek": "Κραμπί λευκό"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Carrots 1 kg",
+"price": 1.26,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 0.88,
+"greek": "Καρότα"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Cauliflower 1 kg",
+"price": 1.63,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.15,
+"greek": "Κουνουπίδι"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Cherry tomatoes 1 kg",
+"price": 6.61,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 4.27,
+"greek": "Τομάτες cherry"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Cucumbers 1 kg",
+"price": 4.23,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 2.62,
+"greek": "Αγγούρι"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Aubergines 1 kg",
+"price": 1.45,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.08,
+"greek": "Μελιντζάνες μαύρες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Onions 1 kg",
+"price": 2.56,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.7,
+"greek": "Κρεμμύδια κεφαλές"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Green peppers 1 kg",
+"price": 3.89,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 3.0,
+"greek": "Πιπεριές πράσινες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Potatoes 1 kg",
+"price": 1.49,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.05,
+"greek": "Πατάτες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Sweet potatoes 1 kg",
+"price": 1.85,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 1.05,
+"greek": "Γλυκοπατάτες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Tomatoes 1 kg",
+"price": 3.92,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 2.73,
+"greek": "Τομάτες"
+}
+},
+{
+"source": "ekofini",
+"side": "S",
+"store": "South supermarkets average (e-kofini, gov.)",
+"name": "Courgettes 1 kg",
+"price": 4.71,
+"currency": "EUR",
+"url": "https://my.e-kofini.gov.cy/reports/daily-price",
+"image": "",
+"category": "Fresh",
+"barcode": "",
+"product_id": "",
+"town": "Average supermarket price, 19/11/2026",
+"maps": "",
+"extra": {
+"producer_price": 3.08,
+"greek": "Κολοκυθάκι μαύρο"
+}
+}
+]
+}
