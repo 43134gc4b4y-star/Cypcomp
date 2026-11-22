@@ -322,7 +322,7 @@
   category: Personal care
   per: l
   north: {any: [sampuan, shampoo], not: [kopek, kedi, hali, oto, araba, kuru, "sac kremi", conditioner, "2 si 1", "2si1", "2in1", "2 1 ", "3 u 1", bebek, baby, mini, seyahat, travel]}
-  south: {cat: [shampoos and conditioners, shampoos], any: [shampoo], not: [conditioner, baby, "2in1", "2 in 1", mini, dry, lice, travel, set, gift]}
+  south: {cat: [shampoos and conditioners, shampoos], any: [shampoo], not: [conditioner, baby, "2in1", "2 in 1", mini, dry, lice, travel, set, gift, shower, body wash, kids, paw patrol, frozen, disney]}
 
 - id: liquid-soap
   name: Liquid hand soap (per litre)
@@ -844,7 +844,7 @@
     all:
       - [deodorant, deo spray, antiperspirant spray, deo ]
       - [men , man , for men, homme, male]
-    not: [roll on, rollon, roll, stick, women, woman, cream, perfume, parfum, eau de, set, gift, wipes, pack of, x2, 2x]
+    not: [roll on, rollon, roll, stick, women, woman, cream, perfume, parfum, eau de, set, gift, wipes, pack of, x2, 2x, ahava, dead sea, crystal, mineral salt]
 
 - id: rollon-women
   name: Roll-on deodorant, women (any brand)

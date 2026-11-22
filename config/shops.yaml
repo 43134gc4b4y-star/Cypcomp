@@ -176,6 +176,7 @@ kibrisonline:
   sitemap: https://kibrisonlinemarket.com/sitemap.xml
   url_include: "^https://kibrisonlinemarket\\.com/m/[^/]+/[^/]+$"
   store_from_path: "/m/([^/]+)/"
+  seller_exclude: "tobacco|tütün|tutun"
   pages_per_day: 3500
   max_minutes: 65
   refresh_days: 4
@@ -192,6 +193,10 @@ girince:
   sitemap: https://girince.com/sitemap.xml
   url_include: "^https://girince\\.com/urun/"
   other_side_brands: true
+  # brand names that are also ordinary words or other products (Galaxy phones, Magnum bags, Solo dishwashers)
+  brand_skip: [galaxy, magnum, solo, mars, monster, pronto, lux, comfort, nan, bounty, always, power, ultra, body]
+  # only shops that sell groceries, toiletries or pet food count (Girince also has phone and garden shops)
+  seller_include: "bakım|bakim|kozmetik|cosmetic|market|eczane|pharmacy|pet|gıda|gida|beauty|care|drogeri|parfüm|parfum"
   seller_exclude: "türkiye|turkiye|turkey"
   pages_per_day: 2500
   max_minutes: 45

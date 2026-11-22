@@ -175,9 +175,26 @@ def _photo(g: Group, win: str) -> str:
     return ""
 
 
+def drop_repeats(groups: list[Group]) -> list[Group]:
+    """The South sometimes lists one product twice (two barcodes, two shops), and each listing
+    picks up the same North products. Keep one item: drop an exact pair whose North products
+    are all already in a larger (or equal, earlier) exact pair of the same pack size."""
+    exact = [g for g in groups if g.kind != "generic"]
+    keys = {id(g): frozenset(o.url or o.name for o in g.north) for g in exact}
+    order = sorted(exact, key=lambda g: (-len(keys[id(g)]), -len(g.south)))
+    kept, out = [], set()
+    for g in order:
+        k = keys[id(g)]
+        if any(k <= keys[id(h)] and g.unit == h.unit for h in kept):
+            out.add(id(g))
+            continue
+        kept.append(g)
+    return [g for g in groups if id(g) not in out]
+
+
 def build_items(groups: list[Group], rate: float) -> list[dict]:
     items = []
-    for g in groups:
+    for g in drop_repeats(groups):
         n = sorted((offer_json(o, rate) for o in g.north), key=lambda x: x["eur"])
         s = sorted((offer_json(o, rate) for o in g.south), key=lambda x: x["eur"])
         # one line per store: its cheapest price (lists are already cheapest-first)

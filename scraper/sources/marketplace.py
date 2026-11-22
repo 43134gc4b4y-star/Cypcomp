@@ -14,6 +14,7 @@ Settings (config/shops.yaml):
   other_side_brands: true
                  only read pages whose address contains a brand sold on the other side
                  (worth it on big general marketplaces: only those can be compared)
+  brand_skip     brand words to ignore when choosing pages (also ordinary words: galaxy, solo)
   currency       TRY or EUR
   seller_include / seller_exclude   regex on the seller name
   store_from_path  regex with one group taking the shop name out of the address
@@ -155,6 +156,8 @@ def scrape(http: Http, cfg: dict) -> list[Offer]:
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
     urls = list(dict.fromkeys(sitemap_urls(http, cfg["sitemap"])))
     brands = _brand_words(cfg.get("_other") or [], cfg.get("_matching") or {}) if cfg.get("other_side_brands") else None
+    if brands:
+        brands -= set(cfg.get("brand_skip") or [])       # brand names that are also common words (Galaxy phones, Magnum bags)
     if cfg.get("other_side_brands") and not brands:
         log.warning("%s: no products from the other side to choose pages by; reading cached pages only", sid)
     wanted = pick(urls, cfg, brands) if brands is not None or not cfg.get("other_side_brands") else [u for u in cache]
