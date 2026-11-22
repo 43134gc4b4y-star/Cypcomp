@@ -447,3 +447,15 @@ def test_marketplace_plan_reads_new_pages_before_refreshing_old_ones():
     from scraper.sources import marketplace
     cache = {"a": {"t": "2026-11-10", "offers": [{}]}, "b": {"t": "2026-11-20", "offers": [{}]}, "c": {"t": "2026-10-01", "offers": []}}
     assert marketplace.plan(cache, ["a", "b", "c", "d"], date(2026, 11, 22), {"refresh_days": 4, "recheck_days": 30}) == ["d", "a", "c"]
+
+
+def test_ekofini_reads_average_supermarket_price_per_kg():
+    from scraper.sources import ekofini
+    html = """<table><tr><th>Producer / Retail Price (€/kg) 19/11/2026</th></tr>
+      <tr><th>Traded product</th><th>Producer price</th><th>Retail price</th></tr>
+      <tr><td>Αβοκάντο - Avocado</td><td>€1.80</td><td>€3.07</td></tr>
+      <tr><td>Μπανάνες ντόπιες - Bananas (local produce) *</td><td>€0.80</td><td>€1.70</td></tr>
+      <tr><td>Κολοκάσι - Taro root</td><td>€2.40</td><td>€3.10</td></tr></table>"""
+    got = {o.name: o.price for o in ekofini.parse(html)}
+    assert got == {"Avocados 1 kg": 3.07, "Bananas 1 kg": 1.70}       # taro has no North counterpart rule
+    assert ekofini.parse(html)[0].town == "Average supermarket price, 19/11/2026"

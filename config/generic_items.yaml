@@ -768,7 +768,7 @@
   category: Fruit & veg
   per: kg
   loose: true
-  north: {any: ["cabbage", "lahana"], not: ["cicek", "tursu", "pickled", "salad", "salata", "bruksel", "brussels"]}
+  north: {any: ["cabbage", "lahana"], not: ["cicek", "tursu", "pickled", "salad", "salata", "bruksel", "brussels", "kirmizi", "red", "mor"]}
   south: {any: ["cabbage 1 kg"]}
 - id: cauliflower
   name: Cauliflower (per kg)
@@ -1309,3 +1309,96 @@
       - [dog]
       - [can, tin, chunks, wet, loaf]
     not: [dry, treat, treats, x4, 4x, x6, 6x, pack of, multipack]
+
+# ---- fresh produce that the South government fruit & veg observatory (e-kofini) prices per kg ----
+- id: avocados
+  name: Avocados (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["avocado", "avokado"], not: ["yag", "oil", "krem", "cream", "sos", "guacamole", "maske", "mask", "sampuan"]}
+  south: {any: ["avocados 1 kg"]}
+- id: green-peppers
+  name: Green peppers (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["yesil biber", "dolmalik biber", "green pepper", "biber yesil", "carliston biber"], not: ["salca", "turşu", "tursu", "konserve", "pul", "toz", "sos", "kirmizi", "red"]}
+  south: {any: ["green peppers 1 kg"]}
+- id: sweet-potatoes
+  name: Sweet potatoes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["tatli patates", "sweet potato"], not: ["cips", "chips", "kurutulmus", "pure", "puree", "mama"]}
+  south: {any: ["sweet potatoes 1 kg"]}
+- id: green-beans
+  name: Green beans (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["taze fasulye", "fasulye taze", "green beans", "ayse fasulye", "barbunya taze"], not: ["konserve", "dondurulmus", "frozen", "kuru", "dry", "x2"]}
+  south: {any: ["green beans 1 kg"]}
+- id: cherry-tomatoes
+  name: Cherry tomatoes (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["cherry domates", "domates cherry", "cherry tomato", "kiraz domates", "domates kiraz"], not: ["kurutulmus", "dried", "konserve", "sos", "sauce"]}
+  south: {any: ["cherry tomatoes 1 kg"]}
+- id: strawberries
+  name: Strawberries (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["cilek", "strawberr"], not: ["recel", "jam", "aroma", "aromali", "yogurt", "sut", "dondurma", "kurutulmus", "dried", "jole", "jelly", "suyu", "juice", "sos", "kek", "biskuvi", "gofret", "lokum", "cikolata", "sakiz", "sampuan", "dus", "krem"]}
+  south: {any: ["strawberries 1 kg"]}
+- id: peaches
+  name: Peaches (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["seftali", "peach"], not: ["nektar", "suyu", "juice", "konserve", "kompost", "recel", "jam", "aroma", "yogurt", "ice tea", "soguk cay", "cay", "kurutulmus", "dried"]}
+  south: {any: ["peaches 1 kg"]}
+- id: nectarines
+  name: Nectarines (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["nektarin", "nectarine"], not: ["suyu", "juice", "konserve"]}
+  south: {any: ["nectarines 1 kg"]}
+- id: melons
+  name: Melons (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["kavun", "melon"], not: ["karpuz", "watermelon", "aroma", "suyu", "juice", "sakiz", "dondurma"]}
+  south: {any: ["melons 1 kg"]}
+- id: watermelons
+  name: Watermelons (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["karpuz", "watermelon"], not: ["aroma", "suyu", "juice", "sakiz", "dondurma", "cekirdek"]}
+  south: {any: ["watermelons 1 kg"]}
+- id: apricots
+  name: Apricots (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["kayisi", "apricot"], not: ["kuru", "kurutulmus", "dried", "recel", "jam", "suyu", "juice", "nektar", "pestil", "aroma"]}
+  south: {any: ["apricots 1 kg"]}
+- id: cherries
+  name: Cherries (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["kiraz", "cherries"], not: ["domates", "tomato", "recel", "jam", "suyu", "juice", "aroma", "konserve", "kurutulmus", "visne", "sos", "cikolata", "jole"]}
+  south: {any: ["cherries 1 kg"]}
+- id: plums
+  name: Plums (per kg)
+  category: Fruit & veg
+  per: kg
+  loose: true
+  north: {any: ["erik", "plum"], not: ["kuru", "kurutulmus", "dried", "recel", "jam", "suyu", "juice", "eksi", "sos", "pestil", "domates"]}
+  south: {any: ["plums 1 kg"]}

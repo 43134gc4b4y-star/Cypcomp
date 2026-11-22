@@ -198,3 +198,11 @@ girince:
   refresh_days: 5
   keep_days: 14
 
+ekofini:
+  enabled: true
+  type: ekofini
+  side: S
+  store: South supermarkets average (e-kofini, gov.)
+  # Department of Agriculture fruit & veg observatory: average supermarket price per kg, recorded twice a week
+  url: https://my.e-kofini.gov.cy/reports/daily-price
+
