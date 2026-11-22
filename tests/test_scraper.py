@@ -421,3 +421,29 @@ def test_generic_personal_care_keeps_types_apart():
     pads = by["gen-sanitary-pads"]                     # tampons and incontinence pads are not sanitary pads
     assert [o.name for o in pads.north] == ["ORKID MAXI GECE 16 ADET"]
     assert [o.name for o in pads.south] == ["Always Maxi Night Pads 16 pcs"]
+
+
+def test_marketplace_reads_schema_org_product_pages():
+    from scraper.sources import marketplace
+    html = """<html><head><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Product",
+      "name":"NIVEA DEO SPREY KADIN DRY FRESH 150 ML","gtin13":"4005900388544","category":"Kişisel Bakım",
+      "description":"NIVEA DEO — Hapcı Market, Girne. Online sipariş, kapıda ödeme.",
+      "image":["https://kibrisonlinemarket.com/api/uploads/x.webp"],
+      "offers":{"@type":"Offer","priceCurrency":"TRY","price":"189.90","availability":"https://schema.org/InStock"}}]
+      </script></head><body></body></html>"""
+    url = "https://kibrisonlinemarket.com/m/hapci-market-girne/nivea-deo-sprey-kadin-dry-fresh-150-ml"
+    cfg = {"id": "kibrisonline", "side": "N", "currency": "TRY", "store_from_path": "/m/([^/]+)/"}
+    [o] = marketplace.parse_page(html, url, cfg)
+    assert (o.side, o.price, o.currency, o.barcode) == ("N", 189.90, "TRY", "4005900388544")
+    assert o.store == "Hapci Market Girne" and o.town == "Girne" and o.category == "Kişisel Bakım"
+    # euro prices are ignored on a lira site, and only addresses naming a wanted brand are picked
+    assert marketplace.parse_page(html.replace('"TRY"', '"EUR"'), url, cfg) == []
+    urls = ["https://girince.com/urun/nivea-krem-150-ml", "https://girince.com/urun/arzum-semaver", "https://girince.com/en/product/nivea-x"]
+    assert marketplace.pick(urls, {"url_include": "^https://girince.com/urun/"}, {"nivea"}) == urls[:1]
+
+
+def test_marketplace_plan_reads_new_pages_before_refreshing_old_ones():
+    from datetime import date
+    from scraper.sources import marketplace
+    cache = {"a": {"t": "2026-11-10", "offers": [{}]}, "b": {"t": "2026-11-20", "offers": [{}]}, "c": {"t": "2026-10-01", "offers": []}}
+    assert marketplace.plan(cache, ["a", "b", "c", "d"], date(2026, 11, 22), {"refresh_days": 4, "recheck_days": 30}) == ["d", "a", "c"]

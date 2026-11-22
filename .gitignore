@@ -4,3 +4,4 @@ __pycache__/
 debug/
 .venv/
 data/raw/fetch_cache.json
+data/raw/*_cache.json

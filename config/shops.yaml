@@ -164,3 +164,37 @@ sonmar:
   product_link: "/urun/"
   page_param: page
   maps: "https://www.google.com/maps/search/?api=1&query=SonMar+Market+Girne"
+
+# ---- North marketplaces (product pages carry schema.org data; read a few thousand pages a day) ----
+kibrisonline:
+  enabled: true
+  type: marketplace
+  side: N
+  currency: TRY
+  store: Kıbrıs Online Market
+  # several North supermarkets on one site (Hapcı Market, Eron Süpermarket, ...); robots.txt allows /m/ pages
+  sitemap: https://kibrisonlinemarket.com/sitemap.xml
+  url_include: "^https://kibrisonlinemarket\\.com/m/[^/]+/[^/]+$"
+  store_from_path: "/m/([^/]+)/"
+  pages_per_day: 3500
+  max_minutes: 65
+  refresh_days: 4
+  keep_days: 12
+
+girince:
+  enabled: true
+  type: marketplace
+  side: N
+  currency: TRY
+  store: Girince
+  # North marketplace with ~160,000 pages (electronics, fashion, cosmetics, food); only pages whose
+  # address names a brand also sold in the South are read, since only those can be compared
+  sitemap: https://girince.com/sitemap.xml
+  url_include: "^https://girince\\.com/urun/"
+  other_side_brands: true
+  seller_exclude: "türkiye|turkiye|turkey"
+  pages_per_day: 2500
+  max_minutes: 45
+  refresh_days: 5
+  keep_days: 14
+

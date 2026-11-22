@@ -72,8 +72,9 @@ class Matcher:
         for w in t.split():
             if SIZE_TOKEN_RE.match(w) or w in self.stop or len(w) < 2 and not w.isdigit():
                 continue
-            if w not in self.synonyms and w.endswith("s") and (w[:-1] in self.conflicts or w[:-1] in self.synonyms):
-                w = w[:-1]            # bananas -> banana, lemons -> lemon
+            if w not in self.synonyms and w.endswith("s") and (w[:-1] in self.conflicts or w[:-1] in self.synonyms or
+                                                         len(w) >= 5 and not w.endswith(("ss", "us", "is", "os", "as"))):
+                w = w[:-1]            # bananas -> banana, razors -> razor, flakes -> flake
             out.update(self.synonyms.get(w, w).split())
         if brand in self.one_gender:
             out -= {"men", "women"}

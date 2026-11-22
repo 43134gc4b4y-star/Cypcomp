@@ -198,6 +198,11 @@ synonyms:
   aycicek: sunflower
   yag: oil
   cikolata: chocolate
+  choco: chocolate
+  choc: chocolate
+  orangeade: orange
+  fibreli: fiber
+  fibre: fiber
   cikolatali: chocolate
   biskuvi: biscuits
   cips: crisps
@@ -568,6 +573,12 @@ conflicts: [men, baby, after, bedtime, aloevera, bronze, alta, rica, riga, unsce
 
 # Multi-word terms rewritten before names are compared (left: as shops write it, right: what it means).
 phrases:
+  makine temizleyicisi: dishwasher cleaner
+  makine temizleyici: dishwasher cleaner
+  makine parlatici: rinse aid
+  finish parlatici: finish rinse aid
+  borjomi mineralli: borjomi sparkling
+  borjomi minerali: borjomi sparkling
   dis macunu: toothpaste
   tooth paste: toothpaste
   dis fircasi: toothbrush

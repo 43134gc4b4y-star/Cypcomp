@@ -27,13 +27,14 @@ from . import contrib, fx, wanted
 from .match import Group, generic, match
 from .models import Offer
 from .net import Http
-from .sources import ekalathi, fetchcy, shop_html, shopify, woocommerce, observatory
+from .sources import ekalathi, fetchcy, shop_html, shopify, woocommerce, observatory, marketplace
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 SITE_DATA = ROOT / "site" / "data"
 SCRAPERS = {"ekalathi": ekalathi.scrape, "shopify": shopify.scrape, "observatory": observatory.scrape,
-    "fetchcy": fetchcy.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape}
+    "fetchcy": fetchcy.scrape, "shop_html": shop_html.scrape, "woocommerce": woocommerce.scrape,
+    "marketplace": marketplace.scrape}
 
 log = logging.getLogger("compare-cyprus")
 
@@ -265,6 +266,12 @@ def main(argv=None):
                                   if c2.get("side") == "N" and c2.get("enabled", True) and read_raw(s2)
                                   for d in read_raw(s2)["offers"]],
                        "_progress": lambda offers, sid=sid: publish_progress(sid, offers)}
+            if cfg["type"] == "marketplace" and cfg.get("other_side_brands"):   # picks pages by the other side's brands
+                other = "S" if cfg.get("side") == "N" else "N"
+                cfg = {**cfg, "_matching": load_yaml("matching.yaml"),
+                       "_other": [Offer.from_dict(d) for s2, c2 in shops.items()
+                                  if c2.get("side") == other and c2.get("enabled", True) and read_raw(s2)
+                                  for d in read_raw(s2)["offers"]]}
             report.append(scrape_shop(http, sid, cfg))
 
     north, south, stamps = [], [], {}
