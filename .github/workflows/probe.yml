@@ -2,6 +2,10 @@ name: Probe new sources
 on:
   workflow_dispatch:
     inputs:
+      script:
+        description: "probe or probe2"
+        required: false
+        default: "probe"
       sites:
         description: "space-separated URLs (blank = default list)"
         required: false
@@ -15,4 +19,4 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q -r requirements.txt
-      - run: python -m tools.probe ${{ github.event.inputs.sites }}
+      - run: python -m tools.${{ github.event.inputs.script || 'probe' }} ${{ github.event.inputs.sites }}
