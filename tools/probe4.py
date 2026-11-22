@@ -11,7 +11,7 @@ for lang in ["en", "el"]:
     links = sorted(set(re.findall(r'href="(https://my\.e-kofini\.gov\.cy[^"]*|/[^"]*)"', t)))
     print(links)
 t = get("https://my.e-kofini.gov.cy/en").text
-for u in sorted(set(re.findall(r'href="(https://my\.e-kofini\.gov\.cy/en/[^"]+)"', t)))[:8]:
+for u in ["https://my.e-kofini.gov.cy/reports/daily-price", "https://my.e-kofini.gov.cy/reports/price-overview"]:
     r = get(u); tx = r.text
     print("   tables:", len(re.findall(r"<table", tx)), "selects:", re.findall(r'(?s)<select[^>]*>(.*?)</select>', tx)[:1][:1] and len(re.findall(r"<option", tx)))
     print("   wire:", sorted(set(re.findall(r'wire:(?:model|click|change)[^=]*="([^"]+)"', tx)))[:15])
