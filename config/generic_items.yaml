@@ -1217,3 +1217,95 @@
       - [wipes]
       - [baby, babies, pampers, huggies]
     not: [x2, 2x, x3, 3x, x4, 4x, x12, 12x, pack of, multipack, cosmetic, makeup, surface, disinfect, bottle]
+
+- id: peach-nectar
+  name: Peach nectar / juice (any brand)
+  category: Drinks
+  per: l
+  sizes: 2
+  north:
+    any: [seftali nektari, seftali nektar, seftali suyu, seftali meyve, peach nectar, peach juice, meyve suyu seftali]
+    not: [ice tea, soguk cay, cay, maden suyu, soda, gazoz, x4, 4 lu, 6 li, x6, 27 li, 12 li, 24 lu]
+  south:
+    any: [peach nectar, peach juice, peach drink, nectar peach, juice peach, lanitis peach, peach 1l]
+    not: [iced tea, ice tea, tea, soda, sparkling, x4, 4x, x6, 6x, pack of, body, scrub, cream, lotion, oil, baby, hipp, organic]
+
+- id: mango-nectar
+  name: Mango nectar / juice (any brand)
+  category: Drinks
+  per: l
+  sizes: 2
+  north:
+    any: [mango nektari, mango nektar, mango suyu, meyve suyu mango, mango meyve suyu, mango nectar, mango juice]
+    not: [ice tea, soguk cay, maden suyu, soda, gazoz, ananas, x4, 4 lu, 6 li, x6, 27 li, 12 li, 24 lu, enerji]
+  south:
+    any: [mango nectar, mango juice, nectar mango, juice mango, mango drink]
+    not: [iced tea, tea, soda, sparkling, pineapple, passion, x4, 4x, x6, 6x, pack of, body, scrub, cream, lotion, oil, smoothie, energy]
+
+- id: cooking-cream
+  name: Cooking cream (any brand)
+  category: Dairy & eggs
+  per: l
+  sizes: 2
+  north:
+    any: [yemeklik krema, krema yemeklik, pisirme kremasi, sivi krema, krema sivi, cooking cream, yemek kremasi, krema bitkisel yemek, bitkisel krema yemeklik]
+    not: [dondurma, sac, el kremi, yuz, vucut, tiras, peynir, krem peynir, cikolata, kakao, pasta kremasi, krem santi, santi]
+  south:
+    any: [cooking cream, cream for cooking, culinary cream, cuisine cream, krema mageirikis, crema da cucina, fresh cream for cooking]
+    not: [cheese, ice, hair, face, body, hand, shaving, chocolate, whipping, whipped, spray]
+
+- id: dark-chocolate
+  name: Dark chocolate bar (any brand)
+  category: Snacks & sweets
+  per: 100 g
+  sizes: 2
+  north:
+    any: [bitter cikolata, dark chocolate, cikolata bitter, cikolata dark, "bitter %70", "%70 kakao", bitter kare]
+    not: [sutlu, milk, sos, sauce, damla, fill, dolgulu, creme, visne, cherry, findik, hazelnut, badem, almond, nane, mint, portakal, orange, karamel, caramel, gofret, kek, biskuvi, protein, x2, x3, 2 li, 3 lu]
+  south:
+    any: [dark chocolate, chocolate dark, extra dark, bitter chocolate]
+    not: [milk, hazelnut, almond, mint, orange, caramel, wafer, cake, biscuit, cookie, protein, couverture, cooking, drops, x2, 2x, x3, 3x, pack of, coated, rice, raisins, cherry, sea salt, chilli, coconut]
+
+- id: soy-sauce
+  name: Soy sauce (any brand)
+  category: Food cupboard
+  per: 100 ml
+  sizes: 2
+  north:
+    any: [soya sosu, soy sauce, soya sos, soy sos]
+    not: [tatli, sweet, teriyaki, mantar, x2]
+  south:
+    any: [soy sauce, soya sauce]
+    not: [sweet, teriyaki, mushroom, x2, 2x, pack of]
+
+- id: cat-food-pouch
+  name: Wet cat food pouch (any brand)
+  category: Food cupboard
+  per: 100 g
+  sizes: 2
+  north:
+    all:
+      - [kedi, cat]
+      - [islak, pouch, poset, yas mama, sos icinde, jole icinde, gravy, jelly]
+    not: [kuru, dry, konserve, ezme, odul, x4, 4 lu, 12 li, x12, multipack]
+  south:
+    all:
+      - [cat]
+      - [pouch, gravy, jelly, wet]
+    not: [dry, can, tin, treat, treats, x4, 4x, x12, 12x, pack of, multipack, litter]
+
+- id: dog-food-can
+  name: Wet dog food, can (any brand)
+  category: Food cupboard
+  per: 100 g
+  sizes: 2
+  north:
+    all:
+      - [kopek, dog]
+      - [konserve, islak, chunk, can]
+    not: [kuru, dry, odul, x4, 4 lu, x6, 6 li]
+  south:
+    all:
+      - [dog]
+      - [can, tin, chunks, wet, loaf]
+    not: [dry, treat, treats, x4, 4x, x6, 6x, pack of, multipack]
