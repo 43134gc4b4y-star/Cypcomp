@@ -230,7 +230,7 @@
     var share = navigator.share ? '<button type="button" class="main ghost" id="pshare">Share this comparison</button>' : "";
     return '<div class="psheet-in" data-g="' + gkey(it) + '" role="dialog" aria-modal="true" aria-labelledby="ptitle" tabindex="-1"><button type="button" class="pclose" id="pclose" aria-label="Close">✕</button>' +
       '<div class="phero">' + photo(it, "pimg", 72) + '<h2 id="ptitle">' + esc(nice(it.name)) + '</h2><div class="unit">' +
-      esc(it.unit || "") + "</div>" + kindPill(it) + "</div>" + '<div class="pduo">' + duo + "</div>" + banner +
+      esc(it.unit || "") + "</div>" + kindPill(it) + "</div>" + '<div class="pcomp"><div class="pduo">' + duo + "</div>" + banner + "</div>" +
       '<button type="button" class="psave' + (isMine(it.id) ? " on" : "") + '" id="psave" data-id="' + esc(it.id) + '">' + STAR + "<span>" +
       (isMine(it.id) ? "On my list" : "Add to my list") + "</span></button>" + cheaper +
       '<h3 class="ph3">All ' + rows.length + ' prices, cheapest first</h3><ul class="plist">' + list + "</ul>" + note + share + "</div>";
@@ -323,7 +323,7 @@
         "</small></a><span class=\"mp N" + (it.cheaper === "N" ? " win" : "") + '">' + eur(n) + '</span><span class="mp S' + (it.cheaper === "S" ? " win" : "") + '">' + eur(s) +
         '</span><button type="button" class="mrm" data-id="' + esc(it.id) + '" aria-label="Remove ' + esc(nice(it.name)) + '">✕</button></li>';
     }).join("");
-    return head + duo + banner + '<h3 class="ph3">' + items.length + " item" + (items.length > 1 ? "s" : "") + '</h3><div class="mhead"><span></span><span class="tN">North</span><span class="tS">South</span><span></span></div><ul class="mlist">' + rows + "</ul>" +
+    return head + '<div class="pcomp">' + duo + banner + "</div>" + '<h3 class="ph3">' + items.length + " item" + (items.length > 1 ? "s" : "") + '</h3><div class="mhead"><span></span><span class="tN">North</span><span class="tS">South</span><span></span></div><ul class="mlist">' + rows + "</ul>" +
       (gone ? '<p class="note">' + gone + " saved item" + (gone > 1 ? "s are" : " is") + " no longer compared.</p>" : "") +
       '<button type="button" class="main ghost" id="mclear">Clear my list</button></div>';
   }
