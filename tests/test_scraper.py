@@ -459,3 +459,16 @@ def test_ekofini_reads_average_supermarket_price_per_kg():
     got = {o.name: o.price for o in ekofini.parse(html)}
     assert got == {"Avocados 1 kg": 3.07, "Bananas 1 kg": 1.70}       # taro has no North counterpart rule
     assert ekofini.parse(html)[0].town == "Average supermarket price, 19/11/2026"
+
+
+def test_per_kg_ignores_weight_ranges_and_shows_price_per_kg():
+    from scraper import match as M
+    assert M._pack(N("KIRNI PILIC BUTUN 2-2,5 KG", 350), "kg") is None          # price per kg unknown
+    assert M._pack(N("KIRNI TAZE TAVUK BUTUN KG", 178), "kg") is not None
+    g = M.Group(id="gen-whole-chicken", name="Whole chicken", unit="per kg", kind="generic", category="Meat",
+                north=[N("Whole Chicken 2250 g", 489.5)], south=[S("Whole chicken 1 kg", 3.81, 1)])
+    g.north[0].extra.update(shelf_price=489.5, shelf_name="Whole Chicken 2250 g")
+    g.north[0].price = 217.56
+    [it] = run.build_items([g], 55.6)
+    assert "shelf" not in it["north"][0] and it["north"][0]["pack"]["try"] == 489.5   # the card shows €/kg, not the pack
+    assert it["cheaper"] == "S"                                   # €3.91/kg vs €3.81/kg

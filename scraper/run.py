@@ -197,6 +197,12 @@ def build_items(groups: list[Group], rate: float) -> list[dict]:
     for g in drop_repeats(groups):
         n = sorted((offer_json(o, rate) for o in g.north), key=lambda x: x["eur"])
         s = sorted((offer_json(o, rate) for o in g.south), key=lambda x: x["eur"])
+        if g.unit == "per kg":
+            # loose goods are compared per kg, so show the price per kg everywhere; the pack a shop
+            # actually sells (a 2.25 kg chicken for 350 TL) is kept only as a note
+            for d in n + s:
+                if "shelf" in d:
+                    d["pack"] = d.pop("shelf")
         # one line per store: its cheapest price (lists are already cheapest-first)
         n = _cheapest_per_store(n)
         s = _cheapest_per_store(s)

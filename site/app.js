@@ -135,7 +135,7 @@
     var e = o.shelf ? o.shelf.eur : o.eur, t = o.shelf ? o.shelf.try : o.try;
     var sticker = win ? '<div class="sticker"><b>' + eur(gap(it)) + " less</b><span>" + Math.round(it.saving_pct) + "% cheaper</span></div>" : "";
     return '<div class="tag ' + cls + (win ? " win" : "") + '"><div class="strip">' + label + (win ? " is cheaper" : "") + '</div><div class="pr">' + eur(e) +
-      '</div><div class="pl">' + tl(t) + "</div>" + sticker + '<div class="sn">' + esc(o.store.split("|")[0].trim()) + "</div></div>";
+      '</div><div class="pl">' + tl(t) + (it.unit === "per kg" ? " per kg" : "") + "</div>" + sticker + '<div class="sn">' + esc(o.store.split("|")[0].trim()) + "</div></div>";
   }
 
   function where(label, cls, o, per) {
@@ -209,18 +209,19 @@
     var duo = ["N", "S"].map(function (k) {
       var o = best[k];
       return '<div class="pd ' + k + (it.cheaper === k ? " win" : "") + '"><i>' + (k === "N" ? "North" : "South") + "</i><b>" + eur(o.shelf ? o.shelf.eur : o.eur) +
-        "</b><span>" + tl(o.shelf ? o.shelf.try : o.try) + "</span></div>";
+        "</b><span>" + tl(o.shelf ? o.shelf.try : o.try) + (it.unit === "per kg" ? " per kg" : "") + "</span></div>";
     }).join("");
     var list = rows.map(function (r, i) {
       var o = r.o, links = "";
       if (safeUrl(o.maps)) links += '<a target="_blank" rel="noopener" href="' + esc(o.maps) + '">Map</a>';
       if (safeUrl(o.url)) links += '<a target="_blank" rel="noopener" href="' + esc(o.url) + '">Shop page</a>';
       var pname = nice(o.shelf ? o.shelf.name : o.name);
+      var pack = o.pack && Math.abs(o.pack.eur - o.eur) > 0.02 ? '<div class="pmeta">Sold as a pack: ' + eur(o.pack.eur) + " (" + tl(o.pack.try) + ")</div>" : "";
       return '<li class="pr-row ' + r.side + '"><div class="prt"><span class="chip ' + r.side + '">' + (r.side === "N" ? "North" : "South") + "</span>" +
         (i === 0 ? '<span class="chip best">Cheapest</span>' : "") + '<b class="pp">' + eur(price(r)) + '</b></div><div class="prs">' + esc(o.store.split("|")[0].trim()) +
         '<span class="ptl">' + tl(lira(r)) + '</span></div><div class="pbar"><span style="width:' + Math.max(6, Math.round(100 * price(r) / max)) + '%"></span></div>' +
         (o.town ? '<div class="pmeta">' + esc(o.town) + "</div>" : "") + '<div class="pmeta pname">' + esc(pname) + "</div>" +
-        (o.shelf && per ? '<div class="pmeta">' + eur(o.eur) + " " + esc(per) + "</div>" : "") +
+        (o.shelf && per ? '<div class="pmeta">' + eur(o.eur) + " " + esc(per) + "</div>" : "") + pack +
         (links ? '<div class="links">' + links + "</div>" : "") + "</li>";
     }).join("");
     var note = it.kind !== "exact" && it.note ? '<p class="note">' + esc(it.note) + "</p>" : "";

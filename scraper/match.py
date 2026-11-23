@@ -342,8 +342,13 @@ def drop_outliers(offers: list[Offer], factor: float = 0.35) -> list[Offer]:
     return [o for o in offers if o.price >= factor * median]
 
 
+_RANGE = re.compile(r"\d+(?:[.,]\d+)?\s*[-–]\s*\d+(?:[.,]\d+)?\s*(?:kg|kgr|kilo|gr|g)\b", re.I)
+
+
 def _pack(o: Offer, per: str):
     """Pack size of a shelf product, or None if it can't be read."""
+    if per.endswith("kg") and _RANGE.search(o.name):
+        return None                   # "whole chicken 2-2.5 kg" for one price: the price per kg isn't known
     size = parse_size(o.name)
     if size:
         return size
