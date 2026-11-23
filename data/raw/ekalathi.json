@@ -1,6 +1,6 @@
 {
 "source": "ekalathi",
-"fetched_at": "2026-11-22T03:58:46+00:00",
+"fetched_at": "2026-11-23T04:12:36+00:00",
 "offers": [
 {
 "source": "ekalathi",
@@ -4137,10 +4137,10 @@
 "category": "FLOUR",
 "barcode": "",
 "product_id": "1162",
-"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Πέρα Χωριό Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.009417,33.394667",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Παλιομέτοχο",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.133194,33.203583",
 "extra": {
-"address": "Λεωφόρος Λεμεσού 12, 2572,Πέρα Χωριό Νήσου,Λευκωσία",
+"address": "Λεωφόρος Αρχ.Μακαρίου 87,2682, Παλιομέτοχο,Λευκωσία",
 "offer": true
 }
 },
@@ -4156,10 +4156,10 @@
 "category": "FLOUR",
 "barcode": "",
 "product_id": "1162",
-"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Παλιομέτοχο",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.133194,33.203583",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Πέρα Χωριό Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.009417,33.394667",
 "extra": {
-"address": "Λεωφόρος Αρχ.Μακαρίου 87,2682, Παλιομέτοχο,Λευκωσία",
+"address": "Λεωφόρος Λεμεσού 12, 2572,Πέρα Χωριό Νήσου,Λευκωσία",
 "offer": true
 }
 },
@@ -4479,10 +4479,10 @@
 "category": "PASTA AND PASTA SAUCES",
 "barcode": "",
 "product_id": "1077",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -5011,10 +5011,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2112",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -5201,10 +5201,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2119",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -7044,10 +7044,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "30",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -7234,10 +7234,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "32",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -7424,10 +7424,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2132",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -7614,10 +7614,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2138",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -8165,10 +8165,10 @@
 "category": "SANITARY NAPKINS",
 "barcode": "",
 "product_id": "2949",
-"town": "SUPER DISCOUNT STORE Λιβάδια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
+"town": "SUPER DISCOUNT STORE Αστρομερίτης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
 "extra": {
-"address": "Κυριάκου Μάτση 110, 7060,Λιβάδια ",
+"address": "Τροόδους 10,Αστρομερίτης, 2722 Λευκωσία  ",
 "offer": false
 }
 },
@@ -8184,10 +8184,10 @@
 "category": "SANITARY NAPKINS",
 "barcode": "",
 "product_id": "2949",
-"town": "SUPER DISCOUNT STORE Αστρομερίτης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
+"town": "SUPER DISCOUNT STORE Λιβάδια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
 "extra": {
-"address": "Τροόδους 10,Αστρομερίτης, 2722 Λευκωσία  ",
+"address": "Κυριάκου Μάτση 110, 7060,Λιβάδια ",
 "offer": false
 }
 },
@@ -9552,10 +9552,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2148",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -10217,10 +10217,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "27",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -10407,10 +10407,10 @@
 "category": "BREAKFAST CEREALS AND MUSLI",
 "barcode": "",
 "product_id": "707",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -12440,10 +12440,10 @@
 "category": "FRUIT AND VEGETABLE JUICES",
 "barcode": "",
 "product_id": "2137",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -16791,10 +16791,10 @@
 "category": "NAPKINGS AND KITCHEN ROLL",
 "barcode": "",
 "product_id": "3618",
-"town": "Ioannides Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
+"town": "Ioannides Αγιοί Ομολογητές",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.161389,33.354500",
 "extra": {
-"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
+"address": "Σπετσών 22, Αγίοι Ομολογητές, 1082 Λευκωσία",
 "offer": false
 }
 },
@@ -16810,10 +16810,10 @@
 "category": "NAPKINGS AND KITCHEN ROLL",
 "barcode": "",
 "product_id": "3618",
-"town": "Ioannides Αγιοί Ομολογητές",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.161389,33.354500",
+"town": "Ioannides Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
 "extra": {
-"address": "Σπετσών 22, Αγίοι Ομολογητές, 1082 Λευκωσία",
+"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
 "offer": false
 }
 },
@@ -17524,177 +17524,6 @@
 "source": "ekalathi",
 "side": "S",
 "store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Αθηαίνου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
-"extra": {
-"address": "Ηφαίστου 19, 7600, Αθηαίνου",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
-"extra": {
-"address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Δάλι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
-"extra": {
-"address": "Χακάνωρος 74-76, 2540, Δάλι",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Ανθούπολη",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.117861,33.296750",
-"extra": {
-"address": "Αιγαίου 71, 2303, Ανθούπολη ",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
-"extra": {
-"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Λατσιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
-"extra": {
-"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Λινόπετρα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.693806,33.065472",
-"extra": {
-"address": "Γεώργιου Γρίβα Διγενή 100, Λινόπετρα",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 1.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "Poplife Αυγόρου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.033639,33.838028",
-"extra": {
-"address": "Γωνία Τριών Ιεραρχών και Παναγή Ζαχαρία 23,5510, Αυγόρου ",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "AlphaMega",
-"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
-"price": 2.65,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/497",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "497",
-"town": "AlphaMega Ακρόπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
-"extra": {
-"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
 "name": "Nestlé Kit Kat Cereal 330g",
 "price": 1.99,
 "currency": "EUR",
@@ -18026,10 +17855,10 @@
 "category": "WATER",
 "barcode": "",
 "product_id": "2077",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -19223,10 +19052,10 @@
 "category": "BUTTER AND MARGATINE",
 "barcode": "",
 "product_id": "961",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -20762,10 +20591,10 @@
 "category": "BREAKFAST CEREALS AND MUSLI",
 "barcode": "",
 "product_id": "643",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -21123,10 +20952,10 @@
 "category": "YOGURT",
 "barcode": "",
 "product_id": "391",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -21503,10 +21332,10 @@
 "category": "HOUSEHOLD CLEANING PRODUCTS",
 "barcode": "",
 "product_id": "3343",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -25180,6 +25009,177 @@
 {
 "source": "ekalathi",
 "side": "S",
+"store": "Mas - Μικροπολις",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Πέρα Χωριό Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.009417,33.394667",
+"extra": {
+"address": "Λεωφόρος Λεμεσού 12, 2572,Πέρα Χωριό Νήσου,Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Μικροπολις",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Αθαλάσσας",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.141694,33.369861",
+"extra": {
+"address": "ΑΝΔΡΕΑ ΔΗΜΗΤΡΙΟΥ 63, 2024, Στρόβολος, Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Μικροπολις",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Παλιομέτοχο",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.133194,33.203583",
+"extra": {
+"address": "Λεωφόρος Αρχ.Μακαρίου 87,2682, Παλιομέτοχο,Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis NICOSIA MALL",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "Athienitis Nicosia Mall",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.134528,33.278917",
+"extra": {
+"address": "Μαδρίτης 2 (Nicosia Mall), 2306  Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis ΠΑΛΛΟΥΡΙΩΤΙΣΣΑ",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "Athienitis Παλλουριώτισσα",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.172167,33.377917",
+"extra": {
+"address": "Τζων Κέννεντυ 26,1046 Παλουριώτισσα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.39,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "Poplife Λατσιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
+"extra": {
+"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.39,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "Poplife Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
+"extra": {
+"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.39,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "Poplife Λινόπετρα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.693806,33.065472",
+"extra": {
+"address": "Γεώργιου Γρίβα Διγενή 100, Λινόπετρα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "AlphaMega",
+"name": "Kinder Cards Biscuits (Half-ChocoCov) 128g",
+"price": 2.65,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/497",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000497/10000497_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "497",
+"town": "AlphaMega Ακρόπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
+"extra": {
+"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
 "store": "Alpha Sigma",
 "name": "Ambrosia Mayonnaise 500g",
 "price": 2.37,
@@ -26614,25 +26614,6 @@
 "category": "BUSCUITS",
 "barcode": "",
 "product_id": "533",
-"town": "Sklavenitis Πέρα Χωριό Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.014083,33.394361",
-"extra": {
-"address": "Λεωφόρος Λεμεσού 34, 2572 Λευκωσία",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Sklavenitis",
-"name": "Oreo Cookies with Vanilla Filling 3 x 154g",
-"price": 2.4,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/533",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000533/10000533_thumb.png",
-"category": "BUSCUITS",
-"barcode": "",
-"product_id": "533",
 "town": "Sklavenitis Δρομολαξιά",
 "maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
 "extra": {
@@ -26652,10 +26633,10 @@
 "category": "BUSCUITS",
 "barcode": "",
 "product_id": "533",
-"town": "Sklavenitis Κοκκινοτριμιθιάς",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.146111,33.199278",
+"town": "Sklavenitis Τσερίου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
 "extra": {
-"address": "Κυριάκου Μάτση 13, 2660 Λευκωσία",
+"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
 "offer": true
 }
 },
@@ -26671,10 +26652,29 @@
 "category": "BUSCUITS",
 "barcode": "",
 "product_id": "533",
-"town": "Sklavenitis Τσερίου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
+"town": "Sklavenitis Πέρα Χωριό Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.014083,33.394361",
 "extra": {
-"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
+"address": "Λεωφόρος Λεμεσού 34, 2572 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Oreo Cookies with Vanilla Filling 3 x 154g",
+"price": 2.4,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/533",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000533/10000533_thumb.png",
+"category": "BUSCUITS",
+"barcode": "",
+"product_id": "533",
+"town": "Sklavenitis Κοκκινοτριμιθιάς",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.146111,33.199278",
+"extra": {
+"address": "Κυριάκου Μάτση 13, 2660 Λευκωσία",
 "offer": true
 }
 },
@@ -32979,10 +32979,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "31",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -34176,10 +34176,10 @@
 "category": "SOAPS",
 "barcode": "",
 "product_id": "2880",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -34442,67 +34442,10 @@
 "category": "CHEESE",
 "barcode": "",
 "product_id": "151",
-"town": "SUPER DISCOUNT STORE Ζακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
-"extra": {
-"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Babybel Mini Portion (5) 100g",
-"price": 2.74,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/151",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
-"category": "CHEESE",
-"barcode": "",
-"product_id": "151",
 "town": "SUPER DISCOUNT STORE Λιβάδια",
 "maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
 "extra": {
 "address": "Κυριάκου Μάτση 110, 7060,Λιβάδια ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Babybel Mini Portion (5) 100g",
-"price": 2.74,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/151",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
-"category": "CHEESE",
-"barcode": "",
-"product_id": "151",
-"town": "SUPER DISCOUNT STORE Ακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
-"extra": {
-"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Babybel Mini Portion (5) 100g",
-"price": 2.74,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/151",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
-"category": "CHEESE",
-"barcode": "",
-"product_id": "151",
-"town": "SUPER DISCOUNT STORE Καλό Χωριό",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
-"extra": {
-"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
 "offer": false
 }
 },
@@ -34537,10 +34480,10 @@
 "category": "CHEESE",
 "barcode": "",
 "product_id": "151",
-"town": "SUPER DISCOUNT STORE Δερύνειας",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
+"town": "SUPER DISCOUNT STORE Καλό Χωριό",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
 "extra": {
-"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
 "offer": false
 }
 },
@@ -34560,6 +34503,63 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
 "extra": {
 "address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Babybel Mini Portion (5) 100g",
+"price": 2.74,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/151",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
+"category": "CHEESE",
+"barcode": "",
+"product_id": "151",
+"town": "SUPER DISCOUNT STORE Ζακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
+"extra": {
+"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Babybel Mini Portion (5) 100g",
+"price": 2.74,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/151",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
+"category": "CHEESE",
+"barcode": "",
+"product_id": "151",
+"town": "SUPER DISCOUNT STORE Δερύνειας",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
+"extra": {
+"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Babybel Mini Portion (5) 100g",
+"price": 2.74,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/151",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10000151/10000151_thumb.png",
+"category": "CHEESE",
+"barcode": "",
+"product_id": "151",
+"town": "SUPER DISCOUNT STORE Ακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
+"extra": {
+"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
 "offer": false
 }
 },
@@ -35069,10 +35069,10 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1498",
-"town": "METRO Supermarket Πλατύ",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.148444,33.392611",
+"town": "METRO Supermarket Αγλαντζιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.156889,33.387472",
 "extra": {
-"address": "Θεσσαλονίκης 9, 2122 Πλατύ Αγλαντζιάς",
+"address": "Λεωφόρος Αγλαντζιάς 45, 2108 Αγλαντζιά",
 "offer": true
 }
 },
@@ -35088,10 +35088,10 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1498",
-"town": "METRO Supermarket Αγλαντζιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.156889,33.387472",
+"town": "METRO Αγίας Φυλάξεως",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.703778,33.027694",
 "extra": {
-"address": "Λεωφόρος Αγλαντζιάς 45, 2108 Αγλαντζιά",
+"address": "Αγίας Φυλάξεως 248, 3082 Λεμεσός",
 "offer": true
 }
 },
@@ -36855,10 +36855,10 @@
 "category": "SHAMPOOS AND CONDITIONERS",
 "barcode": "",
 "product_id": "2760",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -37235,10 +37235,10 @@
 "category": "BUTTER AND MARGATINE",
 "barcode": "",
 "product_id": "976",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -39097,10 +39097,10 @@
 "category": "SHAMPOOS AND CONDITIONERS",
 "barcode": "",
 "product_id": "2753",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -40332,10 +40332,10 @@
 "category": "SOFT DRINKS AND SODA",
 "barcode": "",
 "product_id": "2249",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -41586,10 +41586,10 @@
 "category": "SOAPS",
 "barcode": "",
 "product_id": "2860",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -42099,48 +42099,29 @@
 "category": "FROZEN VEGETABLES AND POTATO",
 "barcode": "",
 "product_id": "1616",
+"town": "Poplife Δάλι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
+"extra": {
+"address": "Χακάνωρος 74-76, 2540, Δάλι",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Peas 1000g",
+"price": 2.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1616",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001616/10001616_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1616",
 "town": "Poplife Νήσου",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
 "extra": {
 "address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Peas 1000g",
-"price": 2.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1616",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001616/10001616_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1616",
-"town": "Poplife Αθηαίνου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
-"extra": {
-"address": "Ηφαίστου 19, 7600, Αθηαίνου",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Peas 1000g",
-"price": 2.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1616",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001616/10001616_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1616",
-"town": "Poplife Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
-"extra": {
-"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
 "offer": true
 }
 },
@@ -42194,10 +42175,29 @@
 "category": "FROZEN VEGETABLES AND POTATO",
 "barcode": "",
 "product_id": "1616",
-"town": "Poplife Δάλι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
+"town": "Poplife Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
 "extra": {
-"address": "Χακάνωρος 74-76, 2540, Δάλι",
+"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Peas 1000g",
+"price": 2.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1616",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001616/10001616_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1616",
+"town": "Poplife Αθηαίνου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
+"extra": {
+"address": "Ηφαίστου 19, 7600, Αθηαίνου",
 "offer": true
 }
 },
@@ -43239,10 +43239,10 @@
 "category": "BREAKFAST CEREALS AND MUSLI",
 "barcode": "",
 "product_id": "640",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -43904,10 +43904,10 @@
 "category": "FRESH MILK",
 "barcode": "",
 "product_id": "28",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -46013,10 +46013,10 @@
 "category": "EGGS",
 "barcode": "",
 "product_id": "425",
-"town": "Ioannides Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
+"town": "Ioannides Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
 "extra": {
-"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
+"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
 "offer": false
 }
 },
@@ -46032,10 +46032,10 @@
 "category": "EGGS",
 "barcode": "",
 "product_id": "425",
-"town": "Ioannides Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
+"town": "Ioannides Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
 "extra": {
-"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
+"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
 "offer": false
 }
 },
@@ -46051,10 +46051,10 @@
 "category": "EGGS",
 "barcode": "",
 "product_id": "425",
-"town": "Sklavenitis Δρομολαξιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
+"town": "Sklavenitis Τσερίου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
 "extra": {
-"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
+"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
 "offer": true
 }
 },
@@ -46089,10 +46089,10 @@
 "category": "EGGS",
 "barcode": "",
 "product_id": "425",
-"town": "Sklavenitis Τσερίου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
+"town": "Sklavenitis Δρομολαξιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
 "extra": {
-"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
+"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
 "offer": true
 }
 },
@@ -46146,10 +46146,10 @@
 "category": "BUTTER AND MARGATINE",
 "barcode": "",
 "product_id": "968",
-"town": "WOLT MARKET Αμμόχωστος",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.041861,33.978083",
+"town": "WOLT MARKET Παρισσινός",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.154194,33.330972",
 "extra": {
-"address": "Λεωφόρος 1ης Απριλίου 49, Παραλιμνι, 5281, Αμμοχωστος",
+"address": "Λεωφόρος Αρχαγγέλου 49Κ, Στρόβολος, 2057",
 "offer": true
 }
 },
@@ -46222,10 +46222,10 @@
 "category": "BUTTER AND MARGATINE",
 "barcode": "",
 "product_id": "968",
-"town": "WOLT MARKET Άγιος Αθανάσιος",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.705056,33.071361",
+"town": "WOLT MARKET Αμμόχωστος",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.041861,33.978083",
 "extra": {
-"address": "Ιαπετου 38, Βιομηχανικη Αγιου Αθανασίου, 4101, Λεμεσος",
+"address": "Λεωφόρος 1ης Απριλίου 49, Παραλιμνι, 5281, Αμμοχωστος",
 "offer": true
 }
 },
@@ -46251,19 +46251,19 @@
 {
 "source": "ekalathi",
 "side": "S",
-"store": "Wolt Market",
+"store": "Mas - Μικροπολις",
 "name": "Kerrygold Butter Unsalted 250g Foil",
-"price": 3.19,
+"price": 3.29,
 "currency": "EUR",
 "url": "https://www.e-kalathi.gov.cy/product-information/968",
 "image": "https://e-kalathi.b-cdn.net/assets/img/products/10000968/10000968_thumb.png",
 "category": "BUTTER AND MARGATINE",
 "barcode": "",
 "product_id": "968",
-"town": "WOLT MARKET Παρισσινός",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.154194,33.330972",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Αθαλάσσας",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.141694,33.369861",
 "extra": {
-"address": "Λεωφόρος Αρχαγγέλου 49Κ, Στρόβολος, 2057",
+"address": "ΑΝΔΡΕΑ ΔΗΜΗΤΡΙΟΥ 63, 2024, Στρόβολος, Λευκωσία",
 "offer": true
 }
 },
@@ -48426,6 +48426,25 @@
 "category": "WET WIPES",
 "barcode": "",
 "product_id": "2997",
+"town": "Sklavenitis Δρομολαξιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
+"extra": {
+"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Hope Baby Pink (80pcs) x3",
+"price": 3.5,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/2997",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002997/10002997_thumb.png",
+"category": "WET WIPES",
+"barcode": "",
+"product_id": "2997",
 "town": "Sklavenitis Πέρα Χωριό Νήσου",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.014083,33.394361",
 "extra": {
@@ -48449,25 +48468,6 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
 "extra": {
 "address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Sklavenitis",
-"name": "Hope Baby Pink (80pcs) x3",
-"price": 3.5,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/2997",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002997/10002997_thumb.png",
-"category": "WET WIPES",
-"barcode": "",
-"product_id": "2997",
-"town": "Sklavenitis Δρομολαξιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
-"extra": {
-"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
 "offer": true
 }
 },
@@ -51466,10 +51466,10 @@
 "category": "FROZEN VEGETABLES AND POTATO",
 "barcode": "",
 "product_id": "1618",
-"town": "Poplife Δάλι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
+"town": "Poplife Ανθούπολη",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.117861,33.296750",
 "extra": {
-"address": "Χακάνωρος 74-76, 2540, Δάλι",
+"address": "Αιγαίου 71, 2303, Ανθούπολη ",
 "offer": true
 }
 },
@@ -51485,10 +51485,10 @@
 "category": "FROZEN VEGETABLES AND POTATO",
 "barcode": "",
 "product_id": "1618",
-"town": "Poplife Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
+"town": "Poplife Δάλι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
 "extra": {
-"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
+"address": "Χακάνωρος 74-76, 2540, Δάλι",
 "offer": true
 }
 },
@@ -51542,10 +51542,10 @@
 "category": "FROZEN VEGETABLES AND POTATO",
 "barcode": "",
 "product_id": "1618",
-"town": "Poplife Ανθούπολη",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.117861,33.296750",
+"town": "Poplife Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.925278,33.627361",
 "extra": {
-"address": "Αιγαίου 71, 2303, Ανθούπολη ",
+"address": "Αγίου Ιακώβου 1, 6012,Λάρνακα",
 "offer": true
 }
 },
@@ -52625,10 +52625,10 @@
 "category": "SHAMPOOS AND CONDITIONERS",
 "barcode": "",
 "product_id": "2773",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -53689,10 +53689,10 @@
 "category": "CHEESE",
 "barcode": "",
 "product_id": "126",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -54202,10 +54202,10 @@
 "category": "SOFT DRINKS AND SODA",
 "barcode": "",
 "product_id": "2236",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -54392,10 +54392,10 @@
 "category": "YOGURT",
 "barcode": "",
 "product_id": "385",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -54582,10 +54582,10 @@
 "category": "YOGURT",
 "barcode": "",
 "product_id": "388",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -55437,10 +55437,10 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1524",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -57489,29 +57489,10 @@
 "category": "ICE CREAM",
 "barcode": "",
 "product_id": "1765",
-"town": "Poplife Ανθούπολη",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.117861,33.296750",
+"town": "Poplife Αυγόρου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.033639,33.838028",
 "extra": {
-"address": "Αιγαίου 71, 2303, Ανθούπολη ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Algida Magnum Mini Snack Double Gold Caramel Billionaire Pack 55ml x6",
-"price": 4.35,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1765",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001765/10001765_thumb.png",
-"category": "ICE CREAM",
-"barcode": "",
-"product_id": "1765",
-"town": "Poplife Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
-"extra": {
-"address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
+"address": "Γωνία Τριών Ιεραρχών και Παναγή Ζαχαρία 23,5510, Αυγόρου ",
 "offer": false
 }
 },
@@ -57531,25 +57512,6 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.018889,33.418139",
 "extra": {
 "address": "Χακάνωρος 74-76, 2540, Δάλι",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Algida Magnum Mini Snack Double Gold Caramel Billionaire Pack 55ml x6",
-"price": 4.35,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1765",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001765/10001765_thumb.png",
-"category": "ICE CREAM",
-"barcode": "",
-"product_id": "1765",
-"town": "Poplife Αυγόρου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.033639,33.838028",
-"extra": {
-"address": "Γωνία Τριών Ιεραρχών και Παναγή Ζαχαρία 23,5510, Αυγόρου ",
 "offer": false
 }
 },
@@ -57588,6 +57550,44 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
 "extra": {
 "address": "Ηφαίστου 19, 7600, Αθηαίνου",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Algida Magnum Mini Snack Double Gold Caramel Billionaire Pack 55ml x6",
+"price": 4.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1765",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001765/10001765_thumb.png",
+"category": "ICE CREAM",
+"barcode": "",
+"product_id": "1765",
+"town": "Poplife Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
+"extra": {
+"address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Algida Magnum Mini Snack Double Gold Caramel Billionaire Pack 55ml x6",
+"price": 4.35,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1765",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001765/10001765_thumb.png",
+"category": "ICE CREAM",
+"barcode": "",
+"product_id": "1765",
+"town": "Poplife Ανθούπολη",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.117861,33.296750",
+"extra": {
+"address": "Αιγαίου 71, 2303, Ανθούπολη ",
 "offer": false
 }
 },
@@ -58116,10 +58116,10 @@
 "category": "SOFT DRINKS AND SODA",
 "barcode": "",
 "product_id": "2242",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -58439,10 +58439,10 @@
 "category": "OLIVE OIL",
 "barcode": "",
 "product_id": "904",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -60263,44 +60263,6 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1505",
-"town": "SUPER DISCOUNT STORE Λιβάδια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
-"extra": {
-"address": "Κυριάκου Μάτση 110, 7060,Λιβάδια ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Chrisi Zimi Makedonitiko Striftari Fetta & Mizithra Cheese 800g",
-"price": 4.29,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1505",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001505/10001505_thumb.png",
-"category": "FROZEN PASTA, PIZZA AND PASTRIES",
-"barcode": "",
-"product_id": "1505",
-"town": "SUPER DISCOUNT STORE Ακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
-"extra": {
-"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Super Discount Store",
-"name": "Chrisi Zimi Makedonitiko Striftari Fetta & Mizithra Cheese 800g",
-"price": 4.29,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1505",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001505/10001505_thumb.png",
-"category": "FROZEN PASTA, PIZZA AND PASTRIES",
-"barcode": "",
-"product_id": "1505",
 "town": "SUPER DISCOUNT STORE Αστρομερίτης",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.136833,33.029500",
 "extra": {
@@ -60320,10 +60282,10 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1505",
-"town": "SUPER DISCOUNT STORE Καλό Χωριό",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
+"town": "SUPER DISCOUNT STORE Λιβάδια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.943361,33.618556",
 "extra": {
-"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
+"address": "Κυριάκου Μάτση 110, 7060,Λιβάδια ",
 "offer": false
 }
 },
@@ -60339,10 +60301,10 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1505",
-"town": "SUPER DISCOUNT STORE Δερύνειας",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
+"town": "SUPER DISCOUNT STORE Ζακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
 "extra": {
-"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
 "offer": false
 }
 },
@@ -60377,10 +60339,48 @@
 "category": "FROZEN PASTA, PIZZA AND PASTRIES",
 "barcode": "",
 "product_id": "1505",
-"town": "SUPER DISCOUNT STORE Ζακάκι",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
+"town": "SUPER DISCOUNT STORE Δερύνειας",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.056556,33.947611",
 "extra": {
-"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
+"address": "Αρχιεπισκόπου Μακαρείου Γ'129,ΤΚ 5380 ,Δερύνεια ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Chrisi Zimi Makedonitiko Striftari Fetta & Mizithra Cheese 800g",
+"price": 4.29,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1505",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001505/10001505_thumb.png",
+"category": "FROZEN PASTA, PIZZA AND PASTRIES",
+"barcode": "",
+"product_id": "1505",
+"town": "SUPER DISCOUNT STORE Καλό Χωριό",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.906139,33.572556",
+"extra": {
+"address": "Ευρώπης 1, ΤΚ 7700, Αραδίππου,Λάρνακα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Super Discount Store",
+"name": "Chrisi Zimi Makedonitiko Striftari Fetta & Mizithra Cheese 800g",
+"price": 4.29,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1505",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001505/10001505_thumb.png",
+"category": "FROZEN PASTA, PIZZA AND PASTRIES",
+"barcode": "",
+"product_id": "1505",
+"town": "SUPER DISCOUNT STORE Ακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.135306,33.121167",
+"extra": {
+"address": "Γρηγόρη Αυξεντίου 57, Ακάκι, 2720 Λευκωσία",
 "offer": false
 }
 },
@@ -62790,10 +62790,10 @@
 "category": "INSTANT COFFEE",
 "barcode": "",
 "product_id": "2321",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -62847,10 +62847,10 @@
 "category": "BABY FOOD",
 "barcode": "",
 "product_id": "3719",
-"town": "METRO Supermarket Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.921028,33.624972",
+"town": "METRO Express Πλατύ",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.148444,33.392611",
 "extra": {
-"address": "Νικοδήμου Μυλωνά 1, 6050 Λάρνακα ",
+"address": "Θεσσαλονίκης 9, 2122 Πλατύ Αγλαντζιάς",
 "offer": false
 }
 },
@@ -62866,10 +62866,10 @@
 "category": "BABY FOOD",
 "barcode": "",
 "product_id": "3719",
-"town": "METRO Supermarket Στρόβολος",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.125667,33.324222",
+"town": "METRO Exprress Παραλίμνι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.045444,34.003194",
 "extra": {
-"address": "Σπύρου Κυπριανού 365, 2046 Στρόβολος",
+"address": "Λεωφόρος Πρωταρά 212, 5290 Παραλίμνι",
 "offer": false
 }
 },
@@ -62923,10 +62923,10 @@
 "category": "BABY FOOD",
 "barcode": "",
 "product_id": "3719",
-"town": "METRO Express Πλατύ",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.148444,33.392611",
+"town": "METRO Supermarket Στρόβολος",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.125667,33.324222",
 "extra": {
-"address": "Θεσσαλονίκης 9, 2122 Πλατύ Αγλαντζιάς",
+"address": "Σπύρου Κυπριανού 365, 2046 Στρόβολος",
 "offer": false
 }
 },
@@ -62942,10 +62942,10 @@
 "category": "BABY FOOD",
 "barcode": "",
 "product_id": "3719",
-"town": "METRO Exprress Παραλίμνι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.045444,34.003194",
+"town": "METRO Supermarket Πλατύ",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.148444,33.392611",
 "extra": {
-"address": "Λεωφόρος Πρωταρά 212, 5290 Παραλίμνι",
+"address": "Θεσσαλονίκης 9, 2122 Πλατύ Αγλαντζιάς",
 "offer": false
 }
 },
@@ -65279,10 +65279,10 @@
 "category": "COLD CUTS, PORK AND SAUSAGES",
 "barcode": "",
 "product_id": "3957",
-"town": "Ioannides Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
+"town": "Ioannides Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
 "extra": {
-"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
+"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
 "offer": false
 }
 },
@@ -65298,10 +65298,10 @@
 "category": "COLD CUTS, PORK AND SAUSAGES",
 "barcode": "",
 "product_id": "3957",
-"town": "Ioannides Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
+"town": "Ioannides Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
 "extra": {
-"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
+"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
 "offer": false
 }
 },
@@ -65355,30 +65355,11 @@
 "category": "COLD CUTS, PORK AND SAUSAGES",
 "barcode": "",
 "product_id": "3957",
-"town": "METRO Supermarket Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.921028,33.624972",
+"town": "METRO Supermarket Παραλίμνι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.045444,34.003194",
 "extra": {
-"address": "Νικοδήμου Μυλωνά 1, 6050 Λάρνακα ",
+"address": "Λεωφόρος Πρωταρά 212, 5290 Παραλίμνι",
 "offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Μικροπολις",
-"name": "Birds Eye Great Value Fish Fingers 350g",
-"price": 4.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1386",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001386/10001386_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1386",
-"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Πέρα Χωριό Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.009417,33.394667",
-"extra": {
-"address": "Λεωφόρος Λεμεσού 12, 2572,Πέρα Χωριό Νήσου,Λευκωσία",
-"offer": true
 }
 },
 {
@@ -65397,6 +65378,25 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.133194,33.203583",
 "extra": {
 "address": "Λεωφόρος Αρχ.Μακαρίου 87,2682, Παλιομέτοχο,Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Μικροπολις",
+"name": "Birds Eye Great Value Fish Fingers 350g",
+"price": 4.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1386",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001386/10001386_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1386",
+"town": "MAS - ΜΙΚΡΟΠΟΛΙΣ Πέρα Χωριό Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.009417,33.394667",
+"extra": {
+"address": "Λεωφόρος Λεμεσού 12, 2572,Πέρα Χωριό Νήσου,Λευκωσία",
 "offer": true
 }
 },
@@ -65431,29 +65431,10 @@
 "category": "FROZEN FISH AND SEAFOOD",
 "barcode": "",
 "product_id": "1386",
-"town": "WOLT MARKET Limassol West",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668917,32.996778",
+"town": "WOLT MARKET Αμμόχωστος",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.041861,33.978083",
 "extra": {
-"address": "Δήλου 7, Πρώτη Βιομηχανική Λεμεσού, Λεμεσος, 3056",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Great Value Fish Fingers 350g",
-"price": 5.6,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1386",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001386/10001386_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1386",
-"town": "WOLT MARKET Λεμεσός",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.680833,33.034222",
-"extra": {
-"address": "Λεωφόρος Αρχιεπισκοπου  Λεοντιου 169, 3022, Λεμεσος",
+"address": "Λεωφόρος 1ης Απριλίου 49, Παραλιμνι, 5281, Αμμοχωστος",
 "offer": true
 }
 },
@@ -65488,30 +65469,49 @@
 "category": "FROZEN FISH AND SEAFOOD",
 "barcode": "",
 "product_id": "1386",
-"town": "WOLT MARKET Πάφος",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.782778,32.427694",
+"town": "WOLT MARKET Limassol West",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668917,32.996778",
 "extra": {
-"address": "Γωνια Ελλαδος 17 με Ολγας Ξιναριδου, Αγιος Παυλος, 8020, Παφος",
+"address": "Δήλου 7, Πρώτη Βιομηχανική Λεμεσού, Λεμεσος, 3056",
 "offer": true
 }
 },
 {
 "source": "ekalathi",
 "side": "S",
-"store": "Wolt Market",
+"store": "Stelios",
 "name": "Birds Eye Great Value Fish Fingers 350g",
-"price": 5.6,
+"price": 5.8,
 "currency": "EUR",
 "url": "https://www.e-kalathi.gov.cy/product-information/1386",
 "image": "https://e-kalathi.b-cdn.net/assets/img/products/10001386/10001386_thumb.png",
 "category": "FROZEN FISH AND SEAFOOD",
 "barcode": "",
 "product_id": "1386",
-"town": "WOLT MARKET Λευκωσία",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.168611,33.372083",
+"town": "Stelios Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.948556,33.628278",
 "extra": {
-"address": "Γωνία Διγενή Ακρίτα 26/Μελετίου Μεταξάκι 4, 1055, Λευκωσία",
-"offer": true
+"address": "Πετράκη Κυπριανού 40,7060 Λιβάδια",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis NICOSIA MALL",
+"name": "Birds Eye Great Value Fish Fingers 350g",
+"price": 5.95,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1386",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001386/10001386_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1386",
+"town": "Athienitis Nicosia Mall",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.134528,33.278917",
+"extra": {
+"address": "Μαδρίτης 2 (Nicosia Mall), 2306  Λευκωσία",
+"offer": false
 }
 },
 {
@@ -65868,10 +65868,10 @@
 "category": "HOUSEHOLD CLEANING PRODUCTS",
 "barcode": "",
 "product_id": "3351",
-"town": "Poplife Λατσιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
+"town": "Poplife Αθηαίνου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
 "extra": {
-"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
+"address": "Ηφαίστου 19, 7600, Αθηαίνου",
 "offer": false
 }
 },
@@ -65925,10 +65925,10 @@
 "category": "HOUSEHOLD CLEANING PRODUCTS",
 "barcode": "",
 "product_id": "3351",
-"town": "Poplife Αθηαίνου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
+"town": "Poplife Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
 "extra": {
-"address": "Ηφαίστου 19, 7600, Αθηαίνου",
+"address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
 "offer": false
 }
 },
@@ -65944,10 +65944,10 @@
 "category": "HOUSEHOLD CLEANING PRODUCTS",
 "barcode": "",
 "product_id": "3351",
-"town": "Poplife Νήσου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.014139,33.391750",
+"town": "Poplife Λατσιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
 "extra": {
-"address": "Ειρήνης 17, 2572 , Πέρα Χωρίο Νήσου",
+"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
 "offer": false
 }
 },
@@ -67863,10 +67863,10 @@
 "category": "FABRIC SOFTENERS",
 "barcode": "",
 "product_id": "3501",
-"town": "LIDL Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
+"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
 "extra": {
-"address": "Αξιού 81, 2311 Λακατάμια",
+"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
 "offer": false
 }
 },
@@ -68224,10 +68224,10 @@
 "category": "POTATO / CORN / RICE CHIPS",
 "barcode": "",
 "product_id": "2015",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": true
 }
 },
@@ -68414,6 +68414,177 @@
 "category": "POTATO / CORN / RICE CHIPS",
 "barcode": "",
 "product_id": "2032",
+"town": "AlphaMega Ακρόπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
+"extra": {
+"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Τριανταφυλλος",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.59,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "MAS - ΤΡΙΑΝΤΑΦΥΛΛΟΣ Κίτι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.849389,33.572111",
+"extra": {
+"address": "Γραβιάς 22, Κίτι, 7550, Λάρνακα",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Ύψωνας",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.679639,32.983278",
+"extra": {
+"address": "Ηλία Καννάουρου 69, 4186, Ύψωνας",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Παραλίμνι",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.046750,34.005306",
+"extra": {
+"address": "Λεωφόρος Πρωταρά 222, 5291,Παραλίμνι ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Λατσιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
+"extra": {
+"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Ξυλοτύμπου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.014222,33.750444",
+"extra": {
+"address": "Γεώργιου Σεφέρη 7, 7510, Ξυλοτύμπου ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Αυγόρου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.033639,33.838028",
+"extra": {
+"address": "Γωνία Τριών Ιεραρχών και Παναγή Ζαχαρία 23,5510, Αυγόρου ",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Poplife",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Poplife Αθηαίνου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
+"extra": {
+"address": "Ηφαίστου 19, 7600, Αθηαίνου",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Ioannides",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 5.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
+"town": "Ioannides Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
+"extra": {
+"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "AlphaMega",
+"name": "Barba Stathis Artichokes 750g ",
+"price": 6.99,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1600",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
+"category": "FROZEN VEGETABLES AND POTATO",
+"barcode": "",
+"product_id": "1600",
 "town": "AlphaMega Ακρόπολης",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
 "extra": {
@@ -70096,177 +70267,6 @@
 {
 "source": "ekalathi",
 "side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Αυγόρου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.033639,33.838028",
-"extra": {
-"address": "Γωνία Τριών Ιεραρχών και Παναγή Ζαχαρία 23,5510, Αυγόρου ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Ξυλοτύμπου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.014222,33.750444",
-"extra": {
-"address": "Γεώργιου Σεφέρη 7, 7510, Ξυλοτύμπου ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Ύψωνας",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.679639,32.983278",
-"extra": {
-"address": "Ηλία Καννάουρου 69, 4186, Ύψωνας",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Αθηαίνου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.062500,33.536917",
-"extra": {
-"address": "Ηφαίστου 19, 7600, Αθηαίνου",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Λατσιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.120917,33.377250",
-"extra": {
-"address": "Λεωφόρος Λεμεσού 239, 2029, Λατσιά",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Poplife",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Poplife Παραλίμνι",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.046750,34.005306",
-"extra": {
-"address": "Λεωφόρος Πρωταρά 222, 5291,Παραλίμνι ",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Ioannides",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 5.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Ioannides Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
-"extra": {
-"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Mary's Market",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 6.4,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "Mas - Mary’s Veggies",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.688222,33.030917",
-"extra": {
-"address": "Le Corbusier 47, (Naafi area) 3501 Λεμεσός",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "AlphaMega",
-"name": "Barba Stathis Artichokes 750g ",
-"price": 6.99,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1600",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001600/10001600_thumb.png",
-"category": "FROZEN VEGETABLES AND POTATO",
-"barcode": "",
-"product_id": "1600",
-"town": "AlphaMega Ακρόπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
-"extra": {
-"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
 "store": "Super Discount Store",
 "name": "Eureka Massalias Classic (57W) 2.592L",
 "price": 6.09,
@@ -71435,10 +71435,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2935",
-"town": "LITSA' S SUPERMARKET Βρυσούλλες",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.084444,33.877861",
+"town": "ALPHA SIGMA SUPERMARKET Περιοχή Φασούρι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.644167,32.944778",
 "extra": {
-"address": "Βαρωσίων 101 5522 Αμμόχωστος ",
+"address": "Δρόμος Ακρωτήρι, 4640 Κολόσσι",
 "offer": false
 }
 },
@@ -71454,29 +71454,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2935",
-"town": "ALPHA SIGMA SUPERMARKET Περιοχή Φασούρι",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.644167,32.944778",
+"town": "LITSA' S SUPERMARKET Βρυσούλλες",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.084444,33.877861",
 "extra": {
-"address": "Δρόμος Ακρωτήρι, 4640 Κολόσσι",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Philippos",
-"name": "Tena Pants Plus Large Thin Comfort 14pcs",
-"price": 6.65,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/2935",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002935/10002935_thumb.png",
-"category": "ADULT DIAPERS",
-"barcode": "",
-"product_id": "2935",
-"town": "PHILIPPOS SUPERMARKET Αγ. Γεωργίου Πέγεια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.857000,32.378139",
-"extra": {
-"address": "Λεωφόρος  Αγίου Γεωργίου 12, Πέγεια, 8575,Πάφος",
+"address": "Βαρωσίων 101 5522 Αμμόχωστος ",
 "offer": false
 }
 },
@@ -71496,6 +71477,25 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=34.884833,32.381972",
 "extra": {
 "address": "Εισόδια της Θεοτόκου 7, Πέγεια, 8560, Πάφος",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Philippos",
+"name": "Tena Pants Plus Large Thin Comfort 14pcs",
+"price": 6.65,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/2935",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10002935/10002935_thumb.png",
+"category": "ADULT DIAPERS",
+"barcode": "",
+"product_id": "2935",
+"town": "PHILIPPOS SUPERMARKET Αγ. Γεωργίου Πέγεια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.857000,32.378139",
+"extra": {
+"address": "Λεωφόρος  Αγίου Γεωργίου 12, Πέγεια, 8575,Πάφος",
 "offer": false
 }
 },
@@ -71530,10 +71530,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2935",
-"town": "Ioannides Λάρνακα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
+"town": "Ioannides Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
 "extra": {
-"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
+"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
 "offer": false
 }
 },
@@ -71549,10 +71549,10 @@
 "category": "ADULT DIAPERS",
 "barcode": "",
 "product_id": "2935",
-"town": "Ioannides Λακατάμια",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.116083,33.293500",
+"town": "Ioannides Λάρνακα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.918361,33.619250",
 "extra": {
-"address": "Σποράδων 33, Ανθούπολη, 2303 Λακατάμια",
+"address": "Γεωργίου Γρίβα Διγενή 27, Δροσιά, 6035 Λάρνακα",
 "offer": false
 }
 },
@@ -74817,10 +74817,10 @@
 "category": "BABY MILK",
 "barcode": "",
 "product_id": "3794",
-"town": "SUPER DISCOUNT STORE Ανθούπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.119722,33.278306",
+"town": "SUPER DISCOUNT STORE Ζακάκι",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.662639,33.015833",
 "extra": {
-"address": "Αμμοχώστου 3, Αγίοι Τριμιθιάς, 2671 Λευκωσία ",
+"address": "Φρακλίνου Ρούσβελτ 152, 3048 Ζακάκι ",
 "offer": false
 }
 },
@@ -75587,177 +75587,6 @@
 {
 "source": "ekalathi",
 "side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Άγιος Αθανάσιος",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.705056,33.071361",
-"extra": {
-"address": "Ιαπετου 38, Βιομηχανικη Αγιου Αθανασίου, 4101, Λεμεσος",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Πάφος",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.782778,32.427694",
-"extra": {
-"address": "Γωνια Ελλαδος 17 με Ολγας Ξιναριδου, Αγιος Παυλος, 8020, Παφος",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Λευκωσία",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.168611,33.372083",
-"extra": {
-"address": "Γωνία Διγενή Ακρίτα 26/Μελετίου Μεταξάκι 4, 1055, Λευκωσία",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Λεμεσός",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.680833,33.034222",
-"extra": {
-"address": "Λεωφόρος Αρχιεπισκοπου  Λεοντιου 169, 3022, Λεμεσος",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Παρισσινός",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.154194,33.330972",
-"extra": {
-"address": "Λεωφόρος Αρχαγγέλου 49Κ, Στρόβολος, 2057",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Wolt Market",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 8.76,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "WOLT MARKET Limassol West",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668917,32.996778",
-"extra": {
-"address": "Δήλου 7, Πρώτη Βιομηχανική Λεμεσού, Λεμεσος, 3056",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Karseras",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 9.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "MAS - KARSERAS Πολεμίδια",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.697333,33.010833",
-"extra": {
-"address": "Γιάννη Κρανιδιώτη 1, Κάτω Πολεμίδια 3110, Λεμεσός",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Mas - Karseras",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 9.45,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "MAS - KARSERAS Αγία Φύλα",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.697278,33.010750",
-"extra": {
-"address": "Αγίας Φυλάξεως 253, 3116, Αγία Φύλα, Λεμεσός",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "AlphaMega",
-"name": "Birds Eye Breaded Cod Fish Fillets 400g",
-"price": 9.95,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/1383",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
-"category": "FROZEN FISH AND SEAFOOD",
-"barcode": "",
-"product_id": "1383",
-"town": "AlphaMega Ακρόπολης",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
-"extra": {
-"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
-"offer": false
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
 "store": "Mas - Α&t Διομηδους",
 "name": "DIXAN ΥΓΡΟ MULTICOLOR (70W) 3.15L",
 "price": 8.89,
@@ -75919,10 +75748,10 @@
 "category": "LAUNDRY DETERGENTS",
 "barcode": "",
 "product_id": "3954",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -76280,10 +76109,10 @@
 "category": "BABY DIAPERS",
 "barcode": "",
 "product_id": "3705",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -77192,10 +77021,10 @@
 "category": "BABY DIAPERS",
 "barcode": "",
 "product_id": "3678",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -77943,6 +77772,177 @@
 {
 "source": "ekalathi",
 "side": "S",
+"store": "Mas - Karseras",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "MAS - KARSERAS Αγία Φύλα",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.697278,33.010750",
+"extra": {
+"address": "Αγίας Φυλάξεως 253, 3116, Αγία Φύλα, Λεμεσός",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Mas - Karseras",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "MAS - KARSERAS Πολεμίδια",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.697333,33.010833",
+"extra": {
+"address": "Γιάννη Κρανιδιώτη 1, Κάτω Πολεμίδια 3110, Λεμεσός",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis NICOSIA MALL",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Athienitis Nicosia Mall",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.134528,33.278917",
+"extra": {
+"address": "Μαδρίτης 2 (Nicosia Mall), 2306  Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Athienitis ΠΑΛΛΟΥΡΙΩΤΙΣΣΑ",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Athienitis Παλλουριώτισσα",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.172167,33.377917",
+"extra": {
+"address": "Τζων Κέννεντυ 26,1046 Παλουριώτισσα",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Sklavenitis Κοκκινοτριμιθιάς",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.146111,33.199278",
+"extra": {
+"address": "Κυριάκου Μάτση 13, 2660 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Sklavenitis Δρομολαξιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
+"extra": {
+"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Sklavenitis Πέρα Χωριό Νήσου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.014083,33.394361",
+"extra": {
+"address": "Λεωφόρος Λεμεσού 34, 2572 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.45,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "Sklavenitis Τσερίου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
+"extra": {
+"address": "Λεωφόρος Τσερίου 110, 1010 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "AlphaMega",
+"name": "Birds Eye Breaded Cod Fish Fillets 400g",
+"price": 9.95,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/1383",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10001383/10001383_thumb.png",
+"category": "FROZEN FISH AND SEAFOOD",
+"barcode": "",
+"product_id": "1383",
+"town": "AlphaMega Ακρόπολης",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.142944,33.359833",
+"extra": {
+"address": "Γεωργίου Δαβάρη, 2024 Στρόβολος, Λευκωσία",
+"offer": false
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
 "store": "Andreas & Avgoustis",
 "name": "Austrian Bonalpi Edam Ball 40% 850g",
 "price": 9.65,
@@ -78446,10 +78446,10 @@
 "category": "BABY MILK",
 "barcode": "",
 "product_id": "3805",
-"town": "MAS - GREEN TREE Καλλιθέα",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.066194,33.386917",
+"town": "MAS - GREEN TREE Ονασαγόρου",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.172639,33.362583",
 "extra": {
-"address": "Στύλλοι Αμμοχώστου 5, 2546 Λευκωσία ",
+"address": "Γωνία Ευριπίδου & Ονασαγόρου 1, 1011 Λευκωσία",
 "offer": false
 }
 },
@@ -78465,10 +78465,10 @@
 "category": "BABY MILK",
 "barcode": "",
 "product_id": "3805",
-"town": "MAS - GREEN TREE Ονασαγόρου",
-"maps": "https://www.google.com/maps/search/?api=1&query=35.172639,33.362583",
+"town": "MAS - GREEN TREE Καλλιθέα",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.066194,33.386917",
 "extra": {
-"address": "Γωνία Ευριπίδου & Ονασαγόρου 1, 1011 Λευκωσία",
+"address": "Στύλλοι Αμμοχώστου 5, 2546 Λευκωσία ",
 "offer": false
 }
 },
@@ -78693,25 +78693,6 @@
 "category": "BABY MILK",
 "barcode": "",
 "product_id": "3806",
-"town": "Sklavenitis Δρομολαξιά",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
-"extra": {
-"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
-"offer": true
-}
-},
-{
-"source": "ekalathi",
-"side": "S",
-"store": "Sklavenitis",
-"name": "Nutricia Almiron 4 Pronutra 400g",
-"price": 10.2,
-"currency": "EUR",
-"url": "https://www.e-kalathi.gov.cy/product-information/3806",
-"image": "https://e-kalathi.b-cdn.net/assets/img/products/10003806/10003806_thumb.png",
-"category": "BABY MILK",
-"barcode": "",
-"product_id": "3806",
 "town": "Sklavenitis Τσερίου",
 "maps": "https://www.google.com/maps/search/?api=1&query=35.131528,33.338556",
 "extra": {
@@ -78735,6 +78716,25 @@
 "maps": "https://www.google.com/maps/search/?api=1&query=35.014083,33.394361",
 "extra": {
 "address": "Λεωφόρος Λεμεσού 34, 2572 Λευκωσία",
+"offer": true
+}
+},
+{
+"source": "ekalathi",
+"side": "S",
+"store": "Sklavenitis",
+"name": "Nutricia Almiron 4 Pronutra 400g",
+"price": 10.2,
+"currency": "EUR",
+"url": "https://www.e-kalathi.gov.cy/product-information/3806",
+"image": "https://e-kalathi.b-cdn.net/assets/img/products/10003806/10003806_thumb.png",
+"category": "BABY MILK",
+"barcode": "",
+"product_id": "3806",
+"town": "Sklavenitis Δρομολαξιά",
+"maps": "https://www.google.com/maps/search/?api=1&query=34.869222,33.594556",
+"extra": {
+"address": "Λεωφόρος Ελευθερίας 26,7020 Λάρνακα",
 "offer": true
 }
 },
@@ -79301,10 +79301,10 @@
 "category": "BABY DIAPERS",
 "barcode": "",
 "product_id": "3712",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
@@ -79681,10 +79681,10 @@
 "category": "LAUNDRY DETERGENTS",
 "barcode": "",
 "product_id": "3438",
-"town": "LIDL Λεμεσός - Φραγκλίνου Ρούσβελτ",
-"maps": "https://www.google.com/maps/search/?api=1&query=34.668833,33.028667",
+"town": "LIDL Λακατάμια",
+"maps": "https://www.google.com/maps/search/?api=1&query=35.110111,33.310083",
 "extra": {
-"address": "Φραγκλίνου Ρούσβελτ 45, 3046 Λεμεσός",
+"address": "Αξιού 81, 2311 Λακατάμια",
 "offer": false
 }
 },
