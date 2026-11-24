@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-23T04:36:56+00:00",
+"fetched_at": "2026-11-24T04:43:59+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -50741,7 +50741,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Ice Power Cold Gel Analgesic Cryotherapy Gel 75 ml",
 "price": 8.72,
 "currency": "EUR",
@@ -50751,7 +50751,7 @@
 "barcode": "6419854101308",
 "product_id": "gtin-6419854101308",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -51157,7 +51157,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Elvive Total Repair 5 Conditioner 200Ml",
 "price": 3.47,
 "currency": "EUR",
@@ -51167,7 +51167,7 @@
 "barcode": "3600521706978",
 "product_id": "gtin-3600521706978",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -236912,6 +236912,38 @@
 "product_id": "https://fetch.com.cy/s/pharmacy-ayios-minas-egkomi/p/shiseido-uv-protective-compact-foundation-spf30-refill-medium",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ayios+Minas+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Eleni Mamilou",
+"name": "Gillette Simply Venus 3 Bis Blist",
+"price": 4.1,
+"currency": "EUR",
+"url": "https://fetch.com.cy/s/pharmacy-eleni-mamilou/p/gillette-simply-venus3-womens-disposable-razors",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/02/c1d46010-0e29-4fea-8ba0-7516ba938338.jpg",
+"category": "Pharmacy Eleni Mamilou",
+"barcode": "7702018465675",
+"product_id": "gtin-7702018465675",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Mamilou+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Michalis Michaelides - Limassol",
+"name": "Mam Air Orthodontic Silicone Pacifier 6-16M (Pack Of 2)",
+"price": 10.25,
+"currency": "EUR",
+"url": "https://fetch.com.cy/s/pharmacy-michalis-michaelides-limassol/p/mam-air-orthodontic-silicone-pacifier-6-16m-pack-of-2",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/17fdfffb-ba1c-43d2-8efd-1ebaec67d99e/139284c7-7c1a-440f-b060-f978e882aaf1.jpg",
+"category": "Pharmacy Michalis Michaelides - Limassol",
+"barcode": "9001616718953",
+"product_id": "gtin-9001616718953",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Michalis+Michaelides+-+Limassol+Cyprus",
 "extra": {}
 }
 ]
