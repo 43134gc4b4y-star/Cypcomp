@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-24T06:33:43+00:00",
+"fetched_at": "2026-11-24T04:31:39+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -237712,6 +237712,22 @@
 "product_id": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/max-factor-smokey-eye-drama-kit",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Papaellinas",
+"name": "Korres Morello Matte Lasting Lip Fluid 58 Red Clay 3.4Ml",
+"price": 14.93,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/korres-morello-matte-lasting-lip-fluid-58-red-clay-34ml",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/36258a5f-f171-490d-a7f8-67b49792c9ea.jpg",
+"category": "Lipsticks",
+"barcode": "5203069116674",
+"product_id": "gtin-5203069116674",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Papaellinas+Cyprus",
 "extra": {}
 }
 ]
