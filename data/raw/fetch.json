@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-24T05:20:35+00:00",
+"fetched_at": "2026-11-24T05:57:08+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -159173,7 +159173,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Vasilina Perissiou",
+"store": "Pharmacy All 4 You",
 "name": "Collistar Stick Solar Skins Hypersensitive Spf50 +9 Ml",
 "price": 25.89,
 "currency": "EUR",
@@ -159183,7 +159183,7 @@
 "barcode": "8015150262538",
 "product_id": "gtin-8015150262538",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -159957,7 +159957,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Health Aid Selenium Plus Vitamins Ace & Zinc Powerful Antioxidant Combination 60 Tablets",
 "price": 15.77,
 "currency": "EUR",
@@ -159967,7 +159967,7 @@
 "barcode": "5019781020027",
 "product_id": "gtin-5019781020027",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -160197,7 +160197,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Acne Clear Oil-Control Purifying Face Mask 75Ml",
 "price": 10.8,
 "currency": "EUR",
@@ -160207,7 +160207,7 @@
 "barcode": "5200410660954",
 "product_id": "gtin-5200410660954",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -160245,7 +160245,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy IZK - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Dr. Muller Lozenges With Iceland Moss, Vitamin C & Honey – Pack of 12 lozenges",
 "price": 3.64,
 "currency": "EUR",
@@ -160255,7 +160255,7 @@
 "barcode": "8594009625859",
 "product_id": "gtin-8594009625859",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -165109,7 +165109,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Christofides",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Apivita Queen Bee Absolute Anti-Ageing & Replenishing Night Cream 50Ml",
 "price": 77.0,
 "currency": "EUR",
@@ -165119,7 +165119,7 @@
 "barcode": "5201279080945",
 "product_id": "gtin-5201279080945",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -176437,22 +176437,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Lee Stafford Bleach Blondes Ice White Shampoo 250 Ml",
-"price": 11.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/lee-stafford-bleach-blondes-ice-white-shampoo-250-ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/84990df2-3688-4654-8dc8-ad4ff9e5d6fe.jpg",
-"category": "Body Care",
-"barcode": "5060282705579",
-"product_id": "gtin-5060282705579",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
 "name": "Seventeen Ideal Cover Liquid Concealer No7 Medium Beige",
 "price": 10.64,
@@ -179861,7 +179845,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Elpida Petrou",
 "name": "Lanes Propolcare Pastilles Kids Blackberry",
 "price": 6.01,
 "currency": "EUR",
@@ -179871,7 +179855,7 @@
 "barcode": "5201314087625",
 "product_id": "gtin-5201314087625",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
 "extra": {}
 },
 {
@@ -180773,7 +180757,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
+"store": "Pharmacy All 4 You",
 "name": "Lavish Care Tropical Affair Body Lotion 300ml",
 "price": 6.0,
 "currency": "EUR",
@@ -180783,7 +180767,7 @@
 "barcode": "5200410641625",
 "product_id": "gtin-5200410641625",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -183829,7 +183813,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antri Kouzoupi - Strovolos",
+"store": "Pharmacy All 4 You",
 "name": "Cleanic Biodegradable Cotton Buds X200",
 "price": 1.5,
 "currency": "EUR",
@@ -183839,7 +183823,7 @@
 "barcode": "5900095028932",
 "product_id": "gtin-5900095028932",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antri+Kouzoupi+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -184853,7 +184837,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Gentle Day Women's Sensitive Care Organic Size 1 Regular Pantyliners 30",
 "price": 4.47,
 "currency": "EUR",
@@ -184863,7 +184847,7 @@
 "barcode": "4779030680068",
 "product_id": "gtin-4779030680068",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -185781,7 +185765,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Socratous",
+"store": "Pharmacy All 4 You",
 "name": "Betaisodona Mouthwash 250ml",
 "price": 6.55,
 "currency": "EUR",
@@ -185791,7 +185775,7 @@
 "barcode": "5291043000170",
 "product_id": "gtin-5291043000170",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Socratous+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -186005,7 +185989,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy All 4 You",
 "name": "Intermed Chlorhexil 0.12% Mouthwash Long Use Oral Solution with Chlorhexidine 0.12%, 250ml",
 "price": 7.92,
 "currency": "EUR",
@@ -186015,7 +185999,7 @@
 "barcode": "5205152017820",
 "product_id": "gtin-5205152017820",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -186341,7 +186325,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Elina Tsielepi",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Caudalie Lip Conditioner, 4.5gr",
 "price": 6.5,
 "currency": "EUR",
@@ -186351,7 +186335,7 @@
 "barcode": "3522930003595",
 "product_id": "gtin-3522930003595",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -187813,7 +187797,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy All 4 You",
 "name": "Pharmalead Baby, Shampoo & Bath, 1L",
 "price": 16.12,
 "currency": "EUR",
@@ -187823,7 +187807,7 @@
 "barcode": "5205352011383",
 "product_id": "gtin-5205352011383",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
@@ -188053,7 +188037,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Margarita Antoniou - Agios Dometios",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Helenvita Micellar Water 100Ml",
 "price": 6.74,
 "currency": "EUR",
@@ -188063,7 +188047,7 @@
 "barcode": "5213000529869",
 "product_id": "gtin-5213000529869",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Margarita+Antoniou+-+Agios+Dometios+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -188325,7 +188309,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy All 4 You",
 "name": "Youth Lab Micellar Water All Skin Types 400Ml",
 "price": 16.9,
 "currency": "EUR",
@@ -188335,7 +188319,7 @@
 "barcode": "5201062007975",
 "product_id": "gtin-5201062007975",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
 "extra": {}
 },
 {
