@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-24T04:31:39+00:00",
+"fetched_at": "2026-11-25T04:50:43+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -63095,7 +63095,7 @@
 "side": "S",
 "store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Korres Aegean Bronze Shimmering Dry Oil For Face, Hair & Body, 50Ml",
-"price": 18.0,
+"price": 14.49,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/korres-aegean-bronze-shimmering-dry-oil-for-face-hair-body-50ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/04/2228ae7b-eb06-44b0-8aac-e7c7d9737983.jpg",
@@ -65367,7 +65367,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Ogx Apple Cider Vinegar Conditioner 385Ml",
-"price": 10.35,
+"price": 7.25,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/ogx-apple-cider-vinegar-conditioner-385ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/798e02f5-f858-4e7a-9a4d-3c161d1eee5d.jpg",
@@ -66085,7 +66085,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Melco Express Discount Supermarket",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal Men Expert Pure Carbon Shower Gel 400Ml",
 "price": 3.63,
 "currency": "EUR",
@@ -66095,7 +66095,7 @@
 "barcode": "3600523881611",
 "product_id": "gtin-3600523881611",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Melco+Express+Discount+Supermarket+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -66501,7 +66501,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Apivita Bee Tech Concentrates C15 Propolis Correct Serum Anti-Wrinkle & Antioxidant Brightening Serum 30 ml",
 "price": 31.5,
 "currency": "EUR",
@@ -66511,7 +66511,7 @@
 "barcode": "5201279102760",
 "product_id": "gtin-5201279102760",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -70421,7 +70421,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Korres White Tea Edt50+Bm125Ml",
 "price": 28.2,
 "currency": "EUR",
@@ -70431,7 +70431,7 @@
 "barcode": "5203069134012",
 "product_id": "gtin-5203069134012",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -237728,6 +237728,70 @@
 "product_id": "gtin-5203069116674",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Papaellinas+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "MAS supermarket Panagiotis Charalambous",
+"name": "Kelloggs Frosties 330 G",
+"price": 4.2,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/kelloggs-frosties-330-g",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/8413b1ba-c585-46cb-ac66-36bbd4b8ee9e.jpeg",
+"category": "Snacks & Ice Cream",
+"barcode": "5059319023281",
+"product_id": "gtin-5059319023281",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Pharmacy Antzelina - Larnaca",
+"name": "Colgate Total Whitening Toothpaste 75ml",
+"price": 3.1,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/colgate-toothpaste-total-whitening-75ml",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/d6972a70-e929-40b9-9ed6-f0dc86925019.jpg",
+"category": "Toothpastes",
+"barcode": "8718951224094",
+"product_id": "gtin-8718951224094",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Etherio Bio Stores - Larnakos Ave",
+"name": "Cerealvit Corn Flαkεs Bio 375G",
+"price": 3.95,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/cerealvit-corn-flakes-bio-375g",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/11/59d9be1f-6ff1-47ed-880d-24159a887c0d.png",
+"category": "Cereal, Oatmeal & Bars",
+"barcode": "",
+"product_id": "https://fetch.com.cy/p/cerealvit-corn-flakes-bio-375g",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Etherio+Bio+Stores+-+Larnakos+Ave+Cyprus",
+"extra": {}
+},
+{
+"source": "fetch",
+"side": "S",
+"store": "Ayios Tychonas Supermarket",
+"name": "Kellogs Coco Pops Cereal 330G",
+"price": 4.35,
+"currency": "EUR",
+"url": "https://fetch.com.cy/p/kelloggs-coco-pops-330g",
+"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/01/dcf13710-c244-4c3f-bbc6-f6810b0437aa.jpg",
+"category": "Cereal, Oatmeal & Bars",
+"barcode": "5059319024905",
+"product_id": "gtin-5059319024905",
+"town": "Cyprus (Fetch delivery)",
+"maps": "https://www.google.com/maps/search/?api=1&query=Ayios+Tychonas+Supermarket+Cyprus",
 "extra": {}
 }
 ]
