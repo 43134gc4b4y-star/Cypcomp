@@ -459,3 +459,19 @@ button.main, label.main { display: block; width: 100%; padding: 13px; border: 2p
 .pduo:has(.pd.win) .pd:not(.win) i { opacity: .7; }
 .pduo:has(.pd.win) .pd:not(.win) b { color: #a3adbb; font-size: 34px; }
 .pduo:has(.pd.win) .pd:not(.win) span { color: #a3adbb; }
+
+/* ---- Wanted: real totals, new products, recently found ---- */
+.wnote { margin: 0 2px 10px; font-size: 13px; color: var(--muted); }
+.wnew { display: inline-block; margin-right: 6px; padding: 1px 7px; border-radius: 999px; background: var(--offer); color: var(--offer-ink);
+  font-size: 11px; font-weight: 800; vertical-align: 2px; }
+.wfound { margin-top: 20px; padding: 14px 16px; border-radius: var(--r-card); background: var(--card); color: var(--ink); box-shadow: var(--lift); }
+.wfound h3 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 17px; color: var(--good); }
+.wfound p { margin: 2px 0 8px; font-size: 14px; color: var(--muted); }
+.wfound ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.wfound li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; background: #fff; font-size: 14px; }
+.wfound li a { color: var(--ink); font-weight: 600; text-decoration: none; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wfound li span { flex: 0 0 auto; font-size: 12px; font-weight: 700; color: var(--good); }
+.tabbar .badge { white-space: nowrap; }
+.wfound { overflow: hidden; }
+.wfound li a { flex: 1 1 0; }
+.wfound ul { grid-template-columns: minmax(0, 1fr); }

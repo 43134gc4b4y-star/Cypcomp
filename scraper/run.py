@@ -349,7 +349,8 @@ def main(argv=None):
     (SITE_DATA / "prices.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     if (ROOT / "config" / "wanted.yaml").exists():
-        w = wanted.build(north, south, groups, load_yaml("wanted.yaml"), rate)
+        w = wanted.build(north, south, groups, {**load_yaml("wanted.yaml"), "_matching": load_yaml("matching.yaml")}, rate,
+                         history_path=ROOT / "data" / "wanted_history.json")
         (SITE_DATA / "wanted.json").write_text(json.dumps(w, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     stamp_assets()

@@ -472,3 +472,24 @@ def test_per_kg_ignores_weight_ranges_and_shows_price_per_kg():
     [it] = run.build_items([g], 55.6)
     assert "shelf" not in it["north"][0] and it["north"][0]["pack"]["try"] == 489.5   # the card shows €/kg, not the pack
     assert it["cheaper"] == "S"                                   # €3.91/kg vs €3.81/kg
+
+
+def test_wanted_counts_ranks_and_remembers_found_products(tmp_path):
+    from datetime import date
+    from scraper import wanted
+    from scraper.match import Group
+    cfg = {"brands": ["Nivea"], "per_side": 1, "per_brand": 30, "_matching": run.load_yaml("matching.yaml")}
+    north = [N("NIVEA KREM 150 ML", 200), N("NIVEA DEO 150 ML", 150), N("Nivea Deo 150 ml", 140)]
+    north[2].store = "Another shop"
+    south = [S("Nivea Soft 200ml", 3.5, 1)]
+    hist = tmp_path / "h.json"
+    w = wanted.build(north, south, [], cfg, 55.0, history_path=hist, today=date(2026, 11, 20))
+    assert w["counts"]["need_south"] == 2 and len(w["need_south"]) == 1       # real total, short list
+    assert w["need_south"][0]["shops"] == 2                                     # sold in two shops ranks first
+    assert w["need_south"][0]["since"] == "2000-01-01"                          # the first list isn't "new"
+    # next week the cream gets a South price (it joins a comparison) and a new product appears
+    north.append(N("NIVEA ROLL ON 50 ML", 120))
+    g = Group(id="ek-1", name="Nivea Creme", unit="150 ml", category="", north=[north[0]], south=[S("Nivea Creme 150ml", 4.1, 9)])
+    w = wanted.build(north, south, [g], {**cfg, "per_side": 10}, 55.0, history_path=hist, today=date(2026, 11, 27))
+    assert [f["id"] for f in w["found"]] == ["ek-1"] and w["found"][0]["name"] == "NIVEA KREM 150 ML"
+    assert {r["name"]: r["since"] for r in w["need_south"]}["NIVEA ROLL ON 50 ML"] == "2026-11-27"
