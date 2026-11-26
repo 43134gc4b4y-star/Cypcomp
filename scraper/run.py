@@ -350,7 +350,7 @@ def main(argv=None):
 
     if (ROOT / "config" / "wanted.yaml").exists():
         w = wanted.build(north, south, groups, {**load_yaml("wanted.yaml"), "_matching": load_yaml("matching.yaml")}, rate,
-                         history_path=ROOT / "data" / "wanted_history.json")
+                         history_path=RAW.parent / "wanted_history.json")   # data/ (a temp folder in tests)
         (SITE_DATA / "wanted.json").write_text(json.dumps(w, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     stamp_assets()
