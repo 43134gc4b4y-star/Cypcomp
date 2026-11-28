@@ -1,6 +1,6 @@
 {
 "source": "fetch",
-"fetched_at": "2026-11-28T05:16:28+00:00",
+"fetched_at": "2026-11-28T05:41:29+00:00",
 "offers": [
 {
 "source": "fetch",
@@ -136855,7 +136855,7 @@
 "side": "S",
 "store": "Pharmacy Medadvice",
 "name": "Nuxe Huile Prodigieuse Or Iridescent Dry Oil for Face, Body & Hair in Roll On Form, 60ml",
-"price": 29.36,
+"price": 26.91,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nuxe-huile-prodigieuse-or-iridescent-dry-oil-for-face-body-hair-in-roll-on-form-60ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/d8d88178-ee94-45de-a14d-65e787146693.jpg",
@@ -136869,7 +136869,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Aloe Nicosia - Strovolos",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Ahava The Perfect Match Hand & Body Set Mineral Hand Cream 40ml + Mineral Body Lotion 40ml",
 "price": 11.9,
 "currency": "EUR",
@@ -136879,7 +136879,7 @@
 "barcode": "697045015139",
 "product_id": "gtin-697045015139",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Aloe+Nicosia+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -136933,25 +136933,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Seventeen Fragrance Dry Body Oil 125Ml Rose Iria",
-"price": 13.65,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/seventeen-fragrance-dry-body-oil-125ml-rose-iria",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/42a92637-61a4-46cd-870e-94a52f4838cd.jpg",
-"category": "Body Oils",
-"barcode": "5201641735725",
-"product_id": "gtin-5201641735725",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Oral B Mint Super Floss 50 Pre Cut Strands",
-"price": 3.0,
+"price": 3.07,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/oral-b-mint-super-floss-50-pre-cut-strands",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/26ad1265-3c85-4ccd-80da-b74585e01df7.jpg",
@@ -137141,7 +137125,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Pantelis Agathokleous",
 "name": "WELLA-KOLESTON-ROOT SPRAY BLACK",
 "price": 9.15,
 "currency": "EUR",
@@ -137151,7 +137135,7 @@
 "barcode": "3614226761675",
 "product_id": "gtin-3614226761675",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Pantelis+Agathokleous+Cyprus",
 "extra": {}
 },
 {
@@ -137237,7 +137221,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Xenios Xenophontos Pharmacy",
+"store": "Pharmacy Medadvice",
 "name": "Apivita Bee Radiant Light Texture Face Cream 50ml",
 "price": 27.3,
 "currency": "EUR",
@@ -137247,7 +137231,7 @@
 "barcode": "5201279035846",
 "product_id": "gtin-5201279035846",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Xenios+Xenophontos+Pharmacy+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Medadvice+Cyprus",
 "extra": {}
 },
 {
@@ -137445,7 +137429,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Apivita Bee Sun Safe Hydra Sun Kids Lotion Spray Spf50+ 200ml",
 "price": 17.41,
 "currency": "EUR",
@@ -137455,13 +137439,13 @@
 "barcode": "5201279080273",
 "product_id": "gtin-5201279080273",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Magda Papadopoulou",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Leciel Sun Soak Off Gel Nail Polish No.530 Emile",
 "price": 8.75,
 "currency": "EUR",
@@ -137471,7 +137455,7 @@
 "barcode": "5291283017310",
 "product_id": "gtin-5291283017310",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Magda+Papadopoulou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -137511,7 +137495,7 @@
 "side": "S",
 "store": "Pharmacy Antzelina - Larnaca",
 "name": "L'Oreal Paris Excellence Creme Permanent Hair Dye No10.13, 48Ml",
-"price": 9.94,
+"price": 8.69,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/loreal-paris-excellence-creme-permanent-hair-dye-no1013-48ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/c0047a5b-ef52-46e4-baad-5b44992dfb6d.png",
@@ -137605,22 +137589,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Radiant Natural Fix All Day Matt Foundation Spf15 No 06A Earthy Tan High Coverage Natural Matte Long Lasting Result And Sun Protection 30ml",
-"price": 22.3,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/radiant-natural-fix-all-day-matt-foundation-spf15-no-06a-earthy-tan-high-coverage-natural-matte-long-lasting-result-and-sun-protection-30ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/bc51565b-1152-4995-9202-bac3d8268a7d.jpg",
-"category": "Costume Makeup",
-"barcode": "5201641732748",
-"product_id": "gtin-5201641732748",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Elina Tsielepi",
 "name": "Intermed Luxurious Suncare Sun Silk Cover Face Cream Bronze Spf50 75Ml, Hydrating Antioxidant Spray Mist 50Ml & Hydrating Lip Balm Spf30 15Ml",
 "price": 32.0,
@@ -137669,22 +137637,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Invisibobble KIDS Scrunchie Disney Moana",
-"price": 11.0,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/inisibobble-disney-moana-sprunchies",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/e8923df6-71c1-4542-8af0-a1030ad46fd9.jpg",
-"category": "Hair Products",
-"barcode": "4063528064424",
-"product_id": "gtin-4063528064424",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Elina Tsielepi",
 "name": "Garden Gold Glow Shimmer Body Mist Rodi & Aggouri 200Ml (Golden Secret)",
 "price": 16.12,
@@ -137717,7 +137669,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy VTC",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Grigi Matte Liquid Lipstick 26",
 "price": 10.9,
 "currency": "EUR",
@@ -137727,7 +137679,7 @@
 "barcode": "5207042160265",
 "product_id": "gtin-5207042160265",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -137893,9 +137845,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
 "name": "Ahava Dead Sea Minerals Liquid Salt 200ml",
-"price": 26.39,
+"price": 21.73,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-dead-sea-minerals-liquid-salt-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/d6302b25-8ac3-44a8-9820-bdd216c8412e.jpg",
@@ -137903,7 +137855,7 @@
 "barcode": "697045150342",
 "product_id": "gtin-697045150342",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
 "extra": {}
 },
 {
@@ -137927,9 +137879,9 @@
 "side": "S",
 "store": "Melco Express Discount Supermarket",
 "name": "Pedigree 2.6 kilograms - Poultry",
-"price": 11.5,
+"price": 10.5,
 "currency": "EUR",
-"url": "https://fetch.com.cy/s/melco-express-discount-supermarket/p/pedigree-26-kilograms-poultry",
+"url": "https://fetch.com.cy/p/pedigree-26-kilograms-poultry",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/06/02c92e9b-72f2-4022-842e-dfe8ad603db8.jpg",
 "category": "Dog Food",
 "barcode": "5998749145036",
@@ -137973,7 +137925,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Zenon & Papaellinas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Jimmy Choo Man Eau De Toilette 100Ml",
 "price": 74.25,
 "currency": "EUR",
@@ -137983,23 +137935,7 @@
 "barcode": "3386460064118",
 "product_id": "gtin-3386460064118",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Zenon+%26+Papaellinas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy All 4 You",
-"name": "Mam Night Soother Glow In The Dark & Self-Sterilising 0M+ 2Pcs",
-"price": 11.25,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/mam-night-soother-glow-in-the-dark-self-sterilising-0m-2pcs",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/b4364c2f-8971-454e-b56c-8cca0a73c350/3a8c7167-912d-4091-84ad-2e4b0029996b.webp",
-"category": "Pacifiers",
-"barcode": "9001616718687",
-"product_id": "gtin-9001616718687",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -138373,17 +138309,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Lee Stafford Scalp Love Anti Hair-Loss Thickening Shampoo 250Ml",
 "price": 13.59,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/lee-stafford-scalp-love-anti-hair-loss-thickening-shampoo-250ml",
+"url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/lee-stafford-scalp-love-anti-hair-loss-thickening-shampoo-250ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/7dc2f1af-6e8f-4add-9e90-2981f3fe0146.jpg",
 "category": "Body Care",
 "barcode": "5060282704428",
 "product_id": "gtin-5060282704428",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -138423,7 +138359,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Kikka Boo Bedding Set 2 pieces 70x140cm Rabbits In Love",
-"price": 39.1,
+"price": 32.2,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/kikka-boo-bedding-set-2-pieces-70x140cm-rabbits-in-love",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/0373d4e0-b9ba-4458-a510-ea6ebe9d2c2b.jpg",
@@ -138453,7 +138389,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Vasilina Perissiou",
+"store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Arnica Ointment for Massage and Skincare 50ml",
 "price": 7.5,
 "currency": "EUR",
@@ -138463,7 +138399,7 @@
 "barcode": "8594009624913",
 "product_id": "gtin-8594009624913",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -138517,33 +138453,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Seventeen Clear Skin Balancing & Moisturizing Cream",
 "price": 10.36,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/seventeen-clear-skin-balancing-moisturizing-cream",
+"url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/seventeen-clear-skin-balancing-moisturizing-cream",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/fb07a2d3-2c73-41a3-90e9-0a124807ec57.jpg",
 "category": "Facial Creams",
 "barcode": "5201641728598",
 "product_id": "gtin-5201641728598",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Yankee Scented Candle Sign Medium Soft Blanket 368G",
-"price": 35.95,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/yankee-scented-candle-sign-medium-soft-blanket-368g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/05/c1e67f6d-6b2f-4cab-8080-331845482f5c.jpg",
-"category": "Scented Candles",
-"barcode": "5038581125084",
-"product_id": "gtin-5038581125084",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -138581,17 +138501,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Aloe Nicosia - Strovolos",
 "name": "TRANSDERMIC 5 Actions ultra",
 "price": 420.0,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/transdermic-5-actions-ultra",
+"url": "https://fetch.com.cy/s/pharmacy-aloe-nicosia-strovolos/p/transdermic-5-actions-ultra",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/134870eb-1abe-4640-9f76-09a0b0ac48ee.jpg",
 "category": "Facial Skincare",
 "barcode": "8051417206693",
 "product_id": "gtin-8051417206693",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Aloe+Nicosia+-+Strovolos+Cyprus",
 "extra": {}
 },
 {
@@ -138599,7 +138519,7 @@
 "side": "S",
 "store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
 "name": "Ahava Time To Clear Eye Make Up Remover 125ml",
-"price": 16.95,
+"price": 14.54,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-time-to-clear-eye-make-up-remover-125ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/a4007d41-831a-48d2-82a4-f4bba97d9b3f.jpg",
@@ -138693,7 +138613,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Elpida Petrou",
 "name": "Collistar Ultra Soothing After Sun Repair Treatment 250Ml 1pc",
 "price": 31.9,
 "currency": "EUR",
@@ -138703,7 +138623,7 @@
 "barcode": "8015150260992",
 "product_id": "gtin-8015150260992",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
 "extra": {}
 },
 {
@@ -138773,7 +138693,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Christina Nikiforou - Limassol",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Invisibobble Power True Black Hair Accesories",
 "price": 7.45,
 "currency": "EUR",
@@ -138783,7 +138703,7 @@
 "barcode": "4063528059802",
 "product_id": "gtin-4063528059802",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Nikiforou+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -138885,7 +138805,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Tania Argyrou",
 "name": "Dr. Brown’s Aqua Cool Apple Massaging Teether",
 "price": 6.0,
 "currency": "EUR",
@@ -138895,7 +138815,7 @@
 "barcode": "72239328651",
 "product_id": "gtin-72239328651",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
 "extra": {}
 },
 {
@@ -138997,7 +138917,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Christofides",
+"store": "Pharmacy VTC",
 "name": "Korres Spread Joy Hair & Body Dailies Set:Hair Shampoo For Thin Fine Hair 250ml & Pure Cotton",
 "price": 11.93,
 "currency": "EUR",
@@ -139007,7 +138927,7 @@
 "barcode": "5203069124228",
 "product_id": "gtin-5203069124228",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
 "extra": {}
 },
 {
@@ -139189,7 +139109,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Safe & Sound Assorted Clear & Discreet Plasters Sa4049 12 Pcs",
 "price": 3.64,
 "currency": "EUR",
@@ -139199,7 +139119,7 @@
 "barcode": "5018632211720",
 "product_id": "gtin-5018632211720",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -139333,7 +139253,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Xenios Xenophontos Pharmacy",
+"store": "Pharmacy Rafael Neofitou",
 "name": "Oral-B Stages Kids Rechargable Spider-Man Electric Toothbrush",
 "price": 25.99,
 "currency": "EUR",
@@ -139343,7 +139263,7 @@
 "barcode": "4210201425373",
 "product_id": "gtin-4210201425373",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Xenios+Xenophontos+Pharmacy+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
 "extra": {}
 },
 {
@@ -139557,7 +139477,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Christina Nikiforou - Limassol",
 "name": "Frisolac Comfort Baby Powder Milk 400g",
 "price": 18.52,
 "currency": "EUR",
@@ -139567,7 +139487,7 @@
 "barcode": "8716200708470",
 "product_id": "gtin-8716200708470",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Nikiforou+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -139575,7 +139495,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Rudy Iris of Capri Body Cream 450ml",
-"price": 22.77,
+"price": 15.94,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/rudy-iris-of-capri-body-cream-450ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/b681226b-46cf-43f0-aa38-33cffaec82aa/abd9cbc3-6877-4824-adfe-62e76e09a8a6.jpg",
@@ -139621,7 +139541,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Dr. Ciccarelli Wet Wash Gloves x 12",
 "price": 8.0,
 "currency": "EUR",
@@ -139631,7 +139551,7 @@
 "barcode": "8002140020209",
 "product_id": "gtin-8002140020209",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -139701,7 +139621,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Savvas Rotos",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Leciel Wet & Dry Solo Eyeshadow 120",
 "price": 10.7,
 "currency": "EUR",
@@ -139711,7 +139631,7 @@
 "barcode": "5291283008264",
 "product_id": "gtin-5291283008264",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Savvas+Rotos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -139911,7 +139831,7 @@
 "side": "S",
 "store": "Pharmacy Elpida Petrou",
 "name": "Body Farm Donkey Milk Body Scrub 200ml",
-"price": 14.27,
+"price": 11.75,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/body-farm-donkey-milk-body-scrub-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/93001ab6-b116-4a9a-89b0-241eac348618.jpg",
@@ -139943,7 +139863,7 @@
 "side": "S",
 "store": "Melco Express Discount Supermarket",
 "name": "Loreal Men Expert Barberclub Shower Gel 400Ml",
-"price": 3.63,
+"price": 3.19,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/loreal-men-expert-barber-club-body-hair-beard-wash-400ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/ae9832de-b71f-42b0-ba0d-af1e15100e10.jpeg",
@@ -140021,22 +139941,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Montblanc Legend Set Eau De Toilette 100Ml&Eau De Toilette 7,5Ml & Body Deodorant Stick 75G",
-"price": 90.0,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/montblanc-legend-set-eau-de-toilette-100mleau-de-toilette-75ml-body-deodorant-stick-75g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/4452638a-4fec-4d59-9f8a-e7cb944b2854.jpg",
-"category": "Cosmetics Gift Boxes & Sets",
-"barcode": "3386460130288",
-"product_id": "gtin-3386460130288",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Eleni Michael - Limassol",
 "name": "Actius Elastic Knee Support + Stabil (Ace803)  medium",
 "price": 17.0,
@@ -140085,7 +139989,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karacosta - Nicosia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Ren Clean Skincare Flash Hydro Boost Instant Plumping Emulsion 40Ml",
 "price": 43.99,
 "currency": "EUR",
@@ -140095,7 +139999,7 @@
 "barcode": "5060389243769",
 "product_id": "gtin-5060389243769",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karacosta+-+Nicosia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -140117,7 +140021,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Stamatogianni",
+"store": "Pharmacy Tania Argyrou",
 "name": "POWER HEALTH Doctor Nasal Spray 20ml – nasal spray",
 "price": 15.84,
 "currency": "EUR",
@@ -140127,7 +140031,7 @@
 "barcode": "5200321014617",
 "product_id": "gtin-5200321014617",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Stamatogianni+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
 "extra": {}
 },
 {
@@ -140485,7 +140389,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Xenios Xenophontos Pharmacy",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Apivita Sun Face & Body Milk Spf50 100Ml",
 "price": 11.6,
 "currency": "EUR",
@@ -140495,7 +140399,7 @@
 "barcode": "5201279080662",
 "product_id": "gtin-5201279080662",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Xenios+Xenophontos+Pharmacy+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -140517,7 +140421,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leperdik - Ayios Andreas",
+"store": "Pharmacy Tania Argyrou",
 "name": "Master Aid Forte Med Plasters 20 X Medium Narrow",
 "price": 2.4,
 "currency": "EUR",
@@ -140527,13 +140431,13 @@
 "barcode": "8032956140273",
 "product_id": "gtin-8032956140273",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leperdik+-+Ayios+Andreas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Mad Beauty Body Wash Set Scooby Doo",
 "price": 15.4,
 "currency": "EUR",
@@ -140543,7 +140447,7 @@
 "barcode": "5060895834017",
 "product_id": "gtin-5060895834017",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -140629,9 +140533,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Radiant Perfect Finish Compact Face Powder No 11 Natural Tan Even Color Tone Fine Texture Natural Matte Result 10g",
-"price": 20.0,
+"price": 20.53,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/radiant-perfect-finish-compact-face-powder-no-11-natural-tan-even-color-tone-fine-texture-natural-matte-result-10g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/d590ed98-bb71-487d-957c-d20084d97136.jpg",
@@ -140639,7 +140543,7 @@
 "barcode": "5201641658796",
 "product_id": "gtin-5201641658796",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -140743,7 +140647,7 @@
 "side": "S",
 "store": "Pharmacy Christina Nikiforou - Limassol",
 "name": "Medisei Panthenol Extra Baby Gentle Moisturizing Body Milk 100Ml",
-"price": 8.28,
+"price": 7.25,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/panthenol-extra-baby-body-lotion-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/c33837ee-4cb5-434a-b5e9-5ef5da88f015.jpg",
@@ -141079,7 +140983,7 @@
 "side": "S",
 "store": "Pharmacy Charis Georgiou",
 "name": "Anaplasis Body Butter Watermelon 200Ml",
-"price": 9.5,
+"price": 10.3,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/anaplasis-body-butter-watermelon-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/4f78d825-6266-4941-8769-e185071d43fe.jpg",
@@ -141367,7 +141271,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Max Factor Miracle Touch Foundation No 45",
-"price": 19.16,
+"price": 18.03,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/max-factor-miracle-touch-foundation-no-45",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/46813f41-2ca6-47e9-bd0c-b4216977c7bc.jpeg",
@@ -141495,7 +141399,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Kikka Boo Spiral Rattle Toy Jungle King",
-"price": 9.68,
+"price": 7.97,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/kikka-boo-spiral-rattle-toy-jungle-king-65ah",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/9b34b57d-6f04-4b30-a72a-e5c6a8a25bae.jpg",
@@ -141589,7 +141493,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "The Pioneers Coconut Flakes Scented Hair & Body Spray 100Ml",
 "price": 12.8,
 "currency": "EUR",
@@ -141599,7 +141503,7 @@
 "barcode": "5207212002203",
 "product_id": "gtin-5207212002203",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -141616,22 +141520,6 @@
 "product_id": "gtin-8718951558809",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=MAS+supermarket+Panagiotis+Charalambous+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Yankee scented candle Warm Cashmere Scented The Scented candle Medium Jar",
-"price": 30.95,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/yankee-candle-warm-cashmere-scented-candle-medium-jar",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/27c0b78f-c825-4eb9-894c-3a46e4fc9720.jpg",
-"category": "Scented Candles",
-"barcode": "5038581016665",
-"product_id": "gtin-5038581016665",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -141733,7 +141621,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Sigg Kid's Water Bottle Thermos Hero Berry Design 0.6L",
 "price": 16.5053,
 "currency": "EUR",
@@ -141743,7 +141631,7 @@
 "barcode": "7610465863244",
 "product_id": "gtin-7610465863244",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -141925,7 +141813,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Aloe Nicosia - Strovolos",
+"store": "Pharmacy IZK - Larnaca",
 "name": "Disney Cars Multivitamins 60 Gummies",
 "price": 16.95,
 "currency": "EUR",
@@ -141935,7 +141823,7 @@
 "barcode": "8718503011424",
 "product_id": "gtin-8718503011424",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Aloe+Nicosia+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -142069,7 +141957,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy IZK - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Health Pro Vitamin C 1000 + Zinc + Selenium + D3 30 Tabs",
 "price": 11.0,
 "currency": "EUR",
@@ -142079,7 +141967,7 @@
 "barcode": "5214002572129",
 "product_id": "gtin-5214002572129",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -142087,7 +141975,7 @@
 "side": "S",
 "store": "Pharmacy Papaellinas",
 "name": "Elizabeth Arden Advanced Ceramide Lift & Firm Night Cream Care 50 Ml",
-"price": 86.25,
+"price": 115.0,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/elizabeth-arden-advanced-ceramide-lift-firm-night-cream-care-50-ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/93474030-efc1-42e0-9fcc-6db10363d172.jpg",
@@ -142181,9 +142069,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Proceive Men Max 30 Sachets Advanced Fertility Supplement",
-"price": 49.75,
+"price": 53.06,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/proceive-men-max-30-sachets-advanced-fertility-supplement",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/68df4796-472e-4676-b715-2b812300645d.jpg",
@@ -142191,7 +142079,7 @@
 "barcode": "5392000077270",
 "product_id": "gtin-5392000077270",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -142503,7 +142391,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal ELVIVE HYDRA HYALURONIC 2% SERUM150ML",
-"price": 8.23,
+"price": 7.2,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-elvive-hydra-hyaluronic-serum-for-dehydrated-hair-150ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/87dbca4b-ddae-4796-af38-71aafbb50b3c.jpg",
@@ -142629,7 +142517,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Ahava Dead Sea Osmoter Eye Mask 6 Pairs",
 "price": 7.3,
 "currency": "EUR",
@@ -142639,7 +142527,7 @@
 "barcode": "697045159000",
 "product_id": "gtin-697045159000",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -142695,7 +142583,7 @@
 "side": "S",
 "store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Body Farm Greek Yogurt & Royal Jelly Body Butter 200ml",
-"price": 12.5,
+"price": 11.67,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/body-farm-greek-yogurt-royal-jelly-body-butter-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/07c296e7-d942-46e2-8b80-030c2ae619fa.jpg",
@@ -142807,7 +142695,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Max Factor Miracle Pure Concealer Shade 02  7.8Ml",
-"price": 12.51,
+"price": 11.78,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/max-factor-miracle-pure-concealer-shade-02-78ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/09/309a9191-735e-4400-be04-074d898a7e9e.png",
@@ -143109,7 +142997,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Seventeen Ultra Black Jet Eyeliner",
 "price": 9.75,
 "currency": "EUR",
@@ -143119,7 +143007,7 @@
 "barcode": "5201641002667",
 "product_id": "gtin-5201641002667",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -160165,7 +160053,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "IAP PHARMA Eau de Parfum Women No15 (Women's Perfume type Narciso Rodriguez), 30ml",
 "price": 6.5,
 "currency": "EUR",
@@ -160175,7 +160063,7 @@
 "barcode": "8424730014052",
 "product_id": "gtin-8424730014052",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+%26+Victoria+Varelia%E2%80%99s+Cyprus",
 "extra": {}
 },
 {
@@ -160309,7 +160197,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Kiza",
+"store": "Pharmacy Georgia Georgiou - Larnaca",
 "name": "Anaplasis Intensive Anti-Wrinkle Eye & Lip Cream With Platinum Chia Oil & Two Type Hyaluronic Acid 15 ml",
 "price": 21.6,
 "currency": "EUR",
@@ -160319,7 +160207,7 @@
 "barcode": "5200137590343",
 "product_id": "gtin-5200137590343",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Kiza+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Georgia+Georgiou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -162645,9 +162533,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Charis Georgiou",
 "name": "Nuxe Reve Body De The Exalting Fragrant Water 100ml",
-"price": 36.08,
+"price": 32.26,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nuxe-reve-body-de-the-exalting-fragrant-water-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/e88a86f8-c158-486a-acaa-14e79b18220f.jpg",
@@ -162655,7 +162543,7 @@
 "barcode": "3264680021985",
 "product_id": "gtin-3264680021985",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Georgiou+Cyprus",
 "extra": {}
 },
 {
@@ -162693,7 +162581,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Ygia Sharp Mind 500Mg 60 Capsules",
 "price": 19.46,
 "currency": "EUR",
@@ -162703,7 +162591,7 @@
 "barcode": "5292518001036",
 "product_id": "gtin-5292518001036",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -162823,7 +162711,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Kikka Boo Plush Rattle Toy Jungle King",
-"price": 6.84,
+"price": 5.63,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/kikka-boo-plush-rattle-toy-jungle-king-w1y3",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/696447c9-c4d8-489e-bbfc-cc62226134e8.jpg",
@@ -162869,17 +162757,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Grigi Sparkle Eyeliner Pro 04 Emerald",
 "price": 11.64,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/grigi-sparkle-eyeliner-color-pro-4ml-04-emerald",
+"url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/grigi-sparkle-eyeliner-color-pro-4ml-04-emerald",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/bf460fa6-ed6a-4ec5-bcb1-76921edfbac5.jpg",
 "category": "Eyeliners",
 "barcode": "5207042670047",
 "product_id": "gtin-5207042670047",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -162887,7 +162775,7 @@
 "side": "S",
 "store": "Pharmacy Ayios Minas",
 "name": "Colour Off Aceton Free Acetone Nail Polish Remover 60ml",
-"price": 1.5,
+"price": 1.28,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/colour-off-aceton-free-acetone-nail-polish-remover-60ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/9c3f07f6-40fe-4a3b-b42f-4bfb41aab26e.jpg",
@@ -162981,22 +162869,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Yankee Scented Candle New Wax Melt Cliffside Sunrise",
-"price": 2.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/yankee-scented-candle-new-wax-melt-cliffside-sunrise",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/05/fa2c420f-740f-45fc-bfa5-0ab425388a15.jpg",
-"category": "Scented Candles",
-"barcode": "5038581113968",
-"product_id": "gtin-5038581113968",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Cheap Basket Supermarket - Larnaca",
 "name": "Starbucks Italian Style Roast 56G (10 Caps - Intensity 11)(Exp.Date:24/05/2026)",
 "price": 4.2,
@@ -163024,22 +162896,6 @@
 "product_id": "gtin-5200137594143",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Collistar Body Nourish Antiage Body Oil Milk 200ml",
-"price": 39.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/collistar-body-nourish-antiage-body-oil-milk-200ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/d94c1fc0-7159-46af-b991-56265f657e8b.jpg",
-"category": "Bath & Shower Products",
-"barcode": "8015150251570",
-"product_id": "gtin-8015150251570",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -163191,7 +163047,7 @@
 "side": "S",
 "store": "Melco Express Discount Supermarket",
 "name": "Loreal Men Expert Stress Resist Shower Gel 400Ml",
-"price": 3.63,
+"price": 3.19,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/loreal-men-expert-stress-resist-intense-relaxing-vine-extract-shower-400ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/55ee90f0-158e-47bb-b11f-5ac7a98c2630.jpg",
@@ -163255,7 +163111,7 @@
 "side": "S",
 "store": "Pharmacy Elpida Petrou",
 "name": "Nuxe Sun Delicious Lotion High Protection Spf30 Face & Body 150ml",
-"price": 27.35,
+"price": 25.88,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nuxe-sun-delicious-lotion-high-protection-spf30-face-body-150ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/63e54301-0349-4371-8fe4-213e44a50206.jpg",
@@ -163349,17 +163205,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Yankee The Scented Candle Classic Medium All Is Bright 411G",
 "price": 30.95,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/yankee-the-scented-candle-classic-medium-all-is-bright-411g",
+"url": "https://fetch.com.cy/s/pharmacy-eleni-michael-limassol/p/yankee-the-scented-candle-classic-medium-all-is-bright-411g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/4a971060-03bb-480b-882d-3aec9df0c736.jpg",
 "category": "Scented Candles",
 "barcode": "5038580084771",
 "product_id": "gtin-5038580084771",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -163413,7 +163269,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Vasilina Perissiou",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Actius Adjustable Elastic Ankle Ace902 Medium Size",
 "price": 11.5,
 "currency": "EUR",
@@ -163423,13 +163279,13 @@
 "barcode": "8435025981492",
 "product_id": "gtin-8435025981492",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Spiritou - Strovolos",
+"store": "Pharmacy IZK - Larnaca",
 "name": "Futuro Elastic Belt Comfort Lift Medium 76578",
 "price": 7.06,
 "currency": "EUR",
@@ -163439,7 +163295,7 @@
 "barcode": "4046719341986",
 "product_id": "gtin-4046719341986",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Spiritou+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -163591,7 +163447,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Burberry London Women Eau De Parfum 100Ml",
-"price": 128.05,
+"price": 105.45,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/burberry-london-women-eau-de-parfum-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/a79d278b-3edd-4a3a-8eb6-f3d6db322438.jpg",
@@ -163605,7 +163461,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Christina Nikiforou - Limassol",
 "name": "Korres Morning Mimosa Body Milk, 125ml",
 "price": 8.55,
 "currency": "EUR",
@@ -163615,7 +163471,7 @@
 "barcode": "5203069092367",
 "product_id": "gtin-5203069092367",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Nikiforou+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -163648,22 +163504,6 @@
 "product_id": "gtin-3522930004653",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "St. Moriz Tanning Mousse Dark 200Ml",
-"price": 9.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/st-moriz-professional-tanning-mousse-dark-200ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/5a1db9c1-2c66-4be4-9d7f-fd95b311db54.jpg",
-"category": "Self-Tan",
-"barcode": "5060427350268",
-"product_id": "gtin-5060427350268",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -163781,7 +163621,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Gum Original White Toothbrush Sunstar Medium 563",
 "price": 5.02,
 "currency": "EUR",
@@ -163791,7 +163631,7 @@
 "barcode": "7630019902304",
 "product_id": "gtin-7630019902304",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -163815,7 +163655,7 @@
 "side": "S",
 "store": "Pharmacy IZK - Larnaca",
 "name": "Pupa Easy Eyeliner Deep Mauve 329",
-"price": 10.75,
+"price": 8.86,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/pupa-easy-eyeliner-deep-mauve-329",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/b75d8056-9e85-4810-a699-9aa882d75fdd.png",
@@ -163847,7 +163687,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Pupa Sunscreen Milk Body + Face Spf50 200ml",
-"price": 33.19,
+"price": 27.32,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/pupa-sunscreen-milk-body-face-spf50-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/d099856f-6214-4fcd-b583-1de72ab79f05.jpg",
@@ -164023,7 +163863,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Rudy Vanilla Hand & Body Lotion 250ml",
-"price": 14.84,
+"price": 10.38,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/rudy-vanilla-hand-body-lotion-250ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/d5851327-779b-44fc-bf8a-9f8ef20b4250/64610b91-656b-46f3-acb1-877a4a6734c9.jpg",
@@ -164119,7 +163959,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal Excellence Cool Creme 7.11 48Ml",
-"price": 9.94,
+"price": 8.69,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-excellence-cool-creme-711-48ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/40cc39c1-1f61-4867-a0dd-a70a2454c061.jpg",
@@ -164183,7 +164023,7 @@
 "side": "S",
 "store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Ahava Men Age Control Face Cream Broad Spectrum SPF15 50ml",
-"price": 36.0,
+"price": 30.59,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-men-time-to-energize-age-control-moisturizing-cream-broad-spectrum-spf15",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/9ee6ee9a-0f4f-4718-b46f-a360ed2fd044.jpg",
@@ -164247,7 +164087,7 @@
 "side": "S",
 "store": "Pharmacy Antzelina - Larnaca",
 "name": "Frisolac Comfort No1 Powdered Milk for Infants with Gastroesophageal Reflux or Constipation up to 6 Months 400gr",
-"price": 11.22,
+"price": 13.6,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/almiron-lactose-free-400gr",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/02/46e46733-0f13-4910-a951-d2160aacfd5c.jpg",
@@ -164293,7 +164133,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Andria Neocleous - Kato Polemidia",
+"store": "Pharmacy Spiritou - Strovolos",
 "name": "La Roche Posay Anthelios Uv Air Spf50+ 40Ml",
 "price": 30.4,
 "currency": "EUR",
@@ -164303,13 +164143,13 @@
 "barcode": "3337875917810",
 "product_id": "gtin-3337875917810",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Spiritou+-+Strovolos+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Radiant Perfect Finish Compact Face Powder No 03 Light Tan Even Color Tone Fine Texture Natural Matte Result 10g",
 "price": 20.53,
 "currency": "EUR",
@@ -164319,7 +164159,7 @@
 "barcode": "5201641032602",
 "product_id": "gtin-5201641032602",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -164352,22 +164192,6 @@
 "product_id": "https://fetch.com.cy/p/holle-crunchy-snack-millet-mango-8m-25g-bio",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Etherio+Bio+Stores+-+Larnakos+Ave+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Puro Aloe Vera Hand & Body Cream 75Ml",
-"price": 14.0,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/puro-aloe-vera-hand-body-cream-75ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/76abc16b-c328-4325-93db-33bbc74900c3.jpg",
-"category": "Skincare",
-"barcode": "5298001470020",
-"product_id": "gtin-5298001470020",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -164743,9 +164567,9 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "After Bite Kids Soothing Insect Bite Cream 20 g",
-"price": 5.62,
+"price": 4.63,
 "currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/after-bite-kids-soothing-insect-bite-cream-20-g",
+"url": "https://fetch.com.cy/p/after-bite-kids-soothing-insect-bite-cream-20-g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/d68b2bfb-8926-4c8b-97be-d46618bf0bcf/1d3cc075-8fdf-4fc4-9f65-3a87a1b0e23b.jpg",
 "category": "Insect Repellents",
 "barcode": "044224610805",
@@ -164757,7 +164581,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Georgiou",
+"store": "Pharmacy Spiritou - Strovolos",
 "name": "Vichy Capital Soleil Solar Protective Water Spf30 Enhanced Tan Sunscreen 200Ml",
 "price": 21.45,
 "currency": "EUR",
@@ -164767,7 +164591,7 @@
 "barcode": "3337875585217",
 "product_id": "gtin-3337875585217",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Georgiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Spiritou+-+Strovolos+Cyprus",
 "extra": {}
 },
 {
@@ -164791,7 +164615,7 @@
 "side": "S",
 "store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Ahava Dead Sea Water Mangesium Rich Deodorant 50ml",
-"price": 15.9,
+"price": 13.64,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-dead-sea-water-mangesium-rich-deodorant-50ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/499298d8-ca67-4fda-91ff-499449de653c.png",
@@ -164805,7 +164629,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Nuk Magic Cup 230ml Mickey",
 "price": 12.45,
 "currency": "EUR",
@@ -164815,7 +164639,7 @@
 "barcode": "4008600321910",
 "product_id": "gtin-4008600321910",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Andria+Neocleous+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -164853,7 +164677,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Ktenas - Strovolos",
+"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
 "name": "Organic Shop By Natura Siberica Body Desserts Renewing Body Scrub Coconut Bite, 450Ml",
 "price": 15.9,
 "currency": "EUR",
@@ -164863,7 +164687,7 @@
 "barcode": "4743318143378",
 "product_id": "gtin-4743318143378",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ktenas+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -164997,9 +164821,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy IZK - Larnaca",
 "name": "WELLA-KOLESTON-MS 301/0 BLUE BLACK",
-"price": 5.5,
+"price": 5.67,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/wella-koleston-ms-3010-blue-black-hair-dye",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/a68b0ae8-69f9-472e-9942-2adeb5f433bf.jpg",
@@ -165007,7 +164831,7 @@
 "barcode": "4056800867844",
 "product_id": "gtin-4056800867844",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -165093,7 +164917,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Antzelina - Larnaca",
+"store": "Pharmacy Tania Argyrou",
 "name": "Snails Petite Love Is Rasberry Nail Polish 5Ml",
 "price": 4.5,
 "currency": "EUR",
@@ -165103,7 +164927,7 @@
 "barcode": "5200384504902",
 "product_id": "gtin-5200384504902",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
 "extra": {}
 },
 {
@@ -165141,7 +164965,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Papaellinas",
+"store": "Pharmacy Antzelina - Larnaca",
 "name": "Eubos Cream Bath Oil Oily Foam Bath For Gentle, Deep Cleaning & Care Of Dry Skin 200Ml",
 "price": 10.35,
 "currency": "EUR",
@@ -165151,7 +164975,7 @@
 "barcode": "4021354032017",
 "product_id": "gtin-4021354032017",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Papaellinas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antzelina+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -165173,7 +164997,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
+"store": "Pharmacy Charis Christofides",
 "name": "Lavish Care Hydro Boost Moisture Balance Face Serum 30Ml",
 "price": 11.3,
 "currency": "EUR",
@@ -165183,7 +165007,7 @@
 "barcode": "5200410660893",
 "product_id": "gtin-5200410660893",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
 "extra": {}
 },
 {
@@ -165397,17 +165221,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Margarita Antoniou - Agios Dometios",
 "name": "Iwhite Dark Stains Toothpaste Pack 75Ml",
-"price": 9.0,
+"price": 9.08,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/iwhite-dark-stains-toothpaste-pack-75ml",
+"url": "https://fetch.com.cy/s/pharmacy-margarita-antoniou-agios-dometios/p/iwhite-dark-stains-toothpaste-pack-75ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/754b6cb2-b806-432f-baf3-282833446c1b.jpg",
 "category": "Cosmetics Gift Boxes & Sets",
 "barcode": "5425012532762",
 "product_id": "gtin-5425012532762",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Margarita+Antoniou+-+Agios+Dometios+Cyprus",
 "extra": {}
 },
 {
@@ -165477,7 +165301,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy All 4 You",
+"store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Pesitro Prime Ultra Soft 7680 Toothbrush For Oral Care",
 "price": 4.24,
 "currency": "EUR",
@@ -165487,7 +165311,7 @@
 "barcode": "6955338810453",
 "product_id": "gtin-6955338810453",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+All+4+You+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
 "extra": {}
 },
 {
@@ -165495,7 +165319,7 @@
 "side": "S",
 "store": "Pharmacy Elpida Petrou",
 "name": "Apivita Bee Sun Safe Anti-Spot & Anti-Age Defense Face Cream SPF50 50ml & Black Detox Cleansing Gel 50ml & Express Beauty Sea Lavendere Face Mask & Pouch",
-"price": 24.44,
+"price": 20.12,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/apivita-bee-sun-safe-promo-2025",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/04/0a013798-b6f8-473a-a509-48c775bc9998.jpg",
@@ -165509,7 +165333,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Frezyderm Eye Balm For Dark Circles & Swelling Of The Eyes 15Ml",
 "price": 20.0,
 "currency": "EUR",
@@ -165519,7 +165343,7 @@
 "barcode": "5202888271069",
 "product_id": "gtin-5202888271069",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -165717,7 +165541,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Aloe Nicosia - Strovolos",
+"store": "Pharmacy Anna Koliou - Nicosia",
 "name": "Avene Couvrance Compact Foundation Cream Fini Mat 4.0 Honey SPF30 10g",
 "price": 26.58,
 "currency": "EUR",
@@ -165727,7 +165551,7 @@
 "barcode": "3282770100198",
 "product_id": "gtin-3282770100198",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Aloe+Nicosia+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Anna+Koliou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -165749,27 +165573,11 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Seventeen Fragrance Dry Body Oil 125Ml Yellow Fruity",
-"price": 13.65,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/seventeen-fragrance-dry-body-oil-125ml-yellow-fruity",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/b801abd4-0601-41ae-b53c-a5dd97abc500.jpg",
-"category": "Body Oils",
-"barcode": "5201641735640",
-"product_id": "gtin-5201641735640",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Baylis & Harding Unicorn Scented Kids Body Wash 500ml",
-"price": 5.63,
+"price": 4.6,
 "currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/baylis-harding-unicorn-scented-kids-body-wash-500ml",
+"url": "https://fetch.com.cy/p/baylis-harding-unicorn-scented-kids-body-wash-500ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/d7fecd5f-f199-4b18-861a-651536627b9a/e598f8ac-6e3e-40cd-9c93-98a2049a4a0b.jpg",
 "category": "Body Washes",
 "barcode": "017854113312",
@@ -166005,7 +165813,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy VTC",
 "name": "Radiant Natural Fix Matt Foundation 00",
 "price": 21.38,
 "currency": "EUR",
@@ -166015,7 +165823,7 @@
 "barcode": "5201641718124",
 "product_id": "gtin-5201641718124",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
 "extra": {}
 },
 {
@@ -166087,7 +165895,7 @@
 "side": "S",
 "store": "Pharmacy Liza Papadopoulou - Larnaca",
 "name": "Apivita Bee Sun Safe Hydra Fresh Face & Body Milk Spf 50+ 100Ml & Cool - Sooth Face & Body Gel Cream 100Ml",
-"price": 20.53,
+"price": 16.91,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/apivita-bee-sun-safe-hydra-fresh-face-body-milk-spf-50-100ml-cool-sooth-face-body-gel-cream-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/3cdd009e-f63e-40c9-aac5-f4a166629860.jpg",
@@ -166096,22 +165904,6 @@
 "product_id": "gtin-5201279103026",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Yankee Candle Cucumber Mint Cooler M",
-"price": 35.95,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/yankee-scented-candle-sign-medium-cucumber-mint-cooler-368g",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/86b25b4e-5844-457f-b5cb-9614e6622b59.jpg",
-"category": "Scented Candles",
-"barcode": "5038581151168",
-"product_id": "gtin-5038581151168",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -166501,7 +166293,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Tania Argyrou",
+"store": "Pharmacy Elpida Petrou",
 "name": "Dr Gregs Vapour Rub 50 G",
 "price": 2.75,
 "currency": "EUR",
@@ -166511,7 +166303,7 @@
 "barcode": "5290198005238",
 "product_id": "gtin-5290198005238",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elpida+Petrou+Cyprus",
 "extra": {}
 },
 {
@@ -166597,7 +166389,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Aloe Nicosia - Strovolos",
+"store": "Pharmacy Liza & Victoria Varelia’s",
 "name": "Korres Apothecary Wild Rose 2-Step Glow Boost Promo",
 "price": 8.6,
 "currency": "EUR",
@@ -166607,7 +166399,7 @@
 "barcode": "5203069129223",
 "product_id": "gtin-5203069129223",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Aloe+Nicosia+-+Strovolos+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+%26+Victoria+Varelia%E2%80%99s+Cyprus",
 "extra": {}
 },
 {
@@ -166921,7 +166713,7 @@
 "name": "Collistar Silk Effect Eye Shadow 33 Lilla Selvatico",
 "price": 16.15,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/collistar-silk-effect-eye-shadow-33-lilla-selvatico",
+"url": "https://fetch.com.cy/s/pharmacy-izk-larnaca/p/collistar-silk-effect-eye-shadow-33-lilla-selvatico",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/338ff0c4-cc7d-40f9-86ef-eb0a977ceaea.jpg",
 "category": "Eyeshadows",
 "barcode": "8015150151535",
@@ -167189,7 +166981,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Eleni Stamatogianni",
 "name": "Mam Clip Love & Affection Boy",
 "price": 7.65,
 "currency": "EUR",
@@ -167199,7 +166991,7 @@
 "barcode": "9001616802072",
 "product_id": "gtin-9001616802072",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Stamatogianni+Cyprus",
 "extra": {}
 },
 {
@@ -167303,7 +167095,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal True Match Pressed Powder Foundation W3 Golden Beige",
-"price": 16.47,
+"price": 14.41,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-true-match-powder-w3-gold-beige-shade-9gr",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/9870888c-ca77-4399-aa36-bc50d27b0772.jpg",
@@ -167319,7 +167111,7 @@
 "side": "S",
 "store": "Pharmacy Christina Nikiforou - Limassol",
 "name": "Anatomic Help 3031 Elastic Roller With Two Rights Beige Medium",
-"price": 21.32,
+"price": 27.6,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/anatomic-help-3031-elastic-roller-with-two-rights-beige-medium",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/1d06bcad-3a1c-4aea-9000-f34f96256d0d.png",
@@ -167461,7 +167253,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy VTC",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Lorvenn No 6.6 Dark Blond Red Permanent Hair Color With Keratin & Organic Olive Oil 70ml",
 "price": 6.12,
 "currency": "EUR",
@@ -167471,13 +167263,13 @@
 "barcode": "5201641530276",
 "product_id": "gtin-5201641530276",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
 "source": "fetch",
 "side": "S",
-"store": "E & F Pharmacy - Fragkiskos Marios Triantafyllou",
+"store": "Pharmacy Vasilina Perissiou",
 "name": "Mua Pro Base Double Shot Under Eye Brightener",
 "price": 6.0,
 "currency": "EUR",
@@ -167487,7 +167279,7 @@
 "barcode": "",
 "product_id": "https://fetch.com.cy/p/mua-pro-base-double-shot-under-eye-brightener",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=E+%26+F+Pharmacy+-+Fragkiskos+Marios+Triantafyllou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
 "extra": {}
 },
 {
@@ -167545,7 +167337,7 @@
 "name": "A-Derma Epitheliale H.A Plus Ultra Repair Cream 40ml",
 "price": 16.85,
 "currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-andria-neocleous-kato-polemidia/p/a-derma-epitheliale-h-a-plus-ultra-repair-cream-40ml",
+"url": "https://fetch.com.cy/p/a-derma-epitheliale-h-a-plus-ultra-repair-cream-40ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/da8a5e23-3f07-4829-9d16-6f217670b498/c6a5796d-8935-4e4b-b028-bd3ef88ab6d1.webp",
 "category": "Body Lotions",
 "barcode": "3282770398632",
@@ -167591,7 +167383,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Nuxe Reve De Miel Bee Happy Duo Offer Lip Stick 2x4g",
-"price": 12.71,
+"price": 8.97,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/nuxe-reve-de-miel-bee-happy-duo-offer-lip-stick-2x4g",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/da9e7af7-5516-40df-a43b-229bf81c3a1b/22f31c51-6288-42d5-b77f-04fb19e9df94.jpg",
@@ -167607,7 +167399,7 @@
 "side": "S",
 "store": "Pharmacy IZK - Larnaca",
 "name": "Ahava Holiday Set Advanced Deep Wrinkle Cream 50ml + Overnight Deep Wrinkle Mask 50ml + Lip Line Wrinkle Treatment 15ml",
-"price": 175.86,
+"price": 144.82,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/ahava-holiday-set-advanced-deep-wrinkle-cream-50ml-overnight-deep-wrinkle-mask-50ml-lip-line-wrinkle-treatment-15ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/970d06c8-f273-403c-9696-7e2f6177e88e.png",
@@ -167701,9 +167493,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Charis Georgiou",
 "name": "Nuxe Creme Prodigieuse Boost Night Recovery Oil Balm. For All Skin Types 50ml",
-"price": 34.91,
+"price": 32.12,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/nuxe-creme-prodigieuse-boost-night-recovery-oil-balm-for-all-skin-types-50ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/08eaef6c-7d96-44f0-87c7-d49f55487168.png",
@@ -167711,7 +167503,7 @@
 "barcode": "3264680015854",
 "product_id": "gtin-3264680015854",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Georgiou+Cyprus",
 "extra": {}
 },
 {
@@ -167893,22 +167685,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Radiant Pink Liquid Metal For Eyes & More 13",
-"price": 16.8,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/radiant-pink-liquid-metal-for-eyes-more-13",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/53465202-88c1-4dd5-af6b-86783b907f24.jpg",
-"category": "Eyeshadows",
-"barcode": "5201641740088",
-"product_id": "gtin-5201641740088",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Aloe Nicosia - Strovolos",
 "name": "Apivita Nature's Hair Color N3.0 Dark Brown",
 "price": 16.46,
@@ -168085,7 +167861,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Eleni Michael - Limassol",
+"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
 "name": "COCOSOLIS CAPRI after-sun lotion for prolonging the tan 100 ml",
 "price": 27.0,
 "currency": "EUR",
@@ -168095,7 +167871,7 @@
 "barcode": "3800502737032",
 "product_id": "gtin-3800502737032",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
 "extra": {}
 },
 {
@@ -168231,7 +168007,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Kikka Boo Bedding Set Carry Cot 6Pcs Sleepy Sheep",
-"price": 25.32,
+"price": 20.85,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/kikka-boo-bedding-set-carry-cot-6pcs-sleepy-sheep",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/db98d148-820f-4219-9d90-2b3d9a18031a/790cf3bc-76d2-42c0-b793-1f0d78428100.jpg",
@@ -168245,7 +168021,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Collistar Mascara Impeccabile Ultra Black Biphasic Make-up Removing Solution 35ml + THE BRIDGE beauty-bag",
 "price": 32.15,
 "currency": "EUR",
@@ -168255,7 +168031,7 @@
 "barcode": "8015150161299",
 "product_id": "gtin-8015150161299",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -168405,7 +168181,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Lorvenn No 3 Dark Brown Permanent Hair Color With Keratin & Organic Olive Oil 70ml",
 "price": 6.12,
 "currency": "EUR",
@@ -168415,7 +168191,7 @@
 "barcode": "5201641640395",
 "product_id": "gtin-5201641640395",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -168439,7 +168215,7 @@
 "side": "S",
 "store": "Pharmacy Elpida Petrou",
 "name": "Anaplasis Body Butter Multi-Vitamin Big Bubble 200ml",
-"price": 9.5,
+"price": 11.93,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/anaplasis-body-butter-multi-vitamin-big-bubble-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/92bd6f48-bf3f-45a7-808c-5a6032b0070e.jpg",
@@ -168551,7 +168327,7 @@
 "side": "S",
 "store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Apivita Bee Sun Safe Anti-Spot & Anti-Age Face Cream Spf50 Anti-Blemish Face Cream, 50Ml & Face & Body After Sun Refreshing Cream 100Ml",
-"price": 24.44,
+"price": 20.12,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/apivita-bee-sun-safe-anti-spot-anti-age-face-cream-spf50-anti-blemish-face-cream-50ml-face-body-after-sun-refreshing-cream-100ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/9611d22a-4da0-42a6-82a4-312cc913e0d7.jpg",
@@ -168661,9 +168437,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Burberry Her London Dream Edp Eau de Parfum 30ML",
-"price": 60.0,
+"price": 66.98,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/burberry-her-london-dream-eau-de-parfum-30ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/3de95d76-b1e9-44d4-9d9d-716a32c1acd6.jpg",
@@ -168671,7 +168447,7 @@
 "barcode": "3616300892428",
 "product_id": "gtin-3616300892428",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -168743,7 +168519,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal True Match Powder 2 R/2 C Rose Vanille",
-"price": 16.47,
+"price": 14.41,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-true-match-powder-2-r2-c-rose-vanille",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/36db65de-12b9-4280-baa9-1defc1e6e059.jpg",
@@ -168789,7 +168565,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Xenios Xenophontos Pharmacy",
+"store": "Pharmacy Nektaria Konstantinou - Lakatamia",
 "name": "Karen Nitr Black Disposable Gloves Medium x100",
 "price": 4.74,
 "currency": "EUR",
@@ -168799,7 +168575,7 @@
 "barcode": "5290251002242",
 "product_id": "gtin-5290251002242",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Xenios+Xenophontos+Pharmacy+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Nektaria+Konstantinou+-+Lakatamia+Cyprus",
 "extra": {}
 },
 {
@@ -168919,7 +168695,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Rimmel Brow This Way Fill & Sculpt Eyebrow Definer 03 Dark Brown",
-"price": 7.52,
+"price": 7.08,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/rimmel-brow-this-way-fill-sculpt-eyebrow-definer-03-dark-brown",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/840bd427-3400-4d02-a92b-4428b0b26b52.png",
@@ -168976,22 +168752,6 @@
 "product_id": "https://fetch.com.cy/p/ariel-all-in-1-pods-33-washes",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Cheap+Basket+Supermarket+-+Larnaca+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Grigi Sparkle Bronze Tanning Oil Body Lotion 300ml",
-"price": 14.0,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/grigi-sparkle-bronze-tanning-oil-body-lotion-300ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/2287433f-d81b-43e7-9f17-75d7119980d1.jpg",
-"category": "Tan Enhancers",
-"barcode": "5207042470012",
-"product_id": "gtin-5207042470012",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -169061,7 +168821,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Elina Tsielepi",
 "name": "Mastiha Capsules 100% Natural Care 350Mg 90 Capsules",
 "price": 18.5,
 "currency": "EUR",
@@ -169071,7 +168831,7 @@
 "barcode": "5200314372014",
 "product_id": "gtin-5200314372014",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Elina+Tsielepi+Cyprus",
 "extra": {}
 },
 {
@@ -169184,22 +168944,6 @@
 "product_id": "gtin-8056860825750",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Radiant Dark Chocolate Professional Eye Color No 192",
-"price": 9.8,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/radiant-professional-eye-color-4g-192-dark-chocolate",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/ba979174-11cc-4d0e-bdc7-965ed7128fc0.jpg",
-"category": "Eyeshadows",
-"barcode": "5201641698129",
-"product_id": "gtin-5201641698129",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
@@ -169557,22 +169301,6 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "PAREX Women's Boots W2021 (10324069) ",
-"price": 65.0,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/parex-womens-boots-w2021-10324069",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/b2490975-3fed-4c43-b55b-c81e165c6449.jpg",
-"category": "Shoes",
-"barcode": "",
-"product_id": "https://fetch.com.cy/p/parex-womens-boots-w2021-10324069",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
 "store": "Pharmacy Costas Constantopoulos - Limassol",
 "name": "Type Dsquared - Wild  for him 50ml",
 "price": 13.0,
@@ -169673,7 +169401,7 @@
 "name": "Elizabeth Arden Ladies Green Tea Pistachio Crunch EDT Spray  100",
 "price": 27.0,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/elizabeth-arden-ladies-green-tea-pistachio-crunch-edt-spray-100",
+"url": "https://fetch.com.cy/s/pharmacy-eleni-mamilou/p/elizabeth-arden-ladies-green-tea-pistachio-crunch-edt-spray-100",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2026/02/acc99e93-5e47-4e96-8f84-4658e8532dca.jpg",
 "category": "Eau de Toilette",
 "barcode": "85805378349",
@@ -169701,17 +169429,17 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Medadvice",
 "name": "Bodyfarm  Mandarin Basil Set: Shower Gel 250Ml & Body Milk Set 250Ml",
 "price": 26.3,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/bodyfarm-mandarin-basil-set-shower-gel-250ml-body-milk-set-250ml",
+"url": "https://fetch.com.cy/s/pharmacy-medadvice/p/bodyfarm-mandarin-basil-set-shower-gel-250ml-body-milk-set-250ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/dd5b67bf-c17a-4b8d-a2a6-3c15b3655343.png",
 "category": "Body Washes",
 "barcode": "5204702090047",
 "product_id": "gtin-5204702090047",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Medadvice+Cyprus",
 "extra": {}
 },
 {
@@ -169737,7 +169465,7 @@
 "name": "NIVEA SUN KIDS MOISTURISING SUN SPRAY SPF 30 200ML",
 "price": 13.99,
 "currency": "EUR",
-"url": "https://fetch.com.cy/p/nivea-sun-kids-moisturising-sun-spray-spf-30-200ml",
+"url": "https://fetch.com.cy/s/pharmacy-karamanidou/p/nivea-sun-kids-moisturising-sun-spray-spf-30-200ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/14026e86-3532-46c1-807f-76ce94ae2732.jpg",
 "category": "Sunscreens",
 "barcode": "5025970023694",
@@ -184341,7 +184069,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karmelia Tornariti - Kato Polemidia",
+"store": "Pharmacy Christina Nikiforou - Limassol",
 "name": "Apivita Hand Care Mild Hand Wash 300ml",
 "price": 8.18,
 "currency": "EUR",
@@ -184351,7 +184079,7 @@
 "barcode": "5201279084769",
 "product_id": "gtin-5201279084769",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karmelia+Tornariti+-+Kato+Polemidia+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Christina+Nikiforou+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -184486,22 +184214,6 @@
 "source": "fetch",
 "side": "S",
 "store": "Pharmacy Ayios Minas",
-"name": "Korres Shampoo Set",
-"price": 18.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-ayios-minas-egkomi/p/korres-shampoo-set",
-"image": "",
-"category": "Hair Gift Boxes & Sets",
-"barcode": "",
-"product_id": "https://fetch.com.cy/p/korres-shampoo-set",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Ayios+Minas+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Ayios Minas",
 "name": "Tricogen Shampoo 250Ml",
 "price": 11.12,
 "currency": "EUR",
@@ -184613,9 +184325,9 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
+"store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Radiant Matt Lasting Lip Color No 06. Perfect Matt Result And A Long Lasting Color 6.5ml",
-"price": 14.3,
+"price": 14.95,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/radiant-matt-lasting-lip-color-no-06-perfect-matt-result-and-a-long-lasting-color-65ml",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/ae99ada7-b90e-4a53-8e98-a73b384064ff.jpg",
@@ -184623,7 +184335,7 @@
 "barcode": "5201641723876",
 "product_id": "gtin-5201641723876",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
 "extra": {}
 },
 {
@@ -184901,7 +184613,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Liza Papadopoulou - Larnaca",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Intermed Flexel Ice Gel Analgesic Cryotherapy Gel 100ml",
 "price": 7.65,
 "currency": "EUR",
@@ -184911,7 +184623,7 @@
 "barcode": "5205152002680",
 "product_id": "gtin-5205152002680",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Liza+Papadopoulou+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -184937,7 +184649,7 @@
 "name": "Colorsport 30 Day Eyelash & Eyebrow Tint - Dark Brown",
 "price": 15.9,
 "currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-vasilina-perissiou/p/colorsport-30-day-eyelash-eyebrow-tint-dark-brown",
+"url": "https://fetch.com.cy/p/colorsport-30-day-eyelash-eyebrow-tint-dark-brown",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/products/e623dde4-770c-4d51-8e3d-3903e5482daf/9b79d774-d576-4d07-ac11-c67d4b0438df.png",
 "category": "Mascaras",
 "barcode": "5012368050196",
@@ -185031,7 +184743,7 @@
 "side": "S",
 "store": "Pharmacy VTC",
 "name": "Oral-B Vitality Pro Gift Edition Black & Pink Duo Pack Electric Toothbrushes 2Pcs",
-"price": 46.05,
+"price": 57.5,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/oral-b-vitality-pro-gift-edition-black-pink-duo-pack-electric-toothbrushes-2pcs",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/07/0012d4be-e9fb-455b-8a76-e56bb2484188.jpg",
@@ -185157,7 +184869,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Epharmadora by P.G Loizou I",
+"store": "Pharmacy Eleni Michael - Limassol",
 "name": "Leciel Sun Soak Off Gel No.425 Madeleine Nail Polish 12Ml",
 "price": 8.75,
 "currency": "EUR",
@@ -185167,7 +184879,7 @@
 "barcode": "5291283016719",
 "product_id": "gtin-5291283016719",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Epharmadora+by+P.G+Loizou+I+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Eleni+Michael+-+Limassol+Cyprus",
 "extra": {}
 },
 {
@@ -185191,7 +184903,7 @@
 "side": "S",
 "store": "Pharmacy Andria Neocleous - Kato Polemidia",
 "name": "Pupa Milano High Definition Eyebrow Pencil 003 Dark Brown For Women 0.003 Oz Eyebrow",
-"price": 15.59,
+"price": 12.83,
 "currency": "EUR",
 "url": "https://fetch.com.cy/p/pupa-milano-high-definition-eyebrow-pencil-003-dark-brown-for-women-0003-oz-eyebrow",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/12/adb5b78c-309c-4200-9108-3e5f2fd04f7a.jpg",
@@ -185509,7 +185221,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy VTC",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Ice Power Sport Spray 125Ml",
 "price": 12.8,
 "currency": "EUR",
@@ -185519,7 +185231,7 @@
 "barcode": "6418029167125",
 "product_id": "gtin-6418029167125",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+VTC+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -185589,7 +185301,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Vasilina Perissiou",
+"store": "Pharmacy Leperdik - Ayios Andreas",
 "name": "Pharmalead Men 3 In 1 Body, Hair & Beard, Shampoo & Shower Gel, 500Ml",
 "price": 10.75,
 "currency": "EUR",
@@ -185599,7 +185311,7 @@
 "barcode": "5205352018986",
 "product_id": "gtin-5205352018986",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Vasilina+Perissiou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leperdik+-+Ayios+Andreas+Cyprus",
 "extra": {}
 },
 {
@@ -185735,7 +185447,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "L'Oreal Color Riche Nude Intense 550 Nu Unapologetic",
-"price": 13.71,
+"price": 11.99,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-color-riche-nude-intense-550-nu-unapologetic",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/10/75e79d8e-4bac-4a9f-ba97-a25eaa614e2c.jpeg",
@@ -185783,7 +185495,7 @@
 "side": "S",
 "store": "Pharmacy Epharmadora by P.G Loizou I",
 "name": "Loreal Color Riche Lipstick 377 Perfect Red",
-"price": 11.78,
+"price": 10.3,
 "currency": "EUR",
 "url": "https://fetch.com.cy/s/pharmacy-epharmadora-by-pg-loizou-i/p/loreal-color-riche-lipstick-377-perfect-red",
 "image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/86df275a-89d2-4015-93f4-83f89fcb0081.jpg",
@@ -185813,7 +185525,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Rafael Neofitou",
+"store": "Pharmacy Charis Christofides",
 "name": "Lavish Care Sensitive Skin Rebalancing Boost Cream Night 50Ml",
 "price": 14.1,
 "currency": "EUR",
@@ -185823,7 +185535,7 @@
 "barcode": "5200410661043",
 "product_id": "gtin-5200410661043",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Rafael+Neofitou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
 "extra": {}
 },
 {
@@ -185845,7 +185557,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy IZK - Larnaca",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Pharmaq Quies Mousse Comfort Foam 3 Pairs",
 "price": 7.51,
 "currency": "EUR",
@@ -185855,7 +185567,7 @@
 "barcode": "3435170190003",
 "product_id": "gtin-3435170190003",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+IZK+-+Larnaca+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -185893,7 +185605,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Karamanidou",
+"store": "Pharmacy Chloe Philippou - Nicosia",
 "name": "Health Aid Omegazon Omega 3 Fish Oil 750Mg For Healthy Heart Brain & Vision 30 Capsules",
 "price": 20.96,
 "currency": "EUR",
@@ -185903,7 +185615,7 @@
 "barcode": "5019781000883",
 "product_id": "gtin-5019781000883",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Karamanidou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Chloe+Philippou+-+Nicosia+Cyprus",
 "extra": {}
 },
 {
@@ -185925,7 +185637,7 @@
 {
 "source": "fetch",
 "side": "S",
-"store": "Pharmacy Charis Christofides",
+"store": "Pharmacy Medadvice",
 "name": "Elgydium Toothpaste Gel Junior Mild Mint For 7-12 Years Old 50Ml",
 "price": 5.29,
 "currency": "EUR",
@@ -185935,23 +185647,7 @@
 "barcode": "3577056019548",
 "product_id": "gtin-3577056019548",
 "town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Charis+Christofides+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Tania Argyrou",
-"name": "Mad Beauty Disney Stitch Cosmetic Bag",
-"price": 14.9,
-"currency": "EUR",
-"url": "https://fetch.com.cy/p/mad-beauty-disney-stitch-cosmetic-bag",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/general/4fa8fac3-5c57-4cc5-a3b6-40b8f0e63c51.jpg",
-"category": "Kids & Family",
-"barcode": "5061038775174",
-"product_id": "gtin-5061038775174",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Tania+Argyrou+Cyprus",
+"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Medadvice+Cyprus",
 "extra": {}
 },
 {
@@ -186240,22 +185936,6 @@
 "product_id": "gtin-5201279026356",
 "town": "Cyprus (Fetch delivery)",
 "maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Antonis+Hadjiapostolou+Cyprus",
-"extra": {}
-},
-{
-"source": "fetch",
-"side": "S",
-"store": "Pharmacy Leonidas Marneros - Ypsonas",
-"name": "Bodyfarm Hand Body Cream Olive Oil Scent 75Ml",
-"price": 4.7,
-"currency": "EUR",
-"url": "https://fetch.com.cy/s/pharmacy-leonidas-marneros-ypsonas/p/bodyfarm-hand-body-cream-olive-oil-scent-75ml",
-"image": "https://d1vx58fgu4jqmf.cloudfront.net/api/v1/public/images/images/products/2025/08/69ffb7b9-aa5c-4429-b6db-478bc6a80fd7.jpg",
-"category": "Bath & Shower Products",
-"barcode": "5204702017051",
-"product_id": "gtin-5204702017051",
-"town": "Cyprus (Fetch delivery)",
-"maps": "https://www.google.com/maps/search/?api=1&query=Pharmacy+Leonidas+Marneros+-+Ypsonas+Cyprus",
 "extra": {}
 },
 {
